@@ -9,18 +9,18 @@ const db = {
   user: {
     id: '5e86809283e28b96d2d38537',
     avatar: '/static/images/avatars/avatar_6.png',
-    bio: 'Sales Manager',
+    bio: 'Dev',
     canHire: false,
     country: 'USA',
-    email: 'katarina.smith@devias.io',
+    email: 'jakbellamy@gmail.com',
     username: 'admin',
     password: 'admin',
-    firstName: 'Katarina',
+    firstName: 'Jakob',
     isPublic: true,
-    lastName: 'Smith',
-    phone: '+40 777666555',
+    lastName: 'Bellamy',
+    phone: '713-480-8815',
     role: 'admin',
-    state: 'New York',
+    state: 'North Carolina',
     timezone: '4:32PM (GMT-4)'
   }
 };
@@ -28,7 +28,7 @@ const db = {
 mock.onPost('/api/account/login').reply((config) => {
   const { email, password } = JSON.parse(config.data);
 
-  if (email !== 'admin@devias.io' || password !== 'admin') {
+  if (email !== 'jakbellamy' || password !== 'awaitFunction12') {
     return [400, { message: 'Please check your email and password' }];
   }
 

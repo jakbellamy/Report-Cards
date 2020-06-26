@@ -11,7 +11,7 @@ import {
   List,
   makeStyles
 } from '@material-ui/core';
-import Logo from 'src/components/Logo';
+import OPEN_Logo from 'src/components/OPEN_Logo';
 import NavItem from './NavItem';
 
 const navItems = [
@@ -143,7 +143,7 @@ function NavBar({ openMobile, onMobileClose }) {
       <Hidden lgUp>
         <Box p={2}>
           <RouterLink to="/">
-            <Logo />
+            <OPEN_Logo />
           </RouterLink>
         </Box>
       </Hidden>

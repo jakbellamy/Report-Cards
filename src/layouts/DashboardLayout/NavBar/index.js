@@ -41,92 +41,72 @@ import {
   Share2 as ShareIcon,
   Users as UsersIcon
 } from 'react-feather';
-import Logo from 'src/components/Logo';
+import OPEN_Logo from 'src/components/OPEN_Logo';
 import NavItem from './NavItem';
 
 const navConfig = [
+
   {
-    subheader: 'Reports',
+    subheader: 'Dashboard',
     items: [
       {
-        title: 'Dashboard',
-        icon: PieChartIcon,
+        title: 'Account Information',
         href: '/app/reports/dashboard'
       },
       {
-        title: 'Dashboard Alternative',
-        icon: BarChartIcon,
+        title: 'Overview',
+        // icon: BarChartIcon,
+        href: '/app/reports/dashboard'
+      },
+      {
+        title: 'Summaries',
+        // icon: PieChartIcon,
         href: '/app/reports/dashboard-alternative'
       }
     ]
   },
   {
-    subheader: 'Management',
+    subheader: 'View Data',
     items: [
       {
-        title: 'Customers',
-        icon: UsersIcon,
+        title: 'SalesForce',
+        // icon: UsersIcon,
         href: '/app/management/customers',
         items: [
           {
-            title: 'List Customers',
+            title: 'Account Information',
             href: '/app/management/customers'
           },
           {
-            title: 'View Customer',
+            title: 'Account Leads',
             href: '/app/management/customers/1'
           },
           {
-            title: 'Edit Customer',
+            title: 'Account Reports',
             href: '/app/management/customers/1/edit'
           }
         ]
       },
       {
-        title: 'Products',
-        icon: ShoppingCartIcon,
-        href: '/app/management/products',
-        items: [
-          {
-            title: 'List Products',
-            href: '/app/management/products'
-          },
-          {
-            title: 'Create Product',
-            href: '/app/management/products/create'
-          }
-        ]
-      },
-      {
-        title: 'Orders',
-        icon: FolderIcon,
+        title: 'Flat Files',
+        // icon: FolderIcon,
         href: '/app/management/orders',
         items: [
           {
-            title: 'List Orders',
+            title: 'Production Reports',
             href: '/app/management/orders'
           },
           {
-            title: 'View Order',
+            title: 'Continuing Education',
             href: '/app/management/orders/1'
           }
         ]
       },
       {
-        title: 'Invoices',
-        icon: ReceiptIcon,
-        href: '/app/management/invoices',
-        items: [
-          {
-            title: 'List Invoices',
-            href: '/app/management/invoices'
-          },
-          {
-            title: 'View Invoice',
-            href: '/app/management/invoices/1'
-          }
-        ]
-      }
+        title: 'Report Cards',
+        href: '/app/kanban',
+        // icon: TrelloIcon
+      },
     ]
   },
   {
@@ -135,7 +115,7 @@ const navConfig = [
       {
         title: 'Projects Platform',
         href: '/app/projects',
-        icon: BriefcaseIcon,
+        // icon: BriefcaseIcon,
         items: [
           {
             title: 'Overview',
@@ -158,7 +138,7 @@ const navConfig = [
       {
         title: 'Social Platform',
         href: '/app/social',
-        icon: ShareIcon,
+        // icon: ShareIcon,
         items: [
           {
             title: 'Profile',
@@ -173,12 +153,12 @@ const navConfig = [
       {
         title: 'Kanban',
         href: '/app/kanban',
-        icon: TrelloIcon
+        // icon: TrelloIcon
       },
       {
         title: 'Mail',
         href: '/app/mail',
-        icon: MailIcon,
+        // icon: MailIcon,
         info: () => (
           <Chip
             color="secondary"
@@ -190,7 +170,7 @@ const navConfig = [
       {
         title: 'Chat',
         href: '/app/chat',
-        icon: MessageCircleIcon,
+        // icon: MessageCircleIcon,
         info: () => (
           <Chip
             color="secondary"
@@ -202,7 +182,7 @@ const navConfig = [
       {
         title: 'Calendar',
         href: '/app/calendar',
-        icon: CalendarIcon
+        // icon: CalendarIcon
       },
     ]
   },
@@ -212,22 +192,22 @@ const navConfig = [
       {
         title: 'Login',
         href: '/login-unprotected',
-        icon: LockIcon
+        // icon: LockIcon
       },
       {
         title: 'Register',
         href: '/register-unprotected',
-        icon: UserPlusIcon
+        // icon: UserPlusIcon
       },
       {
         title: 'Login: Guest Protected',
         href: '/login',
-        icon: ShieldIcon
+        // icon: ShieldIcon
       },
       {
         title: 'Register: Guest Protected',
         href: '/register',
-        icon: ShieldIcon
+        // icon: ShieldIcon
       }
     ]
   },
@@ -238,17 +218,17 @@ const navConfig = [
       {
         title: 'Account',
         href: '/app/account',
-        icon: UserIcon
+        // icon: UserIcon
       },
       {
         title: 'Error',
         href: '/404',
-        icon: AlertCircleIcon
+        // icon: AlertCircleIcon
       },
       {
         title: 'Pricing',
         href: '/pricing',
-        icon: DollarSignIcon
+        // icon: DollarSignIcon
       }
     ]
   },
@@ -258,7 +238,7 @@ const navConfig = [
       {
         title: 'Charts',
         href: '/app/extra/charts',
-        icon: BarChartIcon,
+        // icon: BarChartIcon,
         items: [
           {
             title: 'Apex Charts',
@@ -269,7 +249,7 @@ const navConfig = [
       {
         title: 'Forms',
         href: '/app/extra/forms',
-        icon: EditIcon,
+        // icon: EditIcon,
         items: [
           {
             title: 'Formik',
@@ -284,7 +264,7 @@ const navConfig = [
       {
         title: 'Editors',
         href: '/app/extra/editors',
-        icon: LayoutIcon,
+        // icon: LayoutIcon,
         items: [
           {
             title: 'DraftJS Editor',
@@ -392,52 +372,6 @@ function NavBar({ openMobile, onMobileClose, }) {
       flexDirection="column"
     >
       <PerfectScrollbar options={{ suppressScrollX: true }}>
-        <Hidden lgUp>
-          <Box
-            p={2}
-            display="flex"
-            justifyContent="center"
-          >
-            <RouterLink to="/">
-              <Logo />
-            </RouterLink>
-          </Box>
-        </Hidden>
-        <Box p={2}>
-          <Box
-            display="flex"
-            justifyContent="center"
-          >
-            <RouterLink to="/app/account">
-              <Avatar
-                alt="User"
-                className={classes.avatar}
-                src={user.avatar}
-              />
-            </RouterLink>
-          </Box>
-          <Box
-            mt={2}
-            textAlign="center"
-          >
-            <Link
-              component={RouterLink}
-              to="/app/account"
-              variant="h5"
-              color="textPrimary"
-              underline="none"
-            >
-              {`${user.firstName} ${user.lastName}`}
-            </Link>
-            <Typography
-              variant="body2"
-              color="textSecondary"
-            >
-              {user.bio}
-            </Typography>
-          </Box>
-        </Box>
-        <Divider />
         <Box p={2}>
           {navConfig.map((config) => (
             <List

@@ -10,7 +10,8 @@ import {
 } from 'src/actions/accountActions';
 
 const initialState = {
-  user: null
+  user: null,
+  error: null
 };
 
 const accountReducer = (state = initialState, action) => {
@@ -31,8 +32,9 @@ const accountReducer = (state = initialState, action) => {
     }
 
     case LOGIN_FAILURE: {
-      return produce(state, () => {
-        // Maybe store error
+      const { error } = action.payload
+      return produce(state, (draft) => {
+        draft.error = error
       });
     }
 

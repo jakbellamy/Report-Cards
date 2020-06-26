@@ -22,8 +22,8 @@ const useStyles = makeStyles(() => ({
 function FinancialStats({ className, ...rest }) {
   const classes = useStyles();
   const stats = {
-    thisYear: [18, 16, 5, 8, 3, 14, 14, 16, 17, 19, 18, 20],
-    lastYear: [12, 11, 4, 6, 2, 9, 9, 10, 11, 12, 13, 13]
+    thisYear: [25, 27, 36, 34, 0, 0, 0, 0, 0, 0, 0, 0],
+    lastYear: [10, 41, 9, 11, 17, 11, 33, 31, 7, 10, 34, 30]
   };
   const labels = [
     'Jan',
@@ -47,7 +47,7 @@ function FinancialStats({ className, ...rest }) {
     >
       <CardHeader
         action={<GenericMoreButton />}
-        title="Financial Stats"
+        title="Market Share Volume"
       />
       <Divider />
       <PerfectScrollbar>

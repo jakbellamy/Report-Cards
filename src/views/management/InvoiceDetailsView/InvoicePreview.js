@@ -15,7 +15,7 @@ import {
   TableCell,
   makeStyles
 } from '@material-ui/core';
-import Logo from 'src/components/Logo';
+import OPEN_Logo from 'src/components/OPEN_Logo';
 
 const useStyles = makeStyles(() => ({
   root: {}
@@ -39,7 +39,7 @@ function InvoicePreview({ invoice, className, ...rest }) {
             justify="space-between"
           >
             <Grid item>
-              <Logo />
+              <OPEN_Logo />
               <Typography
                 variant="h5"
                 color="textPrimary"

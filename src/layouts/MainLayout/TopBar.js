@@ -2,19 +2,9 @@ import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import {
-  AppBar,
-  Box,
-  Button,
-  Divider,
-  Toolbar,
-  Hidden,
-  Typography,
-  Link,
-  makeStyles
-} from '@material-ui/core';
+import { AppBar, Box, Button, Divider, Toolbar, Hidden, Typography, Link, makeStyles } from '@material-ui/core';
 import { APP_VERSION } from 'src/config';
-import Logo from 'src/components/Logo';
+import OPEN_Logo from 'src/components/OPEN_Logo';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -51,7 +41,7 @@ function TopBar({ className, ...rest }) {
     >
       <Toolbar className={classes.toolbar}>
         <RouterLink to="/">
-          <Logo className={classes.logo} />
+          <OPEN_Logo className={classes.logo} />
         </RouterLink>
         <Hidden mdDown>
           <Typography

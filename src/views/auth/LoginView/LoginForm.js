@@ -4,13 +4,7 @@ import clsx from 'clsx';
 import * as Yup from 'yup';
 import PropTypes from 'prop-types';
 import { Formik } from 'formik';
-import {
-  Box,
-  Button,
-  TextField,
-  FormHelperText,
-  makeStyles
-} from '@material-ui/core';
+import { Box, Button, TextField, FormHelperText, makeStyles } from '@material-ui/core';
 import { login } from 'src/actions/accountActions';
 
 const useStyles = makeStyles(() => ({
@@ -24,8 +18,8 @@ function LoginForm({ className, onSubmitSuccess, ...rest }) {
   return (
     <Formik
       initialValues={{
-        email: 'admin@devias.io',
-        password: 'admin'
+        email: '',
+        password: ''
       }}
       validationSchema={Yup.object().shape({
         email: Yup.string().email('Must be a valid email').max(255).required('Email is required'),

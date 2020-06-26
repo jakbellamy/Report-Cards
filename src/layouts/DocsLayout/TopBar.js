@@ -11,7 +11,7 @@ import {
   makeStyles
 } from '@material-ui/core';
 import { Menu as MenuIcon } from 'react-feather';
-import Logo from 'src/components/Logo';
+import OPEN_Logo from 'src/components/OPEN_Logo';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -46,7 +46,7 @@ function TopBar({ onMobileNavOpen }) {
         </Hidden>
         <Hidden mdDown>
           <RouterLink to="/">
-            <Logo />
+            <OPEN_Logo />
           </RouterLink>
         </Hidden>
         <Box

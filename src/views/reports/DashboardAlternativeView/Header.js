@@ -18,19 +18,19 @@ import { Calendar as CalendarIcon } from 'react-feather';
 
 const timeRanges = [
   {
-    value: 'today',
-    text: 'Today'
+    value: 'overview',
+    text: 'Over View'
   },
   {
-    value: 'yesterday',
-    text: 'Yesterday'
+    value: 'mtd',
+    text: 'Month to Date'
   },
   {
-    value: 'last_30_days',
-    text: 'Last 30 days'
+    value: 'ytd',
+    text: 'Year to Date'
   },
   {
-    value: 'last_year',
+    value: 'ly',
     text: 'Last year'
   }
 ];
@@ -73,14 +73,14 @@ function Header({ className, ...rest }) {
             variant="body1"
             color="textPrimary"
           >
-            Reports
+            Accounts
           </Typography>
         </Breadcrumbs>
         <Typography
           variant="h3"
           color="textPrimary"
         >
-          Finance Overview
+          BHG - 1st Florida
         </Typography>
       </Grid>
       <Grid item>
@@ -92,7 +92,7 @@ function Header({ className, ...rest }) {
             fontSize="small"
             className={classes.actionIcon}
           >
-            <CalendarIcon />
+            {/*<CalendarIcon />*/}
           </SvgIcon>
           {timeRange}
         </Button>

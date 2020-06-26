@@ -23,7 +23,12 @@ export function login(email, password) {
         }
       });
     } catch (error) {
-      dispatch({ type: LOGIN_FAILURE });
+      dispatch({
+        type: LOGIN_FAILURE,
+        payload: {
+          error
+        }
+      });
       throw error;
     }
   };

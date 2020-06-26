@@ -4,7 +4,7 @@ import {
   CircularProgress,
   makeStyles
 } from '@material-ui/core';
-import Logo from 'src/components/Logo';
+import OPEN_Logo from 'src/components/OPEN_Logo';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -37,7 +37,7 @@ function SlashScreen() {
         justifyContent="center"
         mb={6}
       >
-        <Logo className={classes.logo} />
+        <OPEN_Logo className={classes.logo} />
       </Box>
       <CircularProgress />
     </div>

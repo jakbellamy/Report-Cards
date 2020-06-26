@@ -38,12 +38,20 @@ const useStyles = makeStyles((theme) => ({
 function Overview({ className, ...rest }) {
   const classes = useStyles();
   const overview = {
-    income: '854,355.00',
-    expanses: '373,250.50',
-    profit: '123,532.00',
-    subscriptions: '26,000'
+    officeVol: 12877700,
+    supremeVol: 4457800,
+    officeUnits: 37,
+    supremeUnits: 16
   };
-
+  const ly = {
+    officeVol: 25587090,
+    supremeVol: 4308800,
+    officeUnits: 64,
+    supremeUnits: 14
+  }
+  const calcChange = (name, fixed=2) => {
+    return ((((ly[name] - overview[name]) / overview[name]) * 100) - 100).toFixed(fixed)
+  }
   return (
     <Card
       className={clsx(classes.root, className)}
@@ -67,7 +75,7 @@ function Overview({ className, ...rest }) {
             variant="overline"
             color="textSecondary"
           >
-            Total Income
+            Year to Date Office Volume
           </Typography>
           <div className={classes.valueContainer}>
             <Typography
@@ -75,14 +83,15 @@ function Overview({ className, ...rest }) {
               color="textPrimary"
             >
               $
-              {overview.income}
+              {overview.officeVol}
             </Typography>
-            <Label
-              className={classes.label}
-              color="success"
-            >
-              +25%
-            </Label>
+            {
+              calcChange('officeVol') >= 0
+                  ?
+                <Label className={classes.label} color="success">{calcChange('officeVol')}%</Label>
+                  :
+                <Label className={classes.label} color="error">{calcChange('officeVol')}%</Label>
+            }
           </div>
         </Grid>
         <Grid
@@ -98,7 +107,7 @@ function Overview({ className, ...rest }) {
             variant="overline"
             color="textSecondary"
           >
-            Total Expanses
+            Year to Date Supreme Volume
           </Typography>
           <div className={classes.valueContainer}>
             <Typography
@@ -106,14 +115,15 @@ function Overview({ className, ...rest }) {
               color="textPrimary"
             >
               $
-              {overview.expanses}
+              {overview.supremeVol}
             </Typography>
-            <Label
-              className={classes.label}
-              color="success"
-            >
-              +12%
-            </Label>
+            {
+              calcChange('supremeVol') >= 0
+                ?
+                <Label className={classes.label} color="success">{calcChange('supremeVol')}%</Label>
+                :
+                <Label className={classes.label} color="error">{calcChange('supremeVol')}%</Label>
+            }
           </div>
         </Grid>
         <Grid
@@ -129,21 +139,22 @@ function Overview({ className, ...rest }) {
             variant="overline"
             color="textSecondary"
           >
-            Net Profit
+            Last Year Market Share
           </Typography>
           <div className={classes.valueContainer}>
             <Typography
               variant="h3"
               color="textPrimary"
             >
-              {overview.profit}
+              {overview.officeUnits}
             </Typography>
-            <Label
-              className={classes.label}
-              color="error"
-            >
-              -20%
-            </Label>
+            {
+              calcChange('officeUnits') >= 0
+                ?
+                <Label className={classes.label} color="success">{calcChange('officeUnits', 0)}</Label>
+                :
+                <Label className={classes.label} color="error">{calcChange('officeUnits', 0)}</Label>
+            }
           </div>
         </Grid>
         <Grid
@@ -159,15 +170,22 @@ function Overview({ className, ...rest }) {
             variant="overline"
             color="textSecondary"
           >
-            Active Subscriptions
+            Last Year Units
           </Typography>
           <div className={classes.valueContainer}>
             <Typography
               variant="h3"
               color="textPrimary"
             >
-              {overview.subscriptions}
+              {overview.supremeUnits}
             </Typography>
+            {
+              calcChange('supremeUnits') >= 0
+                ?
+                <Label className={classes.label} color="success">{calcChange('supremeUnits', 0)}</Label>
+                :
+                <Label className={classes.label} color="error">{calcChange('supremeUnits', 0)}</Label>
+            }
           </div>
         </Grid>
       </Grid>

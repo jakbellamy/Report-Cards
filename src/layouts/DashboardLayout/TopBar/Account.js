@@ -67,11 +67,6 @@ function Account() {
         onClick={handleOpen}
         ref={ref}
       >
-        <Avatar
-          alt="User"
-          className={classes.avatar}
-          src={account.user.avatar}
-        />
         <Hidden smDown>
           <Typography
             variant="h6"

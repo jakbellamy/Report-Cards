@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Logo(props) {
+function OPEN_Logo(props) {
   return (
     <img
       alt="Logo"
@@ -10,4 +10,4 @@ function Logo(props) {
   );
 }
 
-export default Logo;
+export default OPEN_Logo;

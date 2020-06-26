@@ -4,16 +4,7 @@ import clsx from 'clsx';
 import * as Yup from 'yup';
 import PropTypes from 'prop-types';
 import { Formik } from 'formik';
-import {
-  Box,
-  Button,
-  Checkbox,
-  FormHelperText,
-  TextField,
-  Typography,
-  Link,
-  makeStyles
-} from '@material-ui/core';
+import { Box, Button, Checkbox, FormHelperText, TextField, Typography, Link, makeStyles } from '@material-ui/core';
 import { register } from 'src/actions/accountActions';
 
 const useStyles = makeStyles(() => ({
@@ -56,19 +47,15 @@ function RegisterForm({ className, onSubmitSuccess, ...rest }) {
       }}
     >
       {({
-        errors,
-        handleBlur,
-        handleChange,
-        handleSubmit,
-        isSubmitting,
-        touched,
-        values
-      }) => (
-        <form
-          className={clsx(classes.root, className)}
-          onSubmit={handleSubmit}
-          {...rest}
-        >
+          errors,
+          handleBlur,
+          handleChange,
+          handleSubmit,
+          isSubmitting,
+          touched,
+          values
+        }) => (
+        <form className={clsx(classes.root, className)} onSubmit={handleSubmit}{...rest}>
           <TextField
             error={Boolean(touched.firstName && errors.firstName)}
             fullWidth
@@ -176,7 +163,8 @@ RegisterForm.propTypes = {
 };
 
 RegisterForm.default = {
-  onSubmitSuccess: () => {}
+  onSubmitSuccess: () => {
+  }
 };
 
 export default RegisterForm;

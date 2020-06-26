@@ -39,17 +39,17 @@ const routesConfig = [
     path: '/login-unprotected',
     component: lazy(() => import('src/views/auth/LoginView'))
   },
-  {
-    exact: true,
-    guard: GuestGuard,
-    path: '/register',
-    component: lazy(() => import('src/views/auth/RegisterView'))
-  },
-  {
-    exact: true,
-    path: '/register-unprotected',
-    component: lazy(() => import('src/views/auth/RegisterView'))
-  },
+  // {
+  //   exact: true,
+  //   guard: GuestGuard,
+  //   path: '/register',
+  //   component: lazy(() => import('src/views/auth/RegisterView'))
+  // },
+  // {
+  //   exact: true,
+  //   path: '/register-unprotected',
+  //   component: lazy(() => import('src/views/auth/RegisterView'))
+  // },
   {
     path: '/app',
     guard: AuthGuard,

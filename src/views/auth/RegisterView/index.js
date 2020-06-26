@@ -1,19 +1,9 @@
 import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { useHistory } from 'react-router';
-import {
-  Box,
-  Button,
-  Card,
-  CardContent,
-  Container,
-  Divider,
-  Link,
-  Typography,
-  makeStyles
-} from '@material-ui/core';
+import { Box, Button, Card, CardContent, Container, Divider, Link, Typography, makeStyles } from '@material-ui/core';
 import Page from 'src/components/Page';
-import Logo from 'src/components/Logo';
+import OPEN_Logo from 'src/components/OPEN_Logo';
 import RegisterForm from './RegisterForm';
 
 const useStyles = makeStyles((theme) => ({
@@ -48,15 +38,15 @@ function RegisterView() {
           display="flex"
           alignItems="center"
         >
-          <RouterLink to="/">
-            <Logo />
+          <RouterLink to="/login">
+            <OPEN_Logo />
           </RouterLink>
           <Button
             component={RouterLink}
-            to="/"
+            to="/login"
             className={classes.backButton}
           >
-            Back to home
+            Login
           </Button>
         </Box>
         <Card>

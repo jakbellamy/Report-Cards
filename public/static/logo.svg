@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="42px" height="43px" viewBox="0 0 42 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
-    <title>Logo</title>
+    <title>OPEN_Logo</title>
     <desc>Created with Sketch.</desc>
     <defs>
         <circle id="path-1" cx="20" cy="20" r="20"></circle>
@@ -23,7 +23,7 @@
         <g id="Landing-page" transform="translate(-31.000000, -11.000000)">
             <g id="topbar">
                 <g id="left" transform="translate(32.000000, 12.000000)">
-                    <g id="Logo">
+                    <g id="OPEN_Logo">
                         <g id="Oval">
                             <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
                             <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
