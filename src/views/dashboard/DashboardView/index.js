@@ -53,7 +53,7 @@ function DashboardView() {
             sm={6}
             xs={12}
           >
-            <TodaysMoney />
+            {/*<TodaysMoney />*/}
           </Grid>
           <Grid
             item
@@ -61,7 +61,7 @@ function DashboardView() {
             sm={6}
             xs={12}
           >
-            <NewProjects />
+            {/*<NewProjects />*/}
           </Grid>
           <Grid
             item
@@ -69,7 +69,7 @@ function DashboardView() {
             sm={6}
             xs={12}
           >
-            <SystemHealth />
+            {/*<SystemHealth />*/}
           </Grid>
           <Grid
             item
@@ -77,21 +77,21 @@ function DashboardView() {
             sm={6}
             xs={12}
           >
-            <RoiPerCustomer />
+            {/*<RoiPerCustomer />*/}
           </Grid>
           <Grid
             item
             lg={3}
             xs={12}
           >
-            <RealTime />
+            {/*<RealTime />*/}
           </Grid>
           <Grid
             item
             lg={9}
             xs={12}
           >
-            <PerformanceOverTime />
+            {/*<PerformanceOverTime />*/}
           </Grid>
           <Grid
             item
@@ -99,7 +99,7 @@ function DashboardView() {
             xl={4}
             xs={12}
           >
-            <TeamTasks />
+            {/*<TeamTasks />*/}
           </Grid>
           <Grid
             item
@@ -107,7 +107,7 @@ function DashboardView() {
             xl={8}
             xs={12}
           >
-            <LatestProjects />
+            {/*<LatestProjects />*/}
           </Grid>
         </Grid>
       </Container>

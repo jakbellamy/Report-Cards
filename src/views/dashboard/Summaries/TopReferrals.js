@@ -40,7 +40,7 @@ function TopReferrals({ className, ...rest }) {
 
   const getReferrals = useCallback(() => {
     axios
-      .get('/api/reports/top-referrals')
+      .get('/api/dashboard/top-referrals')
       .then((response) => {
         if (isMountedRef.current) {
           setReferrals(response.data.referrals);

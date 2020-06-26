@@ -88,7 +88,7 @@ function Chart({
             beginAtZero: true,
             min: 0,
             maxTicksLimit: 5,
-            callback: (value) => (value > 0 ? `${value}K` : value)
+            callback: (value) => (value > 0 ? `${value}%` : value)
           }
         }
       ]
@@ -109,10 +109,10 @@ function Chart({
       callbacks: {
         title: () => {},
         label: (tooltipItem) => {
-          let label = `Sales: ${tooltipItem.yLabel}`;
+          let label = `${tooltipItem.yLabel}`;
 
           if (tooltipItem.yLabel > 0) {
-            label += 'K';
+            label += '%';
           }
 
           return label;

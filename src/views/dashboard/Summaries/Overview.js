@@ -52,6 +52,9 @@ function Overview({ className, ...rest }) {
   const calcChange = (name, fixed=2) => {
     return ((((ly[name] - overview[name]) / overview[name]) * 100) - 100).toFixed(fixed)
   }
+  const insertCommas = (num) => {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
   return (
     <Card
       className={clsx(classes.root, className)}
@@ -75,7 +78,7 @@ function Overview({ className, ...rest }) {
             variant="overline"
             color="textSecondary"
           >
-            Year to Date Office Volume
+            YTD Office Volume
           </Typography>
           <div className={classes.valueContainer}>
             <Typography
@@ -83,7 +86,7 @@ function Overview({ className, ...rest }) {
               color="textPrimary"
             >
               $
-              {overview.officeVol}
+              {insertCommas(overview.officeVol)}
             </Typography>
             {
               calcChange('officeVol') >= 0
@@ -107,7 +110,7 @@ function Overview({ className, ...rest }) {
             variant="overline"
             color="textSecondary"
           >
-            Year to Date Supreme Volume
+            YTD Supreme Volume
           </Typography>
           <div className={classes.valueContainer}>
             <Typography
@@ -115,7 +118,7 @@ function Overview({ className, ...rest }) {
               color="textPrimary"
             >
               $
-              {overview.supremeVol}
+              {insertCommas(overview.supremeVol)}
             </Typography>
             {
               calcChange('supremeVol') >= 0
@@ -139,7 +142,7 @@ function Overview({ className, ...rest }) {
             variant="overline"
             color="textSecondary"
           >
-            Last Year Market Share
+            YTD Office Units
           </Typography>
           <div className={classes.valueContainer}>
             <Typography
@@ -170,7 +173,7 @@ function Overview({ className, ...rest }) {
             variant="overline"
             color="textSecondary"
           >
-            Last Year Units
+            YTD Supreme Units
           </Typography>
           <div className={classes.valueContainer}>
             <Typography

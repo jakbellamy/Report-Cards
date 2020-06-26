@@ -53,7 +53,7 @@ function MostProfitableProducts({ className, ...rest }) {
 
   const getProducts = useCallback(() => {
     axios
-      .get('/api/reports/profitable-products')
+      .get('/api/dashboard/profitable-products')
       .then((response) => {
         if (isMountedRef.current) {
           setProducts(response.data.products);

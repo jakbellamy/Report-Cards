@@ -51,17 +51,17 @@ const navConfig = [
     items: [
       {
         title: 'Account Information',
-        href: '/app/reports/dashboard'
+        href: '/app/dashboard/dashboard'
       },
       {
         title: 'Overview',
         // icon: BarChartIcon,
-        href: '/app/reports/dashboard'
+        href: '/app/dashboard/dashboard'
       },
       {
         title: 'Summaries',
         // icon: PieChartIcon,
-        href: '/app/reports/dashboard-alternative'
+        href: '/app/dashboard/summaries'
       }
     ]
   },
@@ -110,174 +110,199 @@ const navConfig = [
     ]
   },
   {
-    subheader: 'Applications',
+    subheader: 'Data Entry',
     items: [
       {
-        title: 'Projects Platform',
-        href: '/app/projects',
-        // icon: BriefcaseIcon,
-        items: [
-          {
-            title: 'Overview',
-            href: '/app/projects/overview'
-          },
-          {
-            title: 'Browse Projects',
-            href: '/app/projects/browse'
-          },
-          {
-            title: 'Create Project',
-            href: '/app/projects/create'
-          },
-          {
-            title: 'View Project',
-            href: '/app/projects/1'
-          }
-        ]
-      },
-      {
-        title: 'Social Platform',
-        href: '/app/social',
-        // icon: ShareIcon,
-        items: [
-          {
-            title: 'Profile',
-            href: '/app/social/profile'
-          },
-          {
-            title: 'Feed',
-            href: '/app/social/feed'
-          }
-        ]
-      },
-      {
-        title: 'Kanban',
+        title: 'Market Share Report',
         href: '/app/kanban',
         // icon: TrelloIcon
       },
       {
-        title: 'Mail',
-        href: '/app/mail',
-        // icon: MailIcon,
-        info: () => (
-          <Chip
-            color="secondary"
-            size="small"
-            label="Updated"
-          />
-        )
+        title: 'Operation Cycle',
+        href: '/app/kanban',
+        // icon: TrelloIcon
       },
       {
-        title: 'Chat',
-        href: '/app/chat',
-        // icon: MessageCircleIcon,
-        info: () => (
-          <Chip
-            color="secondary"
-            size="small"
-            label="Updated"
-          />
-        )
+        title: 'Continuing Education',
+        href: '/app/kanban',
+        // icon: TrelloIcon
       },
       {
-        title: 'Calendar',
-        href: '/app/calendar',
-        // icon: CalendarIcon
+        title: 'Personal & Professional Best',
+        href: '/app/kanban',
+        // icon: TrelloIcon
       },
     ]
   },
-  {
-    subheader: 'Auth',
-    items: [
-      {
-        title: 'Login',
-        href: '/login-unprotected',
-        // icon: LockIcon
-      },
-      {
-        title: 'Register',
-        href: '/register-unprotected',
-        // icon: UserPlusIcon
-      },
-      {
-        title: 'Login: Guest Protected',
-        href: '/login',
-        // icon: ShieldIcon
-      },
-      {
-        title: 'Register: Guest Protected',
-        href: '/register',
-        // icon: ShieldIcon
-      }
-    ]
-  },
-  {
-    subheader: 'Pages',
-    href: '/app/pages',
-    items: [
-      {
-        title: 'Account',
-        href: '/app/account',
-        // icon: UserIcon
-      },
-      {
-        title: 'Error',
-        href: '/404',
-        // icon: AlertCircleIcon
-      },
-      {
-        title: 'Pricing',
-        href: '/pricing',
-        // icon: DollarSignIcon
-      }
-    ]
-  },
-  {
-    subheader: 'Extra',
-    items: [
-      {
-        title: 'Charts',
-        href: '/app/extra/charts',
-        // icon: BarChartIcon,
-        items: [
-          {
-            title: 'Apex Charts',
-            href: '/app/extra/charts/apex'
-          }
-        ]
-      },
-      {
-        title: 'Forms',
-        href: '/app/extra/forms',
-        // icon: EditIcon,
-        items: [
-          {
-            title: 'Formik',
-            href: '/app/extra/forms/formik'
-          },
-          {
-            title: 'Redux Forms',
-            href: '/app/extra/forms/redux'
-          },
-        ]
-      },
-      {
-        title: 'Editors',
-        href: '/app/extra/editors',
-        // icon: LayoutIcon,
-        items: [
-          {
-            title: 'DraftJS Editor',
-            href: '/app/extra/editors/draft-js'
-          },
-          {
-            title: 'Quill Editor',
-            href: '/app/extra/editors/quill'
-          }
-        ]
-      }
-    ]
-  }
+  // {
+  //   subheader: 'Applications',
+  //   items: [
+  //     {
+  //       title: 'Projects Platform',
+  //       href: '/app/projects',
+  //       // icon: BriefcaseIcon,
+  //       items: [
+  //         {
+  //           title: 'Overview',
+  //           href: '/app/projects/overview'
+  //         },
+  //         {
+  //           title: 'Browse Projects',
+  //           href: '/app/projects/browse'
+  //         },
+  //         {
+  //           title: 'Create Project',
+  //           href: '/app/projects/create'
+  //         },
+  //         {
+  //           title: 'View Project',
+  //           href: '/app/projects/1'
+  //         }
+  //       ]
+  //     },
+  //     {
+  //       title: 'Social Platform',
+  //       href: '/app/social',
+  //       // icon: ShareIcon,
+  //       items: [
+  //         {
+  //           title: 'Profile',
+  //           href: '/app/social/profile'
+  //         },
+  //         {
+  //           title: 'Feed',
+  //           href: '/app/social/feed'
+  //         }
+  //       ]
+  //     },
+  //     {
+  //       title: 'Kanban',
+  //       href: '/app/kanban',
+  //       // icon: TrelloIcon
+  //     },
+  //     {
+  //       title: 'Mail',
+  //       href: '/app/mail',
+  //       // icon: MailIcon,
+  //       info: () => (
+  //         <Chip
+  //           color="secondary"
+  //           size="small"
+  //           label="Updated"
+  //         />
+  //       )
+  //     },
+  //     {
+  //       title: 'Chat',
+  //       href: '/app/chat',
+  //       // icon: MessageCircleIcon,
+  //       info: () => (
+  //         <Chip
+  //           color="secondary"
+  //           size="small"
+  //           label="Updated"
+  //         />
+  //       )
+  //     },
+  //     {
+  //       title: 'Calendar',
+  //       href: '/app/calendar',
+  //       // icon: CalendarIcon
+  //     },
+  //   ]
+  // },
+  // {
+  //   subheader: 'Auth',
+  //   items: [
+  //     {
+  //       title: 'Login',
+  //       href: '/login-unprotected',
+  //       // icon: LockIcon
+  //     },
+  //     {
+  //       title: 'Register',
+  //       href: '/register-unprotected',
+  //       // icon: UserPlusIcon
+  //     },
+  //     {
+  //       title: 'Login: Guest Protected',
+  //       href: '/login',
+  //       // icon: ShieldIcon
+  //     },
+  //     {
+  //       title: 'Register: Guest Protected',
+  //       href: '/register',
+  //       // icon: ShieldIcon
+  //     }
+  //   ]
+  // },
+  // {
+  //   subheader: 'Pages',
+  //   href: '/app/pages',
+  //   items: [
+  //     {
+  //       title: 'Account',
+  //       href: '/app/account',
+  //       // icon: UserIcon
+  //     },
+  //     {
+  //       title: 'Error',
+  //       href: '/404',
+  //       // icon: AlertCircleIcon
+  //     },
+  //     {
+  //       title: 'Pricing',
+  //       href: '/pricing',
+  //       // icon: DollarSignIcon
+  //     }
+  //   ]
+  // },
+  // {
+  //   subheader: 'Extra',
+  //   items: [
+  //     {
+  //       title: 'Charts',
+  //       href: '/app/extra/charts',
+  //       // icon: BarChartIcon,
+  //       items: [
+  //         {
+  //           title: 'Apex Charts',
+  //           href: '/app/extra/charts/apex'
+  //         }
+  //       ]
+  //     },
+  //     {
+  //       title: 'Forms',
+  //       href: '/app/extra/forms',
+  //       // icon: EditIcon,
+  //       items: [
+  //         {
+  //           title: 'Formik',
+  //           href: '/app/extra/forms/formik'
+  //         },
+  //         {
+  //           title: 'Redux Forms',
+  //           href: '/app/extra/forms/redux'
+  //         },
+  //       ]
+  //     },
+  //     {
+  //       title: 'Editors',
+  //       href: '/app/extra/editors',
+  //       // icon: LayoutIcon,
+  //       items: [
+  //         {
+  //           title: 'DraftJS Editor',
+  //           href: '/app/extra/editors/draft-js'
+  //         },
+  //         {
+  //           title: 'Quill Editor',
+  //           href: '/app/extra/editors/quill'
+  //         }
+  //       ]
+  //     }
+  //   ]
+  // }
 ];
 
 function renderNavItems({ items, ...rest }) {
@@ -389,29 +414,29 @@ function NavBar({ openMobile, onMobileClose, }) {
             </List>
           ))}
         </Box>
-        <Divider />
-        <Box p={2}>
-          <Box
-            p={2}
-            borderRadius="borderRadius"
-            bgcolor="background.dark"
-          >
-            <Typography
-              variant="h6"
-              color="textPrimary"
-            >
-              Need Help?
-            </Typography>
-            <Link
-              variant="subtitle1"
-              color="secondary"
-              component={RouterLink}
-              to="/docs"
-            >
-              Check our docs
-            </Link>
-          </Box>
-        </Box>
+        {/*<Divider />*/}
+        {/*<Box p={2}>*/}
+        {/*  <Box*/}
+        {/*    p={2}*/}
+        {/*    borderRadius="borderRadius"*/}
+        {/*    bgcolor="background.dark"*/}
+        {/*  >*/}
+        {/*    <Typography*/}
+        {/*      variant="h6"*/}
+        {/*      color="textPrimary"*/}
+        {/*    >*/}
+        {/*      Need Help?*/}
+        {/*    </Typography>*/}
+        {/*    <Link*/}
+        {/*      variant="subtitle1"*/}
+        {/*      color="secondary"*/}
+        {/*      component={RouterLink}*/}
+        {/*      to="/docs"*/}
+        {/*    >*/}
+        {/*      Check our docs*/}
+        {/*    </Link>*/}
+        {/*  </Box>*/}
+        {/*</Box>*/}
       </PerfectScrollbar>
     </Box>
   );

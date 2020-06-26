@@ -58,9 +58,7 @@ function TopBar({
           </IconButton>
         </Hidden>
         <Hidden mdDown>
-          <RouterLink to="/">
-            <OPEN_Logo />
-          </RouterLink>
+            <h1>Track-Supreme</h1>
         </Hidden>
         <Box
           ml={2}

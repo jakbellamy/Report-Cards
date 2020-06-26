@@ -68,12 +68,12 @@ function Routes() {
                   <Route
                     exact
                     path="/app/reports/dashboard"
-                    component={lazy(() => import('src/views/reports/DashboardView'))}
+                    component={lazy(() => import('src/views/dashboard/DashboardView'))}
                   />
                   <Route
                     exact
                     path="/app/reports/dashboard-alternative"
-                    component={lazy(() => import('src/views/reports/DashboardAlternativeView'))}
+                    component={lazy(() => import('src/views/dashboard/Summaries'))}
                   />
                   <Redirect
                     exact

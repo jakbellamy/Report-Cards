@@ -30,7 +30,7 @@ function TeamTasks({ className, ...rest }) {
 
   const getTasks = useCallback(() => {
     axios
-      .get('/api/reports/tasks')
+      .get('/api/dashboard/tasks')
       .then((response) => {
         if (isMountedRef.current) {
           setTasks(response.data.tasks);

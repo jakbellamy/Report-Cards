@@ -49,7 +49,7 @@ function LatestOrders({ className, ...rest }) {
 
   const getOrders = useCallback(() => {
     axios
-      .get('/api/reports/latest-orders')
+      .get('/api/dashboard/latest-orders')
       .then((response) => {
         if (isMountedRef.current) {
           setOrders(response.data.orders);

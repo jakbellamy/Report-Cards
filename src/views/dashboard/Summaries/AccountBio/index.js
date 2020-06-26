@@ -40,7 +40,7 @@ function EarningsSegmentation({ className, ...rest }) {
 
   const getEarnings = useCallback(() => {
     axios
-      .get('/api/reports/earnings')
+      .get('/api/dashboard/earnings')
       .then((response) => {
         if (isMountedRef.current) {
           setEarnings(response.data.earnings);
@@ -63,7 +63,7 @@ function EarningsSegmentation({ className, ...rest }) {
     >
       <CardHeader
         action={<GenericMoreButton />}
-        title="Earnings Segmentation"
+        title="Account Bio"
       />
       <Divider />
       <Box
@@ -71,7 +71,7 @@ function EarningsSegmentation({ className, ...rest }) {
         position="relative"
         minHeight={320}
       >
-        <Chart data={earnings} />
+        {/*<Chart data={earnings} />*/}
       </Box>
       <Divider />
       <Box display="flex">
@@ -80,19 +80,19 @@ function EarningsSegmentation({ className, ...rest }) {
             key={label}
             className={classes.item}
           >
-            <Typography
-              variant="h4"
-              color="textPrimary"
-            >
-              {earnings.datasets[0].data[i]}
-              %
-            </Typography>
-            <Typography
-              variant="overline"
-              color="textSecondary"
-            >
-              {label}
-            </Typography>
+            {/*<Typography*/}
+            {/*  variant="h4"*/}
+            {/*  color="textPrimary"*/}
+            {/*>*/}
+            {/*  {earnings.datasets[0].data[i]}*/}
+            {/*  %*/}
+            {/*</Typography>*/}
+            {/*<Typography*/}
+            {/*  variant="overline"*/}
+            {/*  color="textSecondary"*/}
+            {/*>*/}
+            {/*  {label}*/}
+            {/*</Typography>*/}
           </div>
         ))}
       </Box>

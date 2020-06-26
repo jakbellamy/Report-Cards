@@ -58,7 +58,7 @@ const routesConfig = [
       {
         exact: true,
         path: '/app',
-        component: () => <Redirect to="/app/reports/dashboard" />
+        component: () => <Redirect to="/app/dashboard/dashboard" />
       },
       {
         exact: true,
@@ -67,18 +67,18 @@ const routesConfig = [
       },
       {
         exact: true,
-        path: '/app/reports/dashboard',
-        component: lazy(() => import('src/views/reports/DashboardView'))
+        path: '/app/dashboard/dashboard',
+        component: lazy(() => import('src/views/dashboard/DashboardView'))
       },
       {
         exact: true,
-        path: '/app/reports/dashboard-alternative',
-        component: lazy(() => import('src/views/reports/DashboardAlternativeView'))
+        path: '/app/dashboard/summaries',
+        component: lazy(() => import('src/views/dashboard/Summaries'))
       },
       {
         exact: true,
-        path: '/app/reports',
-        component: () => <Redirect to="/app/reports/dashboard" />
+        path: '/app/dashboard',
+        component: () => <Redirect to="/app/dashboard/dashboard" />
       },
       {
         exact: true,

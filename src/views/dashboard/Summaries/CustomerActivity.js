@@ -44,7 +44,7 @@ function CustomerActivity({ className, ...rest }) {
 
   const getActivities = useCallback(() => {
     axios
-      .get('/api/reports/customer-activity')
+      .get('/api/dashboard/customer-activity')
       .then((response) => {
         if (isMountedRef.current) {
           setActivities(response.data.activities);

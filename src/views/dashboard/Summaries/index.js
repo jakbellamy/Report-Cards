@@ -6,8 +6,8 @@ import {
 } from '@material-ui/core';
 import Page from 'src/components/Page';
 import CustomerActivity from './CustomerActivity';
-import EarningsSegmentation from './EarningsSegmentation';
-import FinancialStats from './FinancialStats';
+import AccountBio from './AccountBio';
+import FinancialStats from './MktShareGraph';
 import Header from './Header';
 import LatestOrders from './LatestOrders';
 import MostProfitableProducts from './MostProfitableProducts';
@@ -66,35 +66,35 @@ function DashboardAlternativeView() {
             xl={3}
             xs={12}
           >
-            <EarningsSegmentation />
+            <AccountBio />
           </Grid>
           <Grid
             item
             lg={8}
             xs={12}
           >
-            <LatestOrders />
+            {/*<LatestOrders />*/}
           </Grid>
           <Grid
             item
             lg={4}
             xs={12}
           >
-            <CustomerActivity />
+            {/*<CustomerActivity />*/}
           </Grid>
           <Grid
             item
             lg={8}
             xs={12}
           >
-            <MostProfitableProducts />
+            {/*<MostProfitableProducts />*/}
           </Grid>
           <Grid
             item
             lg={4}
             xs={12}
           >
-            <TopReferrals />
+            {/*<TopReferrals />*/}
           </Grid>
         </Grid>
       </Container>

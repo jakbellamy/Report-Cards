@@ -59,7 +59,7 @@ function LatestProjects({ className, ...rest }) {
 
   const getProjects = useCallback(() => {
     axios
-      .get('/api/reports/latest-projects')
+      .get('/api/dashboard/latest-projects')
       .then((response) => {
         if (isMountedRef.current) {
           setProjects(response.data.projects);

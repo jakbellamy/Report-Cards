@@ -53,10 +53,10 @@ const themeConfigs = [
         paper: colors.common.white
       },
       primary: {
-        main: colors.indigo[600]
+        main: '#C62725'
       },
       secondary: {
-        main: '#5850EC'
+        main: '#2573C6'
       },
       text: {
         primary: colors.blueGrey[900],

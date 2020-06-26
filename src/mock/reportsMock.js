@@ -3,7 +3,7 @@ import moment from 'moment';
 import { colors } from '@material-ui/core';
 import mock from 'src/utils/mock';
 
-mock.onGet('/api/reports/top-referrals').reply(200, {
+mock.onGet('/api/dashboard/top-referrals').reply(200, {
   referrals: [
     {
       color: colors.blueGrey['700'],
@@ -56,7 +56,7 @@ mock.onGet('/api/reports/top-referrals').reply(200, {
   ]
 });
 
-mock.onGet('/api/reports/profitable-products').reply(200, {
+mock.onGet('/api/dashboard/profitable-products').reply(200, {
   products: [
     {
       id: uuidv4(),
@@ -111,7 +111,7 @@ mock.onGet('/api/reports/profitable-products').reply(200, {
   ]
 });
 
-mock.onGet('/api/reports/customer-activity').reply(200, {
+mock.onGet('/api/dashboard/customer-activity').reply(200, {
   activities: [
     {
       id: '5e89140bcc768199d1e0dc49',
@@ -186,7 +186,7 @@ mock.onGet('/api/reports/customer-activity').reply(200, {
   ]
 });
 
-mock.onGet('/api/reports/earnings').reply(200, {
+mock.onGet('/api/dashboard/earnings').reply(200, {
   earnings: {
     datasets: [
       {
@@ -198,7 +198,7 @@ mock.onGet('/api/reports/earnings').reply(200, {
   }
 });
 
-mock.onGet('/api/reports/latest-orders').reply(200, {
+mock.onGet('/api/dashboard/latest-orders').reply(200, {
   orders: [
     {
       id: uuidv4(),
@@ -310,7 +310,7 @@ mock.onGet('/api/reports/latest-orders').reply(200, {
   ]
 });
 
-mock.onGet('/api/reports/latest-projects').reply(200, {
+mock.onGet('/api/dashboard/latest-projects').reply(200, {
   projects: [
     {
       id: uuidv4(),
@@ -405,7 +405,7 @@ mock.onGet('/api/reports/latest-projects').reply(200, {
   ]
 });
 
-mock.onGet('/api/reports/tasks').reply(200, {
+mock.onGet('/api/dashboard/tasks').reply(200, {
   tasks: [
     {
       id: uuidv4(),

@@ -20,33 +20,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0bc8d6a-fedc-4de2-bb38-f2b918ef4cd3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/images/technologies/html.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/images/technologies/html.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/logo.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/track-supreme.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/accountActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/accountActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CookiesNotification.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Logo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/OPEN_Logo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SplashScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CHECK_SplashScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RoutesAlternative.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/RoutesAlternative.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layouts/DashboardLayout/NavBar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/DashboardLayout/NavBar/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/DashboardLayout/TopBar/Account.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/DashboardLayout/TopBar/Account.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/DashboardLayout/TopBar/Notifications.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layouts/DashboardLayout/TopBar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/DashboardLayout/TopBar/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/DocsLayout/NavBar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/DocsLayout/NavBar/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/DocsLayout/TopBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/DocsLayout/TopBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/MainLayout/TopBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/MainLayout/TopBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mock/accountMock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/mock/accountMock.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/accountReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/accountReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/auth/LoginView/LoginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/auth/LoginView/LoginForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/auth/LoginView/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/auth/LoginView/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/auth/RegisterView/RegisterForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/auth/RegisterView/RegisterForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/auth/RegisterView/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/auth/RegisterView/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/management/InvoiceDetailsView/InvoicePreview.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/management/InvoiceDetailsView/InvoicePreview.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/reports/DashboardAlternativeView/FinancialStats/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/reports/DashboardAlternativeView/FinancialStats/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/reports/DashboardAlternativeView/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/reports/DashboardAlternativeView/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/reports/DashboardAlternativeView/Overview.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/reports/DashboardAlternativeView/Overview.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mock/reportsMock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/mock/reportsMock.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/theme/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/reports/DashboardAlternativeView/CustomerActivity.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summaries/CustomerActivity.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/reports/DashboardAlternativeView/EarningsSegmentation/Chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summaries/AccountBio/Chart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/reports/DashboardAlternativeView/EarningsSegmentation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summaries/AccountBio/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/reports/DashboardAlternativeView/FinancialStats/Chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summaries/MktShareGraph/Chart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/reports/DashboardAlternativeView/FinancialStats/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summaries/MktShareGraph/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/reports/DashboardAlternativeView/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summaries/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/reports/DashboardAlternativeView/LatestOrders.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summaries/LatestOrders.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/reports/DashboardAlternativeView/MostProfitableProducts/CircularProgress.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summaries/MostProfitableProducts/CircularProgress.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/reports/DashboardAlternativeView/MostProfitableProducts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summaries/MostProfitableProducts/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/reports/DashboardAlternativeView/Overview.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summaries/Overview.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/reports/DashboardAlternativeView/TopReferrals.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summaries/TopReferrals.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/reports/DashboardAlternativeView/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summaries/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/reports/DashboardView/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/DashboardView/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/reports/DashboardView/LatestProjects.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/DashboardView/LatestProjects.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/reports/DashboardView/NewProjects.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/DashboardView/NewProjects.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/reports/DashboardView/PerformanceOverTime/Chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/DashboardView/PerformanceOverTime/Chart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/reports/DashboardView/PerformanceOverTime/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/DashboardView/PerformanceOverTime/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/reports/DashboardView/RealTime/Chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/DashboardView/RealTime/Chart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/reports/DashboardView/RealTime/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/DashboardView/RealTime/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/reports/DashboardView/RoiPerCustomer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/DashboardView/RoiPerCustomer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/reports/DashboardView/SystemHealth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/DashboardView/SystemHealth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/reports/DashboardView/TeamTasks/TaskItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/DashboardView/TeamTasks/TaskItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/reports/DashboardView/TeamTasks/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/DashboardView/TeamTasks/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/reports/DashboardView/TodaysMoney.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/DashboardView/TodaysMoney.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/reports/DashboardView/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/DashboardView/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +86,12 @@
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/public/static" />
+    </key>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -88,7 +102,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1593141849639</updated>
-      <workItem from="1593141851313" duration="12691000" />
+      <workItem from="1593141851313" duration="17363000" />
     </task>
     <servers />
   </component>
@@ -120,9 +134,9 @@
     </state>
     <state x="341" y="164" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1593145725270" />
     <state x="683" y="168" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1593148534690" />
-    <state x="542" y="264" width="596" height="522" key="find.popup" timestamp="1593151410516">
+    <state x="542" y="264" width="596" height="522" key="find.popup" timestamp="1593188911930">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="542" y="264" width="596" height="522" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1593151410516" />
+    <state x="542" y="264" width="596" height="522" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1593188911930" />
   </component>
 </project>
