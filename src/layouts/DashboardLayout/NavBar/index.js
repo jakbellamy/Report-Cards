@@ -51,7 +51,7 @@ const navConfig = [
     items: [
       {
         title: 'Account Information',
-        href: '/app/dashboard/dashboard'
+        href: '/404'
       },
       {
         title: 'Overview',
@@ -59,9 +59,13 @@ const navConfig = [
         href: '/app/dashboard/dashboard'
       },
       {
-        title: 'Summaries',
+        title: 'Test Summaries',
         // icon: PieChartIcon,
         href: '/app/dashboard/summaries'
+      },
+      {
+        title: 'Live Summaries',
+        href: '/app/dashboard/summaries-live'
       }
     ]
   },
@@ -75,36 +79,36 @@ const navConfig = [
         items: [
           {
             title: 'Account Information',
-            href: '/app/management/customers'
+            href: '/404'
           },
           {
             title: 'Account Leads',
-            href: '/app/management/customers/1'
+            href: '/404'
           },
           {
             title: 'Account Reports',
-            href: '/app/management/customers/1/edit'
+            href: '/404'
           }
         ]
       },
       {
         title: 'Flat Files',
         // icon: FolderIcon,
-        href: '/app/management/orders',
+        href: '/404',
         items: [
           {
             title: 'Production Reports',
-            href: '/app/management/orders'
+            href: '/404'
           },
           {
             title: 'Continuing Education',
-            href: '/app/management/orders/1'
+            href: '/404'
           }
         ]
       },
       {
         title: 'Report Cards',
-        href: '/app/kanban',
+        href: '/404',
         // icon: TrelloIcon
       },
     ]
@@ -112,197 +116,28 @@ const navConfig = [
   {
     subheader: 'Data Entry',
     items: [
-      {
-        title: 'Market Share Report',
-        href: '/app/kanban',
-        // icon: TrelloIcon
-      },
-      {
-        title: 'Operation Cycle',
-        href: '/app/kanban',
-        // icon: TrelloIcon
-      },
-      {
-        title: 'Continuing Education',
-        href: '/app/kanban',
-        // icon: TrelloIcon
-      },
-      {
-        title: 'Personal & Professional Best',
-        href: '/app/kanban',
-        // icon: TrelloIcon
-      },
+      // {
+      //   title: 'Market Share Report',
+      //   href: '/app/kanban',
+      //   // icon: TrelloIcon
+      // },
+      // {
+      //   title: 'Operation Cycle',
+      //   href: '/app/kanban',
+      //   // icon: TrelloIcon
+      // },
+      // {
+      //   title: 'Continuing Education',
+      //   href: '/app/kanban',
+      //   // icon: TrelloIcon
+      // },
+      // {
+      //   title: 'Personal & Professional Best',
+      //   href: '/app/kanban',
+      //   // icon: TrelloIcon
+      // },
     ]
   },
-  // {
-  //   subheader: 'Applications',
-  //   items: [
-  //     {
-  //       title: 'Projects Platform',
-  //       href: '/app/projects',
-  //       // icon: BriefcaseIcon,
-  //       items: [
-  //         {
-  //           title: 'Overview',
-  //           href: '/app/projects/overview'
-  //         },
-  //         {
-  //           title: 'Browse Projects',
-  //           href: '/app/projects/browse'
-  //         },
-  //         {
-  //           title: 'Create Project',
-  //           href: '/app/projects/create'
-  //         },
-  //         {
-  //           title: 'View Project',
-  //           href: '/app/projects/1'
-  //         }
-  //       ]
-  //     },
-  //     {
-  //       title: 'Social Platform',
-  //       href: '/app/social',
-  //       // icon: ShareIcon,
-  //       items: [
-  //         {
-  //           title: 'Profile',
-  //           href: '/app/social/profile'
-  //         },
-  //         {
-  //           title: 'Feed',
-  //           href: '/app/social/feed'
-  //         }
-  //       ]
-  //     },
-  //     {
-  //       title: 'Kanban',
-  //       href: '/app/kanban',
-  //       // icon: TrelloIcon
-  //     },
-  //     {
-  //       title: 'Mail',
-  //       href: '/app/mail',
-  //       // icon: MailIcon,
-  //       info: () => (
-  //         <Chip
-  //           color="secondary"
-  //           size="small"
-  //           label="Updated"
-  //         />
-  //       )
-  //     },
-  //     {
-  //       title: 'Chat',
-  //       href: '/app/chat',
-  //       // icon: MessageCircleIcon,
-  //       info: () => (
-  //         <Chip
-  //           color="secondary"
-  //           size="small"
-  //           label="Updated"
-  //         />
-  //       )
-  //     },
-  //     {
-  //       title: 'Calendar',
-  //       href: '/app/calendar',
-  //       // icon: CalendarIcon
-  //     },
-  //   ]
-  // },
-  // {
-  //   subheader: 'Auth',
-  //   items: [
-  //     {
-  //       title: 'Login',
-  //       href: '/login-unprotected',
-  //       // icon: LockIcon
-  //     },
-  //     {
-  //       title: 'Register',
-  //       href: '/register-unprotected',
-  //       // icon: UserPlusIcon
-  //     },
-  //     {
-  //       title: 'Login: Guest Protected',
-  //       href: '/login',
-  //       // icon: ShieldIcon
-  //     },
-  //     {
-  //       title: 'Register: Guest Protected',
-  //       href: '/register',
-  //       // icon: ShieldIcon
-  //     }
-  //   ]
-  // },
-  // {
-  //   subheader: 'Pages',
-  //   href: '/app/pages',
-  //   items: [
-  //     {
-  //       title: 'Account',
-  //       href: '/app/account',
-  //       // icon: UserIcon
-  //     },
-  //     {
-  //       title: 'Error',
-  //       href: '/404',
-  //       // icon: AlertCircleIcon
-  //     },
-  //     {
-  //       title: 'Pricing',
-  //       href: '/pricing',
-  //       // icon: DollarSignIcon
-  //     }
-  //   ]
-  // },
-  // {
-  //   subheader: 'Extra',
-  //   items: [
-  //     {
-  //       title: 'Charts',
-  //       href: '/app/extra/charts',
-  //       // icon: BarChartIcon,
-  //       items: [
-  //         {
-  //           title: 'Apex Charts',
-  //           href: '/app/extra/charts/apex'
-  //         }
-  //       ]
-  //     },
-  //     {
-  //       title: 'Forms',
-  //       href: '/app/extra/forms',
-  //       // icon: EditIcon,
-  //       items: [
-  //         {
-  //           title: 'Formik',
-  //           href: '/app/extra/forms/formik'
-  //         },
-  //         {
-  //           title: 'Redux Forms',
-  //           href: '/app/extra/forms/redux'
-  //         },
-  //       ]
-  //     },
-  //     {
-  //       title: 'Editors',
-  //       href: '/app/extra/editors',
-  //       // icon: LayoutIcon,
-  //       items: [
-  //         {
-  //           title: 'DraftJS Editor',
-  //           href: '/app/extra/editors/draft-js'
-  //         },
-  //         {
-  //           title: 'Quill Editor',
-  //           href: '/app/extra/editors/quill'
-  //         }
-  //       ]
-  //     }
-  //   ]
-  // }
 ];
 
 function renderNavItems({ items, ...rest }) {

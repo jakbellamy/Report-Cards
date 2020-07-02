@@ -28,7 +28,7 @@ const db = {
 mock.onPost('/api/account/login').reply((config) => {
   const { email, password } = JSON.parse(config.data);
 
-  if (email !== 'jakbellamy' || password !== 'awaitFunction12') {
+  if (email !== 'jakbellamy@gmail.com' || password !== 'admin') {
     return [400, { message: 'Please check your email and password' }];
   }
 

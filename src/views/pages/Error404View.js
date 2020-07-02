@@ -45,27 +45,8 @@ function Error404View() {
           variant={mobileDevice ? 'h4' : 'h1'}
           color="textPrimary"
         >
-          404: The page you are looking for isn’t here
+          404: The page you are looking for isn’t here .. yet
         </Typography>
-        <Typography
-          align="center"
-          variant="subtitle2"
-          color="textSecondary"
-        >
-          You either tried some shady route or you
-          came here by mistake. Whichever it is, try using the navigation.
-        </Typography>
-        <Box
-          mt={6}
-          display="flex"
-          justifyContent="center"
-        >
-          <img
-            alt="Under development"
-            className={classes.image}
-            src="/static/images/undraw_page_not_found_su7k.svg"
-          />
-        </Box>
         <Box
           mt={6}
           display="flex"

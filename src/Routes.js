@@ -77,6 +77,11 @@ const routesConfig = [
       },
       {
         exact: true,
+        path: '/app/dashboard/summaries-live',
+        component: lazy(() => import('src/views/dashboard/Summes-Live'))
+      },
+      {
+        exact: true,
         path: '/app/dashboard',
         component: () => <Redirect to="/app/dashboard/dashboard" />
       },
@@ -322,7 +327,7 @@ const routesConfig = [
       {
         exact: true,
         path: '/home',
-        component: HomeView
+        component: () => <Redirect to='/app/dashboard/summaries' />
       },
       {
         exact: true,

@@ -1,21 +1,9 @@
-import React, {
-  useRef,
-  useState
-} from 'react';
+import React, { useRef, useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { useHistory } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
 import { useSnackbar } from 'notistack';
-import {
-  Avatar,
-  Box,
-  ButtonBase,
-  Hidden,
-  Menu,
-  MenuItem,
-  Typography,
-  makeStyles
-} from '@material-ui/core';
+import { Avatar, Box, ButtonBase, Hidden, Menu, MenuItem, Typography, makeStyles } from '@material-ui/core';
 import { logout } from 'src/actions/accountActions';
 
 const useStyles = makeStyles((theme) => ({
@@ -88,18 +76,6 @@ function Account() {
         anchorEl={ref.current}
         open={isOpen}
       >
-        <MenuItem
-          component={RouterLink}
-          to="/app/social/profile"
-        >
-          Profile
-        </MenuItem>
-        <MenuItem
-          component={RouterLink}
-          to="/app/account"
-        >
-          Account
-        </MenuItem>
         <MenuItem onClick={handleLogout}>
           Logout
         </MenuItem>
