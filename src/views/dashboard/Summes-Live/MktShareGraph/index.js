@@ -27,19 +27,8 @@ function FinancialStats(props, { className, ...rest }) {
   };
 
 
-  const labels = [
-    'Jan',
-    'Feb',
-    'Mar',
-    'Apr',
-    'May',
-    'Jun',
-    'Jul',
-    'Aug',
-    'Sep',
-    'Oct',
-    'Nov',
-    'Dec'
+  const labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May',
+    'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
   ];
 
   return (
@@ -47,18 +36,10 @@ function FinancialStats(props, { className, ...rest }) {
       className={clsx(classes.root, className)}
       {...rest}
     >
-      <CardHeader
-        action={<GenericMoreButton />}
-        title="Market Share Volume"
-      />
+      <CardHeader action={<GenericMoreButton />} title="Market Share Volume"/>
       <Divider />
       <PerfectScrollbar>
-        <Box
-          minWidth={700}
-          pt={4}
-          pr={2}
-          pl={2}
-        >
+        <Box minWidth={700} pt={4} pr={2} pl={2}>
           <Chart
             className={classes.chart}
             data={stats}

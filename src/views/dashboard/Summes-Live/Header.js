@@ -11,6 +11,7 @@ import {
   MenuItem,
   SvgIcon,
   Typography,
+  Select,
   makeStyles
 } from '@material-ui/core';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
@@ -28,9 +29,9 @@ function Header(props, {  ...rest }) {
   const actionRef = useRef(null);
   const [isMenuOpen, setMenuOpen] = useState(false);
 
-  const chooseAccount = (e) => {
-    props.setSelectedAccount(e)
-  }
+  // const chooseAccount = (e) => {
+  //   props.setSelectedAccount(e)
+  // }
 
   return (
     <Grid
