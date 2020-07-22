@@ -11,6 +11,8 @@ import {
   MenuItem,
   SvgIcon,
   Typography,
+  InputLabel,
+  FormControl,
   Select,
   makeStyles
 } from '@material-ui/core';
@@ -29,10 +31,11 @@ function Header(props, {  ...rest }) {
   const actionRef = useRef(null);
   const [isMenuOpen, setMenuOpen] = useState(false);
 
-  // const chooseAccount = (e) => {
-  //   props.setSelectedAccount(e)
-  // }
-
+  const handleChange = (e) => {
+    let account = e.target.value
+    props.setSelectedAccount(account)
+  }
+  console.log(props.accounts)
   return (
     <Grid
       // className={clsx(classes.root, className)}
@@ -65,40 +68,25 @@ function Header(props, {  ...rest }) {
           variant="h3"
           color="textPrimary"
         >
-          BHG - 1st Florida
+          {props.selectedAccount}
         </Typography>
       </Grid>
       <Grid item>
-        <Button
-          ref={actionRef}
-          onClick={() => setMenuOpen(true)}
-        >
-          {props.selectedAccount.name}
-        </Button>
-        <Menu
-          anchorEl={actionRef.current}
-          onClose={() => setMenuOpen(false)}
-          open={isMenuOpen}
-          // PaperProps={{ className: classes.menu }}
-          getContentAnchorEl={null}
-          anchorOrigin={{
-            vertical: 'bottom',
-            horizontal: 'center'
-          }}
-          transformOrigin={{
-            vertical: 'top',
-            horizontal: 'center'
-          }}
-        >
-          {props.accounts.map((t) => (
-            <MenuItem
-              key={t.id}
-              onClick={() => props.setSelectedAccount(t)}
-            >
-              {t.name}
-            </MenuItem>
-          ))}
-        </Menu>
+        <FormControl>
+          <InputLabel>Account</InputLabel>
+          <Select
+            value={props.selectedAccount}
+            onChange={handleChange}
+          >
+            {props.accounts.map((t) => (
+              <MenuItem
+                value={t}
+              >
+                {t.name}
+              </MenuItem>
+            ))}
+          </Select>
+        </FormControl>
       </Grid>
     </Grid>
   );

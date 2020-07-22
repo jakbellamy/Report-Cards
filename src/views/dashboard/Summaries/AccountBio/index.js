@@ -11,6 +11,7 @@ import {
   CardHeader,
   Divider,
   Typography,
+  Grid,
   makeStyles
 } from '@material-ui/core';
 import GenericMoreButton from 'src/components/GenericMoreButton';
@@ -71,7 +72,38 @@ function EarningsSegmentation({ className, ...rest }) {
         position="relative"
         minHeight={320}
       >
-        {/*<Chart data={earnings} />*/}
+        <Grid container spacing={3}>
+          <Grid item xs={9}>
+            <Typography variant="h3" color="textPrimary">
+              BHG First Florida
+            </Typography>
+          </Grid>
+        </Grid >
+        <Grid container>
+          <Grid item xs={4}>
+            <Typography variant="h6" color="textPrimary">
+              Manager
+            </Typography>
+          </Grid>
+          <Grid item xs={8}>
+            <Typography variant="h6" color="textPrimary">
+              Bob Willis
+            </Typography>
+          </Grid>
+        </Grid >
+
+        <Grid container spacing="flex">
+          <Grid item xs={4}>
+            <Typography variant="h6" color="textPrimary">
+              Manager
+            </Typography>
+          </Grid>
+          <Grid item xs={8}>
+            <Typography variant="h6" color="textPrimary">
+              Bob Willis
+            </Typography>
+          </Grid>
+        </Grid >
       </Box>
       <Divider />
       <Box display="flex">
@@ -80,19 +112,19 @@ function EarningsSegmentation({ className, ...rest }) {
             key={label}
             className={classes.item}
           >
-            {/*<Typography*/}
-            {/*  variant="h4"*/}
-            {/*  color="textPrimary"*/}
-            {/*>*/}
-            {/*  {earnings.datasets[0].data[i]}*/}
-            {/*  %*/}
-            {/*</Typography>*/}
-            {/*<Typography*/}
-            {/*  variant="overline"*/}
-            {/*  color="textSecondary"*/}
-            {/*>*/}
-            {/*  {label}*/}
-            {/*</Typography>*/}
+            <Typography
+              variant="h4"
+              color="textPrimary"
+            >
+              {earnings.datasets[0].data[i]}
+              %
+            </Typography>
+            <Typography
+              variant="overline"
+              color="textSecondary"
+            >
+              {label}
+            </Typography>
           </div>
         ))}
       </Box>

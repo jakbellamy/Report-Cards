@@ -21,16 +21,13 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
+
 function DashboardAlternativeView() {
   const [accounts, setAccounts] = useState([])
   const [marketReports, setMarketReports] = useState([])
-  const [selectedAccount, setSelectedAccount] = useState({'name': 'Choose Account'})
+  const [selectedAccount, setSelectedAccount] = useState('')
   const [selectedReports, setSelectedReports] = useState([])
   const classes = useStyles();
-
-  useEffect(() => {
-    fetchData()
-  }, []);
 
   const fetchData = async () => {
     await fetch('http://127.0.0.1:8000/api/accounts/')
@@ -42,6 +39,11 @@ function DashboardAlternativeView() {
       .then(res => setMarketReports(res))
   }
 
+  useEffect(() => {
+    fetchData()
+  }, []);
+
+
   const coerceReports = (account) => {
     return marketReports.filter(report => {
       report.account = account.id
@@ -49,15 +51,15 @@ function DashboardAlternativeView() {
   }
 
   const handleAccountSelection = (account) => {
-    setSelectedAccount(account)
-    setSelectedReports(coerceReports(account))
+    setSelectedAccount(account.name)
+    // setSelectedReports(coerceReports(account))
   }
   console.log(selectedAccount)
-  console.log(selectedReports)
+  // console.log(selectedReports)
   return (
     <Page className={classes.root} title="Dashboard Alternative">
       <Container maxWidth={false} className={classes.container}>
-        <Header accounts={accounts} selectedAccount={selectedAccount} setSelectedAccount={handleAccountSelection()} />
+        <Header accounts={accounts} selectedAccount={selectedAccount} setSelectedAccount={handleAccountSelection} />
         <Grid container spacing={3}>
           <Grid item xs={12}>
             <Overview />
