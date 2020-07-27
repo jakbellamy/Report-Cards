@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Container, Grid, makeStyles } from '@material-ui/core';
 import Page from 'src/components/Page';
 import AccountBio from './AccountBio';
-import FinancialStats from './MktShareGraph';
+import CompareLineChart from './CompareLineChart';
 import Header from './Header';
 import Overview from './Overview';
 
@@ -29,6 +29,20 @@ const getYear = (report) => {
 const getMonth = (report) => {
   let date = report['date']
   return Number(date.split('-')[1])
+}
+
+const getReportAttr = (reports, attr) => {
+  if(reports.ly === undefined){
+    return [{ly: [], y: []}]
+  } else {
+    let ly = reports.ly.map(report => {
+      return report[attr]
+    })
+    let y = reports.y.map(report => {
+      return report[attr]
+    })
+    return {y: y, ly: ly}
+  }
 }
 
 function DashboardAlternativeView() {
@@ -60,11 +74,11 @@ function DashboardAlternativeView() {
     let reports = marketReports.filter(report => report.account === account.id)
 
     let ly = reports.filter(report => {
-      return getYear(report) === now - 1
+      return getYear(report) === now //This should be changed to now - 1 once i fix the DB dates
     })
 
     let y = reports.filter(report => {
-      return getYear(report) === now
+      return getYear(report) === now + 1 //This should be changed to now once i fix the DB dates
     })
 
     return {y: y, ly: ly}
@@ -74,7 +88,6 @@ function DashboardAlternativeView() {
     setSelectedAccount(account)
     setSelectedReports(coerceReports(account))
   }
-
 
   console.log(selectedReports)
   return (
@@ -86,19 +99,22 @@ function DashboardAlternativeView() {
             <Overview />
           </Grid>
           <Grid item lg={8} xl={9} xs={12}>
-            <FinancialStats selectedAccount={selectedAccount}/>
+            <CompareLineChart selectedAccount={selectedAccount} reports={getReportAttr(selectedReports, 'market_share_volume')}/>
           </Grid>
           <Grid item lg={4} xl={3} xs={12}>
             <AccountBio />
           </Grid>
           <Grid item lg={8} xs={12}>
             {/*<LatestOrders />*/}
+            {/*<FinancialStats selectedAccount={selectedAccount}/>*/}
           </Grid>
           <Grid item lg={4} xs={12}>
             {/*<CustomerActivity />*/}
+            {/*<FinancialStats selectedAccount={selectedAccount}/>*/}
           </Grid>
           <Grid item lg={8} xs={12}>
             {/*<MostProfitableProducts />*/}
+            {/*<FinancialStats selectedAccount={selectedAccount}/>*/}
           </Grid>
           <Grid item lg={4} xs={12}>
             {/*<TopReferrals />*/}

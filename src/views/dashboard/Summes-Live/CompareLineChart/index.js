@@ -19,7 +19,7 @@ const useStyles = makeStyles(() => ({
   }
 }));
 
-function FinancialStats(props, { className, ...rest }) {
+function CompareLineChart(props, { className, ...rest }) {
   const classes = useStyles();
   const stats = {
     thisYear: [25, 27, 36, 34, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -31,6 +31,7 @@ function FinancialStats(props, { className, ...rest }) {
     'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
   ];
 
+  console.log(props.reports)
   return (
     <Card
       className={clsx(classes.root, className)}
@@ -51,8 +52,8 @@ function FinancialStats(props, { className, ...rest }) {
   );
 }
 
-FinancialStats.propTypes = {
+CompareLineChart.propTypes = {
   className: PropTypes.string
 };
 
-export default FinancialStats;
+export default CompareLineChart;
