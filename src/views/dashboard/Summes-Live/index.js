@@ -45,6 +45,19 @@ const getReportAttr = (reports, attr) => {
   }
 }
 
+const getReportPercent = (reports, attr) => {
+  if(reports.ly === undefined){
+    return [{ly: [], y: []}]
+  } else {
+    let ly = reports.ly.map(report => {
+      return Math.round(report[attr] * 100)
+    })
+    let y = reports.y.map(report => {
+      return Math.round(report[attr] * 100)
+    })
+    return {y: y, ly: ly}
+  }
+}
 function DashboardAlternativeView() {
   const [accounts, setAccounts] = useState([])
   const [marketReports, setMarketReports] = useState([])
@@ -99,7 +112,7 @@ function DashboardAlternativeView() {
             <Overview />
           </Grid>
           <Grid item lg={8} xl={9} xs={12}>
-            <CompareLineChart selectedAccount={selectedAccount} reports={getReportAttr(selectedReports, 'market_share_volume')}/>
+            <CompareLineChart selectedAccount={selectedAccount} reports={getReportPercent(selectedReports, 'market_share_volume')}/>
           </Grid>
           <Grid item lg={4} xl={3} xs={12}>
             <AccountBio />

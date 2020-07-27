@@ -27,9 +27,7 @@ function CompareLineChart(props, { className, ...rest }) {
   };
 
 
-  const labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May',
-    'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
-  ];
+  const labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
   console.log(props.reports)
   return (
