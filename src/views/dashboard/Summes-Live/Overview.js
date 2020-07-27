@@ -38,10 +38,10 @@ const useStyles = makeStyles((theme) => ({
 function Overview(props, { className, ...rest }) {
   const classes = useStyles();
   const overview = {
-    officeVol: 12877700,
-    supremeVol: 4457800,
-    officeUnits: 37,
-    supremeUnits: 16
+    officeVol: props.report.office_volume,
+    supremeVol: props.report.supreme_volume,
+    officeUnits: props.report.office_units,
+    supremeUnits: props.report.supreme_units
   };
   const ly = {
     officeVol: 25587090,

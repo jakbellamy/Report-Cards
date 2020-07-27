@@ -71,37 +71,45 @@ const getReportPercent = (reports, attr) => {
 }
 
 const accuYtd = (yearArr, current=false) => {
-  yearArr = yearArr.sort(function (a, b) {
-    return strToDate(a.date) - strToDate(b.date);
-  })
+  if(yearArr === undefined){
+    if(current){
+      return {office_volume: 0, supreme_volume: 0, office_units: 0, supreme_units: 0}
+    } else {
+      return []
+    }
+  } else {
+    yearArr = yearArr.sort(function (a, b) {
+      return strToDate(a.date) - strToDate(b.date);
+    })
 
-  let ytd = []
-  let acc = {office_volume: 0, supreme_volume: 0, office_units: 0, supreme_units: 0}
+    let ytd = []
+    let acc = {office_volume: 0, supreme_volume: 0, office_units: 0, supreme_units: 0}
 
-  for (var i = 0; i < yearArr.length; i++) {
-    let month = yearArr[i]
+    for (var i = 0; i < yearArr.length; i++) {
+      let month = yearArr[i]
 
-    acc.office_volume += month.office_volume
-    acc.supreme_volume += month.supreme_volume
-    acc.office_units += month.office_units
-    acc.supreme_units += month.supreme_units
+      acc.office_volume += month.office_volume
+      acc.supreme_volume += month.supreme_volume
+      acc.office_units += month.office_units
+      acc.supreme_units += month.supreme_units
 
-    let month_ytd = {
-      date: month.date,
-      account: month.account,
-      office_volume: acc.office_volume,
-      supreme_volume: acc.supreme_volume,
-      office_units: acc.office_units,
-      supreme_units: acc.supreme_units
+      let month_ytd = {
+        date: month.date,
+        account: month.account,
+        office_volume: acc.office_volume,
+        supreme_volume: acc.supreme_volume,
+        office_units: acc.office_units,
+        supreme_units: acc.supreme_units
+      }
+
+      ytd.push(month_ytd)
     }
 
-    ytd.push(month_ytd)
-  }
-
-  if(current){
-    return ytd.reverse()[0]
-  } else {
-    return ytd.reverse()
+    if(current){
+      return ytd.reverse()[0]
+    } else {
+      return ytd.reverse()
+    }
   }
 }
 
@@ -109,7 +117,7 @@ function DashboardAlternativeView() {
   const [accounts, setAccounts] = useState([])
   const [marketReports, setMarketReports] = useState([])
   const [selectedAccount, setSelectedAccount] = useState({name: '', id: -1})
-  const [selectedReports, setSelectedReports] = useState([{current: [], ly: [], y: []}])
+  const [selectedReports, setSelectedReports] = useState([{current: []}])
   const classes = useStyles();
 
   const fetchData = async () => {
@@ -158,7 +166,7 @@ function DashboardAlternativeView() {
         <Header accounts={accounts} selectedAccount={selectedAccount} setSelectedAccount={handleAccountSelection}/>
         <Grid container spacing={3}>
           <Grid item xs={12}>
-            <Overview reports={accuYtd(selectedReports.ytd)}/>
+            <Overview report={accuYtd(selectedReports.ly, true)}/>
           </Grid>
           <Grid item lg={8} xl={9} xs={12}>
             <CompareLineChart selectedAccount={selectedAccount} reports={getReportPercent(selectedReports, 'market_share_volume')}/>
