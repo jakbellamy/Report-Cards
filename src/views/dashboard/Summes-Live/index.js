@@ -57,14 +57,14 @@ function DashboardAlternativeView() {
     let now = new Date()
     now = now.getFullYear()
 
-    let reports = marketReports.filter(report => report.account == selectedAccount.id)
+    let reports = marketReports.filter(report => report.account === account.id)
 
     let ly = reports.filter(report => {
-      return getYear(report) == now - 1
+      return getYear(report) === now - 1
     })
 
     let y = reports.filter(report => {
-      return getYear(report) == now
+      return getYear(report) === now
     })
 
     return {y: y, ly: ly}
