@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-function Overview({ className, ...rest }) {
+function Overview(props, { className, ...rest }) {
   const classes = useStyles();
   const overview = {
     officeVol: 12877700,
@@ -55,6 +55,8 @@ function Overview({ className, ...rest }) {
   const insertCommas = (num) => {
     return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
+
+  console.log(props.report)
   return (
     <Card
       className={clsx(classes.root, className)}
