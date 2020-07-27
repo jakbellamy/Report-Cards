@@ -1,19 +1,7 @@
-import React, {
-  useState,
-  useEffect,
-  useCallback
-} from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import {
-  Box,
-  Card,
-  CardHeader,
-  Divider,
-  Typography,
-  Grid,
-  makeStyles
-} from '@material-ui/core';
+import { Box, Card, CardHeader, Divider, Typography, Grid, makeStyles } from '@material-ui/core';
 import GenericMoreButton from 'src/components/GenericMoreButton';
 import axios from 'src/utils/axios';
 import useIsMountedRef from 'src/hooks/useIsMountedRef';
@@ -37,25 +25,25 @@ const useStyles = makeStyles((theme) => ({
 function EarningsSegmentation({ className, ...rest }) {
   const classes = useStyles();
   const isMountedRef = useIsMountedRef();
-  const [earnings, setEarnings] = useState(null);
-
-  const getEarnings = useCallback(() => {
-    axios
-      .get('/api/dashboard/earnings')
-      .then((response) => {
-        if (isMountedRef.current) {
-          setEarnings(response.data.earnings);
-        }
-      });
-  }, [isMountedRef]);
-
-  useEffect(() => {
-    getEarnings();
-  }, [getEarnings]);
-
-  if (!earnings) {
-    return null;
-  }
+  // const [earnings, setEarnings] = useState(null);
+  //
+  // const getEarnings = useCallback(() => {
+  //   axios
+  //     .get('/api/dashboard/earnings')
+  //     .then((response) => {
+  //       if (isMountedRef.current) {
+  //         setEarnings(response.data.earnings);
+  //       }
+  //     });
+  // }, [isMountedRef]);
+  //
+  // useEffect(() => {
+  //   getEarnings();
+  // }, [getEarnings]);
+  //
+  // if (!earnings) {
+  //   return null;
+  // }
 
   return (
     <Card
@@ -79,13 +67,19 @@ function EarningsSegmentation({ className, ...rest }) {
             </Typography>
           </Grid>
         </Grid >
+        <Typography variant="h6" color="textPrimary">
+          777 S. Federal Hwy, Ft. Lauderdale, FL 33316
+        </Typography>
+        <Typography variant="h6" color="textPrimary">
+          _
+        </Typography>
         <Grid container>
-          <Grid item xs={4}>
+          <Grid item xs={7}>
             <Typography variant="h6" color="textPrimary">
               Manager
             </Typography>
           </Grid>
-          <Grid item xs={8}>
+          <Grid item xs={5}>
             <Typography variant="h6" color="textPrimary">
               Bob Willis
             </Typography>
@@ -93,40 +87,97 @@ function EarningsSegmentation({ className, ...rest }) {
         </Grid >
 
         <Grid container spacing="flex">
-          <Grid item xs={4}>
+          <Grid item xs={7}>
             <Typography variant="h6" color="textPrimary">
-              Manager
+              OP
             </Typography>
           </Grid>
-          <Grid item xs={8}>
+          <Grid item xs={5}>
             <Typography variant="h6" color="textPrimary">
-              Bob Willis
+              Gene Whiddon
             </Typography>
           </Grid>
         </Grid >
+
+        <Grid container spacing="flex">
+          <Grid item xs={7}>
+            <Typography variant="h6" color="textPrimary">
+              Monthly Investment
+            </Typography>
+          </Grid>
+          <Grid item xs={5}>
+            <Typography variant="h6" color="textPrimary">
+              $5,280
+            </Typography>
+          </Grid>
+        </Grid >
+
+        <Grid container spacing="flex">
+          <Grid item xs={7}>
+            <Typography variant="h6" color="textPrimary">
+              Min Customers/Month
+            </Typography>
+          </Grid>
+          <Grid item xs={5}>
+            <Typography variant="h6" color="textPrimary">
+              132
+            </Typography>
+          </Grid>
+        </Grid >
+
+        <Grid container spacing="flex">
+          <Grid item xs={7}>
+            <Typography variant="h6" color="textPrimary">
+              Office Lease
+            </Typography>
+          </Grid>
+          <Grid item xs={5}>
+            <Typography variant="h6" color="textPrimary">
+              $2,550
+            </Typography>
+          </Grid>
+        </Grid >
+
+        <Grid container spacing="flex">
+          <Grid item xs={7}>
+            <Typography variant="h6" color="textPrimary">
+              Monthly Expense
+            </Typography>
+          </Grid>
+          <Grid item xs={5}>
+            <Typography variant="h6" color="textPrimary">
+              $7,830
+            </Typography>
+          </Grid>
+        </Grid >
+
       </Box>
       <Divider />
       <Box display="flex">
-        {earnings.labels.map((label, i) => (
-          <div
-            key={label}
-            className={classes.item}
-          >
-            <Typography
-              variant="h4"
-              color="textPrimary"
-            >
-              {earnings.datasets[0].data[i]}
-              %
+
+          <div className={classes.item}>
+            <Typography variant="h4" color="textPrimary">
+              31.5%
             </Typography>
             <Typography
               variant="overline"
               color="textSecondary"
             >
-              {label}
+              YTD Market Volume
             </Typography>
           </div>
-        ))}
+
+        <div className={classes.item}>
+          <Typography variant="h4" color="textPrimary">
+            43.5%
+          </Typography>
+          <Typography
+            variant="overline"
+            color="textSecondary"
+          >
+            YTD Market Units
+          </Typography>
+        </div>
       </Box>
     </Card>
   );

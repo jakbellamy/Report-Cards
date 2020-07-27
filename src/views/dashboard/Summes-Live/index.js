@@ -21,11 +21,20 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
+const getYear = (report) => {
+  let date = report['date']
+  return Number(date.split('-')[0])
+}
+
+const getMonth = (report) => {
+  let date = report['date']
+  return Number(date.split('-')[1])
+}
 
 function DashboardAlternativeView() {
   const [accounts, setAccounts] = useState([])
   const [marketReports, setMarketReports] = useState([])
-  const [selectedAccount, setSelectedAccount] = useState('')
+  const [selectedAccount, setSelectedAccount] = useState({name: '', id: -1})
   const [selectedReports, setSelectedReports] = useState([])
   const classes = useStyles();
 
@@ -45,17 +54,29 @@ function DashboardAlternativeView() {
 
 
   const coerceReports = (account) => {
-    return marketReports.filter(report => {
-      report.account = account.id
+    let now = new Date()
+    now = now.getFullYear()
+
+    let reports = marketReports.filter(report => report.account == selectedAccount.id)
+
+    let ly = reports.filter(report => {
+      return getYear(report) == now - 1
     })
+
+    let y = reports.filter(report => {
+      return getYear(report) == now
+    })
+
+    return {y: y, ly: ly}
   }
 
   const handleAccountSelection = (account) => {
-    setSelectedAccount(account.name)
-    // setSelectedReports(coerceReports(account))
+    setSelectedAccount(account)
+    setSelectedReports(coerceReports(account))
   }
-  console.log(selectedAccount)
-  // console.log(selectedReports)
+
+
+  console.log(selectedReports)
   return (
     <Page className={classes.root} title="Dashboard Alternative">
       <Container maxWidth={false} className={classes.container}>
