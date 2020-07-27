@@ -22,7 +22,7 @@ const useStyles = makeStyles(() => ({
 function CompareLineChart(props, { className, ...rest }) {
   const classes = useStyles();
   const stats = {
-    thisYear: [25, 27, 36, 34, 0, 0, 0, 0, 0, 0, 0, 0],
+    thisYear: [],
     lastYear: props.reports.ly
   };
 

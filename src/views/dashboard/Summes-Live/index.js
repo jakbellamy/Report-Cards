@@ -31,6 +31,17 @@ const getMonth = (report) => {
   return Number(date.split('-')[1])
 }
 
+const strToDate = (date) => {
+  return Number(date.split('-').join(''))
+};
+
+const getCurrentReport = (reports) => {
+  let sorted = reports.sort(function (a, b) {
+    return strToDate(b.date) - strToDate(a.date);
+  })
+  return sorted[0]
+}
+
 const getReportAttr = (reports, attr) => {
   if(reports.ly === undefined){
     return [{ly: [], y: []}]
@@ -94,7 +105,9 @@ function DashboardAlternativeView() {
       return getYear(report) === now + 1 //This should be changed to now once i fix the DB dates
     })
 
-    return {y: y, ly: ly}
+    let current = getCurrentReport(reports)
+
+    return {y: y, ly: ly, current: current}
   }
 
   const handleAccountSelection = (account) => {
@@ -102,7 +115,7 @@ function DashboardAlternativeView() {
     setSelectedReports(coerceReports(account))
   }
 
-  console.log(selectedReports)
+  console.log(selectedReports.current)
   return (
     <Page className={classes.root} title="Dashboard Alternative">
       <Container maxWidth={false} className={classes.container}>
