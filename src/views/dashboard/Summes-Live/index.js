@@ -99,7 +99,9 @@ const accuYtd = (yearArr, current=false) => {
         office_volume: acc.office_volume,
         supreme_volume: acc.supreme_volume,
         office_units: acc.office_units,
-        supreme_units: acc.supreme_units
+        supreme_units: acc.supreme_units,
+        market_share_volume: acc.supreme_volume / acc.office_volume,
+        market_share_units: acc.supreme_units / acc.office_volume
       }
 
       ytd.push(month_ytd)
