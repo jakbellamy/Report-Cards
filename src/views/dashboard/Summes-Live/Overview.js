@@ -44,13 +44,13 @@ function Overview(props, { className, ...rest }) {
     supremeUnits: props.report.supreme_units
   };
   const ly = {
-    officeVol: 25587090,
-    supremeVol: 4308800,
-    officeUnits: 64,
-    supremeUnits: 14
+    officeVol: props.report.office_volume,
+    supremeVol: props.report.supreme_volume,
+    officeUnits: props.report.office_units,
+    supremeUnits: props.report.supreme_units
   }
   const calcChange = (name, fixed=2) => {
-    return ((((ly[name] - overview[name]) / overview[name]) * 100) - 100).toFixed(fixed)
+    return (((ly[name] - overview[name]) / overview[name]) * 100).toFixed(fixed)
   }
   const insertCommas = (num) => {
     return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");

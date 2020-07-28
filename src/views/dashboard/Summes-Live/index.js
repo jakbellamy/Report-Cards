@@ -142,11 +142,11 @@ function DashboardAlternativeView() {
     let reports = marketReports.filter(report => report.account === account.id)
 
     let ly = reports.filter(report => {
-      return getYear(report) === now //This should be changed to now - 1 once i fix the DB dates
+      return getYear(report) === now - 1
     })
 
     let y = reports.filter(report => {
-      return getYear(report) === now + 1 //This should be changed to now once i fix the DB dates
+      return getYear(report) === now
     })
 
     let current = getCurrentReport(reports)
