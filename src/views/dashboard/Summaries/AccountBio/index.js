@@ -22,28 +22,10 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-function EarningsSegmentation({ className, ...rest }) {
+function EarningsSegmentation(props, { className, ...rest }) {
   const classes = useStyles();
   const isMountedRef = useIsMountedRef();
-  // const [earnings, setEarnings] = useState(null);
-  //
-  // const getEarnings = useCallback(() => {
-  //   axios
-  //     .get('/api/dashboard/earnings')
-  //     .then((response) => {
-  //       if (isMountedRef.current) {
-  //         setEarnings(response.data.earnings);
-  //       }
-  //     });
-  // }, [isMountedRef]);
-  //
-  // useEffect(() => {
-  //   getEarnings();
-  // }, [getEarnings]);
-  //
-  // if (!earnings) {
-  //   return null;
-  // }
+
 
   return (
     <Card

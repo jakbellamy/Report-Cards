@@ -5,6 +5,9 @@ import AccountBio from './AccountBio';
 import CompareLineChart from './CompareLineChart';
 import Header from './Header';
 import Overview from './Overview';
+import CeEvents from './ceEvents'
+import PpbEvents from './ppbEvents'
+import Upcoming from './upcoming'
 const methods = require('./methods')
 
 const useStyles = makeStyles((theme) => ({
@@ -95,15 +98,16 @@ function DashboardAlternativeView() {
             <CompareLineChart selectedAccount={selectedAccount} reports={methods.getReportPercent(selectedReports.ytd, 'market_share_volume')}/>
           </Grid>
           <Grid item lg={4} xl={3} xs={12}>
-            <AccountBio />
-          </Grid>
-          <Grid item lg={8} xs={12}>
-            {/*<LatestOrders />*/}
-            {/*<FinancialStats selectedAccount={selectedAccount}/>*/}
+            <AccountBio account={selectedAccount} report={selectedReports.current}/>
           </Grid>
           <Grid item lg={4} xs={12}>
-            {/*<CustomerActivity />*/}
-            {/*<FinancialStats selectedAccount={selectedAccount}/>*/}
+            <CeEvents account={selectedAccount} report={selectedReports.current}/>
+          </Grid>
+          <Grid item lg={4} xs={12}>
+            <PpbEvents account={selectedAccount} report={selectedReports.current}/>
+          </Grid>
+          <Grid item lg={4} xs={12}>
+            <Upcoming account={selectedAccount} report={selectedReports.current}/>
           </Grid>
           <Grid item lg={8} xs={12}>
             {/*<MostProfitableProducts />*/}
