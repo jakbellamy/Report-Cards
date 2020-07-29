@@ -57,7 +57,7 @@ const getReportAttr = (reports, attr) => {
 }
 
 const getReportPercent = (reports, attr) => {
-  if(reports.ly === undefined){
+  if(reports === undefined){
     return [{ly: [], y: []}]
   } else {
     let ly = reports.ly.map(report => {
@@ -89,7 +89,7 @@ const accuYtd = (yearArr, current=false) => {
       let month = yearArr[i]
 
       acc.office_volume += month.office_volume
-      acc.supreme_volume += month.supreme_volume
+      acc.supreme_volume += month.supreme_volumes
       acc.office_units += month.office_units
       acc.supreme_units += month.supreme_units
 
@@ -103,7 +103,6 @@ const accuYtd = (yearArr, current=false) => {
         market_share_volume: acc.supreme_volume / acc.office_volume,
         market_share_units: acc.supreme_units / acc.office_volume
       }
-
       ytd.push(month_ytd)
     }
 
@@ -119,7 +118,7 @@ function DashboardAlternativeView() {
   const [accounts, setAccounts] = useState([])
   const [marketReports, setMarketReports] = useState([])
   const [selectedAccount, setSelectedAccount] = useState({name: '', id: -1})
-  const [selectedReports, setSelectedReports] = useState([{current: []}])
+  const [selectedReports, setSelectedReports] = useState([{current: [], raw:{ly: [], y: []}, ytd:{ly: [], y:[]}}])
   const classes = useStyles();
 
   const fetchData = async () => {
@@ -151,17 +150,25 @@ function DashboardAlternativeView() {
       return getYear(report) === now
     })
 
-    let current = getCurrentReport(reports)
+    return {y: y, ly: ly}
+  }
 
-    return {y: y, ly: ly, current: current}
+  const buildData = (reports) => {
+    let raw = coerceReports(reports)
+    let ytd = {
+      ly: accuYtd(raw.ly),
+      y: accuYtd(raw.y)
+    }
+    let current = getCurrentReport(ytd.ly)
+    return {raw: raw, ytd: ytd, current: current}
   }
 
   const handleAccountSelection = (account) => {
     setSelectedAccount(account)
-    setSelectedReports(coerceReports(account))
+    setSelectedReports(buildData(account))
   }
 
-  console.log(selectedReports.current)
+  console.log(selectedReports)
   return (
     <Page className={classes.root} title="Dashboard Alternative">
       <Container maxWidth={false} className={classes.container}>
@@ -171,7 +178,7 @@ function DashboardAlternativeView() {
             <Overview report={accuYtd(selectedReports.ly, true)}/>
           </Grid>
           <Grid item lg={8} xl={9} xs={12}>
-            <CompareLineChart selectedAccount={selectedAccount} reports={getReportPercent(selectedReports, 'market_share_volume')}/>
+            <CompareLineChart selectedAccount={selectedAccount} reports={getReportPercent(selectedReports.ytd, 'market_share_volume')}/>
           </Grid>
           <Grid item lg={4} xl={3} xs={12}>
             <AccountBio />

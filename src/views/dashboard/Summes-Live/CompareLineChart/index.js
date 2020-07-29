@@ -29,6 +29,7 @@ function CompareLineChart(props, { className, ...rest }) {
 
   const labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
+  console.log('hit', props.reports)
   return (
     <Card
       className={clsx(classes.root, className)}
