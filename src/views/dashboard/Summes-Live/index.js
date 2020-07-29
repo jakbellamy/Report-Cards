@@ -20,20 +20,26 @@ const useStyles = makeStyles((theme) => ({
       paddingRight: 64
     }
   }
-}));
+}))
+
+let shell = {
+  office_volume: 0,
+  supreme_volume: 0,
+  office_units: 0,
+  supreme_units: 0
+}
 
 function DashboardAlternativeView() {
   const [accounts, setAccounts] = useState([])
   const [marketReports, setMarketReports] = useState([])
   const [selectedAccount, setSelectedAccount] = useState({name: '', id: -1})
-  const [selectedReports, setSelectedReports] = useState([{current: [], raw:{ly: [], y: []}, ytd:{ly: [], y:[]}}])
+  const [selectedReports, setSelectedReports] = useState([{current: shell, raw:{ly: [], y: []}, ytd:{ly: [], y:[]}}])
   const classes = useStyles();
 
   const fetchData = async () => {
     await fetch('http://127.0.0.1:8000/api/accounts/')
       .then(res => res.json())
       .then(res => setAccounts(res))
-      .then(() => console.log('hit'))
     await fetch("http://127.0.0.1:8000/api/market-share-reports/")
       .then(res => res.json())
       .then(res => setMarketReports(res))
@@ -76,14 +82,14 @@ function DashboardAlternativeView() {
     setSelectedReports(buildData(account))
   }
 
-  console.log(selectedReports)
+  console.log('current', selectedReports.current)
   return (
     <Page className={classes.root} title="Dashboard Alternative">
       <Container maxWidth={false} className={classes.container}>
         <Header accounts={accounts} selectedAccount={selectedAccount} setSelectedAccount={handleAccountSelection}/>
         <Grid container spacing={3}>
           <Grid item xs={12}>
-            <Overview report={methods.accuYtd(selectedReports.ly, true)}/>
+            <Overview report={selectedReports.current}/>
           </Grid>
           <Grid item lg={8} xl={9} xs={12}>
             <CompareLineChart selectedAccount={selectedAccount} reports={methods.getReportPercent(selectedReports.ytd, 'market_share_volume')}/>

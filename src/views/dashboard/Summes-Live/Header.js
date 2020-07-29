@@ -22,7 +22,7 @@ function Header(props, {  ...rest }) {
     let account = e.target.value
     props.setSelectedAccount(account)
   }
-  console.log(props.report)
+  // console.log(props.report)
   return (
     <Grid container justify="space-between" spacing={3}{...rest}>
       <Grid item>

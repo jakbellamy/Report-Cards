@@ -59,11 +59,11 @@ exports.accuYtd = (yearArr, current=false) => {
     let ytd = []
     let acc = {office_volume: 0, supreme_volume: 0, office_units: 0, supreme_units: 0}
 
-    for (var i = 0; i < yearArr.length; i++) {
+    for (let i = 0; i < yearArr.length; i++) {
       let month = yearArr[i]
 
       acc.office_volume += month.office_volume
-      acc.supreme_volume += month.supreme_volumes
+      acc.supreme_volume += month.supreme_volume
       acc.office_units += month.office_units
       acc.supreme_units += month.supreme_units
 
@@ -77,6 +77,7 @@ exports.accuYtd = (yearArr, current=false) => {
         market_share_volume: acc.supreme_volume / acc.office_volume,
         market_share_units: acc.supreme_units / acc.office_volume
       }
+      console.log(month_ytd)
       ytd.push(month_ytd)
     }
 

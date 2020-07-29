@@ -38,16 +38,16 @@ const useStyles = makeStyles((theme) => ({
 function Overview(props, { className, ...rest }) {
   const classes = useStyles();
   const overview = {
-    officeVol: props.report.office_volume,
-    supremeVol: props.report.supreme_volume,
-    officeUnits: props.report.office_units,
-    supremeUnits: props.report.supreme_units
+    officeVol: props.report ? props.report.office_volume : 0,
+    supremeVol: props.report ? props.report.supreme_volume : 0,
+    officeUnits: props.report ? props.report.office_units : 0,
+    supremeUnits: props.report ? props.report.supreme_units : 0
   };
   const ly = {
-    officeVol: props.report.office_volume,
-    supremeVol: props.report.supreme_volume,
-    officeUnits: props.report.office_units,
-    supremeUnits: props.report.supreme_units
+    officeVol: props.report ? props.report.office_volume : 0,
+    supremeVol: props.report ? props.report.supreme_volume : 0,
+    officeUnits: props.report ? props.report.office_units : 0,
+    supremeUnits: props.report ? props.report.supreme_units : 0
   }
   const calcChange = (name, fixed=2) => {
     return (((ly[name] - overview[name]) / overview[name]) * 100).toFixed(fixed)
@@ -56,7 +56,6 @@ function Overview(props, { className, ...rest }) {
     return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
 
-  console.log(props.report)
   return (
     <Card
       className={clsx(classes.root, className)}

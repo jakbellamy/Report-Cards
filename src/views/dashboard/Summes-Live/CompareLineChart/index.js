@@ -2,13 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import PerfectScrollbar from 'react-perfect-scrollbar';
-import {
-  Box,
-  Card,
-  CardHeader,
-  Divider,
-  makeStyles
-} from '@material-ui/core';
+import { Box, Card, CardHeader, Divider, makeStyles } from '@material-ui/core';
 import GenericMoreButton from 'src/components/GenericMoreButton';
 import Chart from './Chart';
 
@@ -20,16 +14,16 @@ const useStyles = makeStyles(() => ({
 }));
 
 function CompareLineChart(props, { className, ...rest }) {
+  // console.log(props.reports.ly.reverse())
   const classes = useStyles();
   const stats = {
     thisYear: [],
-    lastYear: props.reports.ly
+    lastYear: props.reports.ly != undefined ? props.reports.ly.reverse() : []
   };
 
 
   const labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-  console.log('hit', props.reports)
   return (
     <Card
       className={clsx(classes.root, className)}
