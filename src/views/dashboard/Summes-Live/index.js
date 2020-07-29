@@ -26,11 +26,6 @@ const getYear = (report) => {
   return Number(date.split('-')[0])
 }
 
-const getMonth = (report) => {
-  let date = report['date']
-  return Number(date.split('-')[1])
-}
-
 const strToDate = (date) => {
   return Number(date.split('-').join(''))
 };
