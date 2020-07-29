@@ -20,7 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0bc8d6a-fedc-4de2-bb38-f2b918ef4cd3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/methods.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/methods.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +81,7 @@
       <workItem from="1594825934527" duration="4678000" />
       <workItem from="1594997218841" duration="4630000" />
       <workItem from="1595434865858" duration="6942000" />
-      <workItem from="1595604905993" duration="19824000" />
+      <workItem from="1595604905993" duration="20747000" />
     </task>
     <servers />
   </component>
@@ -143,7 +145,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/views/dashboard/Summes-Live/index.js</url>
-          <line>111</line>
+          <line>24</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
