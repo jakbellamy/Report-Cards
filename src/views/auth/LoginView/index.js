@@ -67,12 +67,12 @@ function LoginView() {
             >
               Sign in
             </Typography>
-            <Typography
-              variant="subtitle1"
-              color="textSecondary"
-            >
-              Sign in on the internal platform
-            </Typography>
+            {/*<Typography*/}
+            {/*  variant="subtitle1"*/}
+            {/*  color="textSecondary"*/}
+            {/*>*/}
+            {/*  Sign in on the internal platform*/}
+            {/*</Typography>*/}
             <Box mt={3}>
               <LoginForm onSubmitSuccess={handleSubmitSuccess} />
             </Box>

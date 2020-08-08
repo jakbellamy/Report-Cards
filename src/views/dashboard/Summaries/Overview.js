@@ -50,7 +50,7 @@ function Overview({ className, ...rest }) {
     supremeUnits: 14
   }
   const calcChange = (name, fixed=2) => {
-    return ((((ly[name] - overview[name]) / overview[name]) * 100) - 100).toFixed(fixed)
+    return (((ly[name] - overview[name]) / overview[name]) * 100).toFixed(fixed)
   }
   const insertCommas = (num) => {
     return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -91,7 +91,7 @@ function Overview({ className, ...rest }) {
             {
               calcChange('officeVol') >= 0
                   ?
-                <Label className={classes.label} color="success">{calcChange('officeVol')}%</Label>
+                <Label className={classes.label} color="success">+{calcChange('officeVol')}%</Label>
                   :
                 <Label className={classes.label} color="error">{calcChange('officeVol')}%</Label>
             }
@@ -123,7 +123,7 @@ function Overview({ className, ...rest }) {
             {
               calcChange('supremeVol') >= 0
                 ?
-                <Label className={classes.label} color="success">{calcChange('supremeVol')}%</Label>
+                <Label className={classes.label} color="success">+{calcChange('supremeVol')}%</Label>
                 :
                 <Label className={classes.label} color="error">{calcChange('supremeVol')}%</Label>
             }
@@ -154,9 +154,9 @@ function Overview({ className, ...rest }) {
             {
               calcChange('officeUnits') >= 0
                 ?
-                <Label className={classes.label} color="success">{calcChange('officeUnits', 0)}</Label>
+                <Label className={classes.label} color="success">+{calcChange('officeUnits', 0)}%</Label>
                 :
-                <Label className={classes.label} color="error">{calcChange('officeUnits', 0)}</Label>
+                <Label className={classes.label} color="error">{calcChange('officeUnits', 0)}%</Label>
             }
           </div>
         </Grid>
@@ -185,9 +185,9 @@ function Overview({ className, ...rest }) {
             {
               calcChange('supremeUnits') >= 0
                 ?
-                <Label className={classes.label} color="success">{calcChange('supremeUnits', 0)}</Label>
+                <Label className={classes.label} color="success">+{calcChange('supremeUnits', 0)}%</Label>
                 :
-                <Label className={classes.label} color="error">{calcChange('supremeUnits', 0)}</Label>
+                <Label className={classes.label} color="error">{calcChange('supremeUnits', 0)}%</Label>
             }
           </div>
         </Grid>

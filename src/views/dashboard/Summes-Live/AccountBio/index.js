@@ -40,9 +40,9 @@ const handleShare = (num) => {
 function EarningsSegmentation(props, { className, ...rest }) {
   const classes = useStyles();
 
-  console.log('bio props', props)
+  // console.log('bio props', props)
   if(props.report){
-    console.log('units', props.report.market_share_units)
+    // console.log('units', props.report.market_share_units)
   }
   return (
     <Card
@@ -138,7 +138,7 @@ function EarningsSegmentation(props, { className, ...rest }) {
         <Grid container spacing="flex" className={classes.line}>
           <Grid item xs={8}>
             <Typography variant="h5" color="textPrimary">
-              Min. Customers/month
+              Lead Quota
             </Typography>
           </Grid>
           <Grid item xs={4}>

@@ -30,20 +30,6 @@ exports.getReportAttr = (reports, attr) => {
   }
 }
 
-exports.getReportPercent = (reports, attr) => {
-  if(reports === undefined){
-    return [{ly: [], y: []}]
-  } else {
-    let ly = reports.ly.map(report => {
-      return Math.round(report[attr] * 100)
-    })
-    let y = reports.y.map(report => {
-      return Math.round(report[attr] * 100)
-    })
-    return {y: y, ly: ly}
-  }
-}
-
 exports.accuYtd = (yearArr, current=false) => {
   if(yearArr === undefined){
     if(current){

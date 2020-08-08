@@ -44,18 +44,21 @@ function Overview(props, { className, ...rest }) {
     supremeUnits: props.report ? props.report.supreme_units : 0
   };
   const ly = {
-    officeVol: props.report ? props.report.office_volume : 0,
-    supremeVol: props.report ? props.report.supreme_volume : 0,
-    officeUnits: props.report ? props.report.office_units : 0,
-    supremeUnits: props.report ? props.report.supreme_units : 0
+    officeVol: props.ly ? props.ly.office_volume : 0,
+    supremeVol: props.ly ? props.ly.supreme_volume : 0,
+    officeUnits: props.ly ? props.ly.office_units : 0,
+    supremeUnits: props.ly ? props.ly.supreme_units : 0
   }
+  console.log(ly)
   const calcChange = (name, fixed=2) => {
-    return (((ly[name] - overview[name]) / overview[name]) * 100).toFixed(fixed)
+    console.log(overview[name], ly[name])
+    return (((overview[name] - ly[name]) / overview[name])).toFixed(fixed)
+    // return ly[name].toFixed(2)
   }
   const insertCommas = (num) => {
     return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
-
+  props.report ? console.log(new Date(props.report.date).getMonth()) : console.log('waiting...')
   return (
     <Card
       className={clsx(classes.root, className)}
@@ -90,11 +93,11 @@ function Overview(props, { className, ...rest }) {
               {insertCommas(overview.officeVol)}
             </Typography>
             {
-              calcChange('officeVol') >= 0
-                  ?
-                <Label className={classes.label} color="success">{calcChange('officeVol')}%</Label>
-                  :
-                <Label className={classes.label} color="error">{calcChange('officeVol')}%</Label>
+              // calcChange('officeVol')
+              //     ?
+              //   <Label className={classes.label} color="success">{calcChange('officeVol')}%</Label>
+              //     :
+                <Label className={classes.label} color="error">{ly.officeVol}%</Label>
             }
           </div>
         </Grid>
@@ -122,7 +125,7 @@ function Overview(props, { className, ...rest }) {
               {insertCommas(overview.supremeVol)}
             </Typography>
             {
-              calcChange('supremeVol') >= 0
+              calcChange('supremeVol')
                 ?
                 <Label className={classes.label} color="success">{calcChange('supremeVol')}%</Label>
                 :
@@ -153,7 +156,7 @@ function Overview(props, { className, ...rest }) {
               {overview.officeUnits}
             </Typography>
             {
-              calcChange('officeUnits') >= 0
+              calcChange('officeUnits')
                 ?
                 <Label className={classes.label} color="success">{calcChange('officeUnits', 0)}</Label>
                 :
@@ -184,7 +187,7 @@ function Overview(props, { className, ...rest }) {
               {overview.supremeUnits}
             </Typography>
             {
-              calcChange('supremeUnits') >= 0
+              calcChange('supremeUnits')
                 ?
                 <Label className={classes.label} color="success">{calcChange('supremeUnits', 0)}</Label>
                 :

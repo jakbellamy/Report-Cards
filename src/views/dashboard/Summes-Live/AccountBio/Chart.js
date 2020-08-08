@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Doughnut } from 'react-chartjs-2';
 import { useTheme } from '@material-ui/core';
 
-function Chart({ data: dataProp, ...rest }) {
+function Chart(props, { data: dataProp, ...rest }) {
   const theme = useTheme();
 
   const data = {
@@ -51,12 +51,15 @@ function Chart({ data: dataProp, ...rest }) {
     }
   };
 
+
   return (
-    <Doughnut
-      data={data}
-      options={options}
-      {...rest}
-    />
+    <h1>hello</h1>
+    // <Doughnut
+    //   data={data}
+    //   options={options}
+    //   {...rest}
+    // />
+
   );
 }
 

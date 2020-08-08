@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
@@ -17,11 +17,15 @@ function Header(props, {  ...rest }) {
   const classes = useStyles();
   const actionRef = useRef(null);
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const [account, setAccount] = useState({})
 
-  const handleChange = (e) => {
-    let account = e.target.value
-    props.setSelectedAccount(account)
-  }
+  // useEffect(() => {
+  //   if(props.setSelectedAccount(account).selectedAccount !=
+  // })
+
+  // const handleChange = (e) => {
+  //   props.setSelectedAccount(e.target.value)
+  // }
   // console.log(props.report)
   return (
     <Grid container justify="space-between" spacing={3}{...rest}>
@@ -41,7 +45,7 @@ function Header(props, {  ...rest }) {
       <Grid item>
         <FormControl>
           <InputLabel>Account</InputLabel>
-          <Select value={props.selectedAccount} onChange={handleChange}>
+          <Select value={props.selectedAccount} onChange={(e) => props.setSelectedAccount(e.target.value)}>
             {props.accounts.map((t) => (
               <MenuItem value={t}>
                 {t.name}

@@ -40,9 +40,9 @@ const handleShare = (num) => {
 function EarningsSegmentation(props, { className, ...rest }) {
   const classes = useStyles();
 
-  console.log('bio props', props)
+  // console.log('bio props', props)
   if(props.report){
-    console.log('units', props.report.market_share_units)
+    // console.log('units', props.report.market_share_units)
   }
   return (
     <Card className={clsx(classes.root, className)}{...rest}>

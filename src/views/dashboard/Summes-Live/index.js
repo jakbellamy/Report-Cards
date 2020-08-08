@@ -33,19 +33,26 @@ let shell = {
 }
 
 function DashboardAlternativeView() {
+  const [isSelected, setIsSelected] = useState(false)
   const [accounts, setAccounts] = useState([])
-  const [marketReports, setMarketReports] = useState([])
+  const [lyReports, setLyReports] = useState([])
+  const [ytdReports, setYtdReports] = useState([])
   const [selectedAccount, setSelectedAccount] = useState({name: '', id: -1})
-  const [selectedReports, setSelectedReports] = useState([{current: shell, raw:{ly: [], y: []}, ytd:{ly: [], y:[]}}])
+  const [selectedReports, setSelectedReports] = useState([{current: shell, ly: [], y: [], mkt_vol: {ly: [], y: []}, mkt_units:{ly: [], y: []}}])
+  const [graphToggle, setGraphToggle] = useState('market_share_volume')
+  const [stats, setStats] = useState({ly: [], y: []})
   const classes = useStyles();
 
   const fetchData = async () => {
-    await fetch('http://127.0.0.1:8000/api/accounts/')
+    await fetch('https://djsupreme.herokuapp.com/api/accounts/')
       .then(res => res.json())
       .then(res => setAccounts(res))
-    await fetch("http://127.0.0.1:8000/api/market-share-reports/")
+    await fetch("https://djsupreme.herokuapp.com/data/ly")
       .then(res => res.json())
-      .then(res => setMarketReports(res))
+      .then(res => setLyReports(res))
+    await fetch("https://djsupreme.herokuapp.com/data/y")
+      .then(res => res.json())
+      .then(res => setYtdReports(res))
   }
 
   useEffect(() => {
@@ -54,48 +61,41 @@ function DashboardAlternativeView() {
 
 
   const coerceReports = (account) => {
-    let now = new Date()
-    now = now.getFullYear()
 
-    let reports = marketReports.filter(report => report.account === account.id)
+    let y = ytdReports.filter(report => report.account_id === account.id)
+    let ly = lyReports.filter(report => report.account_id === account.id)
+    console.log(y)
 
-    let ly = reports.filter(report => {
-      return methods.getYear(report) === now - 1
+    setStats({
+      y: y.map(report => report[graphToggle]),
+      ly: ly.map(report => report[graphToggle])
     })
 
-    let y = reports.filter(report => {
-      return methods.getYear(report) === now
-    })
-
-    return {y: y, ly: ly}
-  }
-
-  const buildData = (reports) => {
-    let raw = coerceReports(reports)
-    let ytd = {
-      ly: methods.accuYtd(raw.ly),
-      y: methods.accuYtd(raw.y)
+    let current = y.sort((a, b) => b.date - a.date)[0]
+    return {
+      y: y,
+      ly: ly,
+      current: current,
+      oy: ly.filter(rep => new Date(rep.date).getMonth() == new Date(current.date).getMonth())
     }
-    let current = methods.getCurrentReport(ytd.ly)
-    return {raw: raw, ytd: ytd, current: current}
   }
 
   const handleAccountSelection = (account) => {
     setSelectedAccount(account)
-    setSelectedReports(buildData(account))
+    setSelectedReports(coerceReports(account))
   }
 
-  console.log('current', selectedReports.current)
+  console.log('current', selectedReports)
   return (
     <Page className={classes.root} title="Dashboard Alternative">
       <Container maxWidth={false} className={classes.container}>
         <Header accounts={accounts} selectedAccount={selectedAccount} setSelectedAccount={handleAccountSelection}/>
         <Grid container spacing={3}>
           <Grid item xs={12}>
-            <Overview report={selectedReports.current}/>
+            <Overview report={selectedReports.current} ly={selectedReports.oy}/>
           </Grid>
           <Grid item lg={8} xl={9} xs={12}>
-            <CompareLineChart selectedAccount={selectedAccount} reports={methods.getReportPercent(selectedReports.ytd, 'market_share_volume')}/>
+            <CompareLineChart selectedAccount={selectedAccount} reports={stats}/>
           </Grid>
           <Grid item lg={4} xl={3} xs={12}>
             <AccountBio account={selectedAccount} report={selectedReports.current}/>

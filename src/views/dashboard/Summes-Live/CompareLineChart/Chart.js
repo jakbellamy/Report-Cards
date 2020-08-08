@@ -23,12 +23,13 @@ function Chart({
   const classes = useStyles();
   const theme = useTheme();
 
+  console.log(dataProp)
   const data = {
     datasets: [
       {
         label: 'This year',
         backgroundColor: theme.palette.secondary.main,
-        data: dataProp.thisYear,
+        data: dataProp.y,
         barThickness: 12,
         maxBarThickness: 10,
         barPercentage: 0.5,
@@ -37,7 +38,7 @@ function Chart({
       {
         label: 'Last year',
         backgroundColor: fade(theme.palette.secondary.main, 0.25),
-        data: dataProp.lastYear,
+        data: dataProp.ly,
         barThickness: 12,
         maxBarThickness: 10,
         barPercentage: 0.5,

@@ -20,13 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0bc8d6a-fedc-4de2-bb38-f2b918ef4cd3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/ceEvents.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/ppbEvents.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/upcoming.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summaries/AccountBio/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summaries/AccountBio/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/auth/LoginView/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/auth/LoginView/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summaries/Overview.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summaries/Overview.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/AccountBio/Chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/AccountBio/Chart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/AccountBio/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/AccountBio/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/CompareLineChart/Chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/CompareLineChart/Chart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/CompareLineChart/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/CompareLineChart/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/Overview.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/Overview.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/ceEvents.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/ceEvents.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/methods.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/methods.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/ppbEvents.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/ppbEvents.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/upcoming.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/upcoming.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +64,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -86,7 +93,13 @@
       <workItem from="1594997218841" duration="4630000" />
       <workItem from="1595434865858" duration="6942000" />
       <workItem from="1595604905993" duration="20747000" />
-      <workItem from="1596049731725" duration="10428000" />
+      <workItem from="1596049731725" duration="13223000" />
+      <workItem from="1596139784602" duration="5289000" />
+      <workItem from="1596243192090" duration="224000" />
+      <workItem from="1596552542466" duration="297000" />
+      <workItem from="1596648008290" duration="309000" />
+      <workItem from="1596852142662" duration="901000" />
+      <workItem from="1596891438211" duration="11069000" />
     </task>
     <servers />
   </component>
@@ -114,18 +127,23 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1593150389363" />
-    <state x="-1065" y="152" width="908" height="722" key="SettingsEditor" timestamp="1595708594367">
-      <screen x="-1920" y="0" width="1920" height="1080" />
+    <state x="-1065" y="-309" width="908" height="722" key="SettingsEditor" timestamp="1596648036946">
+      <screen x="-1920" y="-458" width="1920" height="1057" />
     </state>
+    <state x="-1065" y="-309" width="908" height="722" key="SettingsEditor/-1920.-458.1920.1057/0.23.1680.1027@-1920.-458.1920.1057" timestamp="1596648036946" />
     <state x="-1065" y="152" width="908" height="722" key="SettingsEditor/-1920.0.1920.1080/0.23.1680.1027@-1920.0.1920.1080" timestamp="1595708594367" />
     <state x="-1139" y="-432" key="SettingsEditor/0.0.1680.1050/-1920.-584.1920.1080@-1920.-584.1920.1080" timestamp="1594668861135" />
     <state x="341" y="164" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1593145725270" />
     <state x="-1139" y="-432" key="SettingsEditor/0.23.1680.1027/-1920.-584.1920.1080@-1920.-584.1920.1080" timestamp="1594670456158" />
     <state x="683" y="168" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1593148534690" />
-    <state x="542" y="264" width="596" height="522" key="find.popup" timestamp="1595524537298">
+    <state x="542" y="264" width="596" height="522" key="find.popup" timestamp="1596852555367">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="542" y="264" width="596" height="522" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1595524537298" />
+    <state x="542" y="264" width="596" height="522" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1596852555367" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1596896213949">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1596896213949" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -150,12 +168,10 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/views/dashboard/Summes-Live/Overview.js</url>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/views/dashboard/Summes-Live/ceEvents.js</url>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>

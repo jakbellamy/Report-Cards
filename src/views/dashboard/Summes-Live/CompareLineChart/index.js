@@ -14,16 +14,12 @@ const useStyles = makeStyles(() => ({
 }));
 
 function CompareLineChart(props, { className, ...rest }) {
-  // console.log(props.reports.ly.reverse())
+  // console.log('line props', props.reports)
   const classes = useStyles();
-  const stats = {
-    thisYear: [],
-    lastYear: props.reports.ly != undefined ? props.reports.ly.reverse() : []
-  };
-
 
   const labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
+  console.log('stats', props.reports)
   return (
     <Card
       className={clsx(classes.root, className)}
@@ -35,7 +31,7 @@ function CompareLineChart(props, { className, ...rest }) {
         <Box minWidth={700} pt={4} pr={2} pl={2}>
           <Chart
             className={classes.chart}
-            data={stats}
+            data={props.reports}
             labels={labels}
           />
         </Box>
