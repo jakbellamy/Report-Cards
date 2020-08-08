@@ -2,7 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import PerfectScrollbar from 'react-perfect-scrollbar';
-import { Box, Card, CardHeader, Divider, makeStyles } from '@material-ui/core';
+import { Box, Card, CardHeader, Divider, makeStyles, Button } from '@material-ui/core';
 import GenericMoreButton from 'src/components/GenericMoreButton';
 import Chart from './Chart';
 
@@ -16,23 +16,28 @@ const useStyles = makeStyles(() => ({
 function CompareLineChart(props, { className, ...rest }) {
   // console.log('line props', props.reports)
   const classes = useStyles();
-
   const labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-  console.log('stats', props.reports)
+
   return (
     <Card
       className={clsx(classes.root, className)}
       {...rest}
     >
-      <CardHeader action={<GenericMoreButton />} title="Market Share Volume"/>
+      {
+        props.graphType == 'market_share_volume' ?
+          <Button><CardHeader onClick={() => props.setGraphType('market_share_units')} title="Market Share Volume"/></Button>
+          :
+          <Button><CardHeader onClick={() => props.setGraphType('market_share_volume')} title="Market Share Units"/></Button>
+      }
       <Divider />
       <PerfectScrollbar>
         <Box minWidth={700} pt={4} pr={2} pl={2}>
           <Chart
             className={classes.chart}
-            data={props.reports}
+            data={props.stats}
             labels={labels}
+            graphType={props.graphType}
           />
         </Box>
       </PerfectScrollbar>

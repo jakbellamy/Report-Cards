@@ -21,19 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d0bc8d6a-fedc-4de2-bb38-f2b918ef4cd3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/auth/LoginView/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/auth/LoginView/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summaries/Overview.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summaries/Overview.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/AccountBio/Chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/AccountBio/Chart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/AccountBio/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/AccountBio/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/CompareLineChart/Chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/CompareLineChart/Chart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/CompareLineChart/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/CompareLineChart/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/Overview.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/Overview.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/ceEvents.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/ceEvents.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/methods.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/methods.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/ppbEvents.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/ppbEvents.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/upcoming.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/upcoming.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +90,7 @@
       <workItem from="1596552542466" duration="297000" />
       <workItem from="1596648008290" duration="309000" />
       <workItem from="1596852142662" duration="901000" />
-      <workItem from="1596891438211" duration="11069000" />
+      <workItem from="1596891438211" duration="18239000" />
     </task>
     <servers />
   </component>
@@ -163,7 +154,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/views/dashboard/Summes-Live/index.js</url>
-          <line>34</line>
+          <line>37</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">

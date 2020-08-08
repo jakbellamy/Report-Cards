@@ -18,12 +18,13 @@ function Chart({
   data: dataProp,
   labels,
   className,
+  graphType,
   ...rest
 }) {
   const classes = useStyles();
   const theme = useTheme();
 
-  console.log(dataProp)
+  console.log('prop', dataProp.ly)
   const data = {
     datasets: [
       {

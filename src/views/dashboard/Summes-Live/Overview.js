@@ -36,24 +36,26 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Overview(props, { className, ...rest }) {
+  console.log(props.thisMonth)
   const classes = useStyles();
   const overview = {
-    officeVol: props.report ? props.report.office_volume : 0,
-    supremeVol: props.report ? props.report.supreme_volume : 0,
-    officeUnits: props.report ? props.report.office_units : 0,
-    supremeUnits: props.report ? props.report.supreme_units : 0
+    officeVol: props.thisMonth.office_volume || 0,
+    supremeVol: props.thisMonth.supreme_volume || 0,
+    officeUnits: props.thisMonth.office_units || 0,
+    supremeUnits: props.thisMonth.supreme_units || 0
   };
+  let retro = props.lastYear[props.thisMonth.month]
   const ly = {
-    officeVol: props.ly ? props.ly.office_volume : 0,
-    supremeVol: props.ly ? props.ly.supreme_volume : 0,
-    officeUnits: props.ly ? props.ly.office_units : 0,
-    supremeUnits: props.ly ? props.ly.supreme_units : 0
+    officeVol: retro ? retro.office_volume : 0,
+    supremeVol: retro ? retro.supreme_volume : 0,
+    officeUnits: retro ?retro.office_units : 0,
+    supremeUnits: retro ?retro.supreme_units : 0
   }
-  console.log(ly)
-  const calcChange = (name, fixed=2) => {
-    console.log(overview[name], ly[name])
-    return (((overview[name] - ly[name]) / overview[name])).toFixed(fixed)
-    // return ly[name].toFixed(2)
+  console.log('overview', ly, props.thisMonth)
+  const calcChange = (name) => {
+    let sv1 = overview[name] - ly[name]
+    let sv2 = sv1 / overview[name]
+    return (sv2 * 100).toFixed(2)
   }
   const insertCommas = (num) => {
     return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -93,11 +95,11 @@ function Overview(props, { className, ...rest }) {
               {insertCommas(overview.officeVol)}
             </Typography>
             {
-              // calcChange('officeVol')
-              //     ?
-              //   <Label className={classes.label} color="success">{calcChange('officeVol')}%</Label>
-              //     :
-                <Label className={classes.label} color="error">{ly.officeVol}%</Label>
+              overview.officeVol - ly.officeVol >= 0
+                  ?
+                <Label className={classes.label} color="success">+{calcChange('officeVol')}%</Label>
+                  :
+                <Label className={classes.label} color="error">{calcChange('officeVol')}%</Label>
             }
           </div>
         </Grid>
@@ -125,9 +127,9 @@ function Overview(props, { className, ...rest }) {
               {insertCommas(overview.supremeVol)}
             </Typography>
             {
-              calcChange('supremeVol')
+              overview.supremeVol - ly.supremeVol >= 0
                 ?
-                <Label className={classes.label} color="success">{calcChange('supremeVol')}%</Label>
+                <Label className={classes.label} color="success">+{calcChange('supremeVol')}%</Label>
                 :
                 <Label className={classes.label} color="error">{calcChange('supremeVol')}%</Label>
             }
@@ -156,11 +158,11 @@ function Overview(props, { className, ...rest }) {
               {overview.officeUnits}
             </Typography>
             {
-              calcChange('officeUnits')
+              overview.officeUnits - ly.officeUnits >= 0
                 ?
-                <Label className={classes.label} color="success">{calcChange('officeUnits', 0)}</Label>
+                <Label className={classes.label} color="success">+{overview.officeUnits - ly.officeUnits}</Label>
                 :
-                <Label className={classes.label} color="error">{calcChange('officeUnits', 0)}</Label>
+                <Label className={classes.label} color="error">{overview.officeUnits - ly.officeUnits}</Label>
             }
           </div>
         </Grid>
@@ -187,11 +189,11 @@ function Overview(props, { className, ...rest }) {
               {overview.supremeUnits}
             </Typography>
             {
-              calcChange('supremeUnits')
+              overview.supremeUnits - ly.supremeUnits >= 0
                 ?
-                <Label className={classes.label} color="success">{calcChange('supremeUnits', 0)}</Label>
+                <Label className={classes.label} color="success">+{overview.supremeUnits - ly.supremeUnits}</Label>
                 :
-                <Label className={classes.label} color="error">{calcChange('supremeUnits', 0)}</Label>
+                <Label className={classes.label} color="error">{overview.supremeUnits - ly.supremeUnits}</Label>
             }
           </div>
         </Grid>
