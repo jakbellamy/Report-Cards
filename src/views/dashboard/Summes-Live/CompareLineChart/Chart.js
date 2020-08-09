@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { Bar } from 'react-chartjs-2';
+import { defaults } from 'react-chartjs-2'
 import {
   fade,
   makeStyles,
@@ -13,6 +14,8 @@ const useStyles = makeStyles(() => ({
     position: 'relative'
   }
 }));
+
+defaults.global.defaultFontFamily = 'Arial'
 
 function Chart({
   data: dataProp,
@@ -28,7 +31,8 @@ function Chart({
   const data = {
     datasets: [
       {
-        label: 'This year',
+        label: 'Year to Date',
+        type: 'bar',
         backgroundColor: theme.palette.secondary.main,
         data: dataProp.y,
         barThickness: 12,
@@ -37,13 +41,22 @@ function Chart({
         categoryPercentage: 0.5
       },
       {
-        label: 'Last year',
-        backgroundColor: fade(theme.palette.secondary.main, 0.25),
+        label: 'Last Year',
+        type: 'bar',
+        backgroundColor: fade(theme.palette.secondary.main, 0.35),
         data: dataProp.ly,
         barThickness: 12,
         maxBarThickness: 10,
         barPercentage: 0.5,
         categoryPercentage: 0.5
+      },
+      {
+        type: 'line',
+        label: 'Company Average Last Year',
+        data: dataProp.avg,
+        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+        borderColor: 'rgba(255,99,132,1)',
+        borderWidth: 1
       }
     ],
     labels
@@ -52,10 +65,10 @@ function Chart({
   const options = {
     responsive: true,
     maintainAspectRatio: false,
-    animation: false,
+    animation: true,
     cornerRadius: 20,
     legend: {
-      display: false
+      display: true
     },
     layout: {
       padding: 0

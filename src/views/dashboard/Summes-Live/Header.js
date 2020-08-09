@@ -10,37 +10,23 @@ const useStyles = makeStyles((theme) => ({
   root: {},
   actionIcon: {
     marginRight: theme.spacing(1)
+  },
+  info: {
+    marginLeft: theme.spacing(2),
   }
 }));
 
 function Header(props, {  ...rest }) {
   const classes = useStyles();
-  const actionRef = useRef(null);
-  const [isMenuOpen, setMenuOpen] = useState(false);
-  const [account, setAccount] = useState({})
 
-  // useEffect(() => {
-  //   if(props.setSelectedAccount(account).selectedAccount !=
-  // })
-
-  // const handleChange = (e) => {
-  //   props.setSelectedAccount(e.target.value)
-  // }
-  // console.log(props.report)
   return (
     <Grid container justify="space-between" spacing={3}{...rest}>
-      <Grid item>
-        <Breadcrumbs separator={<NavigateNextIcon fontSize="small" />} aria-label="breadcrumb">
-          <Link variant="body1" color="inherit" to="/app" component={RouterLink}>
-            Dashboard
-          </Link>
-          <Typography variant="body1" color="textPrimary">
-            Accounts
+      <Grid item className={classes.info}>
+        <Button>
+          <Typography variant="h4" color="textPrimary" onClick={() => console.log('clicked')}>
+            {props.selectedAccount.name}
           </Typography>
-        </Breadcrumbs>
-        <Typography variant="h3" color="textPrimary">
-          {props.selectedAccount.name}
-        </Typography>
+        </Button>
       </Grid>
       <Grid item>
         <FormControl>

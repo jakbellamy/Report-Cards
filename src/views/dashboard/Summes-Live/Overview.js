@@ -10,9 +10,11 @@ import {
 import Label from 'src/components/Label';
 
 const useStyles = makeStyles((theme) => ({
-  root: {},
+  root: {
+    marginBottom: theme.spacing(3)
+  },
   item: {
-    padding: theme.spacing(3),
+    padding: theme.spacing(4),
     textAlign: 'center',
     [theme.breakpoints.up('md')]: {
       '&:not(:last-of-type)': {
@@ -67,7 +69,7 @@ function Overview(props, { className, ...rest }) {
       {...rest}
     >
       <Grid
-        alignItems="center"
+        // alignItems="center"
         container
         justify="space-between"
       >
@@ -76,19 +78,19 @@ function Overview(props, { className, ...rest }) {
           item
           md={3}
           sm={6}
-          xs={12}
+          xs={6}
         >
           <Typography
-            component="h2"
+            component="h4"
             gutterBottom
             variant="overline"
             color="textSecondary"
           >
-            YTD Office Volume
+            Office Volume
           </Typography>
           <div className={classes.valueContainer}>
             <Typography
-              variant="h3"
+              variant="h5"
               color="textPrimary"
             >
               $
@@ -107,20 +109,20 @@ function Overview(props, { className, ...rest }) {
           className={classes.item}
           item
           md={3}
-          sm={6}
-          xs={12}
+          sm={0}
+          xs={6}
         >
           <Typography
-            component="h2"
+            component="h4"
             gutterBottom
             variant="overline"
             color="textSecondary"
           >
-            YTD Supreme Volume
+            Supreme Volume
           </Typography>
           <div className={classes.valueContainer}>
             <Typography
-              variant="h3"
+              variant="h5"
               color="textPrimary"
             >
               $
@@ -140,19 +142,19 @@ function Overview(props, { className, ...rest }) {
           item
           md={3}
           sm={6}
-          xs={12}
+          xs={6}
         >
           <Typography
-            component="h2"
+            component="h4"
             gutterBottom
             variant="overline"
             color="textSecondary"
           >
-            YTD Office Units
+            Office Units
           </Typography>
           <div className={classes.valueContainer}>
             <Typography
-              variant="h3"
+              variant="h5"
               color="textPrimary"
             >
               {overview.officeUnits}
@@ -174,16 +176,16 @@ function Overview(props, { className, ...rest }) {
           xs={12}
         >
           <Typography
-            component="h2"
+            component="h4"
             gutterBottom
             variant="overline"
             color="textSecondary"
           >
-            YTD Supreme Units
+            Supreme Units
           </Typography>
           <div className={classes.valueContainer}>
             <Typography
-              variant="h3"
+              variant="h5"
               color="textPrimary"
             >
               {overview.supremeUnits}

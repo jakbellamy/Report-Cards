@@ -36,22 +36,27 @@ let shell = {
 const year_shell = {1: shell, 2: shell, 3: shell, 4: shell, 5: shell, 6: shell, 7: shell, 8: shell, 9: shell, 10: shell, 11: shell, 12: shell}
 
 function DashboardAlternativeView() {
-  const [isSelected, setIsSelected] = useState(false)
   const [accounts, setAccounts] = useState([])
+  const [selectedAccount, setSelectedAccount] = useState({name: '', id: -1})
   const [lyReports, setLyReports] = useState([])
+  const [ytdReports, setYtdReports] = useState([])
   const [ly, setLy] = useState(year_shell)
   const [ytd, setYtd] = useState(year_shell)
   const [current, setCurrent] = useState(shell)
-  const [ytdReports, setYtdReports] = useState([])
-  const [selectedAccount, setSelectedAccount] = useState({name: '', id: -1})
-  const [selectedReports, setSelectedReports] = useState([{current: shell, ly: [], y: [], mkt_vol: {ly: [], y: []}, mkt_units:{ly: [], y: []}}])
   const [graphType, setGraphType] = useState('market_share_volume')
-  const [stats, setStats] = useState({ly: [], y: []})
+  const [stats, setStats] = useState({ly: [], y: [], avg: []})
+  const [stats1, setStats1] = useState({ly: [], y: [], avg: []})
+  const [company, setCompany] = useState({ly: [], y: [], avg: []})
   const classes = useStyles();
 
   const fetchData = async () => {
     await fetch('https://djsupreme.herokuapp.com/api/accounts/')
       .then(res => res.json())
+      .then(res => res.sort(function(a, b){
+          if(a.name < b.name) { return -1; }
+          if(a.name > b.name) { return 1; }
+          return 0;
+        }))
       .then(res => setAccounts(res))
     await fetch("https://djsupreme.herokuapp.com/data/ly")
       .then(res => res.json())
@@ -65,17 +70,22 @@ function DashboardAlternativeView() {
     fetchData()
   }, []);
 
-  const buildTableData = (yo, lyo) => {
-    let ya = [], lya = []
+  const buildTableData = (yo, lyo, avgo, type) => {
+    let ya = [], lya = [], avga = []
     for(let month in yo){
       ya.push(yo[month])
     }
     for(let month in lyo){
       lya.push(lyo[month])
     }
+    for(let month in lyo){
+      avga.push(avgo[month])
+    }
+    console.log(graphType)
     return {
-      y: ya.map(report => report[graphType]),
-      ly: lya.map(report => report[graphType])
+      y: ya.map(report => report[type]),
+      ly: lya.map(report => report[type]),
+      avg: avga.map(report => report[type])
     }
   }
 
@@ -91,65 +101,57 @@ function DashboardAlternativeView() {
     for (const report of yf){
       ytd_shell[report['month']] = report
     }
-    console.log('year shell: ', year_shell)
     return ytd_shell
   }
 
   const coerceReports = (account) => {
     let yf = ytdReports.filter(report => report.account_id === account.id)
     let lyf = lyReports.filter(report => report.account_id === account.id)
-
+    let avgf = lyReports.filter(report => report.account_id === 25)
     setLy(buildLy(account, lyf))
     setYtd(buildYtd(account, yf))
     setCurrent(yf.sort((a, b) => b.date - a.date)[0])
-
-    setStats(buildTableData(buildLy(account, lyf), buildYtd(account, yf)))
-
-    let current = yf.sort((a, b) => b.date - a.date)[0]
-    return {
-      y: yf,
-      ly: lyf,
-      current: current,
-      oy: lyf.filter(rep => new Date(rep.date).getMonth() == new Date(current.date).getMonth())
-    }
+    setStats(buildTableData(buildLy(account, lyf), buildYtd(account, yf), buildLy(account, avgf), 'market_share_volume'))
+    setStats1(buildTableData(buildLy(account, lyf), buildYtd(account, yf), buildLy(account, avgf), 'market_share_units'))
+    console.log(avgf)
   }
 
   const handleAccountSelection = (account) => {
     setSelectedAccount(account)
-    setSelectedReports(coerceReports(account))
+    coerceReports(account)
   }
-
-  console.log('current', selectedReports)
+  console.log('stats', stats)
   return (
     <Page className={classes.root} title="Dashboard Alternative">
       <Container maxWidth={false} className={classes.container}>
         <Header accounts={accounts} selectedAccount={selectedAccount} setSelectedAccount={handleAccountSelection}/>
         <Grid container spacing={3}>
-          <Grid item xs={12}>
+          <Grid item xs={7} xl={3} spacing={3}>
             <Overview thisYear={ytd} lastYear={ly} thisMonth={current} />
+            <CompareLineChart stats={stats} stats1={stats1} graphType={graphType} setGraphType={setGraphType}/>
           </Grid>
-          <Grid item lg={8} xl={9} xs={12}>
-            <CompareLineChart selectedAccount={selectedAccount} stats={stats} graphType={graphType} setGraphType={setGraphType}/>
+          {/*<Grid item lg={7} xl={9} xs={12}>*/}
+          {/*  <CompareLineChart stats={stats} stats1={stats1} graphType={graphType} setGraphType={setGraphType}/>*/}
+          {/*</Grid>*/}
+          <Grid item lg={4} xl={3} xs={5}>
+            <AccountBio account={selectedAccount}/>
           </Grid>
-          <Grid item lg={4} xl={3} xs={12}>
-            <AccountBio account={selectedAccount} report={selectedReports.current}/>
-          </Grid>
-          <Grid item lg={4} xs={12}>
-            <CeEvents account={selectedAccount} report={selectedReports.current}/>
-          </Grid>
-          <Grid item lg={4} xs={12}>
-            <PpbEvents account={selectedAccount} report={selectedReports.current}/>
-          </Grid>
-          <Grid item lg={4} xs={12}>
-            <Upcoming account={selectedAccount} report={selectedReports.current}/>
-          </Grid>
-          <Grid item lg={8} xs={12}>
-            {/*<MostProfitableProducts />*/}
-            {/*<FinancialStats selectedAccount={selectedAccount}/>*/}
-          </Grid>
-          <Grid item lg={4} xs={12}>
-            {/*<TopReferrals />*/}
-          </Grid>
+          {/*<Grid item lg={4} xs={12}>*/}
+          {/*  <CeEvents account={selectedAccount}/>*/}
+          {/*</Grid>*/}
+          {/*<Grid item lg={4} xs={12}>*/}
+          {/*  <PpbEvents account={selectedAccount}/>*/}
+          {/*</Grid>*/}
+          {/*<Grid item lg={4} xs={12}>*/}
+          {/*  <Upcoming account={selectedAccount}/>*/}
+          {/*</Grid>*/}
+          {/*<Grid item lg={8} xs={12}>*/}
+          {/*  /!*<MostProfitableProducts />*!/*/}
+          {/*  /!*<FinancialStats selectedAccount={selectedAccount}/>*!/*/}
+          {/*</Grid>*/}
+          {/*<Grid item lg={4} xs={12}>*/}
+          {/*  /!*<TopReferrals />*!/*/}
+          {/*</Grid>*/}
         </Grid>
       </Container>
     </Page>
