@@ -50,8 +50,8 @@ function EarningsSegmentation(props, { className, ...rest }) {
       {...rest}
     >
       <CardHeader
-        action={<GenericMoreButton />}
-        title="Account Bio"
+        // action={<GenericMoreButton />}
+        title="Account Info"
       />
       <Divider />
       <Box
@@ -66,128 +66,124 @@ function EarningsSegmentation(props, { className, ...rest }) {
             </Typography>
           </Grid>
         </Grid >
-        <Typography variant="h6" color="textPrimary">
-          {props.account.legal_name}
-        </Typography>
+        {/*<Grid container spacing="flex" className={classes.line}>*/}
+          {/*<Grid item xs={8}>*/}
+            {/*<Typography variant="h5" color="textPrimary">*/}
+            {/*  Username*/}
+            {/*</Typography>*/}
+          {/*</Grid>*/}
+        {/*  <Grid item xs={4}>*/}
+        {/*    <Typography variant="h5" color="textPrimary">*/}
+        {/*      {props.account.username}*/}
+        {/*    </Typography>*/}
+        {/*  </Grid>*/}
+        {/*</Grid >*/}
 
-        <Grid container spacing="flex" className={classes.line}>
-          <Grid item xs={8}>
-            <Typography variant="h5" color="textPrimary">
-              Username
-            </Typography>
-          </Grid>
-          <Grid item xs={4}>
-            <Typography variant="h5" color="textPrimary">
-              {props.account.username}
-            </Typography>
-          </Grid>
-        </Grid >
+        {/*<Grid container spacing="flex" className={classes.line}>*/}
+        {/*  <Grid item xs={8}>*/}
+        {/*    <Typography variant="h5" color="textPrimary">*/}
+        {/*      Agents*/}
+        {/*    </Typography>*/}
+        {/*  </Grid>*/}
+        {/*  <Grid item xs={4}>*/}
+        {/*    <Typography variant="h5" color="textPrimary">*/}
+        {/*      0*/}
+        {/*    </Typography>*/}
+        {/*  </Grid>*/}
+        {/*</Grid >*/}
 
-        <Grid container spacing="flex" className={classes.line}>
-          <Grid item xs={8}>
-            <Typography variant="h5" color="textPrimary">
-              Agents
-            </Typography>
-          </Grid>
-          <Grid item xs={4}>
-            <Typography variant="h5" color="textPrimary">
-              0
-            </Typography>
-          </Grid>
-        </Grid >
+        {/*<Grid container spacing="flex" className={classes.line}>*/}
+        {/*  <Grid item xs={8}>*/}
+        {/*    <Typography variant="h5" color="textPrimary">*/}
+        {/*      Started*/}
+        {/*    </Typography>*/}
+        {/*  </Grid>*/}
+        {/*  <Grid item xs={4}>*/}
+        {/*    <Typography variant="h5" color="textPrimary">*/}
+        {/*      {props.account.agreement_date ? props.account.agreement_date : ''}*/}
+        {/*    </Typography>*/}
+        {/*  </Grid>*/}
+        {/*</Grid >*/}
 
-        <Grid container spacing="flex" className={classes.line}>
-          <Grid item xs={8}>
-            <Typography variant="h5" color="textPrimary">
-              Started
-            </Typography>
-          </Grid>
-          <Grid item xs={4}>
-            <Typography variant="h5" color="textPrimary">
-              {props.account.agreement_date ? props.account.agreement_date : ''}
-            </Typography>
-          </Grid>
-        </Grid >
+        {/*<Grid container spacing="flex" className={classes.line}>*/}
+        {/*  <Grid item xs={8}>*/}
+        {/*    <Typography variant="h5" color="textPrimary">*/}
+        {/*      Monthly Investment*/}
+        {/*    </Typography>*/}
+        {/*  </Grid>*/}
+        {/*  <Grid item xs={4}>*/}
+        {/*    <Typography variant="h5" color="textPrimary">*/}
+        {/*      ${insertCommas(props.account.monthly_investment)}*/}
+        {/*    </Typography>*/}
+        {/*  </Grid>*/}
+        {/*</Grid >*/}
 
-        <Grid container spacing="flex" className={classes.line}>
-          <Grid item xs={8}>
-            <Typography variant="h5" color="textPrimary">
-              Monthly Investment
-            </Typography>
-          </Grid>
-          <Grid item xs={4}>
-            <Typography variant="h5" color="textPrimary">
-              ${insertCommas(props.account.monthly_investment)}
-            </Typography>
-          </Grid>
-        </Grid >
+        {/*<Grid container spacing="flex" className={classes.line}>*/}
+        {/*  <Grid item xs={8}>*/}
+        {/*    <Typography variant="h5" color="textPrimary">*/}
+        {/*      Monthly Expense*/}
+        {/*    </Typography>*/}
+        {/*  </Grid>*/}
+        {/*  <Grid item xs={4}>*/}
+        {/*    <Typography variant="h5" color="textPrimary">*/}
+        {/*      ${insertCommas(props.account.monthly_expense)}*/}
+        {/*    </Typography>*/}
+        {/*  </Grid>*/}
+        {/*</Grid >*/}
 
-        <Grid container spacing="flex" className={classes.line}>
-          <Grid item xs={8}>
-            <Typography variant="h5" color="textPrimary">
-              Monthly Expense
-            </Typography>
-          </Grid>
-          <Grid item xs={4}>
-            <Typography variant="h5" color="textPrimary">
-              ${insertCommas(props.account.monthly_expense)}
-            </Typography>
-          </Grid>
-        </Grid >
-
-        <Grid container spacing="flex" className={classes.line}>
-          <Grid item xs={8}>
-            <Typography variant="h5" color="textPrimary">
-              Lead Quota
-            </Typography>
-          </Grid>
-          <Grid item xs={4}>
-            <Typography variant="h5" color="textPrimary">
-              {insertCommas(props.account.monthly_customer_min)}
-            </Typography>
-          </Grid>
-        </Grid >
+        {/*<Grid container spacing="flex" className={classes.line}>*/}
+        {/*  <Grid item xs={8}>*/}
+        {/*    <Typography variant="h5" color="textPrimary">*/}
+        {/*      Lead Quota*/}
+        {/*    </Typography>*/}
+        {/*  </Grid>*/}
+        {/*  <Grid item xs={4}>*/}
+        {/*    <Typography variant="h5" color="textPrimary">*/}
+        {/*      {insertCommas(props.account.monthly_customer_min)}*/}
+        {/*    </Typography>*/}
+        {/*  </Grid>*/}
+        {/*</Grid >*/}
 
       </Box>
-      <Divider />
-      <Box display="flex">
+      {/*<Divider />*/}
+      {/*<Box display="flex">*/}
 
-        <div className={classes.item}>
-          <Typography variant="h5" color="textPrimary">
-            {props.account.name ? '98.94%' : '0%'}
-          </Typography>
-          <Typography
-            variant="overline"
-            color="textSecondary"
-          >
-            COT/FOT
-          </Typography>
-        </div>
+      {/*  <div className={classes.item}>*/}
+      {/*    <Typography variant="h5" color="textPrimary">*/}
+      {/*      {props.account.name ? '98.94%' : '0%'}*/}
+      {/*    </Typography>*/}
+      {/*    <Typography*/}
+      {/*      variant="overline"*/}
+      {/*      color="textSecondary"*/}
+      {/*    >*/}
+      {/*      COT/FOT*/}
+      {/*    </Typography>*/}
+      {/*  </div>*/}
 
-        <div className={classes.item}>
-          <Typography variant="h5" color="textPrimary">
-            {props.account.name ? '89.05%' : '0%'}
-          </Typography>
-          <Typography
-            variant="overline"
-            color="textSecondary"
-          >
-            CSAT Top Box
-          </Typography>
-        </div>
+      {/*  <div className={classes.item}>*/}
+      {/*    <Typography variant="h5" color="textPrimary">*/}
+      {/*      {props.account.name ? '89.05%' : '0%'}*/}
+      {/*    </Typography>*/}
+      {/*    <Typography*/}
+      {/*      variant="overline"*/}
+      {/*      color="textSecondary"*/}
+      {/*    >*/}
+      {/*      CSAT Top Box*/}
+      {/*    </Typography>*/}
+      {/*  </div>*/}
 
-        <div className={classes.item}>
-          <Typography variant="h5" color="textPrimary">
-            {props.account.name ? '98.10%' : '0%'}
-          </Typography>
-          <Typography
-            variant="overline"
-            color="textSecondary"
-          >
-            CSAT Top Two
-          </Typography>
-        </div>
-      </Box>
+      {/*  <div className={classes.item}>*/}
+      {/*    <Typography variant="h5" color="textPrimary">*/}
+      {/*      {props.account.name ? '98.10%' : '0%'}*/}
+      {/*    </Typography>*/}
+      {/*    <Typography*/}
+      {/*      variant="overline"*/}
+      {/*      color="textSecondary"*/}
+      {/*    >*/}
+      {/*      CSAT Top Two*/}
+      {/*    </Typography>*/}
+      {/*  </div>*/}
+      {/*</Box>*/}
     </Card>
   );
 }

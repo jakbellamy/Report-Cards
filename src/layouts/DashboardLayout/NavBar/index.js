@@ -49,22 +49,22 @@ const navConfig = [
   {
     subheader: 'Dashboard',
     items: [
+      // {
+      //   title: 'Account Information',
+      //   href: '/404'
+      // },
+      // {
+      //   title: 'Overview',
+      //   // icon: BarChartIcon,
+      //   href: '/app/dashboard/dashboard'
+      // },
+      // {
+      //   title: 'Test Summaries',
+      //   // icon: PieChartIcon,
+      //   href: '/app/dashboard/summaries'
+      // },
       {
-        title: 'Account Information',
-        href: '/404'
-      },
-      {
-        title: 'Overview',
-        // icon: BarChartIcon,
-        href: '/app/dashboard/dashboard'
-      },
-      {
-        title: 'Test Summaries',
-        // icon: PieChartIcon,
-        href: '/app/dashboard/summaries'
-      },
-      {
-        title: 'Live Summaries',
+        title: 'Sales Manager Dashboard',
         href: '/app/dashboard/summaries-live'
       }
     ]
