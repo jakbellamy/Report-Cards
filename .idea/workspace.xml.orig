@@ -20,7 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0bc8d6a-fedc-4de2-bb38-f2b918ef4cd3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/leads.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/dashboard/leads.js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/AccountBio/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/AccountBio/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/CompareLineChart/index.js" beforeDir="false" />
+=======
+>>>>>>> best
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +51,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/views/dashboard" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/views/dashboard/Summes-Live" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -55,10 +64,15 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/views/dashboard/leads.js" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/public/static" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+<<<<<<< HEAD
+      <recent name="$PROJECT_DIR$/src/views/dashboard/Summes-Live" />
+=======
+>>>>>>> best
       <recent name="$PROJECT_DIR$/src/views/dashboard" />
     </key>
   </component>
@@ -86,8 +100,12 @@
       <workItem from="1596552542466" duration="297000" />
       <workItem from="1596648008290" duration="309000" />
       <workItem from="1596852142662" duration="901000" />
+<<<<<<< HEAD
+      <workItem from="1596891438211" duration="30918000" />
+=======
       <workItem from="1596891438211" duration="24918000" />
       <workItem from="1596994026073" duration="152000" />
+>>>>>>> best
     </task>
     <servers />
   </component>
@@ -151,7 +169,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/views/dashboard/Summes-Live/index.js</url>
-          <line>37</line>
+          <line>42</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
