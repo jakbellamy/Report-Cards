@@ -327,7 +327,7 @@ const routesConfig = [
       {
         exact: true,
         path: '/home',
-        component: () => <Redirect to='/app/dashboard/summaries' />
+        component: () => <Redirect to='/app/' />
       },
       // {
       //   exact: true,
