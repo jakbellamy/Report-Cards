@@ -21,10 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d0bc8d6a-fedc-4de2-bb38-f2b918ef4cd3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/CompareLineChart/Chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/CompareLineChart/Chart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/CompareLineChart/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/CompareLineChart/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/Overview.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/Overview.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,12 +56,12 @@
     <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/views/dashboard" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/public/static" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/views/dashboard" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -92,6 +89,7 @@
       <workItem from="1596648008290" duration="309000" />
       <workItem from="1596852142662" duration="901000" />
       <workItem from="1596891438211" duration="24918000" />
+      <workItem from="1596994026073" duration="152000" />
     </task>
     <servers />
   </component>

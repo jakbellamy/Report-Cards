@@ -37,7 +37,7 @@ const year_shell = {1: shell, 2: shell, 3: shell, 4: shell, 5: shell, 6: shell, 
 
 function DashboardAlternativeView() {
   const [accounts, setAccounts] = useState([])
-  const [selectedAccount, setSelectedAccount] = useState({name: '', id: -1})
+  const [selectedAccount, setSelectedAccount] = useState({name: 'Choose Account', id: -1})
   const [lyReports, setLyReports] = useState([])
   const [ytdReports, setYtdReports] = useState([])
   const [ly, setLy] = useState(year_shell)
