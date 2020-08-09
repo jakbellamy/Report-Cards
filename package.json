@@ -7,7 +7,8 @@
   "private": true,
   "scripts": {
     "lint": "eslint ./src",
-    "start": "react-scripts start",
+    "dev": "react-scripts start",
+    "start": "serve -s build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -89,6 +90,7 @@
     "redux-form": "^8.3.2",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
+    "serve": "^11.3.2",
     "uuid": "^7.0.3",
     "yup": "^0.28.3"
   },
