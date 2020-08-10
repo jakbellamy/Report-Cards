@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Salesforce(props, { className, ...rest }) {
+function ContinuingEducation(props, { className, ...rest }) {
   const classes = useStyles();
 
   return (
@@ -17,12 +17,12 @@ function Salesforce(props, { className, ...rest }) {
       className={clsx(classes.root, className)}
       {...rest}
     >
-      <CardHeader title="Lead Quota"/>
+      <CardHeader title="Continuing Education"/>
       <Divider />
       <Box
         p={3}
         position="relative"
-        minHeight={165}>
+        minHeight={228}>
 
         {/*<Divider />*/}
       </Box>
@@ -32,8 +32,8 @@ function Salesforce(props, { className, ...rest }) {
   );
 }
 
-Salesforce.propTypes = {
+ContinuingEducation.propTypes = {
   className: PropTypes.string
 };
 
-export default Salesforce;
+export default ContinuingEducation;

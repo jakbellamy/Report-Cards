@@ -8,6 +8,8 @@ import {
   makeStyles
 } from '@material-ui/core';
 import Label from 'src/components/Label';
+import Volume from './volume'
+import Units from './units'
 
 const useStyles = makeStyles((theme) => ({
   root: {

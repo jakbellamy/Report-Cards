@@ -22,7 +22,7 @@ function Comments(props, { className, ...rest }) {
       {...rest}
       p={3}
       position="relative"
-      minHeight={190}
+      minHeight={140}
     >
       <Divider />
       <CardHeader title="Comments"/>

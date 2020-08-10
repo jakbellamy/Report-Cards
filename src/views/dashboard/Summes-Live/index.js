@@ -4,9 +4,11 @@ import Page from 'src/components/Page';
 import AccountBio from './AccountBio';
 import CompareLineChart from './CompareLineChart';
 import Header from './Header';
-import Overview from './Overview';
+// import Overview from './overview/Overview';
+import Overview from './overview/index';
 import Salesforce from './salesforce/salesforce'
 import PersonalBest from './personalBest/personalBest'
+import ContinuingEducation from './continuingEducation/continuingEducation.js'
 import CeEvents from './ceEvents'
 import PpbEvents from './ppbEvents'
 import Upcoming from './upcoming'
@@ -129,14 +131,15 @@ function DashboardAlternativeView() {
       <Container maxWidth={false} className={classes.container}>
         <Header accounts={accounts} selectedAccount={selectedAccount} setSelectedAccount={handleAccountSelection}/>
         <Grid container spacing={3}>
-          <Grid item xs={7} xl={3} spacing={3}>
+          <Grid item xs={7} xl={2} spacing={3}>
             <Overview thisYear={ytd} lastYear={ly} thisMonth={current} />
             <CompareLineChart stats={stats} stats1={stats1} graphType={graphType} setGraphType={setGraphType}/>
+            <ContinuingEducation />
           </Grid>
           {/*<Grid item lg={7} xl={9} xs={12}>*/}
           {/*  <CompareLineChart stats={stats} stats1={stats1} graphType={graphType} setGraphType={setGraphType}/>*/}
           {/*</Grid>*/}
-          <Grid item lg={4} xl={3} xs={5}>
+          <Grid item lg={4.5} xl={2} xs={5}>
             <AccountBio account={selectedAccount}/>
             <Salesforce />
             <PersonalBest />

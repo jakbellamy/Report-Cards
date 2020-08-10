@@ -8,9 +8,8 @@ import Chart from './Chart';
 import Comments from './comments'
 
 const useStyles = makeStyles(() => ({
-  root: {},
   chart: {
-    height: 400
+    height: 300
   }
 }));
 
@@ -60,7 +59,7 @@ function CompareLineChart(props, { className, ...rest }) {
           {/*<CardHeader onClick={() => handleClick('market_share_volume')} title=""/>*/}
       <Divider />
       <PerfectScrollbar>
-        <Box minWidth={700} pt={4} pr={2} pl={2}>
+        <Box minWidth={500} pt={4} pr={2} pl={2}>
           <Chart
             className={classes.chart}
             data={props.graphType == 'market_share_volume' ? props.stats : props.stats1}

@@ -20,27 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0bc8d6a-fedc-4de2-bb38-f2b918ef4cd3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/personalBest/personalBest.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/continuingEducation/continuingEducation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/overview/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/overview/units.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/overview/volume.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/DashboardLayout/NavBar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/DashboardLayout/NavBar/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/DocsLayout/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/DocsLayout/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/DashboardView/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/DashboardView/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summaries/AccountBio/Chart.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summaries/AccountBio/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summaries/CustomerActivity.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summaries/Header.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summaries/LatestOrders.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summaries/MktShareGraph/Chart.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summaries/MktShareGraph/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summaries/MostProfitableProducts/CircularProgress.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summaries/MostProfitableProducts/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summaries/Overview.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summaries/TopReferrals.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summaries/index.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/AccountBio/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/AccountBio/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/CompareLineChart/comments.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/CompareLineChart/comments.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/CompareLineChart/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/CompareLineChart/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/Overview.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/overview/Overview.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/personalBest/personalBest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/personalBest/personalBest.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/salesforce/salesforce.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/salesforce/salesforce.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,12 +66,13 @@
     <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public" />
-      <recent name="$PROJECT_DIR$/public/static" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/views/dashboard" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/views/dashboard/Summes-Live/overview" />
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/public/static" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -134,10 +126,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="304" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1596935002737" />
-    <state x="555" y="325" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1597029914477">
+    <state x="555" y="325" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1597035046624">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="555" y="325" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1597029914477" />
+    <state x="555" y="325" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1597035046624" />
     <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1593150389363">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -179,7 +171,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/views/dashboard/Summes-Live/index.js</url>
-          <line>40</line>
+          <line>42</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
