@@ -6,6 +6,7 @@ import CompareLineChart from './CompareLineChart';
 import Header from './Header';
 import Overview from './Overview';
 import Salesforce from './salesforce/salesforce'
+import PersonalBest from './personalBest/personalBest'
 import CeEvents from './ceEvents'
 import PpbEvents from './ppbEvents'
 import Upcoming from './upcoming'
@@ -16,7 +17,8 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.dark,
     minHeight: '100%',
     paddingTop: theme.spacing(3),
-    paddingBottom: theme.spacing(3)
+    paddingBottom: theme.spacing(3),
+    minWidth: '100%'
   },
   container: {
     [theme.breakpoints.up('lg')]: {
@@ -137,6 +139,7 @@ function DashboardAlternativeView() {
           <Grid item lg={4} xl={3} xs={5}>
             <AccountBio account={selectedAccount}/>
             <Salesforce />
+            <PersonalBest />
           </Grid>
           {/*<Grid item lg={4} xs={12}>*/}
           {/*  <CeEvents account={selectedAccount}/>*/}

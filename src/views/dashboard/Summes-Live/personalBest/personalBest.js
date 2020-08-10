@@ -5,11 +5,11 @@ import PropTypes from 'prop-types';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    marginTop: theme.spacing(3)
+    marginTop: theme.spacing(2.5)
   },
 }));
 
-function Salesforce(props, { className, ...rest }) {
+function PersonalBest(props, { className, ...rest }) {
   const classes = useStyles();
 
   return (
@@ -17,12 +17,12 @@ function Salesforce(props, { className, ...rest }) {
       className={clsx(classes.root, className)}
       {...rest}
     >
-      <CardHeader title="Lead Quota"/>
+      <CardHeader title="Personal & Professional Best"/>
       <Divider />
       <Box
         p={3}
         position="relative"
-        minHeight={150}>
+        minHeight={225}>
 
         {/*<Divider />*/}
       </Box>
@@ -32,8 +32,8 @@ function Salesforce(props, { className, ...rest }) {
   );
 }
 
-Salesforce.propTypes = {
+PersonalBest.propTypes = {
   className: PropTypes.string
 };
 
-export default Salesforce;
+export default PersonalBest;

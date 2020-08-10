@@ -20,12 +20,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0bc8d6a-fedc-4de2-bb38-f2b918ef4cd3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/CompareLineChart/comments.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/salesforce/salesforce.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/personalBest/personalBest.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/DashboardLayout/NavBar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/DashboardLayout/NavBar/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/DocsLayout/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/DocsLayout/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/DashboardView/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/DashboardView/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summaries/AccountBio/Chart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summaries/AccountBio/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summaries/CustomerActivity.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summaries/Header.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summaries/LatestOrders.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summaries/MktShareGraph/Chart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summaries/MktShareGraph/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summaries/MostProfitableProducts/CircularProgress.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summaries/MostProfitableProducts/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summaries/Overview.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summaries/TopReferrals.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summaries/index.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/AccountBio/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/AccountBio/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/CompareLineChart/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/CompareLineChart/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/salesforce/salesforce.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/salesforce/salesforce.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,10 +134,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="304" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1596935002737" />
-    <state x="555" y="325" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1597028159655">
+    <state x="555" y="325" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1597029914477">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="555" y="325" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1597028159655" />
+    <state x="555" y="325" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1597029914477" />
     <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1593150389363">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -135,10 +151,10 @@
     <state x="341" y="164" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1593145725270" />
     <state x="-1139" y="-432" key="SettingsEditor/0.23.1680.1027/-1920.-584.1920.1080@-1920.-584.1920.1080" timestamp="1594670456158" />
     <state x="683" y="168" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1593148534690" />
-    <state x="563" y="528" width="596" height="522" key="find.popup" timestamp="1597017900454">
-      <screen x="0" y="23" width="1680" height="1027" />
+    <state x="542" y="264" width="596" height="522" key="find.popup" timestamp="1597031459336">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="542" y="264" width="596" height="522" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1596996315529" />
+    <state x="542" y="264" width="596" height="522" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1597031459336" />
     <state x="563" y="528" width="596" height="522" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1597017900454" />
     <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1596896213949">
       <screen x="0" y="0" width="1680" height="1050" />
@@ -163,7 +179,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/views/dashboard/Summes-Live/index.js</url>
-          <line>38</line>
+          <line>40</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">

@@ -1,6 +1,6 @@
 /* eslint-disable no-use-before-define */
 /* eslint-disable react/prop-types */
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation, matchPath } from 'react-router';
 import { Link as RouterLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
@@ -213,17 +213,18 @@ const useStyles = makeStyles(() => ({
   }
 }));
 
-function NavBar({ openMobile, onMobileClose, }) {
+function NavBar({ openMobile, onMobileClose, onMobileOpen}) {
   const classes = useStyles();
   const location = useLocation();
+  const [open, isOpen] = useState(true)
   const { user } = useSelector((state) => state.account);
 
   useEffect(() => {
     if (openMobile && onMobileClose) {
       onMobileClose();
     }
-    // eslint-disable-next-line
   }, [location.pathname]);
+
 
   const content = (
     <Box
@@ -249,29 +250,6 @@ function NavBar({ openMobile, onMobileClose, }) {
             </List>
           ))}
         </Box>
-        {/*<Divider />*/}
-        {/*<Box p={2}>*/}
-        {/*  <Box*/}
-        {/*    p={2}*/}
-        {/*    borderRadius="borderRadius"*/}
-        {/*    bgcolor="background.dark"*/}
-        {/*  >*/}
-        {/*    <Typography*/}
-        {/*      variant="h6"*/}
-        {/*      color="textPrimary"*/}
-        {/*    >*/}
-        {/*      Need Help?*/}
-        {/*    </Typography>*/}
-        {/*    <Link*/}
-        {/*      variant="subtitle1"*/}
-        {/*      color="secondary"*/}
-        {/*      component={RouterLink}*/}
-        {/*      to="/docs"*/}
-        {/*    >*/}
-        {/*      Check our docs*/}
-        {/*    </Link>*/}
-        {/*  </Box>*/}
-        {/*</Box>*/}
       </PerfectScrollbar>
     </Box>
   );
@@ -305,6 +283,7 @@ function NavBar({ openMobile, onMobileClose, }) {
 
 NavBar.propTypes = {
   onMobileClose: PropTypes.func,
+  onMobileOpen: PropTypes.func,
   openMobile: PropTypes.bool
 };
 

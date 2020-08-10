@@ -56,13 +56,13 @@ function EarningsSegmentation(props, { className, ...rest }) {
       />
       <Divider />
       <Box
-        p={3}
+        p={2}
         position="relative"
-        minHeight={320}
+        minHeight={250}
       >
         <Grid container spacing={3} className={{}}>
           <Grid item xs={9}>
-            <Typography variant="h3" color="textPrimary">
+            <Typography variant="h4" color="textPrimary">
               {props.account.name}
             </Typography>
           </Grid>
