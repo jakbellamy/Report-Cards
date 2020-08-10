@@ -5,6 +5,7 @@ import PerfectScrollbar from 'react-perfect-scrollbar';
 import { Box, Card, CardHeader, Divider, makeStyles, Button } from '@material-ui/core';
 import GenericMoreButton from 'src/components/GenericMoreButton';
 import Chart from './Chart';
+import Comments from './comments'
 
 const useStyles = makeStyles(() => ({
   root: {},
@@ -40,6 +41,7 @@ function CompareLineChart(props, { className, ...rest }) {
           />
         </Box>
       </PerfectScrollbar>
+      <Comments />
     </Card>
   );
 }

@@ -5,6 +5,7 @@ import AccountBio from './AccountBio';
 import CompareLineChart from './CompareLineChart';
 import Header from './Header';
 import Overview from './Overview';
+import Salesforce from './salesforce/salesforce'
 import CeEvents from './ceEvents'
 import PpbEvents from './ppbEvents'
 import Upcoming from './upcoming'
@@ -135,6 +136,7 @@ function DashboardAlternativeView() {
           {/*</Grid>*/}
           <Grid item lg={4} xl={3} xs={5}>
             <AccountBio account={selectedAccount}/>
+            <Salesforce />
           </Grid>
           {/*<Grid item lg={4} xs={12}>*/}
           {/*  <CeEvents account={selectedAccount}/>*/}
