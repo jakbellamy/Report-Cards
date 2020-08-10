@@ -9,7 +9,7 @@ import Comments from './comments'
 
 const useStyles = makeStyles(() => ({
   chart: {
-    height: 300
+    height: 325
   }
 }));
 

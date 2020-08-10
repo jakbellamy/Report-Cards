@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    marginTop: theme.spacing(3)
+    marginTop: theme.spacing(2)
   },
 }));
 

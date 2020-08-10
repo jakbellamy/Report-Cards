@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    marginTop: theme.spacing(2.5)
+    marginTop: theme.spacing(2)
   },
 }));
 
@@ -22,7 +22,7 @@ function PersonalBest(props, { className, ...rest }) {
       <Box
         p={3}
         position="relative"
-        minHeight={320}>
+        minHeight={345}>
 
         {/*<Divider />*/}
       </Box>

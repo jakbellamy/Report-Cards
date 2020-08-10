@@ -32,7 +32,7 @@ function Units(props, { className, ...rest }) {
             <ListSubheader component="div">YTD Units</ListSubheader>
           </GridListTile>
       </GridList>
-      <GridList cellHeight={70} className={classes.gridList} cols={2}>
+      <GridList cellHeight={55} className={classes.gridList} cols={2}>
         <GridListTile >
 
         </GridListTile>
@@ -40,7 +40,7 @@ function Units(props, { className, ...rest }) {
 
         </GridListTile>
       </GridList>
-      <GridList cellHeight={70} className={classes.gridList} cols={2}>
+      <GridList cellHeight={55} className={classes.gridList} cols={2}>
         <GridListTile >
 
         </GridListTile>
