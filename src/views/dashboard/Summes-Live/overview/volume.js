@@ -23,10 +23,10 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
   },
   gridList: {
-    paddingTop: theme.spacing(0.7),
+    paddingTop: theme.spacing(1),
     // paddingBottom: theme.spacing(0.7),
     // width: 100,
-    height: 40,
+    // height: 40,
   },
   value: {
     textAlign: 'center',
@@ -35,16 +35,16 @@ const useStyles = makeStyles((theme) => ({
   },
   valueSuccess: {
     textAlign: 'center',
-    // verticalAlign: 'text-bottom',
-    backgroundColor: '#E6FFCC'
+    verticalAlign: 'center',
+    backgroundColor: '#77FBB0'
   },
   valueFail: {
     textAlign: 'center',
-      // verticalAlign: 'text-bottom',
+      verticalAlign: 'center',
       backgroundColor: '#FDC1C5'
   },
   success: {
-    backgroundColor: '#E6FFCC'
+    backgroundColor: '#77FBB0'
   },
   fail: {
     backgroundColor: '#FDC1C5'
@@ -59,12 +59,12 @@ function Volume(props, { className, ...rest }) {
       className={clsx(classes.root, className)}
       {...rest}
     >
-      {/*<GridList cellHeight={50} className={classes.gridList}>*/}
+      {/*<GridList cellHeight={15} className={classes.gridList}>*/}
       {/*  <GridListTile >*/}
       {/*    <ListSubheader component="div">YTD Volume</ListSubheader>*/}
       {/*  </GridListTile>*/}
       {/*</GridList>*/}
-      <GridList cellHeight={20} className={classes.gridList} cols={2}>
+      <GridList cellHeight={30} className={classes.gridList} cols={2}>
         <GridListTile className={classes.value}>
           <Typography
             variant="h4"
@@ -82,7 +82,7 @@ function Volume(props, { className, ...rest }) {
           </Typography>
         </GridListTile>
       </GridList>
-      <GridList cellHeight={20} className={classes.gridList} cols={2}>
+      <GridList cellHeight={25} className={classes.gridList} cols={2}>
         <GridListTile className={(props.calcChange('mktVol')) >= 0 ? classes.valueSuccess : classes.valueFail}>
           <Typography
             variant="subtitle1"
@@ -101,7 +101,7 @@ function Volume(props, { className, ...rest }) {
         </GridListTile>
       </GridList>
 
-      <GridList cellHeight={20} className={classes.gridList} cols={2}>
+      <GridList cellHeight={30} className={classes.gridList} cols={2}>
         <GridListTile className={classes.value} >
           <Typography
             variant="h5"
@@ -119,7 +119,7 @@ function Volume(props, { className, ...rest }) {
           </Typography>
         </GridListTile>
       </GridList>
-      <GridList cellHeight={21} className={classes.gridList} cols={2}>
+      <GridList cellHeight={25} className={classes.gridList} cols={2}>
         <GridListTile className={(props.calcChange('supremeVol')) >= 0 ? classes.valueSuccess : classes.valueFail}>
           <Typography
             variant="subtitle1"
