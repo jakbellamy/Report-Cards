@@ -24,7 +24,6 @@ function PersonalBest(props, { className, ...rest }) {
         position="relative"
         minHeight={345}>
 
-        {/*<Divider />*/}
       </Box>
 
 

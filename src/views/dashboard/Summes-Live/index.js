@@ -125,14 +125,14 @@ function DashboardAlternativeView() {
     setSelectedAccount(account)
     coerceReports(account)
   }
-  console.log('stats', stats)
+  console.log('ly', lyReports)
   return (
     <Page className={classes.root} title="Dashboard Alternative">
       <Container maxWidth={false} className={classes.container}>
         <Header accounts={accounts} selectedAccount={selectedAccount} setSelectedAccount={handleAccountSelection}/>
         <Grid container spacing={3}>
           <Grid item xs={7} xl={2} spacing={3}>
-            <Overview thisYear={ytd} lastYear={ly} thisMonth={current} />
+            <Overview thisYear={ytd} lastYear={ly} thisMonth={current}/>
             <CompareLineChart stats={stats} stats1={stats1} graphType={graphType} setGraphType={setGraphType}/>
             <ContinuingEducation />
           </Grid>
@@ -140,7 +140,7 @@ function DashboardAlternativeView() {
           {/*  <CompareLineChart stats={stats} stats1={stats1} graphType={graphType} setGraphType={setGraphType}/>*/}
           {/*</Grid>*/}
           <Grid item lg={4.5} xl={2} xs={5}>
-            <AccountBio account={selectedAccount}/>
+            <AccountBio account={selectedAccount}  />
             <Salesforce />
             <PersonalBest />
           </Grid>

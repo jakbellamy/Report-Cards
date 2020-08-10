@@ -13,14 +13,45 @@ const useStyles = makeStyles((theme) => ({
 
 function Overview(props, { className, ...rest }) {
   const classes = useStyles();
+  const y = {
+    officeVol: props.thisMonth.office_volume || 0,
+    supremeVol: props.thisMonth.supreme_volume || 0,
+    officeUnits: props.thisMonth.office_units || 0,
+    supremeUnits: props.thisMonth.supreme_units || 0,
+    mktVol: props.thisMonth.market_share_volume || 0,
+    mktUnits: props.thisMonth.market_share_units || 0
+  };
+  let retro = props.lastYear[props.thisMonth.month]
+  const ly = {
+    officeVol: retro ? retro.office_volume : 0,
+    supremeVol: retro ? retro.supreme_volume : 0,
+    officeUnits: retro ?retro.office_units : 0,
+    supremeUnits: retro ?retro.supreme_units : 0,
+    mktVol: retro ? retro.market_share_volume : 0,
+    mktUnits: retro ? retro.market_share_units : 0
+  }
+  const calcChange = (name) => {
+    let sv1 = y[name] - ly[name]
+    let sv2 = sv1 / y[name]
+    return (sv2 * 100).toFixed(2)
+  }
+  const insertCommas = (num) => {
+    if(num){
+      return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    } else {
+      return ''
+    }
+  }
+
+  console.log('overview', y, ly)
 
   return (
     <Grid container spacing={2} justify-self={'stretch'} className={classes.root}>
       <Grid item xs={6} xl={2} spacing={1}>
-        <Volume />
+        <Volume y={y} ly={ly} insertCommas={insertCommas} calcChange={calcChange} />
       </Grid>
       <Grid item xs={6} xl={2} spacing={1}>
-        <Units />
+        <Units y={y} ly={ly} insertCommas={insertCommas} calcChange={calcChange} />
       </Grid>
     </Grid>
   )

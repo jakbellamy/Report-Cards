@@ -24,7 +24,6 @@ function ContinuingEducation(props, { className, ...rest }) {
         position="relative"
         minHeight={255}>
 
-        {/*<Divider />*/}
       </Box>
 
 
