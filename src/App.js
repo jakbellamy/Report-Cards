@@ -61,8 +61,8 @@ function App() {
             <Router history={history}>
               <Auth>
                 <ScrollReset />
-                <GoogleAnalytics />
-                <SettingsNotification />
+                {/*<GoogleAnalytics />*/}
+                {/*<SettingsNotification />*/}
                 <Routes />
               </Auth>
             </Router>

@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import Cookies from 'js-cookie'
 import { Link as RouterLink } from 'react-router-dom';
 import { useHistory } from 'react-router';
 import { Avatar, Button, Box, Container, Card, CardContent, CardMedia, Divider, Link, Typography, colors, makeStyles } from '@material-ui/core';
@@ -49,6 +50,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function LoginView() {
+  const [cookie, setCookie] = useState()
   const classes = useStyles();
   const history = useHistory();
 
@@ -56,6 +58,32 @@ function LoginView() {
     history.push('/app');
   };
 
+  const auth = () => {
+    console.log(cookie)
+    fetch('https://djsupreme.herokuapp.com/auth/', {
+      method: 'POST', // or 'PUT'
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRFToken': cookie
+      },
+      body: JSON.stringify({
+        'username': 'jakbellamy',
+        'password': 'admin'
+      }),
+    })
+  }
+
+  useEffect(() => {
+    // const csrftoken = ;
+    setCookie(Cookies.get('csrftoken'))
+    fetch('https://djsupreme.herokuapp.com/login/?next=/')
+      .then(res => console.log(res.headers['set-cookie']))
+      .then(setCookie(Cookies.get('csrftoken')))
+      .then(auth())
+      .then(console.log(cookie))
+  }, []);
+
+  // console.log(cookie)
   return (
     <Page className={classes.root} title="Login">
       <Container maxWidth="sm">
