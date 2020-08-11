@@ -59,6 +59,8 @@ function Volume(props, { className, ...rest }) {
       className={clsx(classes.root, className)}
       {...rest}
     >
+      {/*<CardHeader title="YTD Volume" titleTypographyProps={{variant:'h6' }}/>*/}
+      <Divider />
       <Box
         p={1}
         position="relative"
@@ -67,7 +69,7 @@ function Volume(props, { className, ...rest }) {
         <GridList className={classes.gridList} cols={2}>
           <GridListTile className={classes.value}>
             <Typography
-              variant="h4"
+              variant="h5"
               color="textPrimary"
             >
               {props.y.mktUnits ? (props.insertCommas(props.y.mktUnits)) + '%' : ''}
@@ -86,7 +88,7 @@ function Volume(props, { className, ...rest }) {
       <Divider />
       <Box className={props.calcChange('mktUnits') >= 0 ? classes.success : classes.fail}
            position="relative"
-           height={27}
+           height={30}
       >
         <GridList cols={2}>
           <GridListTile className={classes.value}>
@@ -116,7 +118,7 @@ function Volume(props, { className, ...rest }) {
         <GridList className={classes.gridList} cols={2}>
           <GridListTile className={classes.value}>
             <Typography
-              variant="h4"
+              variant="h5"
               color="textPrimary"
             >
               {props.y.supremeUnits ? (props.insertCommas(props.y.supremeUnits)) + '%' : ''}
@@ -135,7 +137,7 @@ function Volume(props, { className, ...rest }) {
       <Divider />
       <Box className={props.calcChange('supremeUnits') >= 0 ? classes.success : classes.fail}
            position="relative"
-           height={27}
+           height={30}
       >
         <GridList cols={2}>
           <GridListTile className={classes.value}>

@@ -67,7 +67,7 @@ function Volume(props, { className, ...rest }) {
         <GridList className={classes.gridList} cols={2}>
           <GridListTile className={classes.value}>
             <Typography
-              variant="h4"
+              variant="h5"
               color="textPrimary"
             >
               {props.y.mktVol ? (props.insertCommas(props.y.mktVol)) + '%' : ''}
@@ -86,7 +86,7 @@ function Volume(props, { className, ...rest }) {
       <Divider />
       <Box className={props.calcChange('mktVol') >= 0 ? classes.success : classes.fail}
         position="relative"
-        height={27}
+        height={30}
       >
         <GridList cols={2}>
           <GridListTile className={classes.value}>
@@ -116,7 +116,7 @@ function Volume(props, { className, ...rest }) {
         <GridList className={classes.gridList} cols={2}>
           <GridListTile className={classes.value}>
             <Typography
-              variant="h4"
+              variant="h5"
               color="textPrimary"
             >
               {props.y.supremeVol ? (props.insertCommas(props.y.supremeVol)) + '%' : ''}
@@ -135,7 +135,7 @@ function Volume(props, { className, ...rest }) {
       <Divider />
       <Box className={props.calcChange('supremeVol') >= 0 ? classes.success : classes.fail}
            position="relative"
-           height={27}
+           height={30}
       >
         <GridList cols={2}>
           <GridListTile className={classes.value}>
