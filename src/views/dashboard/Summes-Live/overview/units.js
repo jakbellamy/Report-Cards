@@ -60,7 +60,6 @@ function Volume(props, { className, ...rest }) {
       {...rest}
     >
       {/*<CardHeader title="YTD Volume" titleTypographyProps={{variant:'h6' }}/>*/}
-      <Divider />
       <Box
         p={1}
         position="relative"

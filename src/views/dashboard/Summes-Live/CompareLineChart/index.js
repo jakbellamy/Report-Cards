@@ -43,7 +43,6 @@ function CompareLineChart(props, { className, ...rest }) {
       className={clsx(classes.root, className)}
       {...rest}
     >
-      {/*<AppBar position="static" color="default">*/}
         <Tabs
           value={tab}
           onChange={handleTab}
@@ -54,9 +53,6 @@ function CompareLineChart(props, { className, ...rest }) {
           <Tab label="Market Share Volume"/>
           <Tab label="Market Share Units" />
         </Tabs>
-      {/*</AppBar>*/}
-          {/*<CardHeader onClick={() => handleClick('market_share_units')} title=""/>*/}
-          {/*<CardHeader onClick={() => handleClick('market_share_volume')} title=""/>*/}
       <Divider />
       <PerfectScrollbar>
         <Box minWidth={500} pt={4} pr={2} pl={2}>
