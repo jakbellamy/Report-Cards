@@ -22,7 +22,7 @@ function Salesforce(props, { className, ...rest }) {
       <Box
         p={3}
         position="relative"
-        minHeight={165}>
+        minHeight={175}>
 
         {/*<Divider />*/}
       </Box>

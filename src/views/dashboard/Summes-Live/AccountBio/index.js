@@ -58,7 +58,7 @@ function EarningsSegmentation(props, { className, ...rest }) {
       <Box
         p={2}
         position="relative"
-        minHeight={325}
+        minHeight={335}
       >
         <Grid container spacing={3} className={{}}>
           <Grid item xs={9}>
