@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import { Box, Card, CardHeader, Divider, Typography, Grid, makeStyles } from '@material-ui/core';
+import { Box, Card, CardHeader, Divider, Typography, Grid, makeStyles, GridList, GridListTile } from '@material-ui/core';
 import GenericMoreButton from 'src/components/GenericMoreButton';
 import axios from 'src/utils/axios';
 import useIsMountedRef from 'src/hooks/useIsMountedRef';
@@ -45,6 +45,7 @@ function EarningsSegmentation(props, { className, ...rest }) {
   if(props.report){
     // console.log('units', props.report.market_share_units)
   }
+  console.log(props.account)
   return (
     <Card
       className={clsx(classes.root, className)}
@@ -58,133 +59,71 @@ function EarningsSegmentation(props, { className, ...rest }) {
       <Box
         p={2}
         position="relative"
-        minHeight={335}
+        minHeight={265}
       >
-        <Grid container spacing={3} className={{}}>
-          <Grid item xs={9}>
-            <Typography variant="h4" color="textPrimary">
-              {props.account.name}
-            </Typography>
-          </Grid>
-        </Grid >
-        {/*<Grid container spacing="flex" className={classes.line}>*/}
-          {/*<Grid item xs={8}>*/}
-            {/*<Typography variant="h5" color="textPrimary">*/}
-            {/*  Username*/}
-            {/*</Typography>*/}
-          {/*</Grid>*/}
-        {/*  <Grid item xs={4}>*/}
-        {/*    <Typography variant="h5" color="textPrimary">*/}
-        {/*      {props.account.username}*/}
-        {/*    </Typography>*/}
-        {/*  </Grid>*/}
-        {/*</Grid >*/}
+        <Box
+          p={1}
+          position="relative"
+          height={30}
+        >
+          <Typography variant="h2" color="textPrimary">
+            {props.account.name}
+          </Typography>
+        </Box>
+        <Box
+          paddingTop={4}
+          paddingLeft={2}
+          position={'relative'}
+          height={10}
+        >
+          <GridList cols={2} cellHeight={30}>
+            <GridListTile>
+              <Typography variant={'subtitle1'}>Number of Agents</Typography>
+            </GridListTile>
+            <GridListTile>
+              <Typography variant={'subtitle1'}>
+                {props.account.agent_count}
+              </Typography>
+            </GridListTile>
 
-        {/*<Grid container spacing="flex" className={classes.line}>*/}
-        {/*  <Grid item xs={8}>*/}
-        {/*    <Typography variant="h5" color="textPrimary">*/}
-        {/*      Agents*/}
-        {/*    </Typography>*/}
-        {/*  </Grid>*/}
-        {/*  <Grid item xs={4}>*/}
-        {/*    <Typography variant="h5" color="textPrimary">*/}
-        {/*      0*/}
-        {/*    </Typography>*/}
-        {/*  </Grid>*/}
-        {/*</Grid >*/}
+            <GridListTile>
+              <Typography variant={'subtitle1'}>Number of Loan Officers</Typography>
+            </GridListTile>
+            <GridListTile>
+              <Typography variant={'subtitle1'}>
+                {props.account.loan_officers ? props.account.loan_officers.length : ''}
+              </Typography>
+            </GridListTile>
 
-        {/*<Grid container spacing="flex" className={classes.line}>*/}
-        {/*  <Grid item xs={8}>*/}
-        {/*    <Typography variant="h5" color="textPrimary">*/}
-        {/*      Started*/}
-        {/*    </Typography>*/}
-        {/*  </Grid>*/}
-        {/*  <Grid item xs={4}>*/}
-        {/*    <Typography variant="h5" color="textPrimary">*/}
-        {/*      {props.account.agreement_date ? props.account.agreement_date : ''}*/}
-        {/*    </Typography>*/}
-        {/*  </Grid>*/}
-        {/*</Grid >*/}
+            <GridListTile>
+              <Typography variant={'subtitle1'}>Monthly Lead Investment</Typography>
+            </GridListTile>
+            <GridListTile>
+              <Typography variant={'subtitle1'}>
+                {props.account.monthly_investment ? '$' + insertCommas(props.account.monthly_investment) : ''}
+              </Typography>
+            </GridListTile>
 
-        {/*<Grid container spacing="flex" className={classes.line}>*/}
-        {/*  <Grid item xs={8}>*/}
-        {/*    <Typography variant="h5" color="textPrimary">*/}
-        {/*      Monthly Investment*/}
-        {/*    </Typography>*/}
-        {/*  </Grid>*/}
-        {/*  <Grid item xs={4}>*/}
-        {/*    <Typography variant="h5" color="textPrimary">*/}
-        {/*      ${insertCommas(props.account.monthly_investment)}*/}
-        {/*    </Typography>*/}
-        {/*  </Grid>*/}
-        {/*</Grid >*/}
+            <GridListTile>
+              <Typography variant={'subtitle1'}>Monthly Lease</Typography>
+            </GridListTile>
+            <GridListTile>
+              <Typography variant={'subtitle1'}>
+                {props.account.monthly_lease ? '$' + insertCommas(props.account.monthly_lease) : ''}
+              </Typography>
+            </GridListTile>
 
-        {/*<Grid container spacing="flex" className={classes.line}>*/}
-        {/*  <Grid item xs={8}>*/}
-        {/*    <Typography variant="h5" color="textPrimary">*/}
-        {/*      Monthly Expense*/}
-        {/*    </Typography>*/}
-        {/*  </Grid>*/}
-        {/*  <Grid item xs={4}>*/}
-        {/*    <Typography variant="h5" color="textPrimary">*/}
-        {/*      ${insertCommas(props.account.monthly_expense)}*/}
-        {/*    </Typography>*/}
-        {/*  </Grid>*/}
-        {/*</Grid >*/}
-
-        {/*<Grid container spacing="flex" className={classes.line}>*/}
-        {/*  <Grid item xs={8}>*/}
-        {/*    <Typography variant="h5" color="textPrimary">*/}
-        {/*      Lead Quota*/}
-        {/*    </Typography>*/}
-        {/*  </Grid>*/}
-        {/*  <Grid item xs={4}>*/}
-        {/*    <Typography variant="h5" color="textPrimary">*/}
-        {/*      {insertCommas(props.account.monthly_customer_min)}*/}
-        {/*    </Typography>*/}
-        {/*  </Grid>*/}
-        {/*</Grid >*/}
-
+            <GridListTile>
+              <Typography variant={'subtitle1'}>Renewal Date</Typography>
+            </GridListTile>
+            <GridListTile>
+              <Typography variant={'subtitle1'}>
+                {props.account.agreement_end ? props.account.agreement_end : ''}
+              </Typography>
+            </GridListTile>
+          </GridList>
+        </Box>
       </Box>
-      {/*<Divider />*/}
-      {/*<Box display="flex">*/}
-
-      {/*  <div className={classes.item}>*/}
-      {/*    <Typography variant="h5" color="textPrimary">*/}
-      {/*      {props.account.name ? '98.94%' : '0%'}*/}
-      {/*    </Typography>*/}
-      {/*    <Typography*/}
-      {/*      variant="overline"*/}
-      {/*      color="textSecondary"*/}
-      {/*    >*/}
-      {/*      COT/FOT*/}
-      {/*    </Typography>*/}
-      {/*  </div>*/}
-
-      {/*  <div className={classes.item}>*/}
-      {/*    <Typography variant="h5" color="textPrimary">*/}
-      {/*      {props.account.name ? '89.05%' : '0%'}*/}
-      {/*    </Typography>*/}
-      {/*    <Typography*/}
-      {/*      variant="overline"*/}
-      {/*      color="textSecondary"*/}
-      {/*    >*/}
-      {/*      CSAT Top Box*/}
-      {/*    </Typography>*/}
-      {/*  </div>*/}
-
-      {/*  <div className={classes.item}>*/}
-      {/*    <Typography variant="h5" color="textPrimary">*/}
-      {/*      {props.account.name ? '98.10%' : '0%'}*/}
-      {/*    </Typography>*/}
-      {/*    <Typography*/}
-      {/*      variant="overline"*/}
-      {/*      color="textSecondary"*/}
-      {/*    >*/}
-      {/*      CSAT Top Two*/}
-      {/*    </Typography>*/}
-      {/*  </div>*/}
-      {/*</Box>*/}
     </Card>
   );
 }

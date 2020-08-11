@@ -22,7 +22,7 @@ function PersonalBest(props, { className, ...rest }) {
       <Box
         p={3}
         position="relative"
-        minHeight={360}>
+        minHeight={410}>
 
       </Box>
 
