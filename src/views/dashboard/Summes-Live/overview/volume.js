@@ -36,18 +36,18 @@ const useStyles = makeStyles((theme) => ({
   valueSuccess: {
     textAlign: 'center',
     verticalAlign: 'center',
-    backgroundColor: '#77FBB0'
+    backgroundColor: '#E1FFEB'
   },
   valueFail: {
     textAlign: 'center',
       verticalAlign: 'center',
-      backgroundColor: '#FDC1C5'
+      backgroundColor: '#FFE1E6'
   },
   success: {
-    backgroundColor: '#77FBB0'
+    backgroundColor: '#E1FFEB'
   },
   fail: {
-    backgroundColor: '#FDC1C5'
+    backgroundColor: '#FFE1E6'
   }
 }));
 
@@ -125,7 +125,7 @@ function Volume(props, { className, ...rest }) {
             variant="subtitle1"
             color="textPrimary"
           >
-            {props.ly.supremeVol ? '$' + (props.insertCommas(props.ly.supremeVol)) : ''}
+            {props.ly.supremeVol ? (props.calcChange('supremeVol') + '%') : ''}
           </Typography>
         </GridListTile>
         <GridListTile className={(props.calcChange('supremeVol')) >= 0 ? classes.success : classes.fail}>

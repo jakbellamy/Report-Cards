@@ -15,9 +15,9 @@ const db = {
     email: 'jakbellamy@gmail.com',
     username: 'admin',
     password: 'admin',
-    firstName: 'Jakob',
+    firstName: 'Admin',
     isPublic: true,
-    lastName: 'Bellamy',
+    lastName: '',
     phone: '713-480-8815',
     role: 'admin',
     state: 'North Carolina',
@@ -27,20 +27,20 @@ const db = {
 
 mock.onPost('/api/account/login').reply((config) => {
   const { email, password } = JSON.parse(config.data);
-
-  if (email !== 'jakbellamy@gmail.com' || password !== 'admin') {
+  console.log('hit')
+  if (email == 'jakbellamy@gmail.com' && password == 'admin' ||
+    email.toLowerCase() == 'zachary.lavoy@supremelending.com' && password == 'adminlavoy' ||
+    email == 'jmvolpe@nc.rr.com' && password == 'adminvolpe') {
+    const { user } = db;
+    const accessToken = jwt.sign(
+      { id: user.id },
+      JWT_SECRET,
+      { expiresIn: JWT_EXPIRES_IN }
+    );
+    return [200, { user, accessToken }];
+  } else {
     return [400, { message: 'Please check your email and password' }];
   }
-
-  const { user } = db;
-
-  const accessToken = jwt.sign(
-    { id: user.id },
-    JWT_SECRET,
-    { expiresIn: JWT_EXPIRES_IN }
-  );
-
-  return [200, { user, accessToken }];
 });
 
 mock.onGet('/api/account/me').reply((config) => {
