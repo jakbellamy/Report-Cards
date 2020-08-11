@@ -62,9 +62,9 @@ function Volume(props, { className, ...rest }) {
       <Box
         p={1}
         position="relative"
-        minHeight={25}
+        height={45}
       >
-        <GridList cellHeight={20} className={classes.gridList} cols={2}>
+        <GridList className={classes.gridList} cols={2}>
           <GridListTile className={classes.value}>
             <Typography
               variant="h4"
@@ -83,38 +83,43 @@ function Volume(props, { className, ...rest }) {
           </GridListTile>
         </GridList>
       </Box>
-
-      <GridList cellHeight={23} className={classes.gridList} cols={2}>
-        <GridListTile className={props.calcChange('mktUnits') >= 0 ? classes.valueSuccess : classes.valueFail}>
-          <Typography
-            variant="subtitle1"
-            color="textPrimary"
-          >
-            {props.ly.mktUnits ? (props.calcChange('mktUnits')) + '%' : ''}
-          </Typography>
-        </GridListTile>
-        <GridListTile className={props.calcChange('mktUnits') >= 0 ? classes.success : classes.fail}>
-          <Typography
-            variant="subtitle2"
-            color="textPrimary"
-          >
-            vs. prior year
-          </Typography>
-        </GridListTile>
-      </GridList>
-
+      <Divider />
+      <Box className={props.calcChange('mktVol') >= 0 ? classes.success : classes.fail}
+        position="relative"
+        height={27}
+      >
+        <GridList cols={2}>
+          <GridListTile className={classes.value}>
+            <Typography
+              variant="subtitle1"
+              color="textPrimary"
+            >
+              {props.ly.mktVol ? (props.calcChange('mktVol')) + '%' : ''}
+            </Typography>
+          </GridListTile>
+          <GridListTile>
+            <Typography
+              variant="subtitle2"
+              color="textPrimary"
+            >
+              vs. prior year
+            </Typography>
+          </GridListTile>
+        </GridList>
+      </Box>
+      <Divider />
       <Box
         p={1}
         position="relative"
-        minHeight={25}
+        height={45}
       >
-        <GridList cellHeight={20} className={classes.gridList} cols={2}>
-          <GridListTile className={classes.value} >
+        <GridList className={classes.gridList} cols={2}>
+          <GridListTile className={classes.value}>
             <Typography
               variant="h4"
               color="textPrimary"
             >
-              {props.y.supremeUnits ? (props.insertCommas(props.y.supremeUnits)) : ''}
+              {props.y.supremeVol ? (props.insertCommas(props.y.supremeVol)) + '%' : ''}
             </Typography>
           </GridListTile>
           <GridListTile className={classes.subvalue}>
@@ -122,30 +127,36 @@ function Volume(props, { className, ...rest }) {
               variant="subtitle2"
               color="textPrimary"
             >
-              Supreme Units
+              Supreme Volume
             </Typography>
           </GridListTile>
         </GridList>
       </Box>
-
-      <GridList cellHeight={25} className={classes.gridList} cols={2}>
-        <GridListTile className={(props.calcChange('supremeUnits')) >= 0 ? classes.valueSuccess : classes.valueFail}>
-          <Typography
-            variant="subtitle1"
-            color="textPrimary"
-          >
-            {props.ly.supremeUnits ? (props.calcChange('supremeUnits') + '%') : ''}
-          </Typography>
-        </GridListTile>
-        <GridListTile className={(props.calcChange('supremeUnits')) >= 0 ? classes.success : classes.fail}>
-          <Typography
-            variant="subtitle2"
-            color="textPrimary"
-          >
-            vs. prior year
-          </Typography>
-        </GridListTile>
-      </GridList>
+      <Divider />
+      <Box className={props.calcChange('supremeVol') >= 0 ? classes.success : classes.fail}
+           position="relative"
+           height={27}
+      >
+        <GridList cols={2}>
+          <GridListTile className={classes.value}>
+            <Typography
+              variant="subtitle1"
+              color="textPrimary"
+            >
+              {props.ly.supremeVol ? (props.calcChange('supremeVol')) + '%' : ''}
+            </Typography>
+          </GridListTile>
+          <GridListTile>
+            <Typography
+              variant="subtitle2"
+              color="textPrimary"
+            >
+              vs. prior year
+            </Typography>
+          </GridListTile>
+        </GridList>
+      </Box>
+      <Divider />
     </Card>
   );
 }

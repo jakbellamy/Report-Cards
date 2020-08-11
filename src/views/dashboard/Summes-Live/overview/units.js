@@ -62,9 +62,9 @@ function Volume(props, { className, ...rest }) {
       <Box
         p={1}
         position="relative"
-        minHeight={25}
+        height={45}
       >
-        <GridList cellHeight={20} className={classes.gridList} cols={2}>
+        <GridList className={classes.gridList} cols={2}>
           <GridListTile className={classes.value}>
             <Typography
               variant="h4"
@@ -83,9 +83,13 @@ function Volume(props, { className, ...rest }) {
           </GridListTile>
         </GridList>
       </Box>
-
-        <GridList cellHeight={23} className={classes.gridList} cols={2}>
-          <GridListTile className={props.calcChange('mktUnits') >= 0 ? classes.valueSuccess : classes.valueFail}>
+      <Divider />
+      <Box className={props.calcChange('mktUnits') >= 0 ? classes.success : classes.fail}
+           position="relative"
+           height={27}
+      >
+        <GridList cols={2}>
+          <GridListTile className={classes.value}>
             <Typography
               variant="subtitle1"
               color="textPrimary"
@@ -93,7 +97,7 @@ function Volume(props, { className, ...rest }) {
               {props.ly.mktUnits ? (props.calcChange('mktUnits')) + '%' : ''}
             </Typography>
           </GridListTile>
-          <GridListTile className={props.calcChange('mktUnits') >= 0 ? classes.success : classes.fail}>
+          <GridListTile>
             <Typography
               variant="subtitle2"
               color="textPrimary"
@@ -102,19 +106,20 @@ function Volume(props, { className, ...rest }) {
             </Typography>
           </GridListTile>
         </GridList>
-
+      </Box>
+      <Divider />
       <Box
         p={1}
         position="relative"
-        minHeight={25}
+        height={45}
       >
-        <GridList cellHeight={20} className={classes.gridList} cols={2}>
-          <GridListTile className={classes.value} >
+        <GridList className={classes.gridList} cols={2}>
+          <GridListTile className={classes.value}>
             <Typography
               variant="h4"
               color="textPrimary"
             >
-              {props.y.supremeUnits ? (props.insertCommas(props.y.supremeUnits)) : ''}
+              {props.y.supremeUnits ? (props.insertCommas(props.y.supremeUnits)) + '%' : ''}
             </Typography>
           </GridListTile>
           <GridListTile className={classes.subvalue}>
@@ -127,17 +132,21 @@ function Volume(props, { className, ...rest }) {
           </GridListTile>
         </GridList>
       </Box>
-
-        <GridList cellHeight={25} className={classes.gridList} cols={2}>
-          <GridListTile className={(props.calcChange('supremeUnits')) >= 0 ? classes.valueSuccess : classes.valueFail}>
+      <Divider />
+      <Box className={props.calcChange('supremeUnits') >= 0 ? classes.success : classes.fail}
+           position="relative"
+           height={27}
+      >
+        <GridList cols={2}>
+          <GridListTile className={classes.value}>
             <Typography
               variant="subtitle1"
               color="textPrimary"
             >
-              {props.ly.supremeUnits ? (props.calcChange('supremeUnits') + '%') : ''}
+              {props.ly.supremeUnits ? (props.calcChange('supremeUnits')) + '%' : ''}
             </Typography>
           </GridListTile>
-          <GridListTile className={(props.calcChange('supremeUnits')) >= 0 ? classes.success : classes.fail}>
+          <GridListTile>
             <Typography
               variant="subtitle2"
               color="textPrimary"
@@ -146,6 +155,8 @@ function Volume(props, { className, ...rest }) {
             </Typography>
           </GridListTile>
         </GridList>
+      </Box>
+      <Divider />
     </Card>
   );
 }
