@@ -32,10 +32,10 @@ function DocsLayout({ children }) {
 
   return (
     <>
-      <TopBar onMobileNavOpen={() => setMobileNavOpen(true)} />
+      <TopBar onMobileNavOpen={() => setMobileNavOpen(false)} />
       <NavBar
         onMobileClose={() => setMobileNavOpen(false)}
-        onMobileOpen={() => setMobileNavOpen(true)}
+        onMobileOpen={() => setMobileNavOpen(false)}
         openMobile={isMobileNavOpen}
       />
       <div className={classes.wrapper}>

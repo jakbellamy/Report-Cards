@@ -127,12 +127,12 @@ function NavBar({ openMobile, onMobileClose }) {
   const classes = useStyles();
   const location = useLocation();
 
-  useEffect(() => {
-    if (openMobile && onMobileClose) {
-      onMobileClose();
-    }
-    // eslint-disable-next-line
-  }, [location.pathname]);
+  // useEffect(() => {
+  //   if (openMobile && onMobileClose) {
+  //     onMobileClose();
+  //   }
+  //   // eslint-disable-next-line
+  // }, [location.pathname]);
 
   const content = (
     <Box

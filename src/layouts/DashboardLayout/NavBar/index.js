@@ -219,11 +219,11 @@ function NavBar({ openMobile, onMobileClose, onMobileOpen}) {
   const [open, isOpen] = useState(true)
   const { user } = useSelector((state) => state.account);
 
-  useEffect(() => {
-    if (openMobile && onMobileClose) {
-      onMobileClose();
-    }
-  }, [location.pathname]);
+  // useEffect(() => {
+  //   if (openMobile && onMobileClose) {
+  //     onMobileClose();
+  //   }
+  // }, [location.pathname]);
 
 
   const content = (
