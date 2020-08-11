@@ -120,7 +120,7 @@ function Volume(props, { className, ...rest }) {
               variant="h5"
               color="textPrimary"
             >
-              {props.y.supremeUnits ? (props.insertCommas(props.y.supremeUnits)) + '%' : ''}
+              {props.y.supremeUnits ? (props.insertCommas(props.y.supremeUnits)): ''}
             </Typography>
           </GridListTile>
           <GridListTile className={classes.subvalue}>
