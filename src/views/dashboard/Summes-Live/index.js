@@ -4,14 +4,12 @@ import Page from 'src/components/Page';
 import AccountBio from './AccountBio';
 import CompareLineChart from './CompareLineChart';
 import Header from './Header';
-// import Overview from './overview/Overview';
 import Overview from './overview/index';
 import Salesforce from './salesforce/salesforce'
 import PersonalBest from './personalBest/personalBest'
 import ContinuingEducation from './continuingEducation/continuingEducation.js'
-import CeEvents from './ceEvents'
-import PpbEvents from './ppbEvents'
-import Upcoming from './upcoming'
+import Contacts from './contacts/contacts'
+import ReportStatus from './reportStatus/reportStatus';
 const methods = require('./methods')
 
 const useStyles = makeStyles((theme) => ({
@@ -136,30 +134,19 @@ function DashboardAlternativeView() {
             <CompareLineChart stats={stats} stats1={stats1} graphType={graphType} setGraphType={setGraphType}/>
             <ContinuingEducation />
           </Grid>
-          {/*<Grid item lg={7} xl={9} xs={12}>*/}
-          {/*  <CompareLineChart stats={stats} stats1={stats1} graphType={graphType} setGraphType={setGraphType}/>*/}
-          {/*</Grid>*/}
           <Grid item lg={4.5} xl={2} xs={5}>
             <AccountBio account={selectedAccount}  />
             <Salesforce />
             <PersonalBest />
           </Grid>
-          {/*<Grid item lg={4} xs={12}>*/}
-          {/*  <CeEvents account={selectedAccount}/>*/}
-          {/*</Grid>*/}
-          {/*<Grid item lg={4} xs={12}>*/}
-          {/*  <PpbEvents account={selectedAccount}/>*/}
-          {/*</Grid>*/}
-          {/*<Grid item lg={4} xs={12}>*/}
-          {/*  <Upcoming account={selectedAccount}/>*/}
-          {/*</Grid>*/}
-          {/*<Grid item lg={8} xs={12}>*/}
-          {/*  /!*<MostProfitableProducts />*!/*/}
-          {/*  /!*<FinancialStats selectedAccount={selectedAccount}/>*!/*/}
-          {/*</Grid>*/}
-          {/*<Grid item lg={4} xs={12}>*/}
-          {/*  /!*<TopReferrals />*!/*/}
-          {/*</Grid>*/}
+        </Grid>
+        <Grid container spacing={3}>
+          <Grid item xs={8}>
+            <Contacts />
+          </Grid>
+          <Grid item xs={4}>
+            <ReportStatus />
+          </Grid>
         </Grid>
       </Container>
     </Page>
