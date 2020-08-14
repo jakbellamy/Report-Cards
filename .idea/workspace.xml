@@ -21,9 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d0bc8d6a-fedc-4de2-bb38-f2b918ef4cd3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/AccountBio/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/AccountBio/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/personalBest/personalBest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/personalBest/personalBest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/salesforce/salesforce.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/salesforce/salesforce.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,6 +91,7 @@
       <workItem from="1596994026073" duration="152000" />
       <workItem from="1597005872200" duration="6999000" />
       <workItem from="1597027035558" duration="1754000" />
+      <workItem from="1597199947143" duration="7000" />
     </task>
     <servers />
   </component>
