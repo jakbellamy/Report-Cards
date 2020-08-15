@@ -1,37 +1,19 @@
 import React from 'react';
-import {
-  Box,
-  Card,
-  CardHeader,
-  Divider,
-  ListSubheader,
-  makeStyles,
-  Button,
-  GridList,
-  GridListTile,
-  Typography
-} from '@material-ui/core';
+import { Box, Card, Divider, makeStyles, GridList, GridListTile, Typography } from '@material-ui/core';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    // display: 'flex',
-    // flexWrap: 'wrap',
     justifyContent: 'space-around',
     overflow: 'hidden',
     backgroundColor: theme.palette.background.paper,
   },
   gridList: {
-    paddingTop: theme.spacing(1),
-    // paddingBottom: theme.spacing(0.7),
-    // width: 100,
-    // height: 40,
+    paddingTop: theme.spacing(1)
   },
   value: {
-    textAlign: 'center',
-    // verticalAlign: 'text-bottom'
-    // paddingRight: theme.spacing(2)
+    textAlign: 'center'
   },
   valueSuccess: {
     textAlign: 'center',

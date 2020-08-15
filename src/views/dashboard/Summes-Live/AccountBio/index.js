@@ -2,12 +2,6 @@ import React, { useState, useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { Box, Card, CardHeader, Divider, Typography, Grid, makeStyles, GridList, GridListTile } from '@material-ui/core';
-import GenericMoreButton from 'src/components/GenericMoreButton';
-import axios from 'src/utils/axios';
-import useIsMountedRef from 'src/hooks/useIsMountedRef';
-import Chart from './Chart';
-import { getHourNumbers } from '@material-ui/pickers/views/Clock/ClockNumbers';
-import Salesforce from 'src/views/dashboard/Summes-Live/salesforce/salesforce'
 
 const useStyles = makeStyles((theme) => ({
   root: {},

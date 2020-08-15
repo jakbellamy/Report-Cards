@@ -1,8 +1,7 @@
 import React from 'react';
 import Volume from './volume'
 import Units from './units'
-import { Box, Grid, Card, CardHeader, Divider, makeStyles, Button, Typography} from '@material-ui/core';
-import clsx from 'clsx';
+import { Box, Grid, makeStyles, Typography} from '@material-ui/core';
 import PropTypes from 'prop-types';
 
 const useStyles = makeStyles((theme) => ({
