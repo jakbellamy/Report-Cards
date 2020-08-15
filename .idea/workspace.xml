@@ -20,9 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0bc8d6a-fedc-4de2-bb38-f2b918ef4cd3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/overview/overview.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/overview/src/block.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/overview/src/change.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/overview/src/ly.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/overview/src/ytd.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.bitmap" beforeDir="false" afterPath="$PROJECT_DIR$/.bitmap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/AccountBio/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/AccountBio/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/overview/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/overview/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/images/products/product_freelancer.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/images/products/product_freelancer.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/DashboardLayout/NavBar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/DashboardLayout/NavBar/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/index.js.orig" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/index.js.orig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/overview/Overview.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/overview/Overview2.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/overview/units.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/overview/units.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/overview/volume.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/overview/volume.js" afterDir="false" />
     </list>
@@ -97,7 +105,7 @@
       <workItem from="1597005872200" duration="6999000" />
       <workItem from="1597027035558" duration="1754000" />
       <workItem from="1597199947143" duration="7000" />
-      <workItem from="1597419098682" duration="1355000" />
+      <workItem from="1597419098682" duration="6415000" />
     </task>
     <servers />
   </component>

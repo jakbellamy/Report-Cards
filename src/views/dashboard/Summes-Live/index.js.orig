@@ -4,7 +4,7 @@ import Page from 'src/components/Page';
 import AccountBio from './AccountBio';
 import CompareLineChart from '/CompareLineChart';
 import Header from './Header';
-import Overview from './Overview';
+import Overview2 from './Overview2';
 import CeEvents from './ceEvents'
 import PpbEvents from './ppbEvents'
 import Upcoming from './upcoming'
@@ -141,7 +141,7 @@ function DashboardAlternativeView() {
         <Header accounts={accounts} selectedAccount={selectedAccount} setSelectedAccount={handleAccountSelection} date={reportDate}/>
         <Grid container spacing={3}>
           <Grid item xs={7} xl={3} spacing={3}>
-            <Overview thisYear={ytd} lastYear={ly} thisMonth={current} />
+            <Overview2 thisYear={ytd} lastYear={ly} thisMonth={current} />
             <CompareLineChart stats={stats} stats1={stats1} graphType={graphType} setGraphType={setGraphType}/>
           </Grid>
           {/*<Grid item lg={7} xl={9} xs={12}>*/}

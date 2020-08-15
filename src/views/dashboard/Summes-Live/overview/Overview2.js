@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-function Overview(props, { className, ...rest }) {
+function Overview2(props, { className, ...rest }) {
   console.log(props.thisMonth)
   const classes = useStyles();
   const overview = {
@@ -206,8 +206,8 @@ function Overview(props, { className, ...rest }) {
   );
 }
 
-Overview.propTypes = {
+Overview2.propTypes = {
   className: PropTypes.string
 };
 
-export default Overview;
+export default Overview2;

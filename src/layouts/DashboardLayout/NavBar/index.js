@@ -54,7 +54,7 @@ const navConfig = [
       //   href: '/404'
       // },
       // {
-      //   title: 'Overview',
+      //   title: 'Overview2',
       //   // icon: BarChartIcon,
       //   href: '/app/dashboard/dashboard'
       // },

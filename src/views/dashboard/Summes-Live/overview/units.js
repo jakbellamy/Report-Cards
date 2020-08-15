@@ -42,100 +42,192 @@ function Volume(props, { className, ...rest }) {
       {...rest}
     >
       <Box
-        p={1}
+        paddingLeft={1}
+        paddingRight={1}
         position="relative"
-        height={45}
+        height={43}
       >
         <GridList className={classes.gridList} cols={2}>
           <GridListTile className={classes.value}>
-            <Typography
-              variant="h5"
-              color="textPrimary"
-            >
-              {props.y.mktUnits ? (props.insertCommas(props.y.mktUnits)) + '%' : ''}
-            </Typography>
+            <Box paddingTop={0} position="relative">
+              <Typography
+                align="center"
+                variant="h4"
+                color="textPrimary"
+              >
+                {props.y.supremeUnits ? ('$' + props.insertCommas(props.y.supremeUnits)): ''}
+              </Typography>
+            </Box>
           </GridListTile>
-          <GridListTile className={classes.subvalue}>
-            <Typography
-              variant="subtitle2"
-              color="textPrimary"
-            >
-              Supreme Share
-            </Typography>
-          </GridListTile>
-        </GridList>
-      </Box>
-      <Divider />
-      <Box className={props.calcChange('mktUnits') >= 0 ? classes.success : classes.fail}
-           position="relative"
-           height={30}
-      >
-        <GridList cols={2}>
-          <GridListTile className={classes.value}>
-            <Typography
-              variant="subtitle1"
-              color="textPrimary"
-            >
-              {props.ly.mktUnits ? (props.calcChange('mktUnits')) + '%' : ''}
-            </Typography>
-          </GridListTile>
-          <GridListTile>
-            <Typography
-              variant="subtitle2"
-              color="textPrimary"
-            >
-              vs. prior year
-            </Typography>
-          </GridListTile>
+          <Box paddingTop={10} position="relative">
+            <GridListTile className={classes.subvalue}>
+              <Typography
+                variant="subtitle1"
+                color="textPrimary"
+              >
+                Supreme Units
+              </Typography>
+            </GridListTile>
+          </Box>
         </GridList>
       </Box>
       <Divider />
       <Box
-        p={1}
+        paddingLeft={1}
+        paddingRight={1}
         position="relative"
-        height={45}
+        height={35}
       >
         <GridList className={classes.gridList} cols={2}>
           <GridListTile className={classes.value}>
-            <Typography
-              variant="h5"
-              color="textPrimary"
-            >
-              {props.y.supremeUnits ? (props.insertCommas(props.y.supremeUnits)): ''}
-            </Typography>
+            <Box paddingBottom={10} position="relative">
+              <Typography
+                variant="body1"
+                color="textPrimary"
+              >
+                {props.ly.supremeUnits ? '$' + (props.insertCommas(props.ly.supremeUnits)): ''}
+              </Typography>
+            </Box>
           </GridListTile>
-          <GridListTile className={classes.subvalue}>
-            <Typography
-              variant="subtitle2"
-              color="textPrimary"
-            >
-              Supreme Units
-            </Typography>
+          <Box position="relative">
+            <GridListTile className={classes.subvalue}>
+              <Typography
+                variant="body1"
+                color="textPrimary"
+              >
+                Last Year
+              </Typography>
+            </GridListTile>
+          </Box>
+        </GridList>
+      </Box>
+
+      <Divider />
+
+      <Box
+        paddingLeft={1}
+        paddingRight={1}
+        position="relative"
+        height={33}
+        className={props.calcChange('supremeUnits') >= 0 ? classes.success : classes.fail}
+      >
+        <GridList className={classes.gridList} cols={2}>
+          <GridListTile className={classes.value}>
+            <Box paddingBottom={10} position="relative">
+              <Typography
+                variant="body1"
+                color="textPrimary"
+              >
+                {props.ly.supremeUnits ? (props.calcChange('supremeUnits')) + '%' : ''}
+              </Typography>
+            </Box>
           </GridListTile>
+          <Box position="relative">
+            <GridListTile className={classes.subvalue}>
+              <Typography
+                variant="body1"
+                color="textPrimary"
+              >
+                Percent Change
+              </Typography>
+            </GridListTile>
+          </Box>
+        </GridList>
+      </Box>
+
+      <Divider />
+
+      <Box
+        paddingLeft={1}
+        paddingRight={1}
+        position="relative"
+        height={43}
+      >
+        <GridList className={classes.gridList} cols={2}>
+          <GridListTile className={classes.value}>
+            <Box paddingTop={0} position="relative">
+              <Typography
+                align="center"
+                variant="h4"
+                color="textPrimary"
+              >
+                {props.y.mktUnits ? (props.insertCommas(props.y.mktUnits) + '%'): ''}
+              </Typography>
+            </Box>
+          </GridListTile>
+          <Box paddingTop={10} position="relative">
+            <GridListTile className={classes.subvalue}>
+              <Typography
+                variant="subtitle1"
+                color="textPrimary"
+              >
+                Supreme Share
+              </Typography>
+            </GridListTile>
+          </Box>
         </GridList>
       </Box>
       <Divider />
-      <Box className={props.calcChange('supremeUnits') >= 0 ? classes.success : classes.fail}
-           position="relative"
-           height={30}
+      <Box
+        paddingLeft={1}
+        paddingRight={1}
+        position="relative"
+        height={35}
       >
-        <GridList cols={2}>
+        <GridList className={classes.gridList} cols={2}>
           <GridListTile className={classes.value}>
-            <Typography
-              variant="subtitle1"
-              color="textPrimary"
-            >
-              {props.ly.supremeUnits ? (props.calcChange('supremeUnits')) + '%' : ''}
-            </Typography>
+            <Box paddingBottom={10} position="relative">
+              <Typography
+                variant="body1"
+                color="textPrimary"
+              >
+                {props.ly.mktUnits ? (props.insertCommas(props.ly.mktUnits) + '%'): ''}
+              </Typography>
+            </Box>
           </GridListTile>
-          <GridListTile>
-            <Typography
-              variant="subtitle2"
-              color="textPrimary"
-            >
-              vs. prior year
-            </Typography>
+          <Box position="relative">
+            <GridListTile className={classes.subvalue}>
+              <Typography
+                variant="body1"
+                color="textPrimary"
+              >
+                Last Year
+              </Typography>
+            </GridListTile>
+          </Box>
+        </GridList>
+      </Box>
+
+      <Divider />
+
+      <Box
+        paddingLeft={1}
+        paddingRight={1}
+        position="relative"
+        height={33}
+        className={props.calcChange('mktUnits') >= 0 ? classes.success : classes.fail}
+      >
+        <GridList className={classes.gridList} cols={2}>
+          <GridListTile className={classes.value}>
+            <Box paddingBottom={10} position="relative">
+              <Typography
+                variant="body1"
+                color="textPrimary"
+              >
+                {props.ly.mktUnits ? (props.calcChange('mktUnits')) + '%' : ''}
+              </Typography>
+            </Box>
           </GridListTile>
+          <Box position="relative">
+            <GridListTile className={classes.subvalue}>
+              <Typography
+                variant="body1"
+                color="textPrimary"
+              >
+                Percent Change
+              </Typography>
+            </GridListTile>
+          </Box>
         </GridList>
       </Box>
       <Divider />
