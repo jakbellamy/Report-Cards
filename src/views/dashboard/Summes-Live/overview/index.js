@@ -46,13 +46,13 @@ function Overview(props, { className, ...rest }) {
 
   return (
     <Grid container spacing={2} justify-self={'stretch'} className={classes.root}>
-      <Grid item xs={6} xl={2} spacing={1}>
+      <Grid item xs={6} spacing={1}>
         <Box>
           <Typography variant={"subtitle1"}>YTD Volume</Typography>
           <Volume y={y} ly={ly} insertCommas={insertCommas} calcChange={calcChange} />
         </Box>
       </Grid>
-      <Grid item xs={6} xl={2} spacing={1}>
+      <Grid item xs={6} spacing={1}>
         <Box>
           <Typography variant={"subtitle1"}>YTD Units</Typography>
           <Units y={y} ly={ly} insertCommas={insertCommas} calcChange={calcChange} />

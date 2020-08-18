@@ -129,12 +129,12 @@ function DashboardAlternativeView() {
       <Container maxWidth={false} className={classes.container}>
         <Grid container spacing={3}>
           <Header accounts={accounts} selectedAccount={selectedAccount} setSelectedAccount={handleAccountSelection}/>
-          <Grid item xs={7} xl={2} spacing={3}>
+          <Grid item xs={7} spacing={3}>
             <Overview thisYear={ytd} lastYear={ly} thisMonth={current}/>
             <CompareLineChart stats={stats} stats1={stats1} graphType={graphType} setGraphType={setGraphType}/>
             <ContinuingEducation />
           </Grid>
-          <Grid item lg={4.5} xl={2} xs={5}>
+          <Grid item xs={5}>
             <AccountBio account={selectedAccount}  />
             <Salesforce />
             <PersonalBest />

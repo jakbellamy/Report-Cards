@@ -55,7 +55,7 @@ function Volume(props, { className, ...rest }) {
                 variant="h4"
                 color="textPrimary"
               >
-                {props.y.supremeUnits ? ('$' + props.insertCommas(props.y.supremeUnits)): ''}
+                {props.y.supremeUnits ? props.insertCommas(props.y.supremeUnits): ''}
               </Typography>
             </Box>
           </GridListTile>
@@ -85,7 +85,7 @@ function Volume(props, { className, ...rest }) {
                 variant="body1"
                 color="textPrimary"
               >
-                {props.ly.supremeUnits ? '$' + (props.insertCommas(props.ly.supremeUnits)): ''}
+                {props.ly.supremeUnits ? props.insertCommas(props.ly.supremeUnits): ''}
               </Typography>
             </Box>
           </GridListTile>
