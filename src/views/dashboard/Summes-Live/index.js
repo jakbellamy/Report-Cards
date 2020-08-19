@@ -136,7 +136,7 @@ function DashboardAlternativeView() {
           </Grid>
           <Grid item xs={5}>
             <AccountBio account={selectedAccount}  />
-            <Salesforce />
+            <Salesforce account={selectedAccount}/>
             <PersonalBest />
           </Grid>
         </Grid>
