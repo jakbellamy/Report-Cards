@@ -41,6 +41,8 @@ const year_shell = {1: shell, 2: shell, 3: shell, 4: shell, 5: shell, 6: shell, 
 function DashboardAlternativeView() {
   const [accounts, setAccounts] = useState([])
   const [selectedAccount, setSelectedAccount] = useState({name: 'Choose Account', id: -1})
+  const [education, setEducation] = useState([])
+  const [filteredEducation, setFilteredEducation] = useState({y: [], ly: []})
   const [lyReports, setLyReports] = useState([])
   const [ytdReports, setYtdReports] = useState([])
   const [ly, setLy] = useState(year_shell)
@@ -66,6 +68,9 @@ function DashboardAlternativeView() {
     await fetch("https://djsupreme.herokuapp.com/data/y")
       .then(res => res.json())
       .then(res => setYtdReports(res))
+    await fetch("https://djsupreme.herokuapp.com/api/educations/")
+      .then(res => res.json())
+      .then(res => setEducation(res))
   }
 
   useEffect(() => {
@@ -118,11 +123,22 @@ function DashboardAlternativeView() {
     console.log(avgf)
   }
 
+  const filterEducation = (account) => {
+    console.log(education)
+    let edu = education.filter(report => report.account === account.id)
+    let year = education.sort((a, b) => a.date - b.date)[0]['date'].split('-')[0]
+    let eduy = edu.filter(report => report.date >= `${year}-00-00`)
+    let eduly = edu.filter(report => `${year - 1}-00-00` <= report.date <= `${year}-00-00`)
+    setFilteredEducation({y: eduy, ly: eduly})
+  }
+
   const handleAccountSelection = (account) => {
     setSelectedAccount(account)
     coerceReports(account)
+    filterEducation(account)
   }
-  console.log('ly', lyReports)
+
+  console.log('education', filteredEducation)
   return (
     <Page className={classes.root} title="Dashboard Alternative">
       <Container maxWidth={false} className={classes.container}>

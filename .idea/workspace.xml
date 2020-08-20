@@ -20,13 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0bc8d6a-fedc-4de2-bb38-f2b918ef4cd3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/jakobbellamy.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/ContinuingEducation/Education.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/ContinuingEducation/Education.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/Leads/Leads.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/Leads/Leads.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/PersonalBest/PersonalBest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/PersonalBest/PersonalBest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/_Components/SimpleList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/_Components/SimpleList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/_Components/Title.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/_Components/Title.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,6 +100,7 @@
       <workItem from="1597419098682" duration="7267000" />
       <workItem from="1597775997247" duration="1397000" />
       <workItem from="1597875013757" duration="4124000" />
+      <workItem from="1597964023145" duration="1131000" />
     </task>
     <servers />
   </component>
@@ -176,13 +173,11 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/utilities/reducers/accountReducer.js</url>
           <line>1</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/Routes.js</url>
           <line>1</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
