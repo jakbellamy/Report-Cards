@@ -2,23 +2,10 @@ import React, { useState, useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { Box, Card, CardHeader, Divider, Typography, Grid, makeStyles, GridList, GridListTile } from '@material-ui/core';
+import SimpleList from '../_Components/SimpleList'
 
 const useStyles = makeStyles((theme) => ({
   root: {},
-  item: {
-    textAlign: 'center',
-    flexGrow: 1,
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    padding: theme.spacing(3, 2),
-    '&:not(:last-of-type)': {
-      borderRight: `1px solid ${theme.palette.divider}`
-    }
-  },
-  line: {
-    padding: theme.spacing(1.2, 1)
-  }
 }));
 
 const insertCommas = (num) => {
@@ -29,26 +16,20 @@ const insertCommas = (num) => {
   }
 }
 
-const handleShare = (num) => {
-  return Math.round(num * 100)
-}
 function EarningsSegmentation(props, { className, ...rest }) {
   const classes = useStyles();
 
-  // console.log('bio props', props)
-  if(props.report){
-    // console.log('units', props.report.market_share_units)
-  }
-  console.log(props.account)
+  let officers = props.account.loan_officers ? props.account.loan_officers.length : ''
+  let investment = props.account.monthly_investment ? '$' + insertCommas(props.account.monthly_investment) : ''
+  let lease = props.account.monthly_lease ? '$' + insertCommas(props.account.monthly_lease) : ''
+  let renewal = props.account.agreement_end ? props.account.agreement_end : ''
+
   return (
     <Card
       className={clsx(classes.root, className)}
       {...rest}
     >
-      <CardHeader
-        // action={<GenericMoreButton />}
-        title="Account Info"
-      />
+      <CardHeader title="Account Info"/>
       <Divider />
       <Box
         p={2}
@@ -68,54 +49,28 @@ function EarningsSegmentation(props, { className, ...rest }) {
           paddingTop={4}
           paddingLeft={2}
           position={'relative'}
-          height={10}
+          height={250}
         >
-          <GridList cols={2} cellHeight={30}>
-            <GridListTile>
-              <Typography variant={'subtitle1'}>Number of Agents</Typography>
-            </GridListTile>
-            <GridListTile>
-              <Typography variant={'subtitle1'}>
-                {props.account.agent_count}
-              </Typography>
-            </GridListTile>
+          {props.account.agent_count ? <SimpleList variant='subtitle1' noShift={true}
+             text={['Number of Agents', props.account.agent_count]}/>
+            : null}
 
-            <GridListTile>
-              <Typography variant={'subtitle1'}>Number of Loan Officers</Typography>
-            </GridListTile>
-            <GridListTile>
-              <Typography variant={'subtitle1'}>
-                {props.account.loan_officers ? props.account.loan_officers.length : ''}
-              </Typography>
-            </GridListTile>
+          {props.account.agent_count ? <SimpleList variant='subtitle1' noShift={true}
+             text={['Number of Loan Officers', officers]}/>
+            : null}
 
-            <GridListTile>
-              <Typography variant={'subtitle1'}>Monthly Lead Investment</Typography>
-            </GridListTile>
-            <GridListTile>
-              <Typography variant={'subtitle1'}>
-                {props.account.monthly_investment ? '$' + insertCommas(props.account.monthly_investment) : ''}
-              </Typography>
-            </GridListTile>
+          {props.account.agent_count ? <SimpleList variant='subtitle1' noShift={true}
+             text={['Monthly Lead Investment', investment]}/>
+            : null}
 
-            <GridListTile>
-              <Typography variant={'subtitle1'}>Monthly Lease</Typography>
-            </GridListTile>
-            <GridListTile>
-              <Typography variant={'subtitle1'}>
-                {props.account.monthly_lease ? '$' + insertCommas(props.account.monthly_lease) : ''}
-              </Typography>
-            </GridListTile>
+          {props.account.agent_count ? <SimpleList variant='subtitle1' noShift={true}
+             text={['Monthly Lease', lease]}/>
+            : null}
 
-            <GridListTile>
-              <Typography variant={'subtitle1'}>Renewal Date</Typography>
-            </GridListTile>
-            <GridListTile>
-              <Typography variant={'subtitle1'}>
-                {props.account.agreement_end ? props.account.agreement_end : ''}
-              </Typography>
-            </GridListTile>
-          </GridList>
+          {props.account.agent_count ? <SimpleList variant='subtitle1' noShift={true}
+             text={['Renewal Date', renewal]}/>
+            : null}
+
         </Box>
       </Box>
     </Card>

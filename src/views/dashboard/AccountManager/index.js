@@ -49,7 +49,6 @@ function DashboardAlternativeView() {
   const [graphType, setGraphType] = useState('market_share_volume')
   const [stats, setStats] = useState({ly: [], y: [], avg: []})
   const [stats1, setStats1] = useState({ly: [], y: [], avg: []})
-  const [company, setCompany] = useState({ly: [], y: [], avg: []})
   const classes = useStyles();
 
   const fetchData = async () => {
@@ -137,7 +136,7 @@ function DashboardAlternativeView() {
           <Grid item xs={5}>
             <AccountBio account={selectedAccount}  />
             <Leads account={selectedAccount}/>
-            <PersonalBest />
+            <PersonalBest account={selectedAccount} />
           </Grid>
         </Grid>
         <Grid container spacing={3}>
