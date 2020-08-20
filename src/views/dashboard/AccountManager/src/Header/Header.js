@@ -1,11 +1,6 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import { Link as RouterLink } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import clsx from 'clsx';
-import { Breadcrumbs, Button, Grid, Link, Menu, MenuItem, SvgIcon, Typography, InputLabel, FormControl, Select, makeStyles } from '@material-ui/core';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
+import { Button, Grid, Menu, MenuItem, Typography, makeStyles } from '@material-ui/core';
 
 const StyledMenu = withStyles({
   paper: {
@@ -40,12 +35,6 @@ const StyledMenuItem = withStyles((theme) => ({
 
 const useStyles = makeStyles((theme) => ({
   root: {},
-  actionIcon: {
-    marginRight: theme.spacing(1)
-  },
-  info: {
-    marginLeft: theme.spacing(1),
-  }
 }));
 
 function Header(props, {  ...rest }) {

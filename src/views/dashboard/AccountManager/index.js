@@ -3,7 +3,7 @@ import { Container, Grid, makeStyles } from '@material-ui/core';
 import Page from 'src/components/Page';
 import AccountBio from './src/AccountBio/Bio';
 import CompareLineChart from './src/MarketChart';
-import Header from './src/Header';
+import Header from './src/Header/Header';
 import Overview from './src/Overview/index';
 import Leads from './src/Leads/Leads'
 import PersonalBest from './src/PersonalBest/PersonalBest'
