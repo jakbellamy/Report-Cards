@@ -3,7 +3,7 @@ import { Link as RouterLink } from 'react-router-dom';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import { AppBar, Box, Button, Divider, Toolbar, Hidden, Typography, Link, makeStyles } from '@material-ui/core';
-import { APP_VERSION } from 'src/config';
+import { APP_VERSION } from 'src/utilities/config';
 import OPEN_Logo from 'src/components/OPEN_Logo';
 
 const useStyles = makeStyles((theme) => ({

@@ -17,8 +17,8 @@ import Auth from 'src/components/Auth';
 import SettingsNotification from 'src/components/SettingsNotification';
 import GoogleAnalytics from 'src/components/GoogleAnalytics';
 import ScrollReset from 'src/components/ScrollReset';
-import useSettings from 'src/hooks/useSettings';
-import { createTheme } from 'src/theme';
+import useSettings from 'src/utilities/hooks/useSettings';
+import { createTheme } from 'src/utilities/theme';
 import Routes from 'src/Routes';
 
 const history = createBrowserHistory();

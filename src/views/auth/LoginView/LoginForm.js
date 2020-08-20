@@ -5,7 +5,7 @@ import * as Yup from 'yup';
 import PropTypes from 'prop-types';
 import { Formik } from 'formik';
 import { Box, Button, TextField, FormHelperText, makeStyles } from '@material-ui/core';
-import { login } from 'src/actions/accountActions';
+import { login } from 'src/utilities/actions/accountActions';
 
 const useStyles = makeStyles(() => ({
   root: {}

@@ -13,7 +13,7 @@ import {
 } from '@material-ui/core';
 import { Menu as MenuIcon } from 'react-feather';
 import OPEN_Logo from 'src/components/OPEN_Logo';
-import { THEMES } from 'src/constants';
+import { THEMES } from 'src/utilities/constants';
 import Account from './Account';
 import Settings from './Settings';
 

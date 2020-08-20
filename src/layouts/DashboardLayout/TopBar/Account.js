@@ -4,7 +4,7 @@ import { useHistory } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
 import { useSnackbar } from 'notistack';
 import { Avatar, Box, ButtonBase, Hidden, Menu, MenuItem, Typography, makeStyles } from '@material-ui/core';
-import { logout } from 'src/actions/accountActions';
+import { logout } from 'src/utilities/actions/accountActions';
 
 const useStyles = makeStyles((theme) => ({
   avatar: {

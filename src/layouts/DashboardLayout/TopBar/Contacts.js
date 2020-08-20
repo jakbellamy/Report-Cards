@@ -26,7 +26,7 @@ import {
 } from '@material-ui/core';
 import { Users as UsersIcon } from 'react-feather';
 import OnlineIndicator from 'src/components/OnlineIndicator';
-import { getContacts } from 'src/actions/chatActions';
+import { getContacts } from 'src/utilities/actions/chatActions';
 
 const useStyles = makeStyles((theme) => ({
   popover: {

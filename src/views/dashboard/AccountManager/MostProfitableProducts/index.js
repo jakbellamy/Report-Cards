@@ -22,8 +22,8 @@ import {
   makeStyles
 } from '@material-ui/core';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
-import axios from 'src/utils/axios';
-import useIsMountedRef from 'src/hooks/useIsMountedRef';
+import axios from 'src/utilities/utils/axios';
+import useIsMountedRef from 'src/utilities/hooks/useIsMountedRef';
 import GenericMoreButton from 'src/components/GenericMoreButton';
 import CircularProgress from './CircularProgress';
 
