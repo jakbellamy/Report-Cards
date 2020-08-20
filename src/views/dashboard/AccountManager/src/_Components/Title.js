@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 function Title(props, { className, ...rest }) {
   return (
-    <Box paddingBottom={3} paddingTop={3}>
+    <Box paddingBottom={props.height ? props.height : 3} paddingTop={props.height ? props.height : 3}>
       <Typography align={props.align} variant={props.variant}>
         {props.text}
       </Typography>

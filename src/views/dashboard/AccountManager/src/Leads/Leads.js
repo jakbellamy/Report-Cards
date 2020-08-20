@@ -47,7 +47,7 @@ function Leads(props, { className, ...rest }) {
               <GridList cols={2}>
                 <GridListTile>
                   <Typography variant="subtitle1" color="textPrimary">
-                    June Delivery
+                    {props.account.monthly_customer_min ? 'June Delivery' : ''}
                   </Typography>
                 </GridListTile>
                 <GridListTile>
@@ -62,7 +62,7 @@ function Leads(props, { className, ...rest }) {
               <GridList cols={2}>
                 <GridListTile>
                   <Typography variant="subtitle1" color="textPrimary">
-                    Quarter Delivery
+                    {props.account.monthly_customer_min ? 'Quarter Delivery' : ''}
                   </Typography>
                 </GridListTile>
                 <GridListTile>
@@ -77,7 +77,7 @@ function Leads(props, { className, ...rest }) {
               <GridList cols={2}>
                 <GridListTile>
                   <Typography variant="subtitle1" color="textPrimary">
-                   YTD Delivery
+                    {props.account.monthly_customer_min ? 'YTD Delivery' : ''}
                   </Typography>
                 </GridListTile>
                 <GridListTile>

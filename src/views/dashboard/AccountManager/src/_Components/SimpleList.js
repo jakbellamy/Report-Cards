@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 function Title(props, { className, ...rest }) {
   return (
-    <Box position="relative" paddingBottom={2} height={props.height}>
+    <Box position="relative" paddingBottom={props.height ? props.height : 2}>
       <Grid container spacing={0}>
         {props.noShift ? null : <Grid item xs={1}/>}
         <Grid item xs={props.noShift ? 5 : 5}>

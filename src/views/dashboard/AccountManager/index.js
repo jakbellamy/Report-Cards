@@ -131,7 +131,7 @@ function DashboardAlternativeView() {
           <Grid item xs={7} spacing={3}>
             <Overview thisYear={ytd} lastYear={ly} thisMonth={current}/>
             <CompareLineChart stats={stats} stats1={stats1} graphType={graphType} setGraphType={setGraphType}/>
-            <Education />
+            <Education account={selectedAccount} />
           </Grid>
           <Grid item xs={5}>
             <AccountBio account={selectedAccount}  />
