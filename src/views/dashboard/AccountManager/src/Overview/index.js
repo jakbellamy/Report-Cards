@@ -42,7 +42,7 @@ function Overview(props, { className, ...rest }) {
     }
   }
 
-  console.log('overview', y, ly)
+  console.log('Overview', y, ly)
 
   return (
     <Grid container spacing={2} justify-self={'stretch'} className={classes.root}>

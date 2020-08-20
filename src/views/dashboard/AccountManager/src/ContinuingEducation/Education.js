@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function ContinuingEducation(props, { className, ...rest }) {
+function Education(props, { className, ...rest }) {
   const classes = useStyles();
 
   return (
@@ -31,8 +31,8 @@ function ContinuingEducation(props, { className, ...rest }) {
   );
 }
 
-ContinuingEducation.propTypes = {
+Education.propTypes = {
   className: PropTypes.string
 };
 
-export default ContinuingEducation;
+export default Education;

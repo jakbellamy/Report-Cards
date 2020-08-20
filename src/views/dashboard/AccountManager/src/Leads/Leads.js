@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Salesforce(props, { className, ...rest }) {
+function Leads(props, { className, ...rest }) {
   const classes = useStyles();
 
   let title = props.account.monthly_customer_min ? `Lead Quota: ${props.account.monthly_customer_min}/Month` : 'Lead Quota'
@@ -97,8 +97,8 @@ function Salesforce(props, { className, ...rest }) {
   );
 }
 
-Salesforce.propTypes = {
+Leads.propTypes = {
   className: PropTypes.string
 };
 
-export default Salesforce;
+export default Leads;

@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-function Contacts() {
+function Education() {
   const classes = useStyles();
   const ref = useRef(null);
   const dispatch = useDispatch();
@@ -65,7 +65,7 @@ function Contacts() {
 
   return (
     <>
-      <Tooltip title="Contacts">
+      <Tooltip title="Education">
         <IconButton
           color="inherit"
           onClick={handleOpen}
@@ -91,7 +91,7 @@ function Contacts() {
           variant="h4"
           color="textPrimary"
         >
-          Contacts
+          Education
         </Typography>
         <Box mt={2}>
           <List disablePadding>

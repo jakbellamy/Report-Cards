@@ -17,7 +17,7 @@ function Contacts(props, { className, ...rest }) {
       className={clsx(classes.root, className)}
       {...rest}
     >
-      <CardHeader title="Key Contacts"/>
+      <CardHeader title="Key Education"/>
       <Divider />
       <Box
         p={3}

@@ -1,6 +1,6 @@
 import axios from 'src/utilities/utils/axios';
 
-export const GET_CONTACTS = '@chat/get-contacts';
+export const GET_CONTACTS = '@chat/get-Education';
 export const GET_THREADS = '@chat/get-threads';
 export const GET_THREAD = '@chat/get-thread';
 export const MARK_THREAD_AS_SEEN = '@chat/mark-thread-as-seen';
@@ -9,7 +9,7 @@ export const OPEN_SIDEBAR = '@chat/open-sidebar';
 export const CLOSE_SIDEBAR = '@chat/close-sidebar';
 
 export function getContacts() {
-  const request = axios.get('/api/chat/contacts');
+  const request = axios.get('/api/chat/Education');
 
   return (dispatch) => {
     request.then((response) => dispatch({

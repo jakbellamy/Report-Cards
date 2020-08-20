@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Grid, makeStyles } from '@material-ui/core';
 import Page from 'src/components/Page';
-import AccountBio from './AccountBio';
-import CompareLineChart from './CompareLineChart';
-import Header from './Header';
-import Overview from './overview/index';
-import Salesforce from './salesforce/salesforce'
-import PersonalBest from './personalBest/personalBest'
-import ContinuingEducation from './continuingEducation/continuingEducation.js'
-import Contacts from './contacts/contacts'
-import ReportStatus from './reportStatus/reportStatus';
-const methods = require('./_Functions/methods')
+import AccountBio from './src/AccountBio/Bio';
+import CompareLineChart from './src/MarketChart';
+import Header from './src/Header';
+import Overview from './src/Overview/index';
+import Leads from './src/Leads/Leads'
+import PersonalBest from './src/PersonalBest/PersonalBest'
+import Education from './src/ContinuingEducation/Education'
+import Contacts from './src/Contacts/Contacts'
+import ReportStatus from './src/ReportStatus/ReportStatus';
+const methods = require('./functions/methods')
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -132,11 +132,11 @@ function DashboardAlternativeView() {
           <Grid item xs={7} spacing={3}>
             <Overview thisYear={ytd} lastYear={ly} thisMonth={current}/>
             <CompareLineChart stats={stats} stats1={stats1} graphType={graphType} setGraphType={setGraphType}/>
-            <ContinuingEducation />
+            <Education />
           </Grid>
           <Grid item xs={5}>
             <AccountBio account={selectedAccount}  />
-            <Salesforce account={selectedAccount}/>
+            <Leads account={selectedAccount}/>
             <PersonalBest />
           </Grid>
         </Grid>

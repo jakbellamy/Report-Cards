@@ -24,9 +24,9 @@
                 "name": "Chart.js"
             },
             {
-                "relativePath": "src/views/dashboard/DashboardView/PerformanceOverTime/index.js",
+                "relativePath": "src/views/dashboard/DashboardView/PerformanceOverTime/Education.js",
                 "test": false,
-                "name": "index.js"
+                "name": "Education.js"
             },
             {
                 "relativePath": "src/views/dashboard/DashboardView/RealTime/Chart.js",
@@ -34,9 +34,9 @@
                 "name": "Chart.js"
             },
             {
-                "relativePath": "src/views/dashboard/DashboardView/RealTime/index.js",
+                "relativePath": "src/views/dashboard/DashboardView/RealTime/Education.js",
                 "test": false,
-                "name": "index.js"
+                "name": "Education.js"
             },
             {
                 "relativePath": "src/views/dashboard/DashboardView/RoiPerCustomer.js",
@@ -54,9 +54,9 @@
                 "name": "TaskItem.js"
             },
             {
-                "relativePath": "src/views/dashboard/DashboardView/TeamTasks/index.js",
+                "relativePath": "src/views/dashboard/DashboardView/TeamTasks/Education.js",
                 "test": false,
-                "name": "index.js"
+                "name": "Education.js"
             },
             {
                 "relativePath": "src/views/dashboard/DashboardView/TodaysMoney.js",
@@ -64,9 +64,9 @@
                 "name": "TodaysMoney.js"
             },
             {
-                "relativePath": "src/views/dashboard/DashboardView/index.js",
+                "relativePath": "src/views/dashboard/DashboardView/Education.js",
                 "test": false,
-                "name": "index.js"
+                "name": "Education.js"
             },
             {
                 "relativePath": "src/views/dashboard/Summaries/AccountBio/Chart.js",
@@ -74,9 +74,9 @@
                 "name": "Chart.js"
             },
             {
-                "relativePath": "src/views/dashboard/Summaries/AccountBio/index.js",
+                "relativePath": "src/views/dashboard/Summaries/AccountBio/Education.js",
                 "test": false,
-                "name": "index.js"
+                "name": "Education.js"
             },
             {
                 "relativePath": "src/views/dashboard/Summaries/CustomerActivity.js",
@@ -99,9 +99,9 @@
                 "name": "Chart.js"
             },
             {
-                "relativePath": "src/views/dashboard/Summaries/MktShareGraph/index.js",
+                "relativePath": "src/views/dashboard/Summaries/MktShareGraph/Education.js",
                 "test": false,
-                "name": "index.js"
+                "name": "Education.js"
             },
             {
                 "relativePath": "src/views/dashboard/Summaries/MostProfitableProducts/CircularProgress.js",
@@ -109,9 +109,9 @@
                 "name": "CircularProgress.js"
             },
             {
-                "relativePath": "src/views/dashboard/Summaries/MostProfitableProducts/index.js",
+                "relativePath": "src/views/dashboard/Summaries/MostProfitableProducts/Education.js",
                 "test": false,
-                "name": "index.js"
+                "name": "Education.js"
             },
             {
                 "relativePath": "src/views/dashboard/Summaries/Overview2.js",
@@ -124,9 +124,9 @@
                 "name": "TopReferrals.js"
             },
             {
-                "relativePath": "src/views/dashboard/Summaries/index.js",
+                "relativePath": "src/views/dashboard/Summaries/Education.js",
                 "test": false,
-                "name": "index.js"
+                "name": "Education.js"
             },
             {
                 "relativePath": "src/views/dashboard/Summes-Live/AccountBio/Chart.js",
@@ -134,9 +134,9 @@
                 "name": "Chart.js"
             },
             {
-                "relativePath": "src/views/dashboard/Summes-Live/AccountBio/index.js",
+                "relativePath": "src/views/dashboard/Summes-Live/AccountBio/Education.js",
                 "test": false,
-                "name": "index.js"
+                "name": "Education.js"
             },
             {
                 "relativePath": "src/views/dashboard/Summes-Live/CustomerActivity.js",
@@ -159,9 +159,9 @@
                 "name": "Chart.js"
             },
             {
-                "relativePath": "src/views/dashboard/Summes-Live/MktShareGraph/index.js",
+                "relativePath": "src/views/dashboard/Summes-Live/MktShareGraph/Education.js",
                 "test": false,
-                "name": "index.js"
+                "name": "Education.js"
             },
             {
                 "relativePath": "src/views/dashboard/Summes-Live/MostProfitableProducts/CircularProgress.js",
@@ -169,9 +169,9 @@
                 "name": "CircularProgress.js"
             },
             {
-                "relativePath": "src/views/dashboard/Summes-Live/MostProfitableProducts/index.js",
+                "relativePath": "src/views/dashboard/Summes-Live/MostProfitableProducts/Education.js",
                 "test": false,
-                "name": "index.js"
+                "name": "Education.js"
             },
             {
                 "relativePath": "src/views/dashboard/Summes-Live/Overview2.js",
@@ -184,12 +184,12 @@
                 "name": "TopReferrals.js"
             },
             {
-                "relativePath": "src/views/dashboard/Summes-Live/index.js",
+                "relativePath": "src/views/dashboard/Summes-Live/Education.js",
                 "test": false,
-                "name": "index.js"
+                "name": "Education.js"
             }
         ],
-        "mainFile": "src/views/dashboard/DashboardView/index.js",
+        "mainFile": "src/views/dashboard/DashboardView/Education.js",
         "trackDir": "src/views/dashboard",
         "origin": "AUTHORED",
         "exported": false
