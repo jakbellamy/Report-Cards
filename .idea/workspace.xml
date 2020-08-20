@@ -20,12 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0bc8d6a-fedc-4de2-bb38-f2b918ef4cd3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/CustomerActivity.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/ceEvents.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/index.js.orig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/ppbEvents.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/Summes-Live/upcoming.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/DashboardView/Header.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/DashboardView/LatestProjects.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/DashboardView/NewProjects.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/DashboardView/PerformanceOverTime/Chart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/DashboardView/PerformanceOverTime/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/DashboardView/RealTime/Chart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/DashboardView/RealTime/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/DashboardView/RoiPerCustomer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/DashboardView/SystemHealth.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/DashboardView/TeamTasks/TaskItem.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/DashboardView/TeamTasks/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/DashboardView/TodaysMoney.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/DashboardView/index.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,13 +68,14 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/views/dashboard" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/views/dashboard/Summes-Live/_Functions" />
       <recent name="$PROJECT_DIR$/src/views/dashboard/Summes-Live/overview" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/public/static" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/views/dashboard" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -100,7 +109,7 @@
       <workItem from="1597199947143" duration="7000" />
       <workItem from="1597419098682" duration="7267000" />
       <workItem from="1597775997247" duration="1397000" />
-      <workItem from="1597875013757" duration="3826000" />
+      <workItem from="1597875013757" duration="4124000" />
     </task>
     <servers />
   </component>
@@ -128,9 +137,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="555" y="325" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1597035046624" />
-    <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1593150389363">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="-1259" y="-194" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597947304034">
+      <screen x="-1920" y="-481" width="1920" height="1080" />
     </state>
+    <state x="-1259" y="-194" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.-481.1920.1080/0.0.1680.1050@-1920.-481.1920.1080" timestamp="1597947304034" />
     <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1593150389363" />
     <state x="-1065" y="-309" width="908" height="722" key="SettingsEditor" timestamp="1596648036946">
       <screen x="-1920" y="-458" width="1920" height="1057" />

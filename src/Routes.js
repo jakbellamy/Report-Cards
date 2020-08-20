@@ -65,11 +65,11 @@ const routesConfig = [
       //   path: '/app/account',
       //   component: lazy(() => import('src/views/pages/AccountView'))
       // },
-      {
-        exact: true,
-        path: '/app/dashboard/dashboard',
-        component: lazy(() => import('src/views/dashboard/DashboardView'))
-      },
+      // {
+      //   exact: true,
+      //   path: '/app/dashboard/dashboard',
+      //   component: lazy(() => import('src/views/dashboard/DashboardView'))
+      // },
       // {
       //   exact: true,
       //   path: '/app/dashboard/summaries',
@@ -78,7 +78,7 @@ const routesConfig = [
       {
         exact: true,
         path: '/app/dashboard/summaries-live',
-        component: lazy(() => import('src/views/dashboard/Summes-Live'))
+        component: lazy(() => import('src/views/dashboard/AccountManager'))
       },
       {
         exact: true,
