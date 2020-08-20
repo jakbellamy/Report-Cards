@@ -10,7 +10,7 @@ import PersonalBest from './personalBest/personalBest'
 import ContinuingEducation from './continuingEducation/continuingEducation.js'
 import Contacts from './contacts/contacts'
 import ReportStatus from './reportStatus/reportStatus';
-const methods = require('./methods')
+const methods = require('./_Functions/methods')
 
 const useStyles = makeStyles((theme) => ({
   root: {
