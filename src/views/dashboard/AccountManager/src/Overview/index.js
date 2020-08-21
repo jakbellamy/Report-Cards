@@ -13,14 +13,14 @@ const useStyles = makeStyles((theme) => ({
 function Overview(props, { className, ...rest }) {
   const classes = useStyles();
   const y = {
-    officeVol: props.thisMonth.office_volume || 0,
-    supremeVol: props.thisMonth.supreme_volume || 0,
-    officeUnits: props.thisMonth.office_units || 0,
-    supremeUnits: props.thisMonth.supreme_units || 0,
-    mktVol: props.thisMonth.market_share_volume || 0,
-    mktUnits: props.thisMonth.market_share_units || 0
+    officeVol: props.thisMonth?.office_volume,
+    supremeVol: props.thisMonth?.supreme_volume,
+    officeUnits: props.thisMonth?.office_units,
+    supremeUnits: props.thisMonth?.supreme_units,
+    mktVol: props.thisMonth?.market_share_volume,
+    mktUnits: props.thisMonth?.market_share_units
   };
-  let retro = props.lastYear[props.thisMonth.month]
+  let retro = props.lastYear[props.thisMonth?.month]
   const ly = {
     officeVol: retro ? retro.office_volume : 0,
     supremeVol: retro ? retro.supreme_volume : 0,
