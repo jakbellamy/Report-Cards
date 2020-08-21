@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Card, CardHeader, Divider, makeStyles, Button } from '@material-ui/core';
+import { Box, Input, CardHeader, Divider, makeStyles, Typography } from '@material-ui/core';
 import clsx from 'clsx';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import Chart from './Chart';
@@ -26,7 +26,7 @@ function Comments(props, { className, ...rest }) {
     >
       <Divider />
       <CardHeader title="Comments"/>
-
+      <Typography>{props.current.comment}</Typography>
     </Box>
   );
 }

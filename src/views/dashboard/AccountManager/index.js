@@ -10,7 +10,6 @@ import PersonalBest from './src/PersonalBest/PersonalBest'
 import Education from './src/ContinuingEducation/Education'
 import Contacts from './src/Contacts/Contacts'
 import ReportStatus from './src/ReportStatus/ReportStatus';
-const methods = require('./functions/methods')
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -34,8 +33,7 @@ const getPeriod = (latest) => {
   month = Number(date) < 15 ? Number(month) - 1 : month
   month = month.toString().length == 1 ? '0' + month : month
   let dint = year + month
-  console.log(dint, latest)
-  return latest == dint
+  return latest === dint
 }
 
 
@@ -45,7 +43,9 @@ let shell = {
   office_units: 0,
   supreme_units: 0,
   market_share_volume: 0,
-  market_share_units: 0
+  market_share_units: 0,
+  id: 0,
+  comment: ''
 }
 const year_shell = {1: shell, 2: shell, 3: shell, 4: shell, 5: shell, 6: shell, 7: shell, 8: shell, 9: shell, 10: shell, 11: shell, 12: shell}
 
@@ -100,7 +100,6 @@ function DashboardAlternativeView() {
     for(let month in lyo){
       avga.push(avgo[month])
     }
-    console.log(graphType)
     return {
       y: ya.map(report => report[type]),
       ly: lya.map(report => report[type]),
@@ -127,16 +126,15 @@ function DashboardAlternativeView() {
     let yf = ytdReports.filter(report => report.account_id === account.id)
     let lyf = lyReports.filter(report => report.account_id === account.id)
     let avgf = lyReports.filter(report => report.account_id === 25)
+    setCurrent(yf.sort((a, b) => b.date - a.date)[0])
     setLy(buildLy(account, lyf))
     setYtd(buildYtd(account, yf))
-    setCurrent(yf.sort((a, b) => b.date - a.date)[0])
     setIsCurrent(getPeriod(yf.sort((a, b) => b.date - a.date)[0]['date']))
     setStats(buildTableData(buildLy(account, lyf), buildYtd(account, yf), buildLy(account, avgf), 'market_share_volume'))
     setStats1(buildTableData(buildLy(account, lyf), buildYtd(account, yf), buildLy(account, avgf), 'market_share_units'))
   }
 
   const filterEducation = (account) => {
-    console.log(education)
     let edu = education.filter(report => report.account === account.id)
     let year = education.sort((a, b) => a.date - b.date)[0]['date'].split('-')[0]
     let eduy = edu.filter(report => report.date >= `${year}-00-00`)
@@ -158,7 +156,7 @@ function DashboardAlternativeView() {
           <Header accounts={accounts} selectedAccount={selectedAccount} setSelectedAccount={handleAccountSelection}/>
           <Grid item xs={7} spacing={3}>
             <Overview thisYear={ytd} lastYear={ly} thisMonth={current}/>
-            <CompareLineChart stats={stats} stats1={stats1} graphType={graphType} setGraphType={setGraphType}/>
+            <CompareLineChart stats={stats} stats1={stats1} graphType={graphType} setGraphType={setGraphType} current={current}/>
             <Education account={selectedAccount} events={filteredEducation}/>
           </Grid>
           <Grid item xs={5}>
