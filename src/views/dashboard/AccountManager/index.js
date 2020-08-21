@@ -28,6 +28,17 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
+const getPeriod = (latest) => {
+  latest = latest.split('-')[0] + latest.split('-')[1]
+  let [month, date, year] = ( new Date() ).toLocaleDateString().split("/")
+  month = Number(date) < 15 ? Number(month) - 1 : month
+  month = month.toString().length == 1 ? '0' + month : month
+  let dint = year + month
+  console.log(dint, latest)
+  return latest == dint
+}
+
+
 let shell = {
   office_volume: 0,
   supreme_volume: 0,
@@ -41,6 +52,7 @@ const year_shell = {1: shell, 2: shell, 3: shell, 4: shell, 5: shell, 6: shell, 
 function DashboardAlternativeView() {
   const [accounts, setAccounts] = useState([])
   const [selectedAccount, setSelectedAccount] = useState({name: 'Choose Account', id: -1})
+  const [isCurrent, setIsCurrent] = useState(false)
   const [education, setEducation] = useState([])
   const [filteredEducation, setFilteredEducation] = useState({y: [], ly: []})
   const [lyReports, setLyReports] = useState([])
@@ -118,9 +130,9 @@ function DashboardAlternativeView() {
     setLy(buildLy(account, lyf))
     setYtd(buildYtd(account, yf))
     setCurrent(yf.sort((a, b) => b.date - a.date)[0])
+    setIsCurrent(getPeriod(yf.sort((a, b) => b.date - a.date)[0]['date']))
     setStats(buildTableData(buildLy(account, lyf), buildYtd(account, yf), buildLy(account, avgf), 'market_share_volume'))
     setStats1(buildTableData(buildLy(account, lyf), buildYtd(account, yf), buildLy(account, avgf), 'market_share_units'))
-    console.log(avgf)
   }
 
   const filterEducation = (account) => {
@@ -136,6 +148,7 @@ function DashboardAlternativeView() {
     setSelectedAccount(account)
     coerceReports(account)
     filterEducation(account)
+
   }
 
   return (
@@ -159,7 +172,7 @@ function DashboardAlternativeView() {
             <Contacts />
           </Grid>
           <Grid item xs={4}>
-            <ReportStatus />
+            <ReportStatus status={isCurrent}/>
           </Grid>
         </Grid>
       </Container>
