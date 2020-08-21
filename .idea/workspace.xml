@@ -21,7 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d0bc8d6a-fedc-4de2-bb38-f2b918ef4cd3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/Overview/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/Overview/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/ContinuingEducation/Education.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/ContinuingEducation/Education.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/_Components/SimpleList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/_Components/SimpleList.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +101,7 @@
       <workItem from="1597419098682" duration="7267000" />
       <workItem from="1597775997247" duration="1397000" />
       <workItem from="1597875013757" duration="4124000" />
-      <workItem from="1597964023145" duration="2216000" />
+      <workItem from="1597964023145" duration="5750000" />
     </task>
     <servers />
   </component>
@@ -141,11 +143,11 @@
     <state x="341" y="164" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1593145725270" />
     <state x="-1139" y="-432" key="SettingsEditor/0.23.1680.1027/-1920.-584.1920.1080@-1920.-584.1920.1080" timestamp="1594670456158" />
     <state x="683" y="168" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1593148534690" />
-    <state x="-1420" y="-356" width="888" height="537" key="find.popup" timestamp="1597950603496">
-      <screen x="-1920" y="-481" width="1920" height="1080" />
+    <state x="542" y="264" width="596" height="522" key="find.popup" timestamp="1597976608556">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="-1420" y="-356" width="888" height="537" key="find.popup/-1920.-481.1920.1080/0.0.1680.1050@-1920.-481.1920.1080" timestamp="1597950603496" />
-    <state x="542" y="264" width="596" height="522" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1597031459336" />
+    <state x="542" y="264" width="596" height="522" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1597976608556" />
     <state x="563" y="528" width="596" height="522" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1597017900454" />
     <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1596896213949">
       <screen x="0" y="0" width="1680" height="1050" />
@@ -178,6 +180,11 @@
           <url>file://$PROJECT_DIR$/src/Routes.js</url>
           <line>1</line>
           <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/views/dashboard/AccountManager/src/Overview/index.js</url>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

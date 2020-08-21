@@ -138,7 +138,6 @@ function DashboardAlternativeView() {
     filterEducation(account)
   }
 
-  console.log('education', filteredEducation)
   return (
     <Page className={classes.root} title="Dashboard Alternative">
       <Container maxWidth={false} className={classes.container}>
@@ -147,7 +146,7 @@ function DashboardAlternativeView() {
           <Grid item xs={7} spacing={3}>
             <Overview thisYear={ytd} lastYear={ly} thisMonth={current}/>
             <CompareLineChart stats={stats} stats1={stats1} graphType={graphType} setGraphType={setGraphType}/>
-            <Education account={selectedAccount} />
+            <Education account={selectedAccount} events={filteredEducation}/>
           </Grid>
           <Grid item xs={5}>
             <AccountBio account={selectedAccount}  />
