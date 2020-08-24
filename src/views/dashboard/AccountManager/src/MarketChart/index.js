@@ -38,6 +38,8 @@ function CompareLineChart(props, { className, ...rest }) {
     handleClick(chartDict[value])
     setTab(value)
   }
+
+  console.log('CHART CURRENT', props.current)
   return (
     <Card
       className={clsx(classes.root, className)}

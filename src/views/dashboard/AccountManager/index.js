@@ -126,10 +126,12 @@ function DashboardAlternativeView() {
     let yf = ytdReports.filter(report => report.account_id === account.id)
     let lyf = lyReports.filter(report => report.account_id === account.id)
     let avgf = lyReports.filter(report => report.account_id === 25)
-    setCurrent(yf.sort((a, b) => b.date - a.date)[0])
+    if(yf.length > 0){
+      setCurrent(yf.sort((a, b) => b.date - a.date)[0])
+      setIsCurrent(getPeriod(yf.sort((a, b) => b.date - a.date)[0]['date']))
+    }
     setLy(buildLy(account, lyf))
     setYtd(buildYtd(account, yf))
-    setIsCurrent(getPeriod(yf.sort((a, b) => b.date - a.date)[0]['date']))
     setStats(buildTableData(buildLy(account, lyf), buildYtd(account, yf), buildLy(account, avgf), 'market_share_volume'))
     setStats1(buildTableData(buildLy(account, lyf), buildYtd(account, yf), buildLy(account, avgf), 'market_share_units'))
   }
