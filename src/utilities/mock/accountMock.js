@@ -27,10 +27,10 @@ const db = {
 
 mock.onPost('/api/account/login').reply((config) => {
   const { email, password } = JSON.parse(config.data);
-  console.log('hit')
-  if (email == 'jakbellamy@gmail.com' && password == 'admin' ||
-    email.toLowerCase() == 'zachary.lavoy@supremelending.com' && password == 'adminlavoy' ||
-    email == 'jmvolpe@nc.rr.com' && password == 'adminvolpe') {
+
+  if (email === 'jakbellamy@gmail.com' && password === 'admin' ||
+    email.toLowerCase() === 'zachary.lavoy@supremelending.com' && password === 'adminlavoy' ||
+    email === 'jmvolpe@nc.rr.com' && password === 'adminvolpe') {
     const { user } = db;
     const accessToken = jwt.sign(
       { id: user.id },
