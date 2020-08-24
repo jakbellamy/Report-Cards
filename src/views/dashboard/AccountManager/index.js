@@ -148,7 +148,6 @@ function DashboardAlternativeView() {
     setSelectedAccount(account)
     coerceReports(account)
     filterEducation(account)
-
   }
 
   return (
@@ -158,7 +157,7 @@ function DashboardAlternativeView() {
           <Header accounts={accounts} selectedAccount={selectedAccount} setSelectedAccount={handleAccountSelection}/>
           <Grid item xs={7} spacing={3}>
             <Overview thisYear={ytd} lastYear={ly} thisMonth={current}/>
-            <CompareLineChart stats={stats} stats1={stats1} graphType={graphType} setGraphType={setGraphType} current={current}/>
+            <CompareLineChart stats={stats} stats1={stats1} graphType={graphType} setGraphType={setGraphType} current={current} setCurrent={setCurrent}/>
             <Education account={selectedAccount} events={filteredEducation}/>
           </Grid>
           <Grid item xs={5}>

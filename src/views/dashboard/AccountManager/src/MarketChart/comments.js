@@ -5,6 +5,7 @@ import PerfectScrollbar from 'react-perfect-scrollbar';
 import Chart from './Chart';
 import PropTypes from 'prop-types';
 import CompareLineChart from './index';
+import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles(() => ({
   root: {},
@@ -17,7 +18,10 @@ function NewComment(props, { className, ...res}) {
   const [comment, setComment] = React.useState('')
 
   const handleClickOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const handleClose = () => {
+    setComment('')
+    setOpen(false);
+  }
 
   const handleSubmit = () => {
     fetch(`https://djsupreme.herokuapp.com/api/market-share-reports/${props.current.id}/`, {
@@ -29,13 +33,30 @@ function NewComment(props, { className, ...res}) {
         'comment': comment
       })
     })
+    props.setCurrent({...props.current, 'comment': comment})
+    setComment(comment)
     handleClose()
   }
-  console.log('CURRENT', props.current)
+
+  const handleDelete = () => {
+    let noComment = ''
+    fetch(`https://djsupreme.herokuapp.com/api/market-share-reports/${props.current.id}/`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        'comment': noComment
+      })
+    })
+    props.setCurrent({...props.current, 'comment': noComment})
+    setComment(noComment)
+    handleClose()
+  }
   return (
     <div>
       <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-        ADD COMMENT
+        {props.button}
       </Button>
       <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
         <DialogTitle id="form-dialog-title">Add a Comment</DialogTitle>
@@ -43,12 +64,13 @@ function NewComment(props, { className, ...res}) {
           <DialogContentText>
             Save a new comment for this account's most recent report.
           </DialogContentText>
-          <TextField autoFocus margin="dense" id="name" label="Comment" multiline rows={4} variant="outlined" fullWidth
+          <TextField autoFocus margin="dense" id="name" label="Comment" multiline rows={4} variant="outlined" fullWidth defaultValue={props.initValue ? props.initValue : ''} delete={true}
           onChange={(e) => setComment(e.target.value)}
           />
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose} color="primary">Cancel</Button>
+          <Button onClick={handleDelete} color="primary">Delete</Button>
           <Button onClick={handleSubmit} color="primary">Submit</Button>
         </DialogActions>
       </Dialog>
@@ -56,28 +78,40 @@ function NewComment(props, { className, ...res}) {
   )
 }
 
+function ExistingComment(props){
+  return(
+    <Grid container spacing={3}>
+      <Grid item xs={8}>
+        <Typography>{props.current.comment}</Typography>
+      </Grid>
+      <Grid item xs={4}>
+        <NewComment button={'Edit Comment'} current={props.current ? props.current : {}} setCurrent={props.setCurrent} initValue={props.current.comment}/>
+      </Grid>
+    </Grid>
+    );
+}
+
 function Comment(props) {
+  if(!props.current.id){
+    return ''
+  }
   if(props.current?.comment){
-    return <Typography>{props.current.comment}</Typography>
+    return <ExistingComment current={props.current ? props.current : {}} setCurrent={props.setCurrent}/>
   } else {
-    return <NewComment current={props.current ? props.current: {}}/>
+    return <NewComment button={'New Comment'} current={props.current ? props.current: {}} setCurrent={props.setCurrent}/>
   }
 }
 
-function Comments(props, { className, ...rest }) {
-  const classes = useStyles();
-
+function Comments(props) {
   return (
     <Box
-      className={clsx(classes.root, className)}
-      {...rest}
       p={3}
       position="relative"
       minHeight={140}
     >
       <Divider />
       <CardHeader title="Comments"/>
-      <Comment current={props.current ? props.current: {}} />
+      <Comment current={props.current ? props.current: {}} setCurrent={props.setCurrent}/>
     </Box>
   );
 }

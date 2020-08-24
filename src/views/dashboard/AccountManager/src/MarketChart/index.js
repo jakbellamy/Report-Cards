@@ -67,7 +67,7 @@ function CompareLineChart(props, { className, ...rest }) {
           />
         </Box>
       </PerfectScrollbar>
-      <Comments current={props.current}/>
+      <Comments current={props.current} setCurrent={props.setCurrent}/>
     </Card>
   );
 }
