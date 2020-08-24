@@ -10,7 +10,7 @@
     "lint": "eslint ./src",
     "dev": "react-scripts start",
     "start": "serve -s build",
-    "build": "react-scripts build",
+    "build": "GENERATE_SOURCEMAP=false react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
