@@ -2,6 +2,8 @@ import React from 'react';
 import { Box, Card, CardHeader, Divider, makeStyles, Button } from '@material-ui/core';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -20,7 +22,28 @@ function Contacts(props, { className, ...rest }) {
       <CardHeader title="Key Contacts"/>
       <Divider />
       <Box p={3} position="relative" minHeight={220}>
-
+        <Grid container spacing={0}>
+          <Grid item xs={2}>
+            <Typography variant='h5' align={'center'}>
+              Role
+            </Typography>
+          </Grid>
+          <Grid item xs={3}>
+            <Typography variant='h5' align={'center'}>
+              Name
+            </Typography>
+          </Grid>
+          <Grid item xs={4}>
+            <Typography variant='h5' align={'center'}>
+              Email
+            </Typography>
+          </Grid>
+          <Grid item xs={3}>
+            <Typography variant='h5' align={'center'}>
+              Phone Number
+            </Typography>
+          </Grid>
+        </Grid>
       </Box>
 
 
