@@ -69,7 +69,7 @@ function Header(props, {  ...rest }) {
           aria-haspopup="true"
           onClick={handleClick}>
           <Typography
-            variant="h5" color="#FFFFFE" onClick={() => console.log('clicked')}>
+            variant="h5" color="#FFFFFE">
             {props.selectedAccount.name}
           </Typography>
         </Button>

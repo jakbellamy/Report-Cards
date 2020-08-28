@@ -63,7 +63,6 @@ exports.accuYtd = (yearArr, current=false) => {
         market_share_volume: acc.supreme_volume / acc.office_volume,
         market_share_units: acc.supreme_units / acc.office_volume
       }
-      console.log(month_ytd)
       ytd.push(month_ytd)
     }
 

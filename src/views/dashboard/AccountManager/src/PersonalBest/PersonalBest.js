@@ -21,7 +21,7 @@ function PersonalBest(props, { className, ...rest }) {
     >
       <CardHeader title="Personal & Professional Best"/>
       <Divider />
-      <Box p={1} paddingTop={6} position="relative" height={485}>
+      <Box p={1} paddingTop={6} position="relative" height={438}>
         <Title text={props.account.agent_count ? "Next Month's Program": ''} variant={'h3'} align={'center'}/>
         <Box position={'relative'} height={125}>
           {props.account.agent_count ? <SimpleList variant='subtitle1'
