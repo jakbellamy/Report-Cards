@@ -13,7 +13,6 @@ const useStyles = makeStyles((theme) => ({
 
 function PersonalBest(props, { className, ...rest }) {
   const classes = useStyles();
-
   return (
     <Card
       className={clsx(classes.root, className)}
@@ -21,34 +20,27 @@ function PersonalBest(props, { className, ...rest }) {
     >
       <CardHeader title="Personal & Professional Best"/>
       <Divider />
-      <Box p={1} paddingTop={6} position="relative" height={438}>
-        <Title text={props.account.agent_count ? "Next Month's Program": ''} variant={'h3'} align={'center'}/>
-        <Box position={'relative'} height={125}>
-          {props.account.agent_count ? <SimpleList variant='subtitle1'
-           text={['Date', '00/00/0000']}/>
-            : null}
-          {props.account.agent_count ? <SimpleList variant='subtitle1'
-           text={['Topic', 'Name of Topic']}/>
-            : null}
+      <Box paddingTop={2} position="relative" height={438}>
+        <Title text={props.account.agent_count ? "Next Month's Program": ''} variant={'h4'} align={'center'}/>
+        <Box paddingTop={0.5} position={"relative"} height={75}>
+          <Typography variant={'h5'} align={'center'}>
+            {props.account.agent_count ? 'Accountability - Thu Sep 20th at 3 PM' : ''}
+          </Typography>
         </Box>
-        <Title text={props.account.agent_count ? "Smart Trivia Stats" : ''} variant={'h3'} align={'center'}/>
-        <Box position={'relative'} height={85}>
-          <Grid container spacing={0}>
-            <Grid item xs={1}/>
-            <Grid item xs={7}>
-              <Typography variant={'subtitle1'}>
-                {props.account?.agent_count ? 'Cumulative Charitable Contribution' : ''}
-              </Typography>
-            </Grid>
-            <Grid item xs={2}>
-              <Typography variant={props.variant} align={'right'}>
-                {props.account?.agent_count ? '$00,000' : ''}
-              </Typography>
-            </Grid>
-            <Grid item xs={2}/>
-          </Grid>
+        <Title text={props.account.agent_count ? "Recent Events": ''} variant={'h4'} align={'center'}/>
+        <Box paddingTop={0.5} position={"relative"} height={75}>
+          <Typography variant={'h5'} align={'center'} paddingBottom={0.5}>
+            {props.account.agent_count ? 'Profiles in Best: A Conversation with Herschel Walker' : ''}
+          </Typography>
+          <Typography variant={'h5'} align={'center'} paddingBottom={0.5}>
+            {props.account.agent_count ? 'Be The Source with Tom Flood' : ''}
+          </Typography>
+          <Typography variant={'h5'} align={'center'} paddingBottom={0.5}>
+            {props.account.agent_count ? 'Choose Better Over Bitter' : ''}
+          </Typography>
         </Box>
       </Box>
+      {/*<Typography>For all past events, please visit <a href='SupremeBest.com/supreme-best/the-vault/'>the Vault</a> </Typography>*/}
     </Card>
   );
 }
