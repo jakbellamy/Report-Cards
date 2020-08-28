@@ -4,8 +4,8 @@ import PropTypes from 'prop-types'
 
 function ContactRow(props) {
   return(
-    <Grid container spacing={0}>
-      <Grid item xs={2}>
+    <Grid container spacing={1}>
+      <Grid item xs={3}>
         <Typography variant='subtitle1' align={'left'}>
           {props.role ? props.role : ''}
         </Typography>
@@ -20,7 +20,7 @@ function ContactRow(props) {
           {props.email ? props.email : ''}
         </Typography>
       </Grid>
-      <Grid item xs={3}>
+      <Grid item xs={2}>
         <Typography variant='subtitle1' align={'left'}>
           {props.phone ? props.phone : ''}
         </Typography>

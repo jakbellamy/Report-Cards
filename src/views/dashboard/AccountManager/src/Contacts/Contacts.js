@@ -21,8 +21,8 @@ function Contacts(props, { className, ...rest }) {
       <CardHeader title="Key Contacts"/>
       <Divider />
       <Box p={3} position="relative" minHeight={220}>
-        <Grid container spacing={0}>
-          <Grid item xs={2}>
+        <Grid container spacing={1}>
+          <Grid item xs={3}>
             <Typography variant='h5' align={'left'}>Role</Typography>
           </Grid>
           <Grid item xs={3}>
@@ -31,15 +31,39 @@ function Contacts(props, { className, ...rest }) {
           <Grid item xs={4}>
             <Typography variant='h5' align={'left'}>Email</Typography>
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={2}>
             <Typography variant='h5' align={'left'}>Phone Number</Typography>
           </Grid>
         </Grid>
         <ContactRow
-          role={'Test'}
-          name={'Jakob Bellamy'}
-          email={'jakbellamy@gmail.com'}
-          phone={'(713) 480-8815'}
+          role={'Owner'}
+          name={'Gene Whiddon'}
+          email={'genewhiddon@bhgfirst.com'}
+          phone={'(954) 525-2200'}
+        />
+        <ContactRow
+          role={'Team Leader'}
+          name={''}
+          email={''}
+          phone={''}
+        />
+        <ContactRow
+          role={'Asst Team Leader'}
+          name={''}
+          email={''}
+          phone={''}
+        />
+        <ContactRow
+          role={'MCA/Admin'}
+          name={''}
+          email={''}
+          phone={''}
+        />
+        <ContactRow
+          role={'Productivity Coach'}
+          name={''}
+          email={''}
+          phone={''}
         />
       </Box>
 
