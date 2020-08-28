@@ -24,24 +24,16 @@ function Contacts(props, { className, ...rest }) {
       <Box p={3} position="relative" minHeight={220}>
         <Grid container spacing={0}>
           <Grid item xs={2}>
-            <Typography variant='h5' align={'center'}>
-              Role
-            </Typography>
+            <Typography variant='h5' align={'left'}>Role</Typography>
           </Grid>
           <Grid item xs={3}>
-            <Typography variant='h5' align={'center'}>
-              Name
-            </Typography>
+            <Typography variant='h5' align={'left'}>Name</Typography>
           </Grid>
           <Grid item xs={4}>
-            <Typography variant='h5' align={'center'}>
-              Email
-            </Typography>
+            <Typography variant='h5' align={'left'}>Email</Typography>
           </Grid>
           <Grid item xs={3}>
-            <Typography variant='h5' align={'center'}>
-              Phone Number
-            </Typography>
+            <Typography variant='h5' align={'left'}>Phone Number</Typography>
           </Grid>
         </Grid>
       </Box>
