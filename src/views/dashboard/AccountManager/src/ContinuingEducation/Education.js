@@ -12,14 +12,13 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const displayEvents = (events) => {
-  console.log(events.length)
-  if(events.length == 0){
+  if(events.length === 0){
     return ''
   } else {
     events = [...new Set(events.map(event => event['type']))]
-    if(events.length == 1){
+    if(events.length === 1){
       return events[0]
-    } else if(events.length == 2) {
+    } else if(events.length === 2) {
       return `${events[0]} and ${events[1]}`
     } else {
       let res = `${events.shift()}`
@@ -34,7 +33,7 @@ const displayEvents = (events) => {
 }
 
 const totalTrained = (events) => {
-  if(events.length == 0){
+  if(events.length === 0){
     return 0
   } else {
     return events.reduce((acc, curr) => acc + (curr['num_agents'] ? curr['num_agents'] : 0), 0)
@@ -44,8 +43,6 @@ const totalTrained = (events) => {
 function Education(props, { className, ...rest }) {
   const classes = useStyles();
 
-  console.log('last year', props.events?.ly)
-  console.log('this year', props.events?.y)
   return (
     <Card
       className={clsx(classes.root, className)}

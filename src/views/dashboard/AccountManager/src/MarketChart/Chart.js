@@ -27,7 +27,6 @@ function Chart({
   const classes = useStyles();
   const theme = useTheme();
 
-  console.log('prop', dataProp.ly)
   const data = {
     datasets: [
       {

@@ -25,7 +25,6 @@ const chartDict = ['market_share_volume', 'market_share_units']
 
 function CompareLineChart(props, { className, ...rest }) {
   let [tab, setTab] = useState(0)
-  // console.log('line props', props.reports)
   const classes = useStyles();
   const labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
@@ -34,12 +33,10 @@ function CompareLineChart(props, { className, ...rest }) {
   }
 
   const handleTab = (event, value) => {
-    console.log(value)
     handleClick(chartDict[value])
     setTab(value)
   }
 
-  console.log('CHART CURRENT', props.current)
   return (
     <Card
       className={clsx(classes.root, className)}

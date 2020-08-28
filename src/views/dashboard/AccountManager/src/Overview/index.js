@@ -42,8 +42,6 @@ function Overview(props, { className, ...rest }) {
     }
   }
 
-  console.log('Overview', y, ly)
-
   return (
     <Grid container spacing={2} justify-self={'stretch'} className={classes.root}>
       <Grid item xs={6} spacing={1}>
