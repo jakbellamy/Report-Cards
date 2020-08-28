@@ -1,9 +1,8 @@
 import React from 'react';
-import { Box, Card, CardHeader, Divider, makeStyles, Button } from '@material-ui/core';
+import { Box, Card, CardHeader, Divider, makeStyles, Grid, Typography } from '@material-ui/core';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
+import ContactRow from './ContactRow'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -36,6 +35,12 @@ function Contacts(props, { className, ...rest }) {
             <Typography variant='h5' align={'left'}>Phone Number</Typography>
           </Grid>
         </Grid>
+        <ContactRow
+          role={'Test'}
+          name={'Jakob Bellamy'}
+          email={'jakbellamy@gmail.com'}
+          phone={'(713) 480-8815'}
+        />
       </Box>
 
 

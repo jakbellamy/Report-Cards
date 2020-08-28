@@ -6,22 +6,22 @@ function ContactRow(props) {
   return(
     <Grid container spacing={0}>
       <Grid item xs={2}>
-        <Typography variant='subtitle2' align={'left'}>
+        <Typography variant='subtitle1' align={'left'}>
           {props.role ? props.role : ''}
         </Typography>
       </Grid>
       <Grid item xs={3}>
-        <Typography variant='subtitle2' align={'left'}>
+        <Typography variant='subtitle1' align={'left'}>
           {props.name ? props.name : ''}
         </Typography>
       </Grid>
       <Grid item xs={4}>
-        <Typography variant='subtitle2' align={'left'}>
+        <Typography variant='subtitle1' align={'left'}>
           {props.email ? props.email : ''}
         </Typography>
       </Grid>
       <Grid item xs={3}>
-        <Typography variant='subtitle2' align={'left'}>
+        <Typography variant='subtitle1' align={'left'}>
           {props.phone ? props.phone : ''}
         </Typography>
       </Grid>
@@ -32,8 +32,8 @@ function ContactRow(props) {
 ContactRow.propTypes = {
   role: PropTypes.string,
   name: PropTypes.string,
-  email: propTypes.string,
-  phone: propTypes.integer
+  email: PropTypes.string,
+  phone: PropTypes.string
 }
 
 export default ContactRow;
