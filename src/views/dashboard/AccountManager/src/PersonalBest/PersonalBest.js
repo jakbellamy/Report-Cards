@@ -25,10 +25,10 @@ function PersonalBest(props, { className, ...rest }) {
         <Title text={props.account.agent_count ? "Next Month's Program": ''} variant={'h3'} align={'center'}/>
         <Box position={'relative'} height={125}>
           {props.account.agent_count ? <SimpleList variant='subtitle1'
-                                                   text={['Date', '00/00/0000']}/>
+           text={['Date', '00/00/0000']}/>
             : null}
           {props.account.agent_count ? <SimpleList variant='subtitle1'
-                                                   text={['Topic', 'Name of Topic']}/>
+           text={['Topic', 'Name of Topic']}/>
             : null}
         </Box>
         <Title text={props.account.agent_count ? "Smart Trivia Stats" : ''} variant={'h3'} align={'center'}/>
@@ -37,12 +37,12 @@ function PersonalBest(props, { className, ...rest }) {
             <Grid item xs={1}/>
             <Grid item xs={7}>
               <Typography variant={'subtitle1'}>
-                {props.account.agent_count ? 'Cumulative Charitable Contribution' : ''}
+                {props.account?.agent_count ? 'Cumulative Charitable Contribution' : ''}
               </Typography>
             </Grid>
             <Grid item xs={2}>
               <Typography variant={props.variant} align={'right'}>
-                {props.account.agent_count ? '$00,000' : ''}
+                {props.account?.agent_count ? '$00,000' : ''}
               </Typography>
             </Grid>
             <Grid item xs={2}/>

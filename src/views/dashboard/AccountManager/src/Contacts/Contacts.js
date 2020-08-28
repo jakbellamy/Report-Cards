@@ -17,12 +17,9 @@ function Contacts(props, { className, ...rest }) {
       className={clsx(classes.root, className)}
       {...rest}
     >
-      <CardHeader title="Key Education"/>
+      <CardHeader title="Key Contacts"/>
       <Divider />
-      <Box
-        p={3}
-        position="relative"
-        minHeight={220}>
+      <Box p={3} position="relative" minHeight={220}>
 
       </Box>
 
