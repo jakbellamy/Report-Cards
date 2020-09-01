@@ -39,13 +39,13 @@ function Contacts(props, { className, ...rest }) {
           <Grid item xs={3}>
             <Typography variant='h5' align={'left'}>Role</Typography>
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={2}>
             <Typography variant='h5' align={'left'}>Name</Typography>
           </Grid>
           <Grid item xs={4}>
             <Typography variant='h5' align={'left'}>Email</Typography>
           </Grid>
-          <Grid item xs={2}>
+          <Grid item xs={3}>
             <Typography variant='h5' align={'left'}>Phone Number</Typography>
           </Grid>
         </Grid>

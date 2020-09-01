@@ -10,7 +10,7 @@ function ContactRow(props) {
           {props.role ? props.role : ''}
         </Typography>
       </Grid>
-      <Grid item xs={3}>
+      <Grid item xs={2}>
         <Typography variant='subtitle1' align={'left'}>
           {props.name ? props.name : ''}
         </Typography>
@@ -20,7 +20,7 @@ function ContactRow(props) {
           {props.email ? props.email : ''}
         </Typography>
       </Grid>
-      <Grid item xs={2}>
+      <Grid item xs={3}>
         <Typography variant='subtitle1' align={'left'}>
           {props.phone ? props.phone : ''}
         </Typography>
