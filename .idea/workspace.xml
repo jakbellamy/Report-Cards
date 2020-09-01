@@ -20,7 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0bc8d6a-fedc-4de2-bb38-f2b918ef4cd3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/utilities/mock/users.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CHECK_SplashScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CHECK_SplashScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utilities/mock/accountMock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilities/mock/accountMock.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,6 +113,7 @@
       <workItem from="1598770038929" duration="626000" />
       <workItem from="1598968706792" duration="5416000" />
       <workItem from="1598976716369" duration="282000" />
+      <workItem from="1598989237089" duration="5282000" />
     </task>
     <servers />
   </component>
@@ -155,13 +160,14 @@
     </state>
     <state x="1204" y="42" width="664" height="921" key="dock-window-1/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1598971896741" />
     <state x="838" y="0" width="664" height="921" key="dock-window-1/1920.23.1920.1057/0.0.1920.1080@0.0.1920.1080" timestamp="1598971191167" />
-    <state x="-1420" y="-356" width="888" height="537" key="find.popup" timestamp="1598770096949">
-      <screen x="-1920" y="-481" width="1920" height="1080" />
+    <state x="1032" y="134" width="888" height="537" key="find.popup" timestamp="1598991586601">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="-1420" y="-336" width="888" height="526" key="find.popup/-1920.-458.1920.1057/0.23.1680.1027@-1920.-458.1920.1057" timestamp="1598636516670" />
     <state x="-1420" y="-356" width="888" height="537" key="find.popup/-1920.-481.1920.1080/0.0.1680.1050@-1920.-481.1920.1080" timestamp="1598770096949" />
     <state x="542" y="264" width="596" height="522" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1597976608556" />
     <state x="563" y="528" width="596" height="522" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1597017900454" />
+    <state x="1032" y="134" width="888" height="537" key="find.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1598991586601" />
     <state x="-1343" y="-241" width="766" height="696" key="search.everywhere.popup" timestamp="1598043122595">
       <screen x="-1920" y="-481" width="1920" height="1080" />
     </state>

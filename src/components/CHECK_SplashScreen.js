@@ -5,6 +5,7 @@ import {
   makeStyles
 } from '@material-ui/core';
 import OPEN_Logo from 'src/components/OPEN_Logo';
+import CachedIcon from '@material-ui/icons/Cached';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -37,7 +38,6 @@ function SlashScreen() {
         justifyContent="center"
         mb={6}
       >
-        <OPEN_Logo className={classes.logo} />
       </Box>
       <CircularProgress />
     </div>

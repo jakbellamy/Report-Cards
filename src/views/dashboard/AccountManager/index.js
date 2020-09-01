@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 import { Container, Grid, makeStyles } from '@material-ui/core';
 import Page from 'src/components/Page';
 import AccountBio from './src/AccountBio/Bio';
@@ -50,6 +51,7 @@ let shell = {
 const year_shell = {1: shell, 2: shell, 3: shell, 4: shell, 5: shell, 6: shell, 7: shell, 8: shell, 9: shell, 10: shell, 11: shell, 12: shell}
 
 function DashboardAlternativeView() {
+  const user = useSelector((state) => state.account);
   const [accounts, setAccounts] = useState([])
   const [selectedAccount, setSelectedAccount] = useState({name: 'Choose Account', id: -1})
   const [isCurrent, setIsCurrent] = useState(false)
@@ -73,7 +75,7 @@ function DashboardAlternativeView() {
           if(a.name > b.name) { return 1; }
           return 0;
         }))
-      .then(res => setAccounts(res))
+      .then(res => handleAccountSet(res))
     await fetch("https://djsupreme.herokuapp.com/data/ly")
       .then(res => res.json())
       .then(res => setLyReports(res))
@@ -88,6 +90,16 @@ function DashboardAlternativeView() {
   useEffect(() => {
     fetchData()
   }, []);
+
+  const handleAccountSet = (accounts) => {
+    if (user.user.role !== 'admin') {
+      accounts = accounts.filter(account => {
+        return account.sales_manager['id'] === Number(user.user.id) || account.name === 'Monthly Totals'
+      })
+      console.log(accounts)
+    }
+    setAccounts(accounts)
+  }
 
   const buildTableData = (yo, lyo, avgo, type) => {
     let ya = [], lya = [], avga = []
