@@ -19,7 +19,7 @@ function Contacts(props, { className, ...rest }) {
     phone: ''
   }
 
-  let owner = props.account.owners ? props.account.owners[0] : shell
+  let owner = props.account.owners && props.account.owners[0] ? props.account.owners[0] : shell
   let owner2 = props.account.owners && props.account.owners[1] ? props.account.owners[1] : shell
   let teamLeader = props.account.team_leader ? props.account.team_leader : shell
   let assistantTeamLeader = props.account.assistant_team_leader ? props.account.assistant_team_leader : shell
@@ -39,10 +39,10 @@ function Contacts(props, { className, ...rest }) {
           <Grid item xs={3}>
             <Typography variant='h5' align={'left'}>Role</Typography>
           </Grid>
-          <Grid item xs={2}>
+          <Grid item xs={3}>
             <Typography variant='h5' align={'left'}>Name</Typography>
           </Grid>
-          <Grid item xs={4}>
+          <Grid item xs={3}>
             <Typography variant='h5' align={'left'}>Email</Typography>
           </Grid>
           <Grid item xs={3}>
