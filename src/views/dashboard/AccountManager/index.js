@@ -168,7 +168,7 @@ function DashboardAlternativeView() {
         </Grid>
         <Grid container spacing={3}>
           <Grid item xs={8}>
-            <Contacts />
+            <Contacts account={selectedAccount} />
           </Grid>
           <Grid item xs={4}>
             <ReportStatus status={isCurrent}/>

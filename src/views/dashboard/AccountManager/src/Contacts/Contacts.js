@@ -13,6 +13,19 @@ const useStyles = makeStyles((theme) => ({
 function Contacts(props, { className, ...rest }) {
   const classes = useStyles();
 
+  let shell = {
+    name: '',
+    email: '',
+    phone: ''
+  }
+
+  let owner = props.account.owners ? props.account.owners[0] : shell
+  let owner2 = props.account.owners && props.account.owners[1] ? props.account.owners[1] : shell
+  let teamLeader = props.account.team_leader ? props.account.team_leader : shell
+  let assistantTeamLeader = props.account.assistant_team_leader ? props.account.assistant_team_leader : shell
+  let mca = props.account.mca ? props.account.mca : shell
+  let assistantMca = props.account.assistantMca ? props.account.assistantMca : shell
+  let productivityCoach = props.account.productivity_coach ? props.account.productivity_coach : shell
 
   return (
     <Card
@@ -38,33 +51,35 @@ function Contacts(props, { className, ...rest }) {
         </Grid>
         <ContactRow
           role={'Owner'}
-          name={'Gene Whiddon'}
-          email={'genewhiddon@bhgfirst.com'}
-          phone={'(954) 525-2200'}
+          name={owner.name}
+          email={owner.email}
+          phone={owner.phone}
         />
+        {owner2.name ? <ContactRow role={'Owner'} name={owner2.name} email={owner2.email} phone={owner2.phone} /> : null}
         <ContactRow
           role={'Team Leader'}
-          name={''}
-          email={''}
-          phone={''}
+          name={teamLeader.name}
+          email={teamLeader.email}
+          phone={teamLeader.phone}
         />
         <ContactRow
           role={'Asst Team Leader'}
-          name={''}
-          email={''}
-          phone={''}
+          name={assistantTeamLeader.name}
+          email={assistantTeamLeader.email}
+          phone={assistantTeamLeader.phone}
         />
         <ContactRow
           role={'MCA/Admin'}
-          name={''}
-          email={''}
-          phone={''}
+          name={mca.name}
+          email={mca.email}
+          phone={mca.phone}
         />
+        {assistantMca.name ? <ContactRow role={'Asst MCA/Admin'} name={assistantMca.name} phone={assistantMca.phone} email={assistantMca.email}/> : null}
         <ContactRow
           role={'Productivity Coach'}
-          name={''}
-          email={''}
-          phone={''}
+          name={productivityCoach.name}
+          email={productivityCoach.email}
+          phone={productivityCoach.phone}
         />
       </Box>
 
