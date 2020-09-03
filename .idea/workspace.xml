@@ -20,11 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0bc8d6a-fedc-4de2-bb38-f2b918ef4cd3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/utilities/mock/users.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/Overview/DataBlock.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CHECK_SplashScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CHECK_SplashScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utilities/mock/accountMock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilities/mock/accountMock.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/Overview/units.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/Overview/units.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/Overview/volume.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/Overview/volume.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/PersonalBest/PersonalBest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/PersonalBest/PersonalBest.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +114,7 @@
       <workItem from="1598770038929" duration="626000" />
       <workItem from="1598968706792" duration="5416000" />
       <workItem from="1598976716369" duration="282000" />
-      <workItem from="1598989237089" duration="5282000" />
+      <workItem from="1598989237089" duration="11059000" />
     </task>
     <servers />
   </component>
@@ -133,6 +134,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="-1728" y="83" key="#Live_Templates" timestamp="1599141076031">
+      <screen x="-1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="-1728" y="83" key="#Live_Templates/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1599141076031" />
     <state x="304" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596935002737">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -141,11 +146,19 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="555" y="325" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1597035046624" />
+    <state x="-1253" y="129" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1599141221568">
+      <screen x="-1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="-1253" y="129" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1599141221568" />
     <state x="-1259" y="-194" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597948079092">
       <screen x="-1920" y="-481" width="1920" height="1080" />
     </state>
     <state x="-1259" y="-194" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.-481.1920.1080/0.0.1680.1050@-1920.-481.1920.1080" timestamp="1597948079092" />
     <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1593150389363" />
+    <state x="-1372" y="282" key="IDE.errors.dialog" timestamp="1599136737842">
+      <screen x="-1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="-1372" y="282" key="IDE.errors.dialog/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1599136737842" />
     <state x="-1065" y="-309" width="908" height="722" key="SettingsEditor" timestamp="1596648036946">
       <screen x="-1920" y="-458" width="1920" height="1057" />
     </state>
@@ -168,11 +181,13 @@
     <state x="542" y="264" width="596" height="522" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1597976608556" />
     <state x="563" y="528" width="596" height="522" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1597017900454" />
     <state x="1032" y="134" width="888" height="537" key="find.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1598991586601" />
-    <state x="-1343" y="-241" width="766" height="696" key="search.everywhere.popup" timestamp="1598043122595">
-      <screen x="-1920" y="-481" width="1920" height="1080" />
+    <state x="-1343" y="240" width="766" height="696" key="search.everywhere.popup" timestamp="1599141223227">
+      <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state x="-1343" y="-241" width="766" height="696" key="search.everywhere.popup/-1920.-481.1920.1080/0.0.1680.1050@-1920.-481.1920.1080" timestamp="1598043122595" />
     <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1596896213949" />
+    <state x="-1343" y="240" width="766" height="696" key="search.everywhere.popup/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1599141223227" />
+    <state x="-1343" y="240" width="766" height="696" key="search.everywhere.popup/0.23.1920.1057/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1599141191650" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -204,6 +219,11 @@
           <url>file://$PROJECT_DIR$/src/views/dashboard/AccountManager/src/_Components/SimpleList.js</url>
           <line>29</line>
           <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/views/dashboard/AccountManager/src/Overview/units.js</url>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

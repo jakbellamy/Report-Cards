@@ -5,7 +5,6 @@ const users = require('./users')
 const JWT_SECRET = 'devias-top-secret-key';
 const JWT_EXPIRES_IN = '2 days';
 
-
 const db = {
   users: users
 };
@@ -27,19 +26,6 @@ mock.onPost('/api/account/login').reply((config) => {
   } else {
       return [400, { message: 'Please check your email and password' }];
     }
-  // if (email === 'jakbellamy@gmail.com' && password === 'admin' ||
-  //   email.toLowerCase() === 'zachary.lavoy@supremelending.com' && password === 'adminlavoy' ||
-  //   email === 'jmvolpe@nc.rr.com' && password === 'adminvolpe') {
-  //   const { user } = db;
-  //   const accessToken = jwt.sign(
-  //     { id: user.id },
-  //     JWT_SECRET,
-  //     { expiresIn: JWT_EXPIRES_IN }
-  //   );
-  //   return [200, { user, accessToken }];
-  // } else {
-  //   return [400, { message: 'Please check your email and password' }];
-  // }
 
 });
 

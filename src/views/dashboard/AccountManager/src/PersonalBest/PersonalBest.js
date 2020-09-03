@@ -20,7 +20,7 @@ function PersonalBest(props, { className, ...rest }) {
     >
       <CardHeader title="Personal & Professional Best"/>
       <Divider />
-      <Box paddingTop={2} position="relative" height={438}>
+      <Box paddingTop={2} position="relative" height={330}>
         <Title text={props.account.agent_count ? "Next Month's Program": ''} variant={'h4'} align={'center'}/>
         <Box paddingTop={0.5} position={"relative"} height={75}>
           <Typography variant={'h5'} align={'center'}>
@@ -28,7 +28,7 @@ function PersonalBest(props, { className, ...rest }) {
           </Typography>
         </Box>
         <Title text={props.account.agent_count ? "Recent Events": ''} variant={'h4'} align={'center'}/>
-        <Box paddingTop={0.5} position={"relative"} height={75}>
+        <Box position={"relative"} height={75}>
           <Typography variant={'h5'} align={'center'} paddingBottom={0.5}>
             {props.account.agent_count ? 'Profiles in Best: A Conversation with Herschel Walker' : ''}
           </Typography>
