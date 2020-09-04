@@ -27,65 +27,71 @@ function Contacts(props, { className, ...rest }) {
   let assistantMca = props.account.assistantMca ? props.account.assistantMca : shell
   let productivityCoach = props.account.productivity_coach ? props.account.productivity_coach : shell
 
-  return (
-    <Card
-      className={clsx(classes.root, className)}
-      {...rest}
-    >
-      <CardHeader title="Key Contacts"/>
-      <Divider />
-      <Box p={3} position="relative" minHeight={220}>
-        <Grid container spacing={1}>
-          <Grid item xs={3}>
-            <Typography variant='h5' align={'left'}>Role</Typography>
-          </Grid>
-          <Grid item xs={3}>
-            <Typography variant='h5' align={'left'}>Name</Typography>
-          </Grid>
-          <Grid item xs={3}>
-            <Typography variant='h5' align={'left'}>Email</Typography>
-          </Grid>
-          <Grid item xs={3}>
-            <Typography variant='h5' align={'left'}>Phone Number</Typography>
-          </Grid>
+  return <Card
+    className={clsx(classes.root, className)}
+    {...rest}
+  >
+    <CardHeader title="Key Contacts"/>
+    <Divider />
+    <Box p={3} position="relative" minHeight={220}>
+      <Grid container spacing={1}>
+        <Grid item xs={3}>
+          <Typography variant='h5' align={'left'}>Role</Typography>
         </Grid>
-        <ContactRow
-          role={'Owner'}
-          name={owner.name}
-          email={owner.email}
-          phone={owner.phone}
+        <Grid item xs={3}>
+          <Typography variant='h5' align={'left'}>Name</Typography>
+        </Grid>
+        <Grid item xs={3}>
+          <Typography variant='h5' align={'left'}>Email</Typography>
+        </Grid>
+        <Grid item xs={3}>
+          <Typography variant='h5' align={'left'}>Phone Number</Typography>
+        </Grid>
+      </Grid>
+      <ContactRow
+        role={'Owner'}
+        name={owner.name}
+        email={owner.email}
+        phone={owner.phone}
+      />
+      {owner2.name ? <ContactRow role={'Owner'} name={owner2.name} email={owner2.email} phone={owner2.phone} /> : null}
+      <ContactRow
+        role={'Team Leader'}
+        name={teamLeader.name}
+        email={teamLeader.email}
+        phone={teamLeader.phone}
+      />
+      <ContactRow
+        role={'Asst Team Leader'}
+        name={assistantTeamLeader.name}
+        email={assistantTeamLeader.email}
+        phone={assistantTeamLeader.phone}
+      />
+      <ContactRow
+        role={'MCA/Admin'}
+        name={mca.name}
+        email={mca.email}
+        phone={mca.phone}
+      />
+      {assistantMca.name ? <ContactRow role={'Asst MCA/Admin'} name={assistantMca.name} phone={assistantMca.phone} email={assistantMca.email}/> : null}
+      <ContactRow
+        role={'Productivity Coach'}
+        name={productivityCoach.name}
+        email={productivityCoach.email}
+        phone={productivityCoach.phone}
+      />
+      {props.account.loan_officers?.map(lo => {
+        return <ContactRow
+          role={'Loan Officer'}
+          name={lo.name}
+          email={lo.email}
+          phone={lo.phone}
         />
-        {owner2.name ? <ContactRow role={'Owner'} name={owner2.name} email={owner2.email} phone={owner2.phone} /> : null}
-        <ContactRow
-          role={'Team Leader'}
-          name={teamLeader.name}
-          email={teamLeader.email}
-          phone={teamLeader.phone}
-        />
-        <ContactRow
-          role={'Asst Team Leader'}
-          name={assistantTeamLeader.name}
-          email={assistantTeamLeader.email}
-          phone={assistantTeamLeader.phone}
-        />
-        <ContactRow
-          role={'MCA/Admin'}
-          name={mca.name}
-          email={mca.email}
-          phone={mca.phone}
-        />
-        {assistantMca.name ? <ContactRow role={'Asst MCA/Admin'} name={assistantMca.name} phone={assistantMca.phone} email={assistantMca.email}/> : null}
-        <ContactRow
-          role={'Productivity Coach'}
-          name={productivityCoach.name}
-          email={productivityCoach.email}
-          phone={productivityCoach.phone}
-        />
-      </Box>
+      })}
+    </Box>
 
 
-    </Card>
-  );
+  </Card>;
 }
 
 Contacts.propTypes = {
