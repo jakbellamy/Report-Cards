@@ -3,7 +3,6 @@ import { Box, Card, CardHeader, Divider, Grid, makeStyles, Typography } from '@m
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import Title from '../_Components/Title'
-import SimpleList from '../_Components/SimpleList'
 
 const useStyles = makeStyles((theme) => ({
   root: {

@@ -24,6 +24,14 @@ module.exports = [
     lastName: 'LaVoy',
   },
   {
+    id: '0019y682h1',
+    role: 'admin',
+    email: 'TJ.Flood@supremelending.com',
+    password: 'adminflood',
+    firstName: 'TJ',
+    lastName: 'Flood',
+  },
+  {
     id: '6',
     role: 'smgr',
     email: 'Nick.Yeargin@supremelending.com',
