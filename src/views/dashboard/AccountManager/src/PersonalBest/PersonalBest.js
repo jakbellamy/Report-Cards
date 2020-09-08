@@ -8,6 +8,9 @@ const useStyles = makeStyles((theme) => ({
   root: {
     marginTop: theme.spacing(2)
   },
+  link: {
+    color: 'blue'
+  }
 }));
 
 function PersonalBest(props, { className, ...rest }) {
@@ -23,7 +26,7 @@ function PersonalBest(props, { className, ...rest }) {
         <Title text={props.account.agent_count ? "Next Month's Program": ''} variant={'h4'} align={'center'}/>
         <Box paddingTop={0.5} position={"relative"} height={75}>
           <Typography variant={'h5'} align={'center'}>
-            {props.account.agent_count ? 'Accountability - Thu Sep 20th at 3 PM' : ''}
+            {props.account.agent_count ? 'The Energy Bus with Jon Gordon - Thu Sep 24th at 3 PM' : ''}
           </Typography>
         </Box>
         <Title text={props.account.agent_count ? "Recent Events": ''} variant={'h4'} align={'center'}/>
@@ -39,7 +42,7 @@ function PersonalBest(props, { className, ...rest }) {
           </Typography>
         </Box>
       </Box>
-      {/*<Typography>For all past events, please visit <a href='SupremeBest.com/supreme-best/the-vault/'>the Vault</a> </Typography>*/}
+      <Typography variant={'subtitle2'} align={'center'}>For all past events, please visit <a className={classes.link} href='http://www.SupremeBest.com/supreme-best/the-vault/' target="_blank">the Vault</a> </Typography>
     </Card>
   );
 }
