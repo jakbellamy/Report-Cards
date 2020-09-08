@@ -53,8 +53,8 @@ function Chart({
         type: 'line',
         label: 'Company Average Last Year',
         data: dataProp.avg,
-        backgroundColor: 'rgba(255, 99, 132, 0.2)',
-        borderColor: 'rgba(255,99,132,1)',
+        backgroundColor: '#FCF7E1',
+        borderColor: '#FCEEE1',
         borderWidth: 1
       }
     ],
