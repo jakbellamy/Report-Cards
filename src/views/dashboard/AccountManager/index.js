@@ -161,13 +161,18 @@ function DashboardAlternativeView() {
     setFilteredEducation({y: eduy, ly: eduly})
   }
 
+  const filterLeads = (account) => {
+    let leads = leadReports.filter(report => report.account === account.id)
+    setFilteredLeadReports(leads)
+  }
+
   const handleAccountSelection = (account) => {
     setSelectedAccount(account)
     coerceReports(account)
     filterEducation(account)
+    filterLeads(account)
   }
 
-  console.log('lead reports', leadReports)
   return (
     <Page className={classes.root} title="Dashboard Alternative">
       <Container maxWidth={false} className={classes.container}>
@@ -180,7 +185,7 @@ function DashboardAlternativeView() {
           </Grid>
           <Grid item xs={5}>
             <AccountBio account={selectedAccount}  />
-            <Leads account={selectedAccount}/>
+            <Leads account={selectedAccount} leads={filteredLeadReports}/>
             <Education account={selectedAccount} events={filteredEducation}/>
           </Grid>
         </Grid>
