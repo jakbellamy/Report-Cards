@@ -59,6 +59,8 @@ function DashboardAlternativeView() {
   const [filteredEducation, setFilteredEducation] = useState({y: [], ly: []})
   const [lyReports, setLyReports] = useState([])
   const [ytdReports, setYtdReports] = useState([])
+  const [leadReports, setLeadReports] = useState([])
+  const [filteredLeadReports, setFilteredLeadReports] = useState([])
   const [ly, setLy] = useState(year_shell)
   const [ytd, setYtd] = useState(year_shell)
   const [current, setCurrent] = useState(shell)
@@ -85,6 +87,9 @@ function DashboardAlternativeView() {
     await fetch("https://djsupreme.herokuapp.com/api/educations/")
       .then(res => res.json())
       .then(res => setEducation(res))
+    await fetch("https://djsupreme.herokuapp.com/api/lead-reports/")
+      .then(res => res.json())
+      .then(res => setLeadReports(res))
   }
 
   useEffect(() => {
@@ -162,6 +167,7 @@ function DashboardAlternativeView() {
     filterEducation(account)
   }
 
+  console.log('lead reports', leadReports)
   return (
     <Page className={classes.root} title="Dashboard Alternative">
       <Container maxWidth={false} className={classes.container}>
