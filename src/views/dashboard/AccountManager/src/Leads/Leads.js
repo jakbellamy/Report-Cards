@@ -40,7 +40,7 @@ function Leads(props, { className, ...rest }) {
 
   let title = props.account.monthly_customer_min ? `Lead Quota: ${props.account.monthly_customer_min}/Month` : 'Lead Quota'
   let month = props.account.monthly_customer_min ? `${monthCount} Out of ${props.account.monthly_customer_min}` : ''
-  let quarter = props.account.monthly_customer_min ? `${quarterCount} Out of ${Number(props.account.monthly_customer_min) * 4}` : ''
+  let quarter = props.account.monthly_customer_min ? `${quarterCount} Out of ${Number(props.account.monthly_customer_min) * 3}` : ''
   let ytd = props.account.monthly_customer_min ? `000 Out of ${Number(props.account.monthly_customer_min) * 7}` : ''
 
   let monthCheck = monthCount > props.account.monthly_customer_min ? <CheckCircleIcon style={{color: "#25e565"}} /> : <NotInterestedIcon style={{color: "#e5252b"}}/>
@@ -66,7 +66,7 @@ function Leads(props, { className, ...rest }) {
             </Grid>
             <Grid item xs={4}>
               <Typography variant="subtitle1" color="textPrimary">
-                {props.account.monthly_customer_min ? 'July Delivery' : ''}
+                {props.account.monthly_customer_min ? 'August Delivery' : ''}
               </Typography>
             </Grid>
             <Grid item xs={6}>
