@@ -35,7 +35,7 @@ function Leads(props, { className, ...rest }) {
   let monthLeads = props.leads.filter(lead => lead.date === "2020-07-01")
   let quarterLeads = props.leads.filter(lead => lead.date >= "2020-07-01")
 
-  let monthCount = monthLeads.length > 0 ? monthLeads[1]['leads'] : 0
+  let monthCount = monthLeads.length > 0 ? monthLeads[0]['leads'] : 0
   let quarterCount = quarterLeads.length > 0 ? accumulateLeads(quarterLeads) : 0
 
   let title = props.account.monthly_customer_min ? `Lead Quota: ${props.account.monthly_customer_min}/Month` : 'Lead Quota'

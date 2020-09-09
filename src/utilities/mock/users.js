@@ -42,7 +42,7 @@ module.exports = [
   {
     id: 'b164bd',
     role: 'admin',
-    email: 'John.Ragland@supremelending.com', // not his real email
+    email: 'John.Ragland.Jr@supremelending.com', // not his real email
     password: 'jr4smgr',
     firstName: 'John',
     lastName: 'Ragland'
