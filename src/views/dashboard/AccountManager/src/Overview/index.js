@@ -41,7 +41,9 @@ function Overview(props, { className, ...rest }) {
       return ''
     }
   }
-
+  console.log('This Month', props.thisMonth)
+  console.log('This Year', props.thisYear)
+  console.log('Last Year', props.lastYear)
   return (
     <Grid container spacing={2} justify-self={'stretch'} className={classes.root}>
       <Grid item xs={6} spacing={1}>

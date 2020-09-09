@@ -143,8 +143,9 @@ function DashboardAlternativeView() {
     let yf = ytdReports.filter(report => report.account_id === account.id)
     let lyf = lyReports.filter(report => report.account_id === account.id)
     let avgf = lyReports.filter(report => report.account_id === 25)
+    console.log('yf', yf.sort((a, b) => new Date(b.date) - new Date(a.date)))
     if(yf.length > 0){
-      setCurrent(yf.sort((a, b) => b.date - a.date)[0])
+      setCurrent(yf.sort((a, b) => new Date(b.date) - new Date(a.date))[0])
       setIsCurrent(getPeriod(yf.sort((a, b) => b.date - a.date)[0]['date']))
     }
     setLy(buildLy(account, lyf))
@@ -173,8 +174,9 @@ function DashboardAlternativeView() {
     filterLeads(account)
   }
 
+  console.log('Current@Index: ', current)
   return (
-    <Page className={classes.root} title="Dashboard Alternative">
+    <Page className={classes.root} title="Sales Manager Dashboard">
       <Container maxWidth={false} className={classes.container}>
         <Grid container spacing={3}>
           <Header accounts={accounts} selectedAccount={selectedAccount} setSelectedAccount={handleAccountSelection}/>
@@ -190,10 +192,10 @@ function DashboardAlternativeView() {
           </Grid>
         </Grid>
         <Grid container spacing={3}>
-          <Grid item xs={9}>
+          <Grid item xs={10}>
             <Contacts account={selectedAccount} />
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={2}>
             <ReportStatus status={isCurrent}/>
           </Grid>
         </Grid>
