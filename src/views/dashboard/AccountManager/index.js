@@ -11,6 +11,7 @@ import PersonalBest from './src/PersonalBest/PersonalBest'
 import Education from './src/ContinuingEducation/Education'
 import Contacts from './src/Contacts/Contacts'
 import ReportStatus from './src/ReportStatus/ReportStatus';
+import Volume from './src/Overview/volume';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -101,7 +102,6 @@ function DashboardAlternativeView() {
       accounts = accounts.filter(account => {
         return account.sales_manager['id'] === Number(user.user.id) || account.name === 'Monthly Totals'
       })
-      console.log(accounts)
     }
     setAccounts(accounts)
   }
@@ -143,10 +143,12 @@ function DashboardAlternativeView() {
     let yf = ytdReports.filter(report => report.account_id === account.id)
     let lyf = lyReports.filter(report => report.account_id === account.id)
     let avgf = lyReports.filter(report => report.account_id === 25)
-    console.log('yf', yf.sort((a, b) => new Date(b.date) - new Date(a.date)))
     if(yf.length > 0){
       setCurrent(yf.sort((a, b) => new Date(b.date) - new Date(a.date))[0])
       setIsCurrent(getPeriod(yf.sort((a, b) => b.date - a.date)[0]['date']))
+    } else {
+      setCurrent(shell)
+      setIsCurrent(false)
     }
     setLy(buildLy(account, lyf))
     setYtd(buildYtd(account, yf))
@@ -174,14 +176,13 @@ function DashboardAlternativeView() {
     filterLeads(account)
   }
 
-  console.log('Current@Index: ', current)
   return (
     <Page className={classes.root} title="Sales Manager Dashboard">
       <Container maxWidth={false} className={classes.container}>
         <Grid container spacing={3}>
           <Header accounts={accounts} selectedAccount={selectedAccount} setSelectedAccount={handleAccountSelection}/>
           <Grid item xs={7} spacing={3}>
-            <Overview thisYear={ytd} lastYear={ly} thisMonth={current}/>
+            <Overview thisYear={ytd} lastYear={ly} thisMonth={current} key={Math.floor(Math.random() * 101)}/>
             <CompareLineChart stats={stats} stats1={stats1} graphType={graphType} setGraphType={setGraphType} current={current} setCurrent={setCurrent}/>
             <PersonalBest account={selectedAccount} />
           </Grid>

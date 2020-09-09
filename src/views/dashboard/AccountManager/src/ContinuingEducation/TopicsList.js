@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
   },
   scrollable: {
     height: 145,
-    overflow: 'scroll'
+    overflow: 'hidden'
   }
 }));
 

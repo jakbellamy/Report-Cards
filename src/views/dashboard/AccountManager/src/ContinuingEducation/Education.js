@@ -11,7 +11,7 @@ import TopicsList from './TopicsList';
 const useStyles = makeStyles((theme) => ({
   root: {
     marginTop: theme.spacing(2),
-    height: 665
+    height: 685
   },
 }));
 

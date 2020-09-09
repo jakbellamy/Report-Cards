@@ -49,20 +49,20 @@ function Contacts(props, { className, ...rest }) {
         </Grid>
       </Grid>
       <ContactRow
-        role={'Owner'}
+        role={'Owner/OP'}
         name={owner.name}
         email={owner.email}
         phone={owner.phone}
       />
-      {owner2.name ? <ContactRow role={'Owner'} name={owner2.name} email={owner2.email} phone={owner2.phone} /> : null}
+      {owner2.name ? <ContactRow role={'Owner/OP'} name={owner2.name} email={owner2.email} phone={owner2.phone} /> : null}
       <ContactRow
-        role={'Team Leader'}
+        role={'Team Lead/Broker'}
         name={teamLeader.name}
         email={teamLeader.email}
         phone={teamLeader.phone}
       />
       <ContactRow
-        role={'Asst Team Leader'}
+        role={'Asst Team Lead/Broker'}
         name={assistantTeamLeader.name}
         email={assistantTeamLeader.email}
         phone={assistantTeamLeader.phone}

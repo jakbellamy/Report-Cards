@@ -13,12 +13,12 @@ const useStyles = makeStyles((theme) => ({
 function Overview(props, { className, ...rest }) {
   const classes = useStyles();
   const y = {
-    officeVol: props.thisMonth?.office_volume,
-    supremeVol: props.thisMonth?.supreme_volume,
-    officeUnits: props.thisMonth?.office_units,
-    supremeUnits: props.thisMonth?.supreme_units,
-    mktVol: props.thisMonth?.market_share_volume,
-    mktUnits: props.thisMonth?.market_share_units
+    officeVol: props.thisMonth.office_volume ? props.thisMonth.office_volume : 0,
+    supremeVol: props.thisMonth.supreme_volume ? props.thisMonth.supreme_volume : 0,
+    officeUnits: props.thisMonth.office_units ? props.thisMonth.office_units : 0,
+    supremeUnits: props.thisMonth.supreme_units ? props.thisMonth.supreme_units : 0,
+    mktVol: props.thisMonth.market_share_volume ? props.thisMonth.market_share_volume : 0,
+    mktUnits: props.thisMonth.market_share_units ? props.thisMonth.market_share_units : 0
   };
   let retro = props.lastYear[props.thisMonth?.month]
   const ly = {
@@ -41,21 +41,19 @@ function Overview(props, { className, ...rest }) {
       return ''
     }
   }
-  console.log('This Month', props.thisMonth)
-  console.log('This Year', props.thisYear)
-  console.log('Last Year', props.lastYear)
+
   return (
     <Grid container spacing={2} justify-self={'stretch'} className={classes.root}>
       <Grid item xs={6} spacing={1}>
         <Box>
           <Typography variant={"subtitle1"}>YTD Volume</Typography>
-          <Volume y={y} ly={ly} insertCommas={insertCommas} calcChange={calcChange} />
+          <Volume y={y} ly={ly} insertCommas={insertCommas} calcChange={calcChange} key={Math.floor(Math.random() * 101)} />
         </Box>
       </Grid>
       <Grid item xs={6} spacing={1}>
         <Box>
           <Typography variant={"subtitle1"}>YTD Units</Typography>
-          <Units y={y} ly={ly} insertCommas={insertCommas} calcChange={calcChange} />
+          <Units y={y} ly={ly} insertCommas={insertCommas} calcChange={calcChange} key={Math.floor(Math.random() * 101)} />
         </Box>
       </Grid>
     </Grid>
