@@ -30,7 +30,7 @@ function Chart({
   const data = {
     datasets: [
       {
-        label: 'Year to Date',
+        label: '2020',
         type: 'bar',
         backgroundColor: theme.palette.secondary.main,
         data: dataProp.ly,
@@ -40,7 +40,7 @@ function Chart({
         categoryPercentage: 0.5
       },
       {
-        label: 'Last Year',
+        label: '2019',
         type: 'bar',
         backgroundColor: fade(theme.palette.secondary.main, 0.35),
         data: dataProp.y,
@@ -51,7 +51,7 @@ function Chart({
       },
       {
         type: 'line',
-        label: 'Company Average Last Year',
+        label: '2019 Supreme Average',
         data: dataProp.avg,
         backgroundColor: '#FCF7E1',
         borderColor: '#FCEEE1',

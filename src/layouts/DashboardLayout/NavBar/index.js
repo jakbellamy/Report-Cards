@@ -69,75 +69,75 @@ const navConfig = [
       }
     ]
   },
-  {
-    subheader: 'View Data',
-    items: [
-      {
-        title: 'SalesForce',
-        // icon: UsersIcon,
-        href: '/app/management/customers',
-        items: [
-          {
-            title: 'Account Information',
-            href: '/404'
-          },
-          {
-            title: 'Account Leads',
-            href: '/404'
-          },
-          {
-            title: 'Account Reports',
-            href: '/404'
-          }
-        ]
-      },
-      {
-        title: 'Flat Files',
-        // icon: FolderIcon,
-        href: '/404',
-        items: [
-          {
-            title: 'Production Reports',
-            href: '/404'
-          },
-          {
-            title: 'Continuing Education',
-            href: '/404'
-          }
-        ]
-      },
-      {
-        title: 'Report Cards',
-        href: '/404',
-        // icon: TrelloIcon
-      },
-    ]
-  },
-  {
-    subheader: 'Data Entry',
-    items: [
-      // {
-      //   title: 'Market Share Report',
-      //   href: '/app/kanban',
-      //   // icon: TrelloIcon
-      // },
-      // {
-      //   title: 'Operation Cycle',
-      //   href: '/app/kanban',
-      //   // icon: TrelloIcon
-      // },
-      // {
-      //   title: 'Continuing Education',
-      //   href: '/app/kanban',
-      //   // icon: TrelloIcon
-      // },
-      // {
-      //   title: 'Personal & Professional Best',
-      //   href: '/app/kanban',
-      //   // icon: TrelloIcon
-      // },
-    ]
-  },
+  // {
+  //   subheader: 'View Data',
+  //   items: [
+  //     {
+  //       title: 'SalesForce',
+  //       // icon: UsersIcon,
+  //       href: '/app/management/customers',
+  //       items: [
+  //         {
+  //           title: 'Account Information',
+  //           href: '/404'
+  //         },
+  //         {
+  //           title: 'Account Leads',
+  //           href: '/404'
+  //         },
+  //         {
+  //           title: 'Account Reports',
+  //           href: '/404'
+  //         }
+  //       ]
+  //     },
+  //     {
+  //       title: 'Flat Files',
+  //       // icon: FolderIcon,
+  //       href: '/404',
+  //       items: [
+  //         {
+  //           title: 'Production Reports',
+  //           href: '/404'
+  //         },
+  //         {
+  //           title: 'Continuing Education',
+  //           href: '/404'
+  //         }
+  //       ]
+  //     },
+  //     {
+  //       title: 'Report Cards',
+  //       href: '/404',
+  //       // icon: TrelloIcon
+  //     },
+  //   ]
+  // },
+  // {
+  //   subheader: 'Data Entry',
+  //   items: [
+  //     // {
+  //     //   title: 'Market Share Report',
+  //     //   href: '/app/kanban',
+  //     //   // icon: TrelloIcon
+  //     // },
+  //     // {
+  //     //   title: 'Operation Cycle',
+  //     //   href: '/app/kanban',
+  //     //   // icon: TrelloIcon
+  //     // },
+  //     // {
+  //     //   title: 'Continuing Education',
+  //     //   href: '/app/kanban',
+  //     //   // icon: TrelloIcon
+  //     // },
+  //     // {
+  //     //   title: 'Personal & Professional Best',
+  //     //   href: '/app/kanban',
+  //     //   // icon: TrelloIcon
+  //     // },
+  //   ]
+  // },
 ];
 
 function renderNavItems({ items, ...rest }) {

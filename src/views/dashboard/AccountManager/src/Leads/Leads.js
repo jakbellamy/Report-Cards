@@ -82,7 +82,7 @@ function Leads(props, { className, ...rest }) {
             </Grid>
             <Grid item xs={4}>
               <Typography variant="subtitle1" color="textPrimary">
-                {props.account.monthly_customer_min ? 'Quarter Delivery' : ''}
+                {props.account.monthly_customer_min ? 'Q3 Delivery' : ''}
               </Typography>
             </Grid>
             <Grid item xs={6}>
