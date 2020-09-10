@@ -32,13 +32,16 @@ const accumulateLeads = (arr) => {
 function Leads(props, { className, ...rest }) {
   const classes = useStyles();
 
-  let monthLeads = props.leads.filter(lead => lead.date === "2020-07-01")
+  let monthLeads = props.leads.filter(lead => lead.date === "2020-08-01")
+  let lastMonthLeads = props.leads.filter(lead => lead.date === "2020-07-01")
   let quarterLeads = props.leads.filter(lead => lead.date >= "2020-07-01")
 
   let monthCount = monthLeads.length > 0 ? monthLeads[0]['leads'] : 0
+  let lastMonthCount = lastMonthLeads.length > 0 ? lastMonthLeads[0]['leads'] : 0
   let quarterCount = quarterLeads.length > 0 ? accumulateLeads(quarterLeads) : 0
 
   let title = props.account.monthly_customer_min ? `Lead Quota: ${props.account.monthly_customer_min}/Month` : 'Lead Quota'
+  let lastMonth = props.account.monthly_customer_min ? `${lastMonthCount} Out of ${props.account.monthly_customer_min}` : ''
   let month = props.account.monthly_customer_min ? `${monthCount} Out of ${props.account.monthly_customer_min}` : ''
   let quarter = props.account.monthly_customer_min ? `${quarterCount} Out of ${Number(props.account.monthly_customer_min) * 3}` : ''
   let ytd = props.account.monthly_customer_min ? `000 Out of ${Number(props.account.monthly_customer_min) * 7}` : ''
@@ -59,6 +62,22 @@ function Leads(props, { className, ...rest }) {
         minHeight={195}>
 
         <Grid container spacing={3}>
+
+          <Grid item container spacing={3}>
+            <Grid item xs={2}>
+              {props.account.monthly_customer_min ? monthCheck : null}
+            </Grid>
+            <Grid item xs={4}>
+              <Typography variant="subtitle1" color="textPrimary">
+                {props.account.monthly_customer_min ? 'July Delivery' : ''}
+              </Typography>
+            </Grid>
+            <Grid item xs={6}>
+              <Typography variant="subtitle1" color="textPrimary">
+                {lastMonth}
+              </Typography>
+            </Grid>
+          </Grid>
 
           <Grid item container spacing={3}>
             <Grid item xs={2}>
