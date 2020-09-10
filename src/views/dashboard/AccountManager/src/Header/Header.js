@@ -60,6 +60,17 @@ function Header(props, {  ...rest }) {
     props.setSelectedAccount(t)
   }
 
+  const filterButton = () => {
+    if(!props.admin){
+      return (
+      <Button onClick={() => props.handleToggle()}>
+        {props.filterToggle ? 'Filter Account List' : 'Show All Accounts'}
+      </Button>)
+    } else {
+      return null
+    }
+  }
+
   return (
     <>
     <Grid container spacing={1}{...rest}>
@@ -90,9 +101,7 @@ function Header(props, {  ...rest }) {
         </StyledMenu>
       </Grid>
       <Grid item xs={2}>
-        <Button onClick={() => props.handleToggle()}>
-          {props.filterToggle ? 'Filter Account List' : 'Show All Accounts'}
-        </Button>
+        {filterButton()}
       </Grid>
     </Grid>
     </>
