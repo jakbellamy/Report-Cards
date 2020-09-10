@@ -38,7 +38,7 @@ module.exports = [
     password: 'ny6smgr',
     firstName: 'Nick',
     lastName: 'Yeargin',
-    accounts: [6, 42, 7, 9, 11, 13, 22, 19, 20, 21, 44]
+    accounts: [6, 42, 7, 9, 11, 13, 22, 19, 20, 21, 44, 25]
   },
   {
     id: 'b164bd',

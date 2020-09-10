@@ -62,8 +62,8 @@ function Header(props, {  ...rest }) {
 
   return (
     <>
-    <Grid container spacing={7}{...rest}>
-      <Grid item >
+    <Grid container spacing={1}{...rest}>
+      <Grid item xs={7}>
         <Button
           aria-controls="customized-menu"
           aria-haspopup="true"
@@ -89,10 +89,10 @@ function Header(props, {  ...rest }) {
           ))}
         </StyledMenu>
       </Grid>
-      <Grid item>
-        {/*<Typography>*/}
-        {/*  {props.date}*/}
-        {/*</Typography>*/}
+      <Grid item xs={2}>
+        <Button onClick={() => props.handleToggle()}>
+          {props.filterToggle ? 'Filter Account List' : 'Show All Accounts'}
+        </Button>
       </Grid>
     </Grid>
     </>

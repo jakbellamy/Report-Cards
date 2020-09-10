@@ -54,6 +54,7 @@ const year_shell = {1: shell, 2: shell, 3: shell, 4: shell, 5: shell, 6: shell, 
 function DashboardAlternativeView() {
   const user = useSelector((state) => state.account);
   const [accounts, setAccounts] = useState([])
+  const [rawAccounts, setRawAccounts] = useState([])
   const [selectedAccount, setSelectedAccount] = useState({name: 'Choose Account', id: -1})
   const [isCurrent, setIsCurrent] = useState(false)
   const [education, setEducation] = useState([])
@@ -68,6 +69,7 @@ function DashboardAlternativeView() {
   const [graphType, setGraphType] = useState('market_share_volume')
   const [stats, setStats] = useState({ly: [], y: [], avg: []})
   const [stats1, setStats1] = useState({ly: [], y: [], avg: []})
+  const [filterToggle, setFilterToggle] = useState(false)
   const classes = useStyles();
 
   const fetchData = async () => {
@@ -97,13 +99,17 @@ function DashboardAlternativeView() {
     fetchData()
   }, []);
 
-  const handleAccountSet = (accounts) => {
-    if (user.user.role !== 'admin') {
-      accounts = accounts.filter(account => {
-        return account.sales_manager['id'] === Number(user.user.id) || account.name === 'Monthly Totals'
-      })
+  const handleAccountSet = (accounts, toggle='pass') => {
+    setRawAccounts(accounts)
+    if (user.user.role === 'smgr' && toggle != true) {
+      accounts = accounts.filter( account => user.user.accounts.filter( id => id === account.id ).length > 0)
     }
     setAccounts(accounts)
+  }
+
+  const handleFilterToggle = () => {
+    setFilterToggle(!filterToggle)
+    handleAccountSet(rawAccounts, !filterToggle)
   }
 
   const buildTableData = (yo, lyo, avgo, type) => {
@@ -180,7 +186,7 @@ function DashboardAlternativeView() {
     <Page className={classes.root} title="Sales Manager Dashboard">
       <Container maxWidth={false} className={classes.container}>
         <Grid container spacing={3}>
-          <Header accounts={accounts} selectedAccount={selectedAccount} setSelectedAccount={handleAccountSelection}/>
+          <Header accounts={accounts} selectedAccount={selectedAccount} setSelectedAccount={handleAccountSelection} filterToggle={filterToggle} handleToggle={handleFilterToggle}/>
           <Grid item xs={7} spacing={3}>
             <Overview thisYear={ytd} lastYear={ly} thisMonth={current} key={Math.floor(Math.random() * 101)}/>
             <CompareLineChart stats={stats} stats1={stats1} graphType={graphType} setGraphType={setGraphType} current={current} setCurrent={setCurrent}/>
