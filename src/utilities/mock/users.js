@@ -33,12 +33,12 @@ module.exports = [
   },
   {
     id: 'bqcu4',
-    role: 'admin',
+    role: 'smgr',
     email: 'Nick.Yeargin@supremelending.com',
     password: 'ny6smgr',
     firstName: 'Nick',
     lastName: 'Yeargin',
-    accounts: []
+    accounts: [6, 42, 7, 9, 11, 13, 22, 19, 20, 21, 44]
   },
   {
     id: 'b164bd',
