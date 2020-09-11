@@ -23,6 +23,8 @@ function EarningsSegmentation(props, { className, ...rest }) {
   let investment = props.account.monthly_investment ? '$' + insertCommas(props.account.monthly_investment) : ''
   let lease = props.account.monthly_lease ? '$' + insertCommas(props.account.monthly_lease) : ''
   let renewal = props.account.agreement_end ? props.account.agreement_end : ''
+  let agreement = props.account.agreement_date ? props.account.agreement_date : ''
+  let numOtherLenders = props.account.other_lenders ? props.account.other_lenders.length : ''
 
   return (
     <Card
@@ -34,7 +36,7 @@ function EarningsSegmentation(props, { className, ...rest }) {
       <Box
         p={2}
         position="relative"
-        minHeight={265}
+        minHeight={380}
       >
         <Box
           p={1}
@@ -60,11 +62,19 @@ function EarningsSegmentation(props, { className, ...rest }) {
             : null}
 
           {props.account.agent_count ? <SimpleList variant='subtitle1' noShift={true}
+             text={['Number of Other Lenders', numOtherLenders]}/>
+            : null}
+
+          {props.account.agent_count ? <SimpleList variant='subtitle1' noShift={true}
              text={['Monthly Lead Investment', investment]}/>
             : null}
 
           {props.account.agent_count ? <SimpleList variant='subtitle1' noShift={true}
              text={['Monthly Lease', lease]}/>
+            : null}
+
+          {props.account.agent_count ? <SimpleList variant='subtitle1' noShift={true}
+             text={['Agreement Start', agreement]}/>
             : null}
 
           {props.account.agent_count ? <SimpleList variant='subtitle1' noShift={true}

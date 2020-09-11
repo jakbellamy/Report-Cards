@@ -11,7 +11,6 @@ import PersonalBest from './src/PersonalBest/PersonalBest'
 import Education from './src/ContinuingEducation/Education'
 import Contacts from './src/Contacts/Contacts'
 import ReportStatus from './src/ReportStatus/ReportStatus';
-import Volume from './src/Overview/volume';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -199,10 +198,10 @@ function DashboardAlternativeView() {
           </Grid>
         </Grid>
         <Grid container spacing={3}>
-          <Grid item xs={10}>
+          <Grid item xs={9}>
             <Contacts account={selectedAccount} />
           </Grid>
-          <Grid item xs={2}>
+          <Grid item xs={3}>
             <ReportStatus status={isCurrent}/>
           </Grid>
         </Grid>
