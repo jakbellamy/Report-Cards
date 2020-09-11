@@ -64,7 +64,7 @@ function Header(props, {  ...rest }) {
     if(!props.admin){
       return (
       <Button onClick={() => props.handleToggle()}>
-        {props.filterToggle ? 'Unfiltered' : 'Filtered'}
+        {props.filterToggle ? <img src="https://img.icons8.com/ios-glyphs/30/000000/clear-filters.png"/> : <img src="https://img.icons8.com/ios-glyphs/30/000000/filter.png"/>}
       </Button>)
     } else {
       return null
