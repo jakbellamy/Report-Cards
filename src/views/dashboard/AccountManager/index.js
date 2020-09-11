@@ -33,7 +33,7 @@ const getPeriod = (latest) => {
   latest = latest.split('-')[0] + latest.split('-')[1]
   let [month, date, year] = ( new Date() ).toLocaleDateString().split("/")
   month = Number(date) < 15 ? Number(month) - 1 : month
-  month = month.toString().length == 1 ? '0' + month : month
+  month = month.toString().length === 1 ? '0' + month : month
   let dint = year + month
   return latest === dint
 }
@@ -101,7 +101,7 @@ function DashboardAlternativeView() {
 
   const handleAccountSet = (accounts, toggle='pass') => {
     setRawAccounts(accounts)
-    if (user.user.role === 'smgr' && toggle != true) {
+    if (user.user.role === 'smgr' && toggle !== true) {
       accounts = accounts.filter( account => user.user.accounts.filter( id => id === account.id ).length > 0)
     }
     setAccounts(accounts)
@@ -186,7 +186,7 @@ function DashboardAlternativeView() {
     <Page className={classes.root} title="Sales Manager Dashboard">
       <Container maxWidth={false} className={classes.container}>
         <Grid container spacing={3}>
-          <Header accounts={accounts} selectedAccount={selectedAccount} setSelectedAccount={handleAccountSelection} filterToggle={filterToggle} handleToggle={handleFilterToggle} admin={user.user.role === 'admin'}/>
+          <Header accounts={accounts} selectedAccount={selectedAccount} setSelectedAccount={handleAccountSelection} filterToggle={filterToggle} handleToggle={handleFilterToggle} admin={user.user.role === 'admin'} current={current}/>
           <Grid item xs={7} spacing={3}>
             <Overview thisYear={ytd} lastYear={ly} thisMonth={current} key={Math.floor(Math.random() * 101)}/>
             <CompareLineChart stats={stats} stats1={stats1} graphType={graphType} setGraphType={setGraphType} current={current} setCurrent={setCurrent}/>

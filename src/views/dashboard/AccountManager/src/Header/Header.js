@@ -64,17 +64,23 @@ function Header(props, {  ...rest }) {
     if(!props.admin){
       return (
       <Button onClick={() => props.handleToggle()}>
-        {props.filterToggle ? 'Filter Account List' : 'Show All Accounts'}
+        {props.filterToggle ? 'Unfiltered' : 'Filtered'}
       </Button>)
     } else {
       return null
     }
   }
 
+  let thruDate = props.current.date ? `Production Data Updated Through July 2020` : ''
   return (
     <>
     <Grid container spacing={1}{...rest}>
       <Grid item xs={7}>
+        <Typography variant="h4">
+          {thruDate}
+        </Typography>
+      </Grid>
+      <Grid item xs={5}>
         <Button
           aria-controls="customized-menu"
           aria-haspopup="true"
@@ -99,8 +105,6 @@ function Header(props, {  ...rest }) {
             </StyledMenuItem>
           ))}
         </StyledMenu>
-      </Grid>
-      <Grid item xs={2}>
         {filterButton()}
       </Grid>
     </Grid>
