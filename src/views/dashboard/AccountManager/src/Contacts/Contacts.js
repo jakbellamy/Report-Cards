@@ -80,14 +80,6 @@ function Contacts(props, { className, ...rest }) {
         email={productivityCoach.email}
         phone={productivityCoach.phone}
       />
-      {props.account.loan_officers?.map(lo => {
-        return <ContactRow
-          role={'Loan Officer'}
-          name={lo.name}
-          email={lo.email}
-          phone={lo.phone}
-        />
-      })}
     </Box>
 
 

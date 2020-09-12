@@ -33,11 +33,12 @@ module.exports = [
   },
   {
     id: 'bqcu4',
-    role: 'admin',
+    role: 'smgr',
     email: 'Nick.Yeargin@supremelending.com',
     password: 'ny6smgr',
     firstName: 'Nick',
-    lastName: 'Yeargin'
+    lastName: 'Yeargin',
+    accounts: [6, 42, 7, 9, 11, 13, 22, 19, 20, 21, 44, 25]
   },
   {
     id: 'b164bd',
@@ -45,7 +46,8 @@ module.exports = [
     email: 'John.Ragland.Jr@supremelending.com', // not his real email
     password: 'jr4smgr',
     firstName: 'John',
-    lastName: 'Ragland'
+    lastName: 'Ragland',
+    accounts: []
   },
   {
     id: 'tuxb35',
@@ -53,7 +55,8 @@ module.exports = [
     email: 'Brian.Messer@supremelending.com',
     password: 'bm8smgr',
     firstName: 'Brian',
-    lastName: 'Messer'
+    lastName: 'Messer',
+    accounts: []
   },
   {
     id: 'vs7d',
@@ -61,7 +64,8 @@ module.exports = [
     email: 'Richard.Lester@supremelending.com',
     password: 'rl9smgr',
     firstName: 'Richard',
-    lastName: 'Lester'
+    lastName: 'Lester',
+    accounts: []
   },
   {
     id: 'inw8c',
@@ -69,7 +73,8 @@ module.exports = [
     email: 'Amir.Davari@supremelending.com', // Not his real Email
     password: 'ad12smgr',
     firstName: 'Amir',
-    lastName: 'Davari'
+    lastName: 'Davari',
+    accounts: []
   },
   {
     id: 'qvnr61',
@@ -77,7 +82,8 @@ module.exports = [
     email: 'Scott.Mackie@supremelending.com',
     password: 'sm91smgr',
     firstName: 'Scott',
-    lastName: 'Mackie'
+    lastName: 'Mackie',
+    accounts: []
   },
   {
     id: '83hsyc7',
@@ -85,7 +91,8 @@ module.exports = [
     email: 'Keith.Johnson@supremelending.com',
     password: 'kj76smgr',
     firstName: 'Keith',
-    lastName: 'Johnson'
+    lastName: 'Johnson',
+    accounts: []
   },
   {
     id: '74hvs6',
@@ -93,7 +100,8 @@ module.exports = [
     email: 'Robert.Wills@supremelending.com',
     password: 'rw24smgr',
     firstName: 'Robert',
-    lastName: 'Wills'
+    lastName: 'Wills',
+    accounts: []
   },
   {
     id: 'peb63m',
@@ -102,6 +110,7 @@ module.exports = [
     password: 'tf16smgr',
     firstName: 'Tom',
     lastName: 'Flood',
+    accounts: []
   },
   {
     id: 'y254nw',
@@ -109,7 +118,8 @@ module.exports = [
     email: 'Jeffrey.Sachs@supremelending.com',
     password: 'js81smgr',
     firstName: 'Jeffrey',
-    lastName: 'Sachs'
+    lastName: 'Sachs',
+    accounts: []
   },
   {
     id: 'nsdfuv72hvi',

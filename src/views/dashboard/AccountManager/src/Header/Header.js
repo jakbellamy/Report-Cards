@@ -60,10 +60,27 @@ function Header(props, {  ...rest }) {
     props.setSelectedAccount(t)
   }
 
+  const filterButton = () => {
+    if(!props.admin){
+      return (
+      <Button onClick={() => props.handleToggle()}>
+        {props.filterToggle ? <img src="https://img.icons8.com/ios-glyphs/30/000000/clear-filters.png"/> : <img src="https://img.icons8.com/ios-glyphs/30/000000/filter.png"/>}
+      </Button>)
+    } else {
+      return null
+    }
+  }
+
+  let thruDate = props.current.date ? `Production Data Updated Through July 2020` : ''
   return (
     <>
-    <Grid container spacing={7}{...rest}>
-      <Grid item >
+    <Grid container spacing={1}{...rest}>
+      <Grid item xs={7}>
+        <Typography variant="h4">
+          {thruDate}
+        </Typography>
+      </Grid>
+      <Grid item xs={5}>
         <Button
           aria-controls="customized-menu"
           aria-haspopup="true"
@@ -88,11 +105,7 @@ function Header(props, {  ...rest }) {
             </StyledMenuItem>
           ))}
         </StyledMenu>
-      </Grid>
-      <Grid item>
-        {/*<Typography>*/}
-        {/*  {props.date}*/}
-        {/*</Typography>*/}
+        {filterButton()}
       </Grid>
     </Grid>
     </>

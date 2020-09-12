@@ -43,11 +43,20 @@ function Leads(props, { className, ...rest }) {
   let title = props.account.monthly_customer_min ? `Lead Quota: ${props.account.monthly_customer_min}/Month` : 'Lead Quota'
   let lastMonth = props.account.monthly_customer_min ? `${lastMonthCount} Out of ${props.account.monthly_customer_min}` : ''
   let month = props.account.monthly_customer_min ? `${monthCount} Out of ${props.account.monthly_customer_min}` : ''
-  let quarter = props.account.monthly_customer_min ? `${quarterCount} Out of ${Number(props.account.monthly_customer_min) * 3}` : ''
-  let ytd = props.account.monthly_customer_min ? `000 Out of ${Number(props.account.monthly_customer_min) * 7}` : ''
+  let quarter
 
-  let monthCheck = monthCount > props.account.monthly_customer_min ? <CheckCircleIcon style={{color: "#25e565"}} /> : <NotInterestedIcon style={{color: "#e5252b"}}/>
-  let quarterCheck = quarterCount > (props.account.monthly_customer_min * 2) ? <CheckCircleIcon style={{color: "#25e565"}} /> : <NotInterestedIcon style={{color: "#e5252b"}}/>
+  if(props.account.monthly_customer_min){
+    if(quarterCount > (Number(props.account.monthly_customer_min) * 2)){
+      quarter = 'On Pace for Q3'
+    } else {
+      quarter = 'Off Pace for Q3'
+    }
+  } else {
+    quarter = ''
+  }
+
+  const monthCheck = (monthCount) => monthCount >= props.account.monthly_customer_min ? <CheckCircleIcon style={{color: "#25e565"}} /> : <NotInterestedIcon style={{color: "#e5252b"}}/>
+  let quarterCheck = quarterCount >= (props.account.monthly_customer_min * 2) ? <CheckCircleIcon style={{color: "#25e565"}} /> : <NotInterestedIcon style={{color: "#e5252b"}}/>
 
   return (
     <Card
@@ -65,7 +74,7 @@ function Leads(props, { className, ...rest }) {
 
           <Grid item container spacing={3}>
             <Grid item xs={2}>
-              {props.account.monthly_customer_min ? monthCheck : null}
+              {props.account.monthly_customer_min ? monthCheck(lastMonthCount) : null}
             </Grid>
             <Grid item xs={4}>
               <Typography variant="subtitle1" color="textPrimary">
@@ -81,7 +90,7 @@ function Leads(props, { className, ...rest }) {
 
           <Grid item container spacing={3}>
             <Grid item xs={2}>
-              {props.account.monthly_customer_min ? monthCheck : null}
+              {props.account.monthly_customer_min ? monthCheck(monthCount) : null}
             </Grid>
             <Grid item xs={4}>
               <Typography variant="subtitle1" color="textPrimary">
@@ -99,14 +108,9 @@ function Leads(props, { className, ...rest }) {
             <Grid item xs={2}>
               {props.account.monthly_customer_min ? quarterCheck : null}
             </Grid>
-            <Grid item xs={4}>
-              <Typography variant="subtitle1" color="textPrimary">
-                {props.account.monthly_customer_min ? 'Q3 Delivery' : ''}
-              </Typography>
-            </Grid>
             <Grid item xs={6}>
               <Typography variant="subtitle1" color="textPrimary">
-                {quarter}
+                {props.account.monthly_customer_min ? quarter : ''}
               </Typography>
             </Grid>
           </Grid>
