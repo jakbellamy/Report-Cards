@@ -16,6 +16,7 @@ import * as serviceWorker from 'src/serviceWorker';
 import { SettingsProvider } from 'src/utilities/context/SettingsContext';
 import { configureStore } from 'src/utilities/store';
 import { restoreSettings } from 'src/utilities/utils/settings';
+import HttpsRedirect from 'react-https-redirect';
 import App from 'src/App';
 
 enableES5();
@@ -24,11 +25,13 @@ const store = configureStore();
 const settings = restoreSettings();
 
 ReactDOM.render(
-  <Provider store={store}>
-    <SettingsProvider settings={settings}>
-      <App />
-    </SettingsProvider>
-  </Provider>,
+  <HttpsRedirect>
+    <Provider store={store}>
+      <SettingsProvider settings={settings}>
+        <App />
+      </SettingsProvider>
+    </Provider>
+  </HttpsRedirect>,
   document.getElementById('root')
 );
 
