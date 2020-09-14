@@ -9,7 +9,7 @@
   "scripts": {
     "lint": "eslint ./src",
     "dev": "react-scripts start",
-    "start": "serve -s build",
+    "start": "set HTTPS=true&&serve -s build",
     "build": "GENERATE_SOURCEMAP=false react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
