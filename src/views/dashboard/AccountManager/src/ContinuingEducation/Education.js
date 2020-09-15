@@ -82,10 +82,10 @@ function Education(props, { className, ...rest }) {
           <Grid item xs={9}>
             <Box position={'relative'} >
               {props.account.agent_count ? <SimpleList variant='subtitle1' height={1} x1={0} x2={7} x3={4} x4={1}
-                                                       text={['Number of Events', props.events?.ly.length]}/>
+                 text={['Number of Events', props.events?.ly.length]}/>
                 : null}
               {props.account.agent_count ? <SimpleList variant='subtitle1' height={1} x1={0} x2={7} x3={4} x4={1}
-                                                       text={['Number of Agents Trained', totalTrained(props.events?.ly)]}/>
+                 text={['Number of Agents Trained', totalTrained(props.events?.ly)]}/>
                 : null}
               {props.account.agent_count ?  <TopicsList topics={getTopics(props.events?.ly)} /> : null }
             </Box>
