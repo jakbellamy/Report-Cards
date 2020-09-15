@@ -58,7 +58,7 @@ const routesConfig = [
         component: () => <Redirect to="/app/dashboard/dashboard" />
       },
       {
-        component: () => <Redirect to="/404" />
+        component: () => <Redirect to="/app/" />
       }
     ]
   },
@@ -72,7 +72,7 @@ const routesConfig = [
         component: () => <Redirect to='/app/' />
       },
       {
-        component: () => <Redirect to="/404" />
+        component: () => <Redirect to="/app/" />
       }
     ]
   }
