@@ -128,5 +128,14 @@ module.exports = [
     password: 'adminpflood',
     firstName: 'Pat',
     lastName: 'Flood'
+  },
+  {
+    id: 'bniw27unv',
+    role: 'smgr',
+    email: 'Cale.Iorg@supremelending.com',
+    password: 'ci46smgr',
+    firstName: 'Cale',
+    lastName: 'Iorg',
+    accounts: [20, 42, 25]
   }
 ]
