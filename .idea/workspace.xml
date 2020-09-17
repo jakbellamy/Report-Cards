@@ -20,7 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0bc8d6a-fedc-4de2-bb38-f2b918ef4cd3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/MarketChart/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/MarketChart/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,16 +61,16 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/loanOfficers" />
+      <recent name="$PROJECT_DIR$/src/views/dashboard" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/_Components" />
       <recent name="$PROJECT_DIR$/src/views/components" />
       <recent name="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/Header" />
       <recent name="$PROJECT_DIR$/src/views/dashboard/AccountManager/src" />
       <recent name="$PROJECT_DIR$/src/utilities" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/loanOfficers" />
-      <recent name="$PROJECT_DIR$/src/views/dashboard" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -128,7 +128,7 @@
       <workItem from="1600112576884" duration="3353000" />
       <workItem from="1600174845180" duration="1217000" />
       <workItem from="1600176770849" duration="45000" />
-      <workItem from="1600278201470" duration="3696000" />
+      <workItem from="1600278201470" duration="4049000" />
     </task>
     <servers />
   </component>

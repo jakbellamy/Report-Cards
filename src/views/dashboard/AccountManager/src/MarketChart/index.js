@@ -57,7 +57,7 @@ function CompareLineChart(props, { className, ...rest }) {
         <Box minWidth={500} pt={4} pr={2} pl={2}>
           <Chart
             className={classes.chart}
-            data={props.graphType == 'market_share_volume' ? props.stats : props.stats1}
+            data={props.graphType === 'market_share_volume' ? props.stats : props.stats1}
             labels={labels}
             graphType={props.graphType}
             company={props.company}
