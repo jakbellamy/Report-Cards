@@ -14,7 +14,6 @@ const useStyles = makeStyles(() => ({
 
 function CompareLineChart(props, { className, ...rest }) {
   let [tab, setTab] = useState(0)
-  const [graphType, setGraphType] = useState('market_share_volume')
   const classes = useStyles();
   const labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
