@@ -66,7 +66,6 @@ function DashboardAlternativeView() {
   const [ly, setLy] = useState(year_shell)
   const [ytd, setYtd] = useState(year_shell)
   const [current, setCurrent] = useState(shell)
-  const [graphType, setGraphType] = useState('market_share_volume')
   const [stats, setStats] = useState({ly: [], y: [], avg: []})
   const [stats1, setStats1] = useState({ly: [], y: [], avg: []})
   const [filterToggle, setFilterToggle] = useState(false)
@@ -189,7 +188,7 @@ function DashboardAlternativeView() {
           <Header accounts={accounts} selectedAccount={selectedAccount} setSelectedAccount={handleAccountSelection} filterToggle={filterToggle} handleToggle={handleFilterToggle} admin={user.user.role === 'admin'} current={current}/>
           <Grid item xs={7} spacing={3}>
             <Overview thisYear={ytd} lastYear={ly} thisMonth={current} key={Math.floor(Math.random() * 101)}/>
-            <CompareLineChart stats={stats} stats1={stats1} graphType={graphType} setGraphType={setGraphType} current={current} setCurrent={setCurrent}/>
+            <CompareLineChart stats={stats} stats1={stats1} current={current} setCurrent={setCurrent}/>
             <PersonalBest account={selectedAccount} />
           </Grid>
           <Grid item xs={5}>

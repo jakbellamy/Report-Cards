@@ -25,6 +25,7 @@ const chartDict = ['market_share_volume', 'market_share_units']
 
 function CompareLineChart(props, { className, ...rest }) {
   let [tab, setTab] = useState(0)
+  const [graphType, setGraphType] = useState('market_share_volume')
   const classes = useStyles();
   const labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
@@ -36,7 +37,7 @@ function CompareLineChart(props, { className, ...rest }) {
             className={classes.chart}
             data={props.stats}
             labels={labels}
-            graphType={props.graphType}
+            graphType={graphType}
             company={props.company}
           />
         )
@@ -46,7 +47,7 @@ function CompareLineChart(props, { className, ...rest }) {
             className={classes.chart}
             data={props.stats1}
             labels={labels}
-            graphType={props.graphType}
+            graphType={graphType}
             company={props.company}
           />
         )
@@ -54,7 +55,7 @@ function CompareLineChart(props, { className, ...rest }) {
   }
 
   const handleClick = (type) => {
-    props.setGraphType(type)
+    setGraphType(type)
   }
 
   const handleTab = (event, value) => {
@@ -84,9 +85,9 @@ function CompareLineChart(props, { className, ...rest }) {
         <Box minWidth={500} pt={4} pr={2} pl={2}>
           <Chart
             className={classes.chart}
-            data={props.graphType === 'market_share_volume' ? props.stats : props.stats1}
+            data={graphType === 'market_share_volume' ? props.stats : props.stats1}
             labels={labels}
-            graphType={props.graphType}
+            graphType={graphType}
             company={props.company}
           />
         </Box>
