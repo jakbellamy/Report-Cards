@@ -19,6 +19,15 @@ function CompareLineChart(props, { className, ...rest }) {
   const labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   const labels2 = props.stats2Labels
 
+  const statsOverTime = (type) => {
+    if(!props.stats2){
+      return []
+    } else {
+      return props.stats2.map(record => {
+        return record[type] / record['month']
+      })
+    }
+  }
   const handleTab = (event, value) => setTab(value);
   console.log(labels2)
   function renderGraph(tab) {
@@ -45,11 +54,11 @@ function CompareLineChart(props, { className, ...rest }) {
         )
       case 2:
         return(
-          <LineChart className={classes.chart} company={props.company} labels={labels} data={props.stats} key={Math.floor(Math.random() * 101)}/>
+          <LineChart className={classes.chart} labels={labels2} data={statsOverTime('supreme_volume')} key={Math.floor(Math.random() * 101)}/>
         )
       case 3:
         return(
-          <LineChart className={classes.chart} company={props.company} labels={labels} data={props.stats} key={Math.floor(Math.random() * 101)}/>
+          <LineChart className={classes.chart} company={props.company} labels={labels2} data={props.stats} key={Math.floor(Math.random() * 101)}/>
         )
     }
   }
