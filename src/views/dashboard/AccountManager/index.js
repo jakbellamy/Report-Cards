@@ -68,6 +68,8 @@ function DashboardAlternativeView() {
   const [current, setCurrent] = useState(shell)
   const [stats, setStats] = useState({ly: [], y: [], avg: []})
   const [stats1, setStats1] = useState({ly: [], y: [], avg: []})
+  const [stats2, setStats2] = useState([])
+  const [stats2Raw, setStats2Raw] = useState([])
   const [filterToggle, setFilterToggle] = useState(false)
   const classes = useStyles();
 
@@ -86,6 +88,9 @@ function DashboardAlternativeView() {
     await fetch("https://djsupreme.herokuapp.com/data/y")
       .then(res => res.json())
       .then(res => setYtdReports(res))
+    await fetch("https://djsupreme.herokuapp.com/data/y")
+      .then(res => res.json())
+      .then(res => setStats2Raw(res))
     await fetch("https://djsupreme.herokuapp.com/api/educations/")
       .then(res => res.json())
       .then(res => setEducation(res))
@@ -145,9 +150,9 @@ function DashboardAlternativeView() {
   }
 
   const coerceReports = (account) => {
-    let yf = ytdReports.filter(report => report.account_id === account.id)
-    let lyf = lyReports.filter(report => report.account_id === account.id)
-    let avgf = lyReports.filter(report => report.account_id === 25)
+    let yf = ytdReports.filter(report => report['account_id'] === account.id)
+    let lyf = lyReports.filter(report => report['account_id'] === account.id)
+    let avgf = lyReports.filter(report => report['account_id'] === 25)
     if(yf.length > 0){
       setCurrent(yf.sort((a, b) => new Date(b.date) - new Date(a.date))[0])
       setIsCurrent(getPeriod(yf.sort((a, b) => b.date - a.date)[0]['date']))
@@ -188,7 +193,7 @@ function DashboardAlternativeView() {
           <Header accounts={accounts} selectedAccount={selectedAccount} setSelectedAccount={handleAccountSelection} filterToggle={filterToggle} handleToggle={handleFilterToggle} admin={user.user.role === 'admin'} current={current}/>
           <Grid item xs={7} spacing={3}>
             <Overview thisYear={ytd} lastYear={ly} thisMonth={current} key={Math.floor(Math.random() * 101)}/>
-            <CompareLineChart stats={stats} stats1={stats1} current={current} setCurrent={setCurrent}/>
+            <CompareLineChart stats={stats} stats1={stats1} current={current} setCurrent={setCurrent} stats2={stats2}/>
             <PersonalBest account={selectedAccount} />
           </Grid>
           <Grid item xs={5}>

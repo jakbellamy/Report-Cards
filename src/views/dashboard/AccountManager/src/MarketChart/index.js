@@ -19,7 +19,7 @@ function CompareLineChart(props, { className, ...rest }) {
   const labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
   const handleTab = (event, value) => setTab(value);
-  console.log(tab)
+  console.log(props.stats2)
   function renderGraph(tab) {
     switch(tab) {
       case 0:
