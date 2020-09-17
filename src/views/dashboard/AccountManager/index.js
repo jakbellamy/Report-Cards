@@ -69,6 +69,7 @@ function DashboardAlternativeView() {
   const [stats, setStats] = useState({ly: [], y: [], avg: []})
   const [stats1, setStats1] = useState({ly: [], y: [], avg: []})
   const [stats2, setStats2] = useState([])
+  const [stats2Labels, setStats2Labels] = useState([])
   const [stats2Company, setStats2Company] = useState([])
   const [stats2Raw, setStats2Raw] = useState([])
   const [filterToggle, setFilterToggle] = useState(false)
@@ -182,9 +183,18 @@ function DashboardAlternativeView() {
   }
 
   const filterStats2Company = (reports) => {
+    const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+      "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+    ];
+
     let stats = reports.filter(report => report['account_id'] === 25)
     if(stats.length > 0){
       setStats2Company(stats.sort((a, b) => new Date(a.date) - new Date(b.date)))
+      let statLabels = stats.map(record => {
+        record['month'] = monthNames[record.month - 1]
+        return record['month']
+      })
+      setStats2Labels(statLabels)
     } else {
       setStats2Company([])
     }
@@ -219,7 +229,7 @@ function DashboardAlternativeView() {
           <Header accounts={accounts} selectedAccount={selectedAccount} setSelectedAccount={handleAccountSelection} filterToggle={filterToggle} handleToggle={handleFilterToggle} admin={user.user.role === 'admin'} current={current}/>
           <Grid item xs={7} spacing={3}>
             <Overview thisYear={ytd} lastYear={ly} thisMonth={current} key={Math.floor(Math.random() * 101)}/>
-            <CompareLineChart stats={stats} stats1={stats1} current={current} setCurrent={setCurrent} stats2={stats2}/>
+            <CompareLineChart stats={stats} stats1={stats1} current={current} setCurrent={setCurrent} stats2={stats2} stats2Labels={stats2Labels}/>
             <PersonalBest account={selectedAccount} />
           </Grid>
           <Grid item xs={5}>
