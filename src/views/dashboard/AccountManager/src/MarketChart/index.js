@@ -29,7 +29,7 @@ function CompareLineChart(props, { className, ...rest }) {
   const classes = useStyles();
   const labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-  function graphTab(tab) {
+  function renderGraph(tab) {
     switch(tab) {
       case 0:
         return(
@@ -62,7 +62,6 @@ function CompareLineChart(props, { className, ...rest }) {
     handleClick(chartDict[value])
     setTab(value)
   }
-  console.log('props \b', props)
   return (
     <Card
       className={clsx(classes.root, className)}
@@ -83,13 +82,7 @@ function CompareLineChart(props, { className, ...rest }) {
       <Divider />
       <PerfectScrollbar>
         <Box minWidth={500} pt={4} pr={2} pl={2}>
-          <Chart
-            className={classes.chart}
-            data={graphType === 'market_share_volume' ? props.stats : props.stats1}
-            labels={labels}
-            graphType={graphType}
-            company={props.company}
-          />
+          {renderGraph(tab)}
         </Box>
       </PerfectScrollbar>
       <Comments current={props.current} setCurrent={props.setCurrent}/>
