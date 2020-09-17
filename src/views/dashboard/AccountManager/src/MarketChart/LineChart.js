@@ -49,14 +49,14 @@ function LineChart({
       //   barPercentage: 0.5,
       //   categoryPercentage: 0.5
       // },
-      {
-        type: 'line',
-        label: '2019 Supreme Average',
-        data: dataProp.avg,
-        backgroundColor: '#FCF7E1',
-        borderColor: '#FCEEE1',
-        borderWidth: 1
-      }
+      // {
+      //   type: 'line',
+      //   label: '2019 Supreme Average',
+      //   data: dataProp.avg,
+      //   backgroundColor: '#FCF7E1',
+      //   borderColor: '#FCEEE1',
+      //   borderWidth: 1
+      // }
     ],
     labels
   };
