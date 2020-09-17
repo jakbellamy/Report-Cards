@@ -30,7 +30,7 @@ function CompareLineChart(props, { className, ...rest }) {
 
   function graphTab(tab) {
     switch(tab) {
-      case 'mkt_vol':
+      case 0:
         return(
           <Chart
             className={classes.chart}
@@ -40,7 +40,7 @@ function CompareLineChart(props, { className, ...rest }) {
             company={props.company}
           />
         )
-      case 'mkt_units':
+      case 1:
         return(
           <Chart
             className={classes.chart}
