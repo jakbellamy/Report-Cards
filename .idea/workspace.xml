@@ -21,7 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d0bc8d6a-fedc-4de2-bb38-f2b918ef4cd3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utilities/mock/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilities/mock/users.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +128,7 @@
       <workItem from="1600112576884" duration="3353000" />
       <workItem from="1600174845180" duration="1217000" />
       <workItem from="1600176770849" duration="45000" />
-      <workItem from="1600278201470" duration="2552000" />
+      <workItem from="1600278201470" duration="3696000" />
     </task>
     <servers />
   </component>
