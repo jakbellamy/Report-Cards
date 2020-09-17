@@ -51,6 +51,8 @@ function CompareLineChart(props, { className, ...rest }) {
         >
           <Tab label="Market Share Volume"/>
           <Tab label="Market Share Units" />
+          <Tab label="Volume Over Time" />
+          <Tab label="Units Over Time" />
         </Tabs>
       <Divider />
       <PerfectScrollbar>
