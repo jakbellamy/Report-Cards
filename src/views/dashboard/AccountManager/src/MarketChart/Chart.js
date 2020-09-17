@@ -21,7 +21,6 @@ function Chart({
   data: dataProp,
   labels,
   className,
-  graphType,
   ...rest
 }) {
   const classes = useStyles();

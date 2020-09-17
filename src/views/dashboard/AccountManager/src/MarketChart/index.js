@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import PerfectScrollbar from 'react-perfect-scrollbar';
-import { Box, Card, Tabs, Tab, Divider, CardHeader, AppBar, Typography, makeStyles, Button } from '@material-ui/core';
-import GenericMoreButton from 'src/components/GenericMoreButton';
+import { Box, Card, Tabs, Tab, Divider, Typography, makeStyles } from '@material-ui/core';
 import Chart from './Chart';
 import Comments from './comments'
 
@@ -13,21 +12,13 @@ const useStyles = makeStyles(() => ({
   }
 }));
 
-function TabContainer({ children, dir }) {
-  return (
-    <Typography component="div" dir={dir} style={{ padding: 8 * 3 }}>
-      {children}
-    </Typography>
-  );
-}
-
-const chartDict = ['market_share_volume', 'market_share_units']
-
 function CompareLineChart(props, { className, ...rest }) {
   let [tab, setTab] = useState(0)
   const [graphType, setGraphType] = useState('market_share_volume')
   const classes = useStyles();
   const labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+  const handleTab = (event, value) => setTab(value);
 
   function renderGraph(tab) {
     switch(tab) {
@@ -37,7 +28,6 @@ function CompareLineChart(props, { className, ...rest }) {
             className={classes.chart}
             data={props.stats}
             labels={labels}
-            graphType={graphType}
             company={props.company}
           />
         )
@@ -47,21 +37,12 @@ function CompareLineChart(props, { className, ...rest }) {
             className={classes.chart}
             data={props.stats1}
             labels={labels}
-            graphType={graphType}
             company={props.company}
           />
         )
     }
   }
 
-  const handleClick = (type) => {
-    setGraphType(type)
-  }
-
-  const handleTab = (event, value) => {
-    handleClick(chartDict[value])
-    setTab(value)
-  }
   return (
     <Card
       className={clsx(classes.root, className)}
