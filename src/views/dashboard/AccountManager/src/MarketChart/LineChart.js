@@ -17,7 +17,7 @@ const useStyles = makeStyles(() => ({
 
 defaults.global.defaultFontFamily = 'Arial'
 
-function Chart({
+function LineChart({
                  data: dataProp,
                  labels,
                  className,
@@ -29,26 +29,26 @@ function Chart({
 
   const data = {
     datasets: [
-      {
-        label: '2020',
-        type: 'bar',
-        backgroundColor: theme.palette.secondary.main,
-        data: dataProp.ly,
-        barThickness: 12,
-        maxBarThickness: 10,
-        barPercentage: 0.5,
-        categoryPercentage: 0.5
-      },
-      {
-        label: '2019',
-        type: 'bar',
-        backgroundColor: fade(theme.palette.secondary.main, 0.35),
-        data: dataProp.y,
-        barThickness: 12,
-        maxBarThickness: 10,
-        barPercentage: 0.5,
-        categoryPercentage: 0.5
-      },
+      // {
+      //   label: '2020',
+      //   type: 'bar',
+      //   backgroundColor: theme.palette.secondary.main,
+      //   data: dataProp.ly,
+      //   barThickness: 12,
+      //   maxBarThickness: 10,
+      //   barPercentage: 0.5,
+      //   categoryPercentage: 0.5
+      // },
+      // {
+      //   label: '2019',
+      //   type: 'bar',
+      //   backgroundColor: fade(theme.palette.secondary.main, 0.35),
+      //   data: dataProp.y,
+      //   barThickness: 12,
+      //   maxBarThickness: 10,
+      //   barPercentage: 0.5,
+      //   categoryPercentage: 0.5
+      // },
       {
         type: 'line',
         label: '2019 Supreme Average',
@@ -148,10 +148,10 @@ function Chart({
   );
 }
 
-Chart.propTypes = {
+LineChart.propTypes = {
   className: PropTypes.string,
   data: PropTypes.object.isRequired,
   labels: PropTypes.array.isRequired
 };
 
-export default Chart;
+export default LineChart;

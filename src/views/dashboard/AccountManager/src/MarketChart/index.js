@@ -5,6 +5,7 @@ import PerfectScrollbar from 'react-perfect-scrollbar';
 import { Box, Card, Tabs, Tab, Divider, Typography, makeStyles } from '@material-ui/core';
 import Chart from './Chart';
 import Comments from './comments'
+import LineChart from './LineChart';
 
 const useStyles = makeStyles(() => ({
   chart: {
@@ -18,7 +19,7 @@ function CompareLineChart(props, { className, ...rest }) {
   const labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
   const handleTab = (event, value) => setTab(value);
-
+  console.log(tab)
   function renderGraph(tab) {
     switch(tab) {
       case 0:
@@ -28,6 +29,7 @@ function CompareLineChart(props, { className, ...rest }) {
             data={props.stats}
             labels={labels}
             company={props.company}
+            key={Math.floor(Math.random() * 101)}
           />
         )
       case 1:
@@ -37,7 +39,16 @@ function CompareLineChart(props, { className, ...rest }) {
             data={props.stats1}
             labels={labels}
             company={props.company}
+            key={Math.floor(Math.random() * 101)}
           />
+        )
+      case 2:
+        return(
+          <LineChart className={classes.chart} company={props.company} labels={labels} data={props.stats} key={Math.floor(Math.random() * 101)}/>
+        )
+      case 3:
+        return(
+          <LineChart className={classes.chart} company={props.company} labels={labels} data={props.stats} key={Math.floor(Math.random() * 101)}/>
         )
     }
   }
