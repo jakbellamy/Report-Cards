@@ -69,6 +69,7 @@ function DashboardAlternativeView() {
   const [stats, setStats] = useState({ly: [], y: [], avg: []})
   const [stats1, setStats1] = useState({ly: [], y: [], avg: []})
   const [stats2, setStats2] = useState([])
+  const [stats2Company, setStats2Company] = useState([])
   const [stats2Raw, setStats2Raw] = useState([])
   const [filterToggle, setFilterToggle] = useState(false)
   const classes = useStyles();
@@ -88,9 +89,9 @@ function DashboardAlternativeView() {
     await fetch("https://djsupreme.herokuapp.com/data/y")
       .then(res => res.json())
       .then(res => setYtdReports(res))
-    await fetch("https://djsupreme.herokuapp.com/data/y")
+    await fetch("https://djsupreme.herokuapp.com/data/ot")
       .then(res => res.json())
-      .then(res => setStats2Raw(res))
+      .then(res => handleStats2(res))
     await fetch("https://djsupreme.herokuapp.com/api/educations/")
       .then(res => res.json())
       .then(res => setEducation(res))
@@ -114,6 +115,11 @@ function DashboardAlternativeView() {
   const handleFilterToggle = () => {
     setFilterToggle(!filterToggle)
     handleAccountSet(rawAccounts, !filterToggle)
+  }
+
+  const handleStats2 = (res) => {
+    setStats2Raw(res)
+    filterStats2Company(res)
   }
 
   const buildTableData = (yo, lyo, avgo, type) => {
@@ -164,6 +170,7 @@ function DashboardAlternativeView() {
     setYtd(buildYtd(account, yf))
     setStats(buildTableData(buildLy(account, lyf), buildYtd(account, yf), buildLy(account, avgf), 'market_share_volume'))
     setStats1(buildTableData(buildLy(account, lyf), buildYtd(account, yf), buildLy(account, avgf), 'market_share_units'))
+    filterStats2(account)
   }
 
   const filterEducation = (account) => {
@@ -172,6 +179,25 @@ function DashboardAlternativeView() {
     let eduy = edu.filter(report => report.date >= `${year}-00-00`)
     let eduly = edu.filter(report => `${year - 1}-00-00` <= report.date <= `${year}-00-00`)
     setFilteredEducation({y: eduy, ly: eduly})
+  }
+
+  const filterStats2Company = (reports) => {
+    let stats = reports.filter(report => report['account_id'] === 25)
+    if(stats.length > 0){
+      setStats2Company(stats.sort((a, b) => new Date(a.date) - new Date(b.date)))
+    } else {
+      setStats2Company([])
+    }
+  }
+
+
+  const filterStats2 = (account) => {
+    let stats = stats2Raw.filter(report => report['account_id'] === account.id)
+    if(stats.length > 0){
+      setStats2(stats.sort((a, b) => new Date(a.date) - new Date(b.date)))
+    } else {
+      setStats2([])
+    }
   }
 
   const filterLeads = (account) => {
@@ -185,7 +211,7 @@ function DashboardAlternativeView() {
     filterEducation(account)
     filterLeads(account)
   }
-
+  console.log('Company \b', stats2Company)
   return (
     <Page className={classes.root} title="Sales Manager Dashboard">
       <Container maxWidth={false} className={classes.container}>
