@@ -21,37 +21,37 @@ function TabContainer({ children, dir }) {
   );
 }
 
-function graphTab(tab) {
-  switch(tab) {
-    case 'mkt_vol':
-      return(
-        <Chart
-          className={classes.chart}
-          data={props.stats}
-          labels={labels}
-          graphType={props.graphType}
-          company={props.company}
-        />
-      )
-    case 'mkt_units':
-      return(
-        <Chart
-          className={classes.chart}
-          data={props.stats1}
-          labels={labels}
-          graphType={props.graphType}
-          company={props.company}
-        />
-      )
-  }
-}
-
 const chartDict = ['market_share_volume', 'market_share_units']
 
 function CompareLineChart(props, { className, ...rest }) {
   let [tab, setTab] = useState(0)
   const classes = useStyles();
   const labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+  function graphTab(tab) {
+    switch(tab) {
+      case 'mkt_vol':
+        return(
+          <Chart
+            className={classes.chart}
+            data={props.stats}
+            labels={labels}
+            graphType={props.graphType}
+            company={props.company}
+          />
+        )
+      case 'mkt_units':
+        return(
+          <Chart
+            className={classes.chart}
+            data={props.stats1}
+            labels={labels}
+            graphType={props.graphType}
+            company={props.company}
+          />
+        )
+    }
+  }
 
   const handleClick = (type) => {
     props.setGraphType(type)
