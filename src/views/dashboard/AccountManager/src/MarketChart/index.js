@@ -19,11 +19,11 @@ function CompareLineChart(props, { className, ...rest }) {
   const labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   const labels2 = props.stats2Labels;
 
-  const statsOverTime = (type) => {
-    if(!props.stats2){
+  const statsOverTime = (type, source) => {
+    if(!source){
       return [];
     } else {
-      return props.stats2.map(record => {
+      return source.map(record => {
         return record[type] / record['month'];
       });
     }
@@ -54,7 +54,7 @@ function CompareLineChart(props, { className, ...rest }) {
         )
       case 2:
         return(
-          <LineChart className={classes.chart} labels={labels2} data={statsOverTime('supreme_volume')} key={Math.floor(Math.random() * 101)}/>
+          <LineChart className={classes.chart} labels={labels2} data={statsOverTime('supreme_volume', props.stats2)} company={statsOverTime('office_volume', props.stats2)} key={Math.floor(Math.random() * 101)}/>
         )
       case 3:
         return(

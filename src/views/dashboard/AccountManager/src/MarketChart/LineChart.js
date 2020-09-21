@@ -22,6 +22,7 @@ function LineChart({
          labels,
          className,
          graphType,
+         company,
          ...rest
        }) {
   const classes = useStyles();
@@ -53,8 +54,17 @@ function LineChart({
         type: 'line',
         label: 'Supreme Volume Over Time',
         data: dataProp,
-        // backgroundColor: '#0873d7',
+        backgroundColor: '#0873d7',
         borderColor: '#0873d7',
+        borderWidth: 1,
+        fade:  {color: '#054480', value: 90}
+      },
+      {
+        type: 'line',
+        label: 'Office Volume Over Time',
+        data: company,
+        // backgroundColor: '#0c2ba9',
+        borderColor: '#0c2ba9',
         borderWidth: 1,
         fade:  {color: '#054480', value: 90}
       }

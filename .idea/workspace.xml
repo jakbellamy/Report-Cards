@@ -21,6 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d0bc8d6a-fedc-4de2-bb38-f2b918ef4cd3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/MarketChart/LineChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/MarketChart/LineChart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/MarketChart/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/MarketChart/index.js" afterDir="false" />
     </list>
@@ -131,7 +132,7 @@
       <workItem from="1600174845180" duration="1217000" />
       <workItem from="1600176770849" duration="45000" />
       <workItem from="1600278201470" duration="4982000" />
-      <workItem from="1600435647444" duration="2712000" />
+      <workItem from="1600435647444" duration="4760000" />
     </task>
     <servers />
   </component>

@@ -229,7 +229,7 @@ function DashboardAlternativeView() {
           <Header accounts={accounts} selectedAccount={selectedAccount} setSelectedAccount={handleAccountSelection} filterToggle={filterToggle} handleToggle={handleFilterToggle} admin={user.user.role === 'admin'} current={current}/>
           <Grid item xs={7} spacing={3}>
             <Overview thisYear={ytd} lastYear={ly} thisMonth={current} key={Math.floor(Math.random() * 101)}/>
-            <CompareLineChart stats={stats} stats1={stats1} current={current} setCurrent={setCurrent} stats2={stats2} stats2Labels={stats2Labels}/>
+            <CompareLineChart stats={stats} stats1={stats1} current={current} setCurrent={setCurrent} stats2={stats2} stats2Labels={stats2Labels} stats2Company={stats2Company}/>
             <PersonalBest account={selectedAccount} />
           </Grid>
           <Grid item xs={5}>
