@@ -53,9 +53,10 @@ function LineChart({
         type: 'line',
         label: 'Supreme Volume Over Time',
         data: dataProp,
-        backgroundColor: '#FCF7E1',
-        borderColor: '#FCEEE1',
-        borderWidth: 1
+        // backgroundColor: '#0873d7',
+        borderColor: '#0873d7',
+        borderWidth: 1,
+        fade:  {color: '#054480', value: 90}
       }
     ],
     labels
@@ -102,7 +103,7 @@ function LineChart({
             beginAtZero: true,
             min: 0,
             maxTicksLimit: 5,
-            callback: (value) => (value > 0 ? `${value}%` : value)
+            callback: (value) => (value > 0 ? `${value/1000}K` : value)
           }
         }
       ]
@@ -126,7 +127,7 @@ function LineChart({
           let label = `${tooltipItem.yLabel}`;
 
           if (tooltipItem.yLabel > 0) {
-            label += '%';
+            label = '$' + label/1000 + 'k';
           }
 
           return label;
