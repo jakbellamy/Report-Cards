@@ -20,13 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0bc8d6a-fedc-4de2-bb38-f2b918ef4cd3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataChart/charts/UnitsOverTime.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataChart/DataCharts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataChart/DataCharts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataChart/charts/UnitsOverTime.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataChart/charts/UnitsOverTime.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataChart/charts/VolumeOverTime.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataChart/charts/VolumeOverTime.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataChart/comments.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataChart/comments.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataChart/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataChart/DataCharts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataOverview/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataOverview/DataOverview.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

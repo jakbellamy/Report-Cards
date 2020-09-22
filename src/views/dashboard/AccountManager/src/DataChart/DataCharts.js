@@ -68,7 +68,7 @@ function DataChart(props, { className, ...rest }) {
             className={classes.chart}
             company={props.company}
             labels={labels2}
-            data={props.stats}
+            office={props.stats}
             key={Math.floor(Math.random() * 101)}
           />
         )

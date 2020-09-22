@@ -22,7 +22,7 @@ function VolumeOverTime({
                           labels,
                           className,
                           graphType,
-                          company,
+                          office,
                           ...rest
                         }) {
   const classes = useStyles();
@@ -32,7 +32,7 @@ function VolumeOverTime({
     datasets: [
       {
         type: 'line',
-        label: 'Supreme Units Over Time',
+        label: 'Supreme Volume Over Time',
         data: dataProp,
         backgroundColor: '#0873d7',
         borderColor: '#0873d7',
@@ -41,8 +41,8 @@ function VolumeOverTime({
       },
       {
         type: 'line',
-        label: 'Office Units Over Time',
-        data: company,
+        label: 'Office Volume Over Time',
+        data: office,
         borderColor: '#0c2ba9',
         borderWidth: 1,
         fade:  {color: '#054480', value: 90}
@@ -92,7 +92,7 @@ function VolumeOverTime({
             beginAtZero: true,
             min: 0,
             maxTicksLimit: 10,
-            callback: (value) => (value > 0 ? `${value} Units` : value)
+            callback: (value) => (value > 0 ? `$${value/1000000} Mil` : value)
           }
         }
       ]
@@ -116,7 +116,7 @@ function VolumeOverTime({
           let label = `${tooltipItem.yLabel}`;
 
           if (tooltipItem.yLabel > 0) {
-            label = 'Hit Line 119';
+            label = '$' + label/1000 + 'k';
           }
 
           return label;
