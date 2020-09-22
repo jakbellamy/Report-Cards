@@ -2,9 +2,9 @@ import React from 'react';
 import { Box, CardHeader, Divider, makeStyles, Typography, Button, TextField, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from '@material-ui/core';
 import clsx from 'clsx';
 import PerfectScrollbar from 'react-perfect-scrollbar';
-import Chart from './Chart';
+import MarketShareChart from './charts/MarketShareChart';
 import PropTypes from 'prop-types';
-import CompareLineChart from './index';
+import DataChart from './index';
 import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles(() => ({

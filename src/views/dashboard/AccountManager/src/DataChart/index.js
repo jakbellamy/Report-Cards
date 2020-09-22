@@ -3,9 +3,9 @@ import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import { Box, Card, Tabs, Tab, Divider, Typography, makeStyles } from '@material-ui/core';
-import Chart from './Chart';
+import MarketShareChart from './charts/MarketShareChart';
 import Comments from './comments'
-import LineChart from './LineChart';
+import VolumeOverTime from './charts/VolumeOverTime';
 
 const useStyles = makeStyles(() => ({
   chart: {
@@ -13,7 +13,7 @@ const useStyles = makeStyles(() => ({
   }
 }));
 
-function CompareLineChart(props, { className, ...rest }) {
+function DataChart(props, { className, ...rest }) {
   let [tab, setTab] = useState(0)
   const classes = useStyles();
   const labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -34,7 +34,7 @@ function CompareLineChart(props, { className, ...rest }) {
     switch(tab) {
       case 0:
         return(
-          <Chart
+          <MarketShareChart
             className={classes.chart}
             data={props.stats}
             labels={labels}
@@ -44,7 +44,7 @@ function CompareLineChart(props, { className, ...rest }) {
         )
       case 1:
         return(
-          <Chart
+          <MarketShareChart
             className={classes.chart}
             data={props.stats1}
             labels={labels}
@@ -54,11 +54,11 @@ function CompareLineChart(props, { className, ...rest }) {
         )
       case 2:
         return(
-          <LineChart className={classes.chart} labels={labels2} data={statsOverTime('supreme_volume', props.stats2)} company={statsOverTime('office_volume', props.stats2)} key={Math.floor(Math.random() * 101)}/>
+          <VolumeOverTime className={classes.chart} labels={labels2} data={statsOverTime('supreme_volume', props.stats2)} company={statsOverTime('office_volume', props.stats2)} key={Math.floor(Math.random() * 101)}/>
         )
       case 3:
         return(
-          <LineChart className={classes.chart} company={props.company} labels={labels2} data={props.stats} key={Math.floor(Math.random() * 101)}/>
+          <VolumeOverTime className={classes.chart} company={props.company} labels={labels2} data={props.stats} key={Math.floor(Math.random() * 101)}/>
         )
     }
   }
@@ -91,8 +91,8 @@ function CompareLineChart(props, { className, ...rest }) {
   );
 }
 
-CompareLineChart.propTypes = {
+DataChart.propTypes = {
   className: PropTypes.string
 };
 
-export default CompareLineChart;
+export default DataChart;

@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Card, CardHeader, Divider, Grid, makeStyles, Typography } from '@material-ui/core';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import Title from '../_Components/Title'
+import Title from '../../Modules/Title'
 
 const useStyles = makeStyles((theme) => ({
   root: {

@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { Box, Card, CardHeader, Divider, Typography, Grid, makeStyles, GridList, GridListTile } from '@material-ui/core';
-import SimpleList from '../_Components/SimpleList'
+import SimpleList from '../../Modules/SimpleList'
 
 const useStyles = makeStyles((theme) => ({
   root: {},

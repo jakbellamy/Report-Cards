@@ -17,7 +17,7 @@ const useStyles = makeStyles(() => ({
 
 defaults.global.defaultFontFamily = 'Arial'
 
-function LineChart({
+function VolumeOverTime({
          data: dataProp,
          labels,
          className,
@@ -91,8 +91,8 @@ function LineChart({
             fontColor: theme.palette.text.secondary,
             beginAtZero: true,
             min: 0,
-            maxTicksLimit: 5,
-            callback: (value) => (value > 0 ? `$${value/1000000}Million` : value)
+            maxTicksLimit: 10,
+            callback: (value) => (value > 0 ? `$${value/1000000} Mil` : value)
           }
         }
       ]
@@ -138,10 +138,10 @@ function LineChart({
   );
 }
 
-LineChart.propTypes = {
+VolumeOverTime.propTypes = {
   className: PropTypes.string,
   data: PropTypes.object.isRequired,
   labels: PropTypes.array.isRequired
 };
 
-export default LineChart;
+export default VolumeOverTime;

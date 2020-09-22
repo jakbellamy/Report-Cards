@@ -22,7 +22,17 @@
     <list default="true" id="d0bc8d6a-fedc-4de2-bb38-f2b918ef4cd3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/MarketChart/LineChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/MarketChart/LineChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/Leads/Leads.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/InfoComponents/Leads/Leads.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/MarketChart/Chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataChart/charts/MarketShareChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/MarketChart/LineChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataChart/charts/VolumeOverTime.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/MarketChart/comments.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataChart/comments.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/MarketChart/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataChart/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/MarketChart/methods.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/Overview/DataBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataOverview/DataBlock.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/Overview/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataOverview/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/Overview/units.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataOverview/units.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/Overview/volume.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataOverview/volume.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/ReportStatus/ReportStatus.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,11 +78,11 @@
       <recent name="$PROJECT_DIR$/src/views/dashboard" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/InfoComponents" />
+      <recent name="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/MarketChart/charts" />
       <recent name="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/_Components" />
       <recent name="$PROJECT_DIR$/src/views/components" />
       <recent name="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/Header" />
-      <recent name="$PROJECT_DIR$/src/views/dashboard/AccountManager/src" />
-      <recent name="$PROJECT_DIR$/src/utilities" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -241,7 +251,7 @@
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/views/dashboard/AccountManager/src/Overview/index.js</url>
+          <url>file://$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataOverview/index.js</url>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -250,11 +260,11 @@
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/views/dashboard/AccountManager/src/Overview/units.js</url>
+          <url>file://$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataOverview/units.js</url>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/views/dashboard/AccountManager/src/MarketChart/index.js</url>
+          <url>file://$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataChart/index.js</url>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>

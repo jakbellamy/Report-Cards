@@ -17,7 +17,7 @@ const useStyles = makeStyles(() => ({
 
 defaults.global.defaultFontFamily = 'Arial'
 
-function Chart({
+function MarketShareChart({
   data: dataProp,
   labels,
   className,
@@ -100,7 +100,7 @@ function Chart({
             fontColor: theme.palette.text.secondary,
             beginAtZero: true,
             min: 0,
-            maxTicksLimit: 5,
+            maxTicksLimit: 8,
             callback: (value) => (value > 0 ? `${value}%` : value)
           }
         }
@@ -147,10 +147,10 @@ function Chart({
   );
 }
 
-Chart.propTypes = {
+MarketShareChart.propTypes = {
   className: PropTypes.string,
   data: PropTypes.object.isRequired,
   labels: PropTypes.array.isRequired
 };
 
-export default Chart;
+export default MarketShareChart;

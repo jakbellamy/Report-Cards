@@ -2,16 +2,15 @@ import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Container, Grid, makeStyles } from '@material-ui/core';
 import Page from 'src/components/Page';
-import AccountBio from './src/AccountBio/Bio';
-import CompareLineChart from './src/MarketChart';
+import AccountBio from './src/InfoComponents/AccountBio/Bio';
+import DataChart from './src/DataChart';
 import Header from './src/Header/Header';
-import Overview from './src/Overview/index';
-import Leads from './src/Leads/Leads'
-import PersonalBest from './src/PersonalBest/PersonalBest'
-import Education from './src/ContinuingEducation/Education'
-import Contacts from './src/Contacts/Contacts'
-import ReportStatus from './src/ReportStatus/ReportStatus';
-import LoanOfficers from './src/LoanOfficers/LoanOfficers';
+import DataOverview from './src/DataOverview/index';
+import Leads from './src/InfoComponents/Leads/Leads'
+import PersonalBest from './src/InfoComponents/PersonalBest/PersonalBest'
+import Education from './src/InfoComponents/ContinuingEducation/Education'
+import Contacts from './src/InfoComponents/Contacts/Contacts'
+import LoanOfficers from './src/InfoComponents/LoanOfficers/LoanOfficers';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -231,8 +230,8 @@ function DashboardAlternativeView() {
         <Grid container spacing={3}>
           <Header accounts={accounts} selectedAccount={selectedAccount} setSelectedAccount={handleAccountSelection} filterToggle={filterToggle} handleToggle={handleFilterToggle} admin={user.user.role === 'admin'} current={current}/>
           <Grid item xs={7} spacing={3}>
-            <Overview thisYear={ytd} lastYear={ly} thisMonth={current} key={Math.floor(Math.random() * 101)}/>
-            <CompareLineChart stats={stats} stats1={stats1} current={current} setCurrent={setCurrent} stats2={stats2} stats2Labels={stats2Labels} stats2Company={stats2Company}/>
+            <DataOverview thisYear={ytd} lastYear={ly} thisMonth={current} key={Math.floor(Math.random() * 101)}/>
+            <DataChart stats={stats} stats1={stats1} current={current} setCurrent={setCurrent} stats2={stats2} stats2Labels={stats2Labels} stats2Company={stats2Company}/>
             <PersonalBest account={selectedAccount} />
           </Grid>
           <Grid item xs={5}>

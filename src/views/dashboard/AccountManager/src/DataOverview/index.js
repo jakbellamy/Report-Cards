@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-function Overview(props, { className, ...rest }) {
+function DataOverview(props, { className, ...rest }) {
   const classes = useStyles();
   const y = {
     officeVol: props.thisMonth.office_volume ? props.thisMonth.office_volume : 0,
@@ -60,9 +60,9 @@ function Overview(props, { className, ...rest }) {
   )
 }
 
-Overview.propTypes = {
+DataOverview.propTypes = {
   className: PropTypes.string
 };
 
-export default Overview;
+export default DataOverview;
 
