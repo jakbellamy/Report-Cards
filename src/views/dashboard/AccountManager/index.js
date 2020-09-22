@@ -205,7 +205,6 @@ function DashboardAlternativeView() {
         year = year[2] + year[3]
         return `${date.getMonth()+1}/${year}`
       })
-      console.log(statLabels)
       setStats2Labels(statLabels)
     } else {
       setStats2([])
