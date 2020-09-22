@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import MarketShareChart from './charts/MarketShareChart';
 import PropTypes from 'prop-types';
-import DataChart from './index';
+import DataChart from './DataCharts';
 import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles(() => ({

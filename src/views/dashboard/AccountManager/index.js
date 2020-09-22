@@ -3,9 +3,9 @@ import { useSelector } from 'react-redux';
 import { Container, Grid, makeStyles } from '@material-ui/core';
 import Page from 'src/components/Page';
 import AccountBio from './src/InfoComponents/AccountBio/Bio';
-import DataChart from './src/DataChart';
+import DataChart from './src/DataChart/DataCharts';
 import Header from './src/Header/Header';
-import DataOverview from './src/DataOverview/index';
+import DataOverview from './src/DataOverview/DataOverview';
 import Leads from './src/InfoComponents/Leads/Leads'
 import PersonalBest from './src/InfoComponents/PersonalBest/PersonalBest'
 import Education from './src/InfoComponents/ContinuingEducation/Education'

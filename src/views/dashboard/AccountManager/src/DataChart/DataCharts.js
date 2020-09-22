@@ -29,7 +29,7 @@ function DataChart(props, { className, ...rest }) {
     }
   };
   const handleTab = (event, value) => setTab(value);
-  console.log(labels2);
+
   function renderGraph(tab) {
     switch(tab) {
       case 0:
@@ -54,11 +54,23 @@ function DataChart(props, { className, ...rest }) {
         )
       case 2:
         return(
-          <VolumeOverTime className={classes.chart} labels={labels2} data={statsOverTime('supreme_volume', props.stats2)} company={statsOverTime('office_volume', props.stats2)} key={Math.floor(Math.random() * 101)}/>
+          <VolumeOverTime
+            className={classes.chart}
+            labels={labels2}
+            data={statsOverTime('supreme_volume', props.stats2)}
+            office={statsOverTime('office_volume', props.stats2)}
+            key={Math.floor(Math.random() * 101)}
+          />
         )
       case 3:
         return(
-          <VolumeOverTime className={classes.chart} company={props.company} labels={labels2} data={props.stats} key={Math.floor(Math.random() * 101)}/>
+          <VolumeOverTime
+            className={classes.chart}
+            company={props.company}
+            labels={labels2}
+            data={props.stats}
+            key={Math.floor(Math.random() * 101)}
+          />
         )
     }
   }
