@@ -17,14 +17,14 @@ const useStyles = makeStyles(() => ({
 
 defaults.global.defaultFontFamily = 'Arial'
 
-function UnitsOverTime({
-         data: dataProp,
-         labels,
-         className,
-         graphType,
-         office,
-         ...rest
-       }) {
+function VolumeOverTime({
+                          data: dataProp,
+                          labels,
+                          className,
+                          graphType,
+                          office,
+                          ...rest
+                        }) {
   const classes = useStyles();
   const theme = useTheme();
   console.log('dataprop', dataProp)
@@ -92,7 +92,7 @@ function UnitsOverTime({
             beginAtZero: true,
             min: 0,
             maxTicksLimit: 10,
-            callback: (value) => (value > 0 ? `${value} Units` : value)
+            callback: (value) => (value > 0 ? `$${value/1000000} Mil` : value)
           }
         }
       ]
@@ -138,10 +138,10 @@ function UnitsOverTime({
   );
 }
 
-UnitsOverTime.propTypes = {
+VolumeOverTime.propTypes = {
   className: PropTypes.string,
   data: PropTypes.object.isRequired,
   labels: PropTypes.array.isRequired
 };
 
-export default UnitsOverTime;
+export default VolumeOverTime;
