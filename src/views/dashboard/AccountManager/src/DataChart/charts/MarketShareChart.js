@@ -125,7 +125,6 @@ function MarketShareChart({
       callbacks: {
         title: () => {},
         label: (tooltipItem) => {
-          console.log('tooltip: ', tooltipItem)
           let label = `${tooltipItem.yLabel}`;
 
           if (tooltipItem.yLabel > 0) {

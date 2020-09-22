@@ -223,7 +223,6 @@ function DashboardAlternativeView() {
     filterEducation(account)
     filterLeads(account)
   }
-  console.log('Company \b', stats2Company)
   return (
     <Page className={classes.root} title="Sales Manager Dashboard">
       <Container maxWidth={false} className={classes.container}>
