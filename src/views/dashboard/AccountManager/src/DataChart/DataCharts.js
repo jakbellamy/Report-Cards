@@ -6,6 +6,7 @@ import { Box, Card, Tabs, Tab, Divider, Typography, makeStyles } from '@material
 import MarketShareChart from './charts/MarketShareChart';
 import Comments from './comments'
 import VolumeOverTime from './charts/VolumeOverTime';
+import UnitsOverTime from './charts/UnitsOverTime';
 
 const useStyles = makeStyles(() => ({
   chart: {
@@ -64,11 +65,11 @@ function DataChart(props, { className, ...rest }) {
         )
       case 3:
         return(
-          <VolumeOverTime
+          <UnitsOverTime
             className={classes.chart}
-            company={props.company}
             labels={labels2}
-            office={props.stats}
+            data={statsOverTime('supreme_units', props.stats2)}
+            office={statsOverTime('office_units', props.stats2)}
             key={Math.floor(Math.random() * 101)}
           />
         )
