@@ -40,7 +40,7 @@ function MarketShareChart({
         barThickness: 12,
         maxBarThickness: 10,
         barPercentage: 0.5,
-        categoryPercentage: 0.5
+        categoryPercentage: 0.5,
       },
       {
         label: '2019',

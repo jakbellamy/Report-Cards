@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { Bar } from 'react-chartjs-2';
-import { defaults } from 'react-chartjs-2'
+import { defaults } from 'react-chartjs-2';
+import 'chartjs-plugin-trendline';
 import {
   fade,
   makeStyles,
@@ -45,7 +46,12 @@ function UnitsOverTime({
         data: office,
         borderColor: '#0c2ba9',
         borderWidth: 1,
-        fade:  {color: '#054480', value: 90}
+        fade:  {color: '#054480', value: 90},
+        trendlineLinear: {
+          style: "rgba(124,143,255,0.97)",
+          lineStyle: "dotted|solid",
+          width: 3
+        }
       }
     ],
     labels

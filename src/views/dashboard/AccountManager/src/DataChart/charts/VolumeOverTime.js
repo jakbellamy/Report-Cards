@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { Bar } from 'react-chartjs-2';
 import { defaults } from 'react-chartjs-2'
+import 'chartjs-plugin-trendline'
 import {
   fade,
   makeStyles,
@@ -41,11 +42,7 @@ function VolumeOverTime({
         backgroundColor: '#0873d7',
         borderColor: '#0873d7',
         borderWidth: 1,
-        fade:  {color: '#054480', value: 90},
-        // pointBorderColor: theme.palette.background.default,
-        // pointBorderWidth: 3,
-        // pointRadius: 6,
-        // pointBackgroundColor: theme.palette.secondary.main
+        fade:  {color: '#054480', value: 90}
       },
       {
         type: 'line',
@@ -54,10 +51,11 @@ function VolumeOverTime({
         borderColor: '#0c2ba9',
         borderWidth: 1,
         fade:  {color: '#054480', value: 90},
-        // pointBorderColor: theme.palette.background.default,
-        // pointBorderWidth: 3,
-        // pointRadius: 6,
-        // pointBackgroundColor: theme.palette.secondary.main
+        trendlineLinear: {
+          style: "rgba(124,143,255,0.97)",
+          lineStyle: "dotted|solid",
+          width: 3
+        }
       }
     ],
     labels
