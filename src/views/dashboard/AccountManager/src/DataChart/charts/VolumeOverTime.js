@@ -17,6 +17,10 @@ const useStyles = makeStyles(() => ({
 
 defaults.global.defaultFontFamily = 'Arial'
 
+function formatNumber(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
 function VolumeOverTime({
                           data: dataProp,
                           labels,
@@ -146,7 +150,7 @@ function VolumeOverTime({
           let label = `${tooltipItem.yLabel}`;
 
           if (tooltipItem.yLabel > 0) {
-            label = '$' + label/1000 + 'k';
+            label = `${tooltipItem.xLabel}: $${formatNumber(label)}`;
           }
 
           return label;
