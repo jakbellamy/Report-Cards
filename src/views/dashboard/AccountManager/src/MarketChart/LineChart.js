@@ -30,26 +30,6 @@ function LineChart({
   console.log('dataprop', dataProp)
   const data = {
     datasets: [
-      // {
-      //   label: '2020',
-      //   type: 'bar',
-      //   backgroundColor: theme.palette.secondary.main,
-      //   data: dataProp.ly,
-      //   barThickness: 12,
-      //   maxBarThickness: 10,
-      //   barPercentage: 0.5,
-      //   categoryPercentage: 0.5
-      // },
-      // {
-      //   label: '2019',
-      //   type: 'bar',
-      //   backgroundColor: fade(theme.palette.secondary.main, 0.35),
-      //   data: dataProp.y,
-      //   barThickness: 12,
-      //   maxBarThickness: 10,
-      //   barPercentage: 0.5,
-      //   categoryPercentage: 0.5
-      // },
       {
         type: 'line',
         label: 'Supreme Volume Over Time',
@@ -63,7 +43,6 @@ function LineChart({
         type: 'line',
         label: 'Office Volume Over Time',
         data: company,
-        // backgroundColor: '#0c2ba9',
         borderColor: '#0c2ba9',
         borderWidth: 1,
         fade:  {color: '#054480', value: 90}
@@ -113,7 +92,7 @@ function LineChart({
             beginAtZero: true,
             min: 0,
             maxTicksLimit: 5,
-            callback: (value) => (value > 0 ? `${value/1000}K` : value)
+            callback: (value) => (value > 0 ? `$${value/1000000}Million` : value)
           }
         }
       ]

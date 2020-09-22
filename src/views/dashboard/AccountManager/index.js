@@ -175,8 +175,11 @@ function DashboardAlternativeView() {
   }
 
   const filterEducation = (account) => {
-    let edu = education.filter(report => report.account === account.id)
-    let year = education.sort((a, b) => a.date - b.date)[0]['date'].split('-')[0]
+    let edu = []; let year = []
+    if(education.length > 0){
+      edu = education.filter(report => report.account === account.id)
+      year = education.sort((a, b) => a.date - b.date)[0]['date'].split('-')[0]
+    }
     let eduy = edu.filter(report => report.date >= `${year}-00-00`)
     let eduly = edu.filter(report => `${year - 1}-00-00` <= report.date <= `${year}-00-00`)
     setFilteredEducation({y: eduy, ly: eduly})
