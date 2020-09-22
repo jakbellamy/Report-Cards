@@ -15,6 +15,10 @@ const useStyles = makeStyles(() => ({
   }
 }));
 
+function formatNumber(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
 defaults.global.defaultFontFamily = 'Arial'
 
 function MarketShareChart({
@@ -121,10 +125,11 @@ function MarketShareChart({
       callbacks: {
         title: () => {},
         label: (tooltipItem) => {
+          console.log('tooltip: ', tooltipItem)
           let label = `${tooltipItem.yLabel}`;
 
           if (tooltipItem.yLabel > 0) {
-            label += '%';
+            label = `${formatNumber(label)}%`;
           }
 
           return label;
