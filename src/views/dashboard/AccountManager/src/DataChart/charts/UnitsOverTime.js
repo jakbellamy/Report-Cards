@@ -22,12 +22,12 @@ function UnitsOverTime({
                           labels,
                           className,
                           graphType,
-                          company,
+                          office,
                           ...rest
                         }) {
   const classes = useStyles();
   const theme = useTheme();
-  console.log('dataprop', dataProp)
+
   const data = {
     datasets: [
       {
@@ -42,7 +42,7 @@ function UnitsOverTime({
       {
         type: 'line',
         label: 'Office Units Over Time',
-        data: company,
+        data: office,
         borderColor: '#0c2ba9',
         borderWidth: 1,
         fade:  {color: '#054480', value: 90}

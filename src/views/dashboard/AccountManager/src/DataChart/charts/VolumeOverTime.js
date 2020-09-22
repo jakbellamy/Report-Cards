@@ -27,7 +27,7 @@ function VolumeOverTime({
                         }) {
   const classes = useStyles();
   const theme = useTheme();
-  console.log('dataprop', dataProp)
+
   const data = {
     datasets: [
       {
