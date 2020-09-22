@@ -35,10 +35,15 @@ function UnitsOverTime({
         type: 'line',
         label: 'Supreme Units Over Time',
         data: dataProp,
-        backgroundColor: '#0873d7',
+        backgroundColor: fade('#0873d7', 0.35),
         borderColor: '#0873d7',
         borderWidth: 1,
-        fade:  {color: '#054480', value: 90}
+        fade:  {color: '#054480', value: 90},
+        trendlineLinear: {
+          style: fade('#0873d7', 0.75),
+          lineStyle: "dotted|solid",
+          width: 2
+        }
       },
       {
         type: 'line',
@@ -46,11 +51,11 @@ function UnitsOverTime({
         data: office,
         borderColor: '#0c2ba9',
         borderWidth: 1,
-        fade:  {color: '#054480', value: 90},
+        backgroundColor: fade('#373c47', 0.15),
         trendlineLinear: {
-          style: "rgba(124,143,255,0.97)",
+          style: fade('#373c47', 0.5),
           lineStyle: "dotted|solid",
-          width: 3
+          width: 2
         }
       }
     ],
