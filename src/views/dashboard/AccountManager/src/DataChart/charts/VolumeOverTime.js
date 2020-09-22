@@ -37,7 +37,11 @@ function VolumeOverTime({
         backgroundColor: '#0873d7',
         borderColor: '#0873d7',
         borderWidth: 1,
-        fade:  {color: '#054480', value: 90}
+        fade:  {color: '#054480', value: 90},
+        // pointBorderColor: theme.palette.background.default,
+        // pointBorderWidth: 3,
+        // pointRadius: 6,
+        // pointBackgroundColor: theme.palette.secondary.main
       },
       {
         type: 'line',
@@ -45,7 +49,11 @@ function VolumeOverTime({
         data: office,
         borderColor: '#0c2ba9',
         borderWidth: 1,
-        fade:  {color: '#054480', value: 90}
+        fade:  {color: '#054480', value: 90},
+        // pointBorderColor: theme.palette.background.default,
+        // pointBorderWidth: 3,
+        // pointRadius: 6,
+        // pointBackgroundColor: theme.palette.secondary.main
       }
     ],
     labels
@@ -54,13 +62,35 @@ function VolumeOverTime({
   const options = {
     responsive: true,
     maintainAspectRatio: false,
-    animation: true,
     cornerRadius: 20,
     legend: {
       display: true
     },
     layout: {
       padding: 0
+    },
+    markers: {
+      size: 4,
+      strokeColors: ['#1f87e6', '#27c6db'],
+      strokeWidth: 0,
+      shape: 'circle',
+      radius: 2,
+      hover: {
+        size: '10px',
+        sizeOffset: 2
+      }
+    },
+    stroke: {
+      width: 3,
+      curve: 'smooth',
+      lineCap: 'butt',
+      dashArray: [0, 3]
+    },
+    theme: {
+      mode: theme.palette.type
+    },
+    tooltip: {
+      theme: theme.palette.type
     },
     scales: {
       xAxes: [

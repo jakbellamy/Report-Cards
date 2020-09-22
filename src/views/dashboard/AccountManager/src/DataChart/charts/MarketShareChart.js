@@ -63,7 +63,6 @@ function MarketShareChart({
   const options = {
     responsive: true,
     maintainAspectRatio: false,
-    animation: true,
     cornerRadius: 20,
     legend: {
       display: true
