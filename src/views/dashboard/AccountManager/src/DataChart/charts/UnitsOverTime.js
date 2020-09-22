@@ -115,7 +115,7 @@ function UnitsOverTime({
           let label = `${tooltipItem.yLabel}`;
 
           if (tooltipItem.yLabel > 0) {
-            label = 'Hit Line 119';
+            label = `${tooltipItem.xLabel}: ${label} Units`;
           }
 
           return label;
