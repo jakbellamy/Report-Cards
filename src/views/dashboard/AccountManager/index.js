@@ -195,16 +195,17 @@ function DashboardAlternativeView() {
 
 
   const filterStats2 = (account) => {
-    const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
-      "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
-    ];
-
     let stats = stats2Raw.filter(report => report['account_id'] === account.id)
     if(stats.length > 0){
       setStats2(stats.sort((a, b) => new Date(a.date) - new Date(b.date)))
       let statLabels = stats.map(record => {
-        return monthNames[record.month - 1]
+        let date = new Date(record.date)
+        date = new Date(date.setDate(date.getDate()+1))
+        let year = date.getFullYear().toString().split('')
+        year = year[2] + year[3]
+        return `${date.getMonth()+1}/${year}`
       })
+      console.log(statLabels)
       setStats2Labels(statLabels)
     } else {
       setStats2([])
