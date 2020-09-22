@@ -24,7 +24,7 @@ function CompareLineChart(props, { className, ...rest }) {
       return [];
     } else {
       return source.map(record => {
-        return record[type] / record['month'];
+        return record[type];
       });
     }
   };
