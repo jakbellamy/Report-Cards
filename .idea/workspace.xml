@@ -21,6 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d0bc8d6a-fedc-4de2-bb38-f2b918ef4cd3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataOverview/DataOverview.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataOverview/DataOverview.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +131,7 @@
       <workItem from="1600176770849" duration="45000" />
       <workItem from="1600278201470" duration="4982000" />
       <workItem from="1600435647444" duration="4760000" />
-      <workItem from="1600873409958" duration="239000" />
+      <workItem from="1600873409958" duration="610000" />
     </task>
     <servers />
   </component>
@@ -238,10 +239,6 @@
           <url>file://$PROJECT_DIR$/src/Routes.js</url>
           <line>1</line>
           <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataOverview/DataOverview.js</url>
-          <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/views/dashboard/AccountManager/src/Modules/SimpleList.js</url>

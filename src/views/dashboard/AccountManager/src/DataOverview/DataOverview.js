@@ -31,9 +31,10 @@ function DataOverview(props, { className, ...rest }) {
   }
   const calcChange = (name) => {
     let sv1 = y[name] - ly[name]
-    let sv2 = sv1 / y[name]
+    let sv2 = sv1 / ly[name]
     return (sv2 * 100).toFixed(2)
   }
+
   const insertCommas = (num) => {
     if(num){
       return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
