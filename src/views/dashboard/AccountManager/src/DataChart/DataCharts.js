@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+// import ReactDOM from 'react-dom'
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import PerfectScrollbar from 'react-perfect-scrollbar';
-import { Box, Card, Tabs, Tab, Divider, Typography, makeStyles } from '@material-ui/core';
+import { Box, Card, Tabs, Tab, Divider, makeStyles } from '@material-ui/core';
 import MarketShareChart from './charts/MarketShareChart';
 import Comments from './comments'
 import VolumeOverTime from './charts/VolumeOverTime';
@@ -30,6 +31,19 @@ function DataChart(props, { className, ...rest }) {
     }
   };
   const handleTab = (event, value) => setTab(value);
+
+  const tabToID = () => {
+    switch(tab){
+      case 0:
+        return 'market-share-chart'
+      case 1:
+        return 'market-share-chart'
+      case 2:
+        return 'volume-over-time'
+      case 3:
+        return 'units-over-time'
+    }
+  }
 
   function renderGraph(tab) {
     switch(tab) {
@@ -76,6 +90,8 @@ function DataChart(props, { className, ...rest }) {
     }
   }
 
+
+
   return (
     <Card
       className={clsx(classes.root, className)}
@@ -99,7 +115,7 @@ function DataChart(props, { className, ...rest }) {
           {renderGraph(tab)}
         </Box>
       </PerfectScrollbar>
-      <Comments current={props.current} setCurrent={props.setCurrent}/>
+      <Comments current={props.current} setCurrent={props.setCurrent} htmlID={tabToID()}/>
     </Card>
   );
 }
@@ -109,3 +125,4 @@ DataChart.propTypes = {
 };
 
 export default DataChart;
+

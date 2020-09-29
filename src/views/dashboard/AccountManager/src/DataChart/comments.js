@@ -6,6 +6,7 @@ import MarketShareChart from './charts/MarketShareChart';
 import PropTypes from 'prop-types';
 import DataChart from './DataCharts';
 import Grid from '@material-ui/core/Grid';
+import GenericMoreButton from '../../../../../components/GenericMoreButton';
 
 const useStyles = makeStyles(() => ({
   root: {},
@@ -110,7 +111,7 @@ function Comments(props) {
       minHeight={140}
     >
       <Divider />
-      <CardHeader title="Comments"/>
+      <CardHeader title="Comments" action={<GenericMoreButton htmlID={props.htmlID}/>}/>
       <Comment current={props.current ? props.current: {}} setCurrent={props.setCurrent}/>
     </Box>
   );

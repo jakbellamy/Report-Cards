@@ -138,6 +138,7 @@ function UnitsOverTime({
   return (
     <div
       className={clsx(classes.root, className)}
+      id={'units-over-time'}
       {...rest}
     >
       <Bar

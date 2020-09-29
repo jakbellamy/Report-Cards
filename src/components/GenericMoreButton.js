@@ -39,6 +39,11 @@ function GenericMoreButton(props) {
     setOpenMenu(false);
   };
 
+  const handleExportChart = () => {
+    let input = document.querySelector(`.${props.htmlID}`)
+    console.log(input)
+  };
+
   return (
     <>
       <Tooltip title="More options">
@@ -64,30 +69,30 @@ function GenericMoreButton(props) {
           horizontal: 'left'
         }}
       >
-        <MenuItem>
-          <ListItemIcon>
-            <GetAppIcon />
-          </ListItemIcon>
-          <ListItemText primary="Import" />
-        </MenuItem>
-        <MenuItem>
-          <ListItemIcon>
-            <FileCopyIcon />
-          </ListItemIcon>
-          <ListItemText primary="Copy" />
-        </MenuItem>
+        {/*<MenuItem>*/}
+        {/*  <ListItemIcon>*/}
+        {/*    <GetAppIcon />*/}
+        {/*  </ListItemIcon>*/}
+        {/*  <ListItemText primary="Import" />*/}
+        {/*</MenuItem>*/}
+        {/*<MenuItem>*/}
+        {/*  <ListItemIcon>*/}
+        {/*    <FileCopyIcon />*/}
+        {/*  </ListItemIcon>*/}
+        {/*  <ListItemText primary="Copy" />*/}
+        {/*</MenuItem>*/}
         <MenuItem>
           <ListItemIcon>
             <PictureAsPdfIcon />
           </ListItemIcon>
-          <ListItemText primary="Export" />
+          <ListItemText primary="Export" onClick={handleExportChart}/>
         </MenuItem>
-        <MenuItem>
-          <ListItemIcon>
-            <AchiveIcon />
-          </ListItemIcon>
-          <ListItemText primary="Achive" />
-        </MenuItem>
+        {/*<MenuItem>*/}
+        {/*  <ListItemIcon>*/}
+        {/*    <AchiveIcon />*/}
+        {/*  </ListItemIcon>*/}
+        {/*  <ListItemText primary="Achive" />*/}
+        {/*</MenuItem>*/}
       </Menu>
     </>
   );

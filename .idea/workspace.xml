@@ -21,6 +21,12 @@
   <component name="ChangeListManager">
     <list default="true" id="d0bc8d6a-fedc-4de2-bb38-f2b918ef4cd3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GenericMoreButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GenericMoreButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataChart/DataCharts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataChart/DataCharts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataChart/charts/MarketShareChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataChart/charts/MarketShareChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataChart/charts/UnitsOverTime.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataChart/charts/UnitsOverTime.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataChart/charts/VolumeOverTime.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataChart/charts/VolumeOverTime.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataChart/comments.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataChart/comments.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,6 +137,8 @@
       <workItem from="1600278201470" duration="4982000" />
       <workItem from="1600435647444" duration="4760000" />
       <workItem from="1600873409958" duration="2833000" />
+      <workItem from="1601298996975" duration="1848000" />
+      <workItem from="1601384882858" duration="2708000" />
     </task>
     <servers />
   </component>
@@ -209,11 +217,11 @@
     <state x="-888" y="134" width="888" height="537" key="find.popup/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1600364379730" />
     <state x="563" y="528" width="596" height="522" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1597017900454" />
     <state x="1032" y="134" width="888" height="537" key="find.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1598991586601" />
-    <state x="-1343" y="240" width="766" height="696" key="search.everywhere.popup" timestamp="1599141223227">
-      <screen x="-1920" y="0" width="1920" height="1080" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1601384947181">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="-1343" y="-241" width="766" height="696" key="search.everywhere.popup/-1920.-481.1920.1080/0.0.1680.1050@-1920.-481.1920.1080" timestamp="1598043122595" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1596896213949" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1601384947181" />
     <state x="-1343" y="240" width="766" height="696" key="search.everywhere.popup/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1599141223227" />
     <state x="-1343" y="240" width="766" height="696" key="search.everywhere.popup/0.23.1920.1057/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1599141191650" />
   </component>

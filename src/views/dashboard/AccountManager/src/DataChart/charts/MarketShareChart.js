@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { Bar } from 'react-chartjs-2';
@@ -140,6 +141,7 @@ function MarketShareChart({
   return (
     <div
       className={clsx(classes.root, className)}
+      id={'mkt-share-chart'}
       {...rest}
     >
       <Bar
@@ -157,3 +159,5 @@ MarketShareChart.propTypes = {
 };
 
 export default MarketShareChart;
+
+

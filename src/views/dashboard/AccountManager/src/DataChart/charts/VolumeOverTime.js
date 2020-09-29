@@ -167,6 +167,7 @@ function VolumeOverTime({
   return (
     <div
       className={clsx(classes.root, className)}
+      id={'volume-over-time'}
       {...rest}
     >
       <Bar
