@@ -21,6 +21,8 @@ function DataChart(props, { className, ...rest }) {
   const labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   const labels2 = props.stats2Labels;
 
+  const theRef = React.createRef()
+
   const statsOverTime = (type, source) => {
     if(!source){
       return [];
@@ -35,9 +37,9 @@ function DataChart(props, { className, ...rest }) {
   const tabToID = () => {
     switch(tab){
       case 0:
-        return 'market-share-chart'
+        return 'mkt-share-chart'
       case 1:
-        return 'market-share-chart'
+        return 'mkt-share-chart'
       case 2:
         return 'volume-over-time'
       case 3:
@@ -55,6 +57,7 @@ function DataChart(props, { className, ...rest }) {
             labels={labels}
             company={props.company}
             key={Math.floor(Math.random() * 101)}
+            ref={theRef}
           />
         )
       case 1:

@@ -38,7 +38,7 @@ module.exports = [
     password: 'ny6smgr',
     firstName: 'Nick',
     lastName: 'Yeargin',
-    accounts: [6, 42, 7, 9, 11, 13, 22, 19, 20, 21, 44, 25]
+    accounts: [38, 5, 41, 6, 42, 7, 9, 11, 43, 13, 14, 15, 22, 17, 18, 19, 20, 21, 44, 25]
   },
   {
     id: 'b164bd',
@@ -60,12 +60,12 @@ module.exports = [
   },
   {
     id: 'vs7d',
-    role: 'admin',
+    role: 'smgr',
     email: 'Richard.Lester@supremelending.com',
     password: 'rl9smgr',
     firstName: 'Richard',
     lastName: 'Lester',
-    accounts: []
+    accounts: [12, 24, 25]
   },
   {
     id: 'inw8c',
@@ -87,12 +87,12 @@ module.exports = [
   },
   {
     id: '83hsyc7',
-    role: 'admin',
+    role: 'smgr',
     email: 'Keith.Johnson@supremelending.com',
     password: 'kj76smgr',
     firstName: 'Keith',
     lastName: 'Johnson',
-    accounts: []
+    accounts: [12, 25]
   },
   {
     id: '74hvs6',

@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { Bar } from 'react-chartjs-2';
@@ -159,5 +158,3 @@ MarketShareChart.propTypes = {
 };
 
 export default MarketShareChart;
-
-

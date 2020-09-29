@@ -4,6 +4,13 @@ import React, {
   memo
 } from 'react';
 import PropTypes from 'prop-types';
+import html2canvas from "html2canvas";
+import MoreIcon from '@material-ui/icons/MoreVert';
+import ReactToPdf from "react-to-pdf";
+import GetAppIcon from '@material-ui/icons/GetApp';
+import FileCopyIcon from '@material-ui/icons/FileCopy';
+import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
+import AchiveIcon from '@material-ui/icons/ArchiveOutlined';
 import {
   ListItemIcon,
   ListItemText,
@@ -13,11 +20,7 @@ import {
   MenuItem,
   makeStyles
 } from '@material-ui/core';
-import MoreIcon from '@material-ui/icons/MoreVert';
-import GetAppIcon from '@material-ui/icons/GetApp';
-import FileCopyIcon from '@material-ui/icons/FileCopy';
-import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
-import AchiveIcon from '@material-ui/icons/ArchiveOutlined';
+import jsPDF from 'jspdf'
 
 const useStyles = makeStyles(() => ({
   menu: {
@@ -40,8 +43,21 @@ function GenericMoreButton(props) {
   };
 
   const handleExportChart = () => {
-    let input = document.querySelector(`.${props.htmlID}`)
-    console.log(input)
+    let graph = document.getElementById(props.htmlID)
+    html2canvas(graph)
+      .then(canvas => {
+        const img = canvas.toDataURL('image/png')
+        const pdf = new jsPDF("l", "pt")
+        pdf.addImage(
+          img,
+          'png',
+          graph.offsetLeft,
+          graph.offsetTop,
+          graph.clientWidth,
+          graph.clientHeight
+        )
+        pdf.save('chart.pdf')
+      })
   };
 
   return (

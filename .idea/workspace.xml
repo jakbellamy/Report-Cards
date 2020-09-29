@@ -21,12 +21,12 @@
   <component name="ChangeListManager">
     <list default="true" id="d0bc8d6a-fedc-4de2-bb38-f2b918ef4cd3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/GenericMoreButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GenericMoreButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utilities/mock/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilities/mock/users.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataChart/DataCharts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataChart/DataCharts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataChart/charts/MarketShareChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataChart/charts/MarketShareChart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataChart/charts/UnitsOverTime.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataChart/charts/UnitsOverTime.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataChart/charts/VolumeOverTime.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataChart/charts/VolumeOverTime.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataChart/comments.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataChart/comments.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +138,7 @@
       <workItem from="1600435647444" duration="4760000" />
       <workItem from="1600873409958" duration="2833000" />
       <workItem from="1601298996975" duration="1848000" />
-      <workItem from="1601384882858" duration="2708000" />
+      <workItem from="1601384882858" duration="6989000" />
     </task>
     <servers />
   </component>
