@@ -4,10 +4,6 @@ import mock from 'src/utilities/utils/mock';
 const JWT_SECRET = 'devias-top-secret-key';
 const JWT_EXPIRES_IN = '2 days';
 
-const db = {
-  users: users
-};
-
 const users = [
   {
     id: '1',
@@ -150,6 +146,9 @@ const users = [
   }
 ]
 
+const db = {
+  users: users
+};
 
 mock.onPost('/api/account/login').reply((config) => {
   const { email, password } = JSON.parse(config.data);
