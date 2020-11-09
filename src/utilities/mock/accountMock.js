@@ -138,12 +138,21 @@ const users = [
   {
     id: 'bniw27unv',
     role: 'smgr',
+    email: 'Lisa.Spencer@supremelending.com',
+    password: 'ls88adm',
+    firstName: 'Lisa',
+    lastName: 'Spencer',
+    accounts: [1, 40, 3, 4, 5, 8, 10, 23, 39, 26, 27, 28]
+  },
+  {
+    id: 'vjsd3452f3',
+    role: 'smgr',
     email: 'Cale.Iorg@supremelending.com',
     password: 'ci46smgr',
     firstName: 'Cale',
     lastName: 'Iorg',
     accounts: [20, 42, 25]
-  }
+  },
 ]
 
 const db = {
