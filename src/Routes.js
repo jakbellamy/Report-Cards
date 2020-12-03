@@ -14,6 +14,7 @@ import MainLayout from 'src/layouts/MainLayout';
 import LoadingScreen from 'src/components/LoadingScreen';
 import AuthGuard from 'src/components/AuthGuard';
 import GuestGuard from 'src/components/GuestGuard';
+import DashboardAlternativeView from './views/dashboard/AccountManager';
 
 const routesConfig = [
   {
@@ -50,7 +51,7 @@ const routesConfig = [
       {
         exact: true,
         path: '/app/dashboard/account-manager',
-        component: lazy(() => import('src/views/dashboard/AccountManager'))
+        component: DashboardAlternativeView
       },
       {
         exact: true,
