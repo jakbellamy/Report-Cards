@@ -71,7 +71,7 @@ function Header(props, {  ...rest }) {
     }
   }
 
-  let thruDate = props.current.date ? `Production Data Updated Through July 2020` : ''
+  let thruDate = props.current.date ? `Production Data Updated Through October 2020` : ''
   return (
     <>
     <Grid container spacing={1}{...rest}>
