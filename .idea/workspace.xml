@@ -20,11 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0bc8d6a-fedc-4de2-bb38-f2b918ef4cd3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/parsing.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/jakobbellamy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/jakobbellamy.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/parsing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/parsing.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +146,7 @@
       <workItem from="1607092543433" duration="1411000" />
       <workItem from="1607128140554" duration="1000" />
       <workItem from="1607552800206" duration="20000" />
-      <workItem from="1609361858442" duration="1772000" />
+      <workItem from="1609361858442" duration="2806000" />
     </task>
     <servers />
   </component>
@@ -167,72 +166,15 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1728" y="83" key="#Live_Templates" timestamp="1599141076031">
-      <screen x="-1920" y="0" width="1920" height="1080" />
+    <state x="887" y="327" width="888" height="537" key="find.popup" timestamp="1609364805413">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="-1728" y="83" key="#Live_Templates/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1599141076031" />
-    <state x="304" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596935002737">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state x="304" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1596935002737" />
-    <state x="555" y="325" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1597035046624">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state x="555" y="325" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1597035046624" />
-    <state x="-1253" y="129" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1599141221568">
-      <screen x="-1920" y="0" width="1920" height="1080" />
-    </state>
-    <state x="-1253" y="129" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1599141221568" />
-    <state x="-1259" y="-194" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597948079092">
-      <screen x="-1920" y="-481" width="1920" height="1080" />
-    </state>
-    <state x="-1259" y="-194" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.-481.1920.1080/0.0.1680.1050@-1920.-481.1920.1080" timestamp="1597948079092" />
-    <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1593150389363" />
-    <state x="-1372" y="282" key="IDE.errors.dialog" timestamp="1599136737842">
-      <screen x="-1920" y="0" width="1920" height="1080" />
-    </state>
-    <state x="-1372" y="282" key="IDE.errors.dialog/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1599136737842" />
-    <state x="-1065" y="152" width="908" height="722" key="SettingsEditor" timestamp="1600115384218">
-      <screen x="-1920" y="0" width="1920" height="1080" />
-    </state>
-    <state x="-1065" y="-309" width="908" height="722" key="SettingsEditor/-1920.-458.1920.1057/0.23.1680.1027@-1920.-458.1920.1057" timestamp="1596648036946" />
-    <state x="-1065" y="152" width="908" height="722" key="SettingsEditor/-1920.0.1920.1080/0.23.1680.1027@-1920.0.1920.1080" timestamp="1595708594367" />
-    <state x="-1139" y="-432" key="SettingsEditor/0.0.1680.1050/-1920.-584.1920.1080@-1920.-584.1920.1080" timestamp="1594668861135" />
-    <state x="341" y="164" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1593145725270" />
-    <state x="-1065" y="152" key="SettingsEditor/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1600115384218" />
-    <state x="-1139" y="-432" key="SettingsEditor/0.23.1680.1027/-1920.-584.1920.1080@-1920.-584.1920.1080" timestamp="1594670456158" />
-    <state x="683" y="168" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1593148534690" />
-    <state x="-1230" y="290" width="540" height="540" key="StructurePopup" timestamp="1599846587912">
-      <screen x="-1920" y="0" width="1920" height="1080" />
-    </state>
-    <state x="-1230" y="290" width="540" height="540" key="StructurePopup/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1599846587912" />
-    <state x="-1198" y="414" width="1028" height="1080" key="dock-window-1" timestamp="1599846399573">
-      <screen x="-1920" y="0" width="1920" height="1080" />
-    </state>
-    <state x="-1198" y="414" width="1028" height="1080" key="dock-window-1/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1599846399573" />
-    <state x="1204" y="42" width="664" height="921" key="dock-window-1/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1598971896741" />
-    <state x="838" y="0" width="664" height="921" key="dock-window-1/1920.23.1920.1057/0.0.1920.1080@0.0.1920.1080" timestamp="1598971191167" />
-    <state x="-1920" y="0" width="1920" height="1080" key="dock-window-2" timestamp="1599846731277">
-      <screen x="-1920" y="0" width="1920" height="1080" />
-    </state>
-    <state x="-1920" y="0" width="1920" height="1080" key="dock-window-2/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1599846731277" />
-    <state x="-1033" y="327" width="888" height="537" key="find.popup" timestamp="1600808645529">
-      <screen x="-1920" y="0" width="1920" height="1080" />
-    </state>
-    <state x="-1420" y="-336" width="888" height="526" key="find.popup/-1920.-458.1920.1057/0.23.1680.1027@-1920.-458.1920.1057" timestamp="1598636516670" />
-    <state x="-1420" y="-356" width="888" height="537" key="find.popup/-1920.-481.1920.1080/0.0.1680.1050@-1920.-481.1920.1080" timestamp="1598770096949" />
     <state x="-1033" y="327" width="888" height="537" key="find.popup/-1920.0.1920.1080/0.0.1920.1080@-1920.0.1920.1080" timestamp="1600808645529" />
-    <state x="542" y="264" width="596" height="522" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1597976608556" />
-    <state x="-888" y="134" width="888" height="537" key="find.popup/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1600364379730" />
-    <state x="563" y="528" width="596" height="522" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1597017900454" />
-    <state x="1032" y="134" width="888" height="537" key="find.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1598991586601" />
+    <state x="887" y="327" width="888" height="537" key="find.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1609364805413" />
     <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1601384947181">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="-1343" y="-241" width="766" height="696" key="search.everywhere.popup/-1920.-481.1920.1080/0.0.1680.1050@-1920.-481.1920.1080" timestamp="1598043122595" />
     <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1601384947181" />
-    <state x="-1343" y="240" width="766" height="696" key="search.everywhere.popup/0.0.1920.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1599141223227" />
-    <state x="-1343" y="240" width="766" height="696" key="search.everywhere.popup/0.23.1920.1057/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1599141191650" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
