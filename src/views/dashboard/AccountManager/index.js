@@ -11,7 +11,6 @@ import PersonalBest from './src/InfoComponents/PersonalBest/PersonalBest'
 import Education from './src/InfoComponents/ContinuingEducation/Education'
 import Contacts from './src/InfoComponents/Contacts/Contacts'
 import LoanOfficers from './src/InfoComponents/LoanOfficers/LoanOfficers';
-
 const data = require('./data.json')
 
 const useStyles = makeStyles((theme) => ({
@@ -225,7 +224,7 @@ function DashboardAlternativeView() {
     filterEducation(account)
     filterLeads(account)
   }
-  console.log(data)
+
   return (
     <Page className={classes.root} title="Sales Manager Dashboard">
       <Container maxWidth={false} className={classes.container}>
