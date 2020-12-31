@@ -58,7 +58,7 @@ function DashboardAlternativeView() {
             <PersonalBest account={accountData.length > 0 ? accountData[0] : null} />
           </Grid>
           <Grid item xs={5}>
-            {/*<AccountBio account={selectedAccount}  />*/}
+            <AccountBio account={accountData.length > 0 ? accountData[0] : null}  />
             {/*<Leads account={selectedAccount} leads={filteredLeadReports}/>*/}
             {/*<Education account={selectedAccount} events={filteredEducation}/>*/}
           </Grid>
