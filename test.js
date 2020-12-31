@@ -11,10 +11,12 @@ const rand_account = _.sample(accounts)
 
 print(rand_account)
 
-const handleSelection = (account) => _.filter(data, function(x) {
-  print(account)
-  return x['Account'] == account
-})
+// const handleSelection = (account) => _.filter(data, function(x) {
+//   print(account)
+//   return x['Account'] == account
+// })
+
+const handleSelection = (account) => _.filter(data, {'Account': account})
 
 const rand_account_data = handleSelection(rand_account)
 
