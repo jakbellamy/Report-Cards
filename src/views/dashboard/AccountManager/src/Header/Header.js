@@ -1,6 +1,7 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import { Button, Grid, Menu, MenuItem, Typography, makeStyles } from '@material-ui/core';
+import { filterForAccount } from '../../functions/accountSelection';
 
 const StyledMenu = withStyles({
   paper: {
@@ -73,7 +74,6 @@ function Header(props, {  ...rest }) {
 
   let thruDate = `Production Data Updated Through October 2020`
 
-  console.log(props.accounts)
   return (
     <>
     <Grid container spacing={1}{...rest}>

@@ -9,14 +9,9 @@ const print = (x) => console.log(x)
 const accounts = Array.from(new Set(data.map(rec => rec['Account'])))
 const rand_account = _.sample(accounts)
 
-print(rand_account)
-
-// const handleSelection = (account) => _.filter(data, function(x) {
-//   print(account)
-//   return x['Account'] == account
-// })
-
-const handleSelection = (account) => _.filter(data, {'Account': account})
+const handleSelection = (account) => {
+  return _.filter(data, { 'Account': account });
+}
 
 const rand_account_data = handleSelection(rand_account)
 

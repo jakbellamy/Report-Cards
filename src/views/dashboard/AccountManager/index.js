@@ -12,6 +12,7 @@ import PersonalBest from './src/InfoComponents/PersonalBest/PersonalBest'
 import Education from './src/InfoComponents/ContinuingEducation/Education'
 import Contacts from './src/InfoComponents/Contacts/Contacts'
 import LoanOfficers from './src/InfoComponents/LoanOfficers/LoanOfficers';
+
 import {accounts, data} from './parsing';
 
 const useStyles = makeStyles((theme) => ({
@@ -33,6 +34,7 @@ const useStyles = makeStyles((theme) => ({
 function DashboardAlternativeView() {
   const user = useSelector((state) => state.account);
   const [selectedAccount, setSelectedAccount] = useState(null)
+  const [accountData, setAccountData] = useState([])
   const classes = useStyles();
 
   useEffect(() => {
@@ -44,12 +46,12 @@ function DashboardAlternativeView() {
     setSelectedAccount(sel)
   }
 
-  console.table(selectedAccount)
+  // console.table(selectedAccount)
   return (
     <Page className={classes.root} title="Sales Manager Dashboard">
       <Container maxWidth={false} className={classes.container}>
         <Grid container spacing={3}>
-          <Header accounts={accounts} selectedAccount={selectedAccount} setSelectedAccount={setSelectedAccount} admin={user.user.role === 'admin'}/>
+          <Header accounts={accounts} selectedAccount={selectedAccount} setSelectedAccount={setSelectedAccount} setAccountData={setAccountData} admin={user.user.role === 'admin'}/>
           <Grid item xs={7} spacing={3}>
             {/*<DataOverview thisYear={ytd} lastYear={ly} thisMonth={current} key={Math.floor(Math.random() * 101)}/>*/}
             {/*<DataChart stats={stats} stats1={stats1} current={current} setCurrent={setCurrent} stats2={stats2} stats2Labels={stats2Labels} stats2Company={stats2Company}/>*/}
