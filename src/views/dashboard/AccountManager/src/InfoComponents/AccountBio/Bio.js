@@ -51,8 +51,6 @@ function EarningsSegmentation(props, { className, ...rest }) {
             </Typography>
           </Box>
           <Card
-            paddingTop={1}
-            paddingLeft={2}
             position={'relative'}
             height={250}
           >

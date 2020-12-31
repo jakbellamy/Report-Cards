@@ -34,7 +34,7 @@ function PersonalBest(props, { className, ...rest }) {
           <Title text={"Recent Events"} variant={'h3'} align={'center'}/>
           <Box position={"relative"} height={100}>
             {recent.map(event => {
-              return <Typography variant={'h4'} align={'center'} paddingBottom={0.5}>
+              return <Typography variant={'h4'} align={'center'} >
                 {event}
               </Typography>
             })}
