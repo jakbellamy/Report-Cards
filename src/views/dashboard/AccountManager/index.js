@@ -14,7 +14,6 @@ import Contacts from './src/InfoComponents/Contacts/Contacts'
 import LoanOfficers from './src/InfoComponents/LoanOfficers/LoanOfficers';
 import {accounts, data} from './parsing';
 
-
 const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: theme.palette.background.dark,
