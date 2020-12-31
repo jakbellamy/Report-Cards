@@ -92,7 +92,7 @@ function Header(props, {  ...rest }) {
             {props.selectedAccount ? props.selectedAccount['Account'] : null}
           </Typography>
         </Button>
-        <StyledMenu
+        <select
           id="account-selector"
           anchorEl={anchorEl}
           keepMounted
@@ -101,18 +101,15 @@ function Header(props, {  ...rest }) {
           onClose={handleClose}
           color='#FFFFFE'
         >
-          <StyledMenuItem value='0' onClick={() => chooseAccount(0)}>
-            Choose Account
-          </StyledMenuItem>
           {props.accounts.map((t) => {
-            console.log(t)
+             console.log(t)
             return (
-              <StyledMenuItem value={t} onClick={() => chooseAccount(t)}>
-                {t['Account']}
-              </StyledMenuItem>
+              <option value={t} onClick={() => chooseAccount(t)}>
+                {t}
+              </option>
             )
           })}
-        </StyledMenu>
+        </select>
         {/*{filterButton()}*/}
       </Grid>
     </Grid>
