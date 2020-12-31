@@ -5,3 +5,4 @@ const filterForAccount = (data, account) => {
 }
 
 export { filterForAccount }
+

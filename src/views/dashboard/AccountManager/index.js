@@ -31,6 +31,9 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
+const getYear = date => date.split('-')[0]
+const filterYear = (data, year) => _.filter(data, x => getYear(x['Date']) === year)
+
 function DashboardAlternativeView() {
   const user = useSelector((state) => state.account);
   const [selectedAccount, setSelectedAccount] = useState(null)
@@ -46,7 +49,11 @@ function DashboardAlternativeView() {
     setSelectedAccount(sel)
   }
 
-  console.table(accountData)
+  const ly = filterYear(accountData, '2019')
+  const ytd = filterYear(accountData, '2020')
+
+  console.log(ly)
+
   return (
     <Page className={classes.root} title="Sales Manager Dashboard">
       <Container maxWidth={false} className={classes.container}>
