@@ -16,39 +16,53 @@ const recent = ['Better Decisions, Fewer Regrets', 'Love Everybody Better', 'The
 
 function PersonalBest(props, { className, ...rest }) {
   const classes = useStyles();
-  return (
-    <Card
-      className={clsx(classes.root, className)}
-      {...rest}
-    >
-      <CardHeader title="Personal & Professional Best"/>
-      <Divider />
-      <Box paddingTop={2} position="relative" height={395}>
-        {/*<Title text={props.account.agent_count ? "Next Month's Program": ''} variant={'h4'} align={'center'}/>*/}
-        {/*<Box paddingTop={0.5} position={"relative"} height={95}>*/}
-        {/*  <Typography variant={'h5'} align={'center'}>*/}
-        {/*    {props.account.agent_count ? 'The Energy Bus with Jon Gordon - Thu Sep 24th at 3 PM' : ''}*/}
-        {/*  </Typography>*/}
-        {/*</Box>*/}
-        <Title text={props.account.agent_count ? "Recent Events": ''} variant={'h3'} align={'center'}/>
-        <Box position={"relative"} height={100}>
-          {recent.map(event => {
-            return <Typography variant={'h4'} align={'center'} paddingBottom={0.5}>
-              {props.account.agent_count ? event : ''}
-            </Typography>
-          })}
+  if(props.account){
+    return (
+      <Card
+        className={clsx(classes.root, className)}
+        {...rest}
+      >
+        <CardHeader title="Personal & Professional Best"/>
+        <Divider />
+        <Box paddingTop={2} position="relative" height={395}>
+          {/*<Title text={props.account.agent_count ? "Next Month's Program": ''} variant={'h4'} align={'center'}/>*/}
+          {/*<Box paddingTop={0.5} position={"relative"} height={95}>*/}
+          {/*  <Typography variant={'h5'} align={'center'}>*/}
+          {/*    {props.account.agent_count ? 'The Energy Bus with Jon Gordon - Thu Sep 24th at 3 PM' : ''}*/}
+          {/*  </Typography>*/}
+          {/*</Box>*/}
+          <Title text={"Recent Events"} variant={'h3'} align={'center'}/>
+          <Box position={"relative"} height={100}>
+            {recent.map(event => {
+              return <Typography variant={'h4'} align={'center'} paddingBottom={0.5}>
+                {event}
+              </Typography>
+            })}
 
-          {/*<Typography variant={'h5'} align={'center'} paddingBottom={0.5}>*/}
-          {/*  {props.account.agent_count ? 'Be The Source with Tom Flood' : ''}*/}
-          {/*</Typography>*/}
-          {/*<Typography variant={'h5'} align={'center'} paddingBottom={0.5}>*/}
-          {/*  {props.account.agent_count ? 'Choose Better Over Bitter' : ''}*/}
-          {/*</Typography>*/}
+            {/*<Typography variant={'h5'} align={'center'} paddingBottom={0.5}>*/}
+            {/*  {props.account.agent_count ? 'Be The Source with Tom Flood' : ''}*/}
+            {/*</Typography>*/}
+            {/*<Typography variant={'h5'} align={'center'} paddingBottom={0.5}>*/}
+            {/*  {props.account.agent_count ? 'Choose Better Over Bitter' : ''}*/}
+            {/*</Typography>*/}
+          </Box>
         </Box>
-      </Box>
-      <Typography variant={'subtitle2'} align={'center'}>For all past events, please visit <a className={classes.link} href='http://www.SupremeBest.com/supreme-best/the-vault/' target="_blank">the Vault</a> </Typography>
-    </Card>
-  );
+        <Typography variant={'subtitle2'} align={'center'}>For all past events, please visit <a className={classes.link} href='http://www.SupremeBest.com/supreme-best/the-vault/' target="_blank">the Vault</a> </Typography>
+      </Card>
+    );
+  } else {
+    return (
+      <Card
+        className={clsx(classes.root, className)}
+        {...rest}
+      >
+        <CardHeader title="Personal & Professional Best"/>
+        <Divider />
+        <Box paddingTop={2} position="relative" height={395}>
+        </Box>
+      </Card>
+    )
+  }
 }
 
 PersonalBest.propTypes = {
