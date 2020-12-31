@@ -60,18 +60,20 @@ function Header(props, {  ...rest }) {
     props.setSelectedAccount(t)
   }
 
-  const filterButton = () => {
-    if(!props.admin){
-      return (
-      <Button onClick={() => props.handleToggle()}>
-        {props.filterToggle ? <img src="https://img.icons8.com/ios-glyphs/30/000000/clear-filters.png"/> : <img src="https://img.icons8.com/ios-glyphs/30/000000/filter.png"/>}
-      </Button>)
-    } else {
-      return null
-    }
-  }
+  // const filterButton = () => {
+  //   if(!props.admin){
+  //     return (
+  //     <Button onClick={() => props.handleToggle()}>
+  //       {props.filterToggle ? <img src="https://img.icons8.com/ios-glyphs/30/000000/clear-filters.png"/> : <img src="https://img.icons8.com/ios-glyphs/30/000000/filter.png"/>}
+  //     </Button>)
+  //   } else {
+  //     return null
+  //   }
+  // }
 
-  let thruDate = props.current.date ? `Production Data Updated Through October 2020` : ''
+  let thruDate = `Production Data Updated Through October 2020`
+
+  console.log(props.accounts)
   return (
     <>
     <Grid container spacing={1}{...rest}>
@@ -87,7 +89,7 @@ function Header(props, {  ...rest }) {
           onClick={handleClick}>
           <Typography
             variant="h5" color="#FFFFFE">
-            {props.selectedAccount.name}
+            {props.selectedAccount ? props.selectedAccount['Account'] : null}
           </Typography>
         </Button>
         <StyledMenu
@@ -99,13 +101,16 @@ function Header(props, {  ...rest }) {
           onClose={handleClose}
           color='#FFFFFE'
         >
-          {props.accounts.map((t) => (
-            <StyledMenuItem value={t} onClick={() => chooseAccount(t)}>
-              {t.name}
-            </StyledMenuItem>
-          ))}
+          {props.accounts.map((t) => {
+            console.log(t)
+            return (
+              <StyledMenuItem value={t} onClick={() => chooseAccount(t)}>
+                {t['Account']}
+              </StyledMenuItem>
+            )
+          })}
         </StyledMenu>
-        {filterButton()}
+        {/*{filterButton()}*/}
       </Grid>
     </Grid>
     </>

@@ -44,12 +44,12 @@ function DashboardAlternativeView() {
     setSelectedAccount(sel)
   }
 
-  console.log(selectedAccount)
+  console.table(selectedAccount)
   return (
     <Page className={classes.root} title="Sales Manager Dashboard">
       <Container maxWidth={false} className={classes.container}>
         <Grid container spacing={3}>
-          {/*<Header accounts={accounts} selectedAccount={selectedAccount} setSelectedAccount={handleAccountSelection} filterToggle={filterToggle} handleToggle={handleFilterToggle} admin={user.user.role === 'admin'} current={current}/>*/}
+          <Header accounts={accounts} selectedAccount={selectedAccount} setSelectedAccount={setSelectedAccount} admin={user.user.role === 'admin'}/>
           <Grid item xs={7} spacing={3}>
             {/*<DataOverview thisYear={ytd} lastYear={ly} thisMonth={current} key={Math.floor(Math.random() * 101)}/>*/}
             {/*<DataChart stats={stats} stats1={stats1} current={current} setCurrent={setCurrent} stats2={stats2} stats2Labels={stats2Labels} stats2Company={stats2Company}/>*/}
