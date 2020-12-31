@@ -93,7 +93,7 @@ function Header(props, {  ...rest }) {
           </Typography>
         </Button>
         <StyledMenu
-          id="customized-menu"
+          id="account-selector"
           anchorEl={anchorEl}
           keepMounted
           onClick={(e) => handleClick(e)}
@@ -101,6 +101,9 @@ function Header(props, {  ...rest }) {
           onClose={handleClose}
           color='#FFFFFE'
         >
+          <StyledMenuItem value='0' onClick={() => chooseAccount(0)}>
+            Choose Account
+          </StyledMenuItem>
           {props.accounts.map((t) => {
             console.log(t)
             return (

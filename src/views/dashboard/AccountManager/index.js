@@ -36,7 +36,7 @@ function DashboardAlternativeView() {
   const classes = useStyles();
 
   useEffect(() => {
-    handleAccountSelection(_.sample(accounts))
+    // handleAccountSelection(_.sample(accounts))
   }, []);
 
   const handleAccountSelection = (name) => {
