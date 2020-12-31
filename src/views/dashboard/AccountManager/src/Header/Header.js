@@ -1,6 +1,7 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import { Button, Grid, Menu, MenuItem, Typography, makeStyles } from '@material-ui/core';
+import { filterForAccount } from '../../functions/accountSelection';
 
 const StyledMenu = withStyles({
   paper: {
@@ -56,22 +57,28 @@ function Header(props, {  ...rest }) {
     setAnchorEl(null);
   };
 
-  const chooseAccount = (t) => {
-    props.setSelectedAccount(t)
-  }
-
-  const filterButton = () => {
-    if(!props.admin){
-      return (
-      <Button onClick={() => props.handleToggle()}>
-        {props.filterToggle ? <img src="https://img.icons8.com/ios-glyphs/30/000000/clear-filters.png"/> : <img src="https://img.icons8.com/ios-glyphs/30/000000/filter.png"/>}
-      </Button>)
-    } else {
-      return null
+  const chooseAccount = (name) => {
+    if(name != 'Choose Account'){
+      console.log(name)
+      props.setSelectedAccount(name)
+      console.log(filterForAccount(props.data, name))
+      props.setAccountData(filterForAccount(props.data, name))
     }
   }
 
-  let thruDate = props.current.date ? `Production Data Updated Through October 2020` : ''
+  // const filterButton = () => {
+  //   if(!props.admin){
+  //     return (
+  //     <Button onClick={() => props.handleToggle()}>
+  //       {props.filterToggle ? <img src="https://img.icons8.com/ios-glyphs/30/000000/clear-filters.png"/> : <img src="https://img.icons8.com/ios-glyphs/30/000000/filter.png"/>}
+  //     </Button>)
+  //   } else {
+  //     return null
+  //   }
+  // }
+
+  let thruDate = `Production Data Updated Through October 2020`
+
   return (
     <>
     <Grid container spacing={1}{...rest}>
@@ -87,25 +94,23 @@ function Header(props, {  ...rest }) {
           onClick={handleClick}>
           <Typography
             variant="h5" color="#FFFFFE">
-            {props.selectedAccount.name}
+            {props.selectedAccount ? props.selectedAccount['Account'] : null}
           </Typography>
         </Button>
-        <StyledMenu
-          id="customized-menu"
-          anchorEl={anchorEl}
-          keepMounted
-          onClick={(e) => handleClick(e)}
-          open={Boolean(anchorEl)}
-          onClose={handleClose}
-          color='#FFFFFE'
+        <select
+          id="account-selector"
+          onChange={(e) => chooseAccount(e.target.value)}
         >
-          {props.accounts.map((t) => (
-            <StyledMenuItem value={t} onClick={() => chooseAccount(t)}>
-              {t.name}
-            </StyledMenuItem>
-          ))}
-        </StyledMenu>
-        {filterButton()}
+          <option>Choose Account</option>
+          {props.accounts.map((t) => {
+            return (
+              <option value={t}>
+                {t}
+              </option>
+            )
+          })}
+        </select>
+        {/*{filterButton()}*/}
       </Grid>
     </Grid>
     </>
