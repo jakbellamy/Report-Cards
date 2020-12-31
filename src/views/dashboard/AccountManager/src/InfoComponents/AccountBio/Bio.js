@@ -45,7 +45,7 @@ function EarningsSegmentation(props, { className, ...rest }) {
             height={30}
           >
             <Typography variant="h2" color="textPrimary">
-              {props.account.name}
+              {props.account['Account']}
             </Typography>
           </Box>
           <Box
@@ -57,10 +57,9 @@ function EarningsSegmentation(props, { className, ...rest }) {
             <SimpleList variant='subtitle1' noShift={true} text={
               ['Number of Agents', props.account['Agent Count']]}
             />
-
-            {/*{props.account.agent_count ? <SimpleList variant='subtitle1' noShift={true}*/}
-            {/*                                         text={['Number of Loan Officers', officers]}/>*/}
-            {/*  : null}*/}
+            <SimpleList variant='subtitle1' noShift={true} text={
+              ['Number of Loan Officers', props.account['Loan Officer Count']]}
+            />
 
             {/*{props.account.agent_count ? <SimpleList variant='subtitle1' noShift={true}*/}
             {/*                                         text={['Number of Other Lenders', numOtherLenders]}/>*/}
