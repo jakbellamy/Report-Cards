@@ -26,6 +26,7 @@ function EarningsSegmentation(props, { className, ...rest }) {
   // let agreement = props.account.agreement_date ? props.account.agreement_date : ''
   // let numOtherLenders = props.account.other_lenders ? props.account.other_lenders.length : ''
 
+  console.log(props.account)
   if (props.account) {
     return (
       <Card
@@ -43,35 +44,37 @@ function EarningsSegmentation(props, { className, ...rest }) {
             p={1}
             position="relative"
             height={30}
+            marginBottom={2.5}
           >
             <Typography variant="h2" color="textPrimary">
               {props.account['Account']}
             </Typography>
           </Box>
-          <Box
-            paddingTop={4}
+          <Card
+            paddingTop={1}
             paddingLeft={2}
             position={'relative'}
             height={250}
           >
-            <SimpleList variant='subtitle1' noShift={true} text={
-              ['Number of Agents', props.account['Agent Count']]}
+            <CardHeader title='Counts' style={{textAlign: 'center'}}/>
+            <SimpleList variant='subtitle1' noShift={false} text={
+              ['Agents', props.account['Agent Count']]}
             />
-            <SimpleList variant='subtitle1' noShift={true} text={
-              ['Number of Loan Officers', props.account['Loan Officer Count']]}
+            <SimpleList variant='subtitle1' noShift={false} text={
+              ['Loan Officers', props.account['Loan Officer Count']]}
             />
-            <SimpleList variant='subtitle1' noShift={true} text={
-              ['Number of Other Lenders', props.account['Count of Other Lenders']]}
+            <SimpleList variant='subtitle1' noShift={false} text={
+              ['Other Lenders', props.account['Count of Other Lenders']]}
             />
+            <SimpleList variant='subtitle1' noShift={false} text={
+              ['Associated Lite Accounts', props.account['Lite Count']]}
+            />
+          </Card>
 
-            <SimpleList variant='subtitle1' noShift={true} text={
-              ['Number of Associated Lite Accounts', props.account['Lite Count']]}
-            />
+            {/*<SimpleList variant='subtitle1' noShift={true} text={*/}
+            {/*  ['ASA Lead Investment', props.account['Lite Count']]}*/}
+            {/*/>*/}
 
-
-            {/*{props.account.agent_count ? <SimpleList variant='subtitle1' noShift={true}*/}
-            {/*                                         text={['Number of Other Lenders', numOtherLenders]}/>*/}
-            {/*  : null}*/}
 
             {/*{props.account.agent_count ? <SimpleList variant='subtitle1' noShift={true}*/}
             {/*                                         text={['Monthly Lead Investment', investment]}/>*/}
@@ -88,8 +91,6 @@ function EarningsSegmentation(props, { className, ...rest }) {
             {/*{props.account.agent_count ? <SimpleList variant='subtitle1' noShift={true}*/}
             {/*                                         text={['Renewal Date', renewal]}/>*/}
             {/*  : null}*/}
-
-          </Box>
         </Box>
       </Card>
     );

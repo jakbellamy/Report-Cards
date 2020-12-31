@@ -55,10 +55,10 @@ function DashboardAlternativeView() {
           <Grid item xs={7} spacing={3}>
             {/*<DataOverview thisYear={ytd} lastYear={ly} thisMonth={current} key={Math.floor(Math.random() * 101)}/>*/}
             {/*<DataChart stats={stats} stats1={stats1} current={current} setCurrent={setCurrent} stats2={stats2} stats2Labels={stats2Labels} stats2Company={stats2Company}/>*/}
-            <PersonalBest account={accountData.length > 0 ? accountData[0] : null} />
+            <PersonalBest account={accountData.length > 0 ? accountData[accountData.length - 1] : null} />
           </Grid>
           <Grid item xs={5}>
-            <AccountBio account={accountData.length > 0 ? accountData[0] : null}  />
+            <AccountBio account={accountData.length > 0 ? accountData[accountData.length - 1] : null}  />
             {/*<Leads account={selectedAccount} leads={filteredLeadReports}/>*/}
             {/*<Education account={selectedAccount} events={filteredEducation}/>*/}
           </Grid>
