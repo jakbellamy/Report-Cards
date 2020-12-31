@@ -54,7 +54,7 @@ function EarningsSegmentation(props, { className, ...rest }) {
             position={'relative'}
             height={250}
           >
-            <CardHeader title='Counts' style={{textAlign: 'center'}}/>
+            <CardHeader title='Staffing' style={{textAlign: 'center'}}/>
             <SimpleList variant='subtitle1' noShift={false} text={
               ['Agents', props.account['Agent Count']]}
             />
@@ -68,8 +68,27 @@ function EarningsSegmentation(props, { className, ...rest }) {
               ['Associated Lite Accounts', props.account['Lite Count']]}
             />
           </Card>
+          <Card
+            position={'relative'}
+            height={250}
+          >
+            <CardHeader title='Costs' style={{textAlign: 'center'}}/>
+            <SimpleList variant='subtitle1' noShift={false} text={
+              ['Lead Investment (ASA)', props.account['ASA Leads Cost']]}
+            />
+            <SimpleList variant='subtitle1' noShift={false} text={
+              ['Lease Investment (ASA)', props.account['ASA Lease Cost']]}
+            />
+            <SimpleList variant='subtitle1' noShift={false} text={
+              ['Lead Investment (Lites)', props.account['Lites Leads Cost']]}
+            />
+            <SimpleList variant='subtitle1' noShift={false} text={
+              ['Lease Investment (Lites)', props.account['Lites Lease Cost']]}
+            />
+          </Card>
 
-            {/*<SimpleList variant='subtitle1' noShift={true} text={*/}
+
+          {/*<SimpleList variant='subtitle1' noShift={true} text={*/}
             {/*  ['ASA Lead Investment', props.account['Lite Count']]}*/}
             {/*/>*/}
 
