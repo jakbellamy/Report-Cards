@@ -57,8 +57,13 @@ function Header(props, {  ...rest }) {
     setAnchorEl(null);
   };
 
-  const chooseAccount = (t) => {
-    props.setSelectedAccount(t)
+  const chooseAccount = (name) => {
+    if(name != 'Choose Account'){
+      console.log(name)
+      props.setSelectedAccount(name)
+      console.log(filterForAccount(props.data, name))
+      props.setAccountData(filterForAccount(props.data, name))
+    }
   }
 
   // const filterButton = () => {
@@ -94,17 +99,12 @@ function Header(props, {  ...rest }) {
         </Button>
         <select
           id="account-selector"
-          anchorEl={anchorEl}
-          keepMounted
-          onClick={(e) => handleClick(e)}
-          open={Boolean(anchorEl)}
-          onClose={handleClose}
-          color='#FFFFFE'
+          onChange={(e) => chooseAccount(e.target.value)}
         >
+          <option>Choose Account</option>
           {props.accounts.map((t) => {
-             console.log(t)
             return (
-              <option value={t} onClick={() => chooseAccount(t)}>
+              <option value={t}>
                 {t}
               </option>
             )
