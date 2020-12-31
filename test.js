@@ -9,11 +9,17 @@ const print = (x) => console.log(x)
 const accounts = Array.from(new Set(data.map(rec => rec['Account'])))
 const rand_account = _.sample(accounts)
 
-const handleSelection = (account) => {
+const filterForAccount = (data, account) => {
   return _.filter(data, { 'Account': account });
 }
 
-const rand_account_data = handleSelection(rand_account)
+const account_data = filterForAccount(data, rand_account)
+const test_record = account_data[account_data.length - 1]
 
-// print(data)
-print(rand_account_data)
+// ############################## //
+
+const as_dollars = (cost) => {
+  return cost.toLocaleString('en-US', { style: 'currency', currency: 'USD' }).split('.')[0]
+}
+
+print(as_dollars(test_record['ASA Leads Cost']))
