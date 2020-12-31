@@ -48,9 +48,30 @@ function EarningsSegmentation(props, { className, ...rest }) {
             marginBottom={2.5}
           >
             <Typography variant="h2" color="textPrimary">
-              {props.account['Account']}
+              <center>{props.account['Account']}</center>
             </Typography>
           </Box>
+          <Card
+            position={'relative'}
+            height={250}
+          >
+            <CardHeader title='Tenure & Status' style={{textAlign: 'center'}}/>
+            <SimpleList variant='subtitle1' noShift={false} text={
+              ['Start Date', props.account['Start Date']]}
+            />
+
+            <SimpleList variant='subtitle1' noShift={false} text={
+              props.account['Termination Date']
+                ?
+              ['Termination Date', props.account['Termination Date']]
+                :
+              ['Renewal Date', props.account['Renewal']]
+            }
+            />
+            <SimpleList variant='subtitle1' noShift={false} text={
+              ['Tenure', props.account['Tenure (Months)']]}
+            />
+          </Card>
           <Card
             position={'relative'}
             height={250}
