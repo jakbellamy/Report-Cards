@@ -60,6 +60,14 @@ function EarningsSegmentation(props, { className, ...rest }) {
             <SimpleList variant='subtitle1' noShift={true} text={
               ['Number of Loan Officers', props.account['Loan Officer Count']]}
             />
+            <SimpleList variant='subtitle1' noShift={true} text={
+              ['Number of Other Lenders', props.account['Count of Other Lenders']]}
+            />
+
+            <SimpleList variant='subtitle1' noShift={true} text={
+              ['Number of Associated Lite Accounts', props.account['Lite Count']]}
+            />
+
 
             {/*{props.account.agent_count ? <SimpleList variant='subtitle1' noShift={true}*/}
             {/*                                         text={['Number of Other Lenders', numOtherLenders]}/>*/}
