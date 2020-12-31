@@ -52,8 +52,6 @@ function DashboardAlternativeView() {
   const ly = filterYear(accountData, '2019')
   const ytd = filterYear(accountData, '2020')
 
-  console.log(ly)
-
   return (
     <Page className={classes.root} title="Sales Manager Dashboard">
       <Container maxWidth={false} className={classes.container}>

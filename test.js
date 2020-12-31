@@ -26,10 +26,9 @@ const test_record = account_data[account_data.length - 1]
 
 
 // ###### Format Data ########## //
-
-const get_year = date => date.split('-')[0]
-const filter_year = (data, year) => _.filter(data, x => get_year(x['Date']) === year)
-
-const ytd = filter_year(account_data,'2020')
-const ly = filter_year(account_data, '2019')
-print(ytd)
+// const get_year = date => date.split('-')[0]
+// const filter_year = (data, year) => _.filter(data, x => get_year(x['Date']) === year)
+//
+// const ytd = filter_year(account_data,'2020')
+// const ly = filter_year(account_data, '2019')
+// print(ytd)
