@@ -19,7 +19,8 @@ const test_record = account_data[account_data.length - 1]
 // ############################## //
 
 const as_dollars = (cost) => {
-  return cost.toLocaleString('en-US', { style: 'currency', currency: 'USD' }).split('.')[0]
+  return cost.toLocaleString(
+    'en-US', { style: 'currency', currency: 'USD' }).split('.')[0]
 }
 
 print(as_dollars(test_record['ASA Leads Cost']))

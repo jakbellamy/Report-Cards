@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { Box, Card, CardHeader, Divider, Typography, Grid, makeStyles, GridList, GridListTile } from '@material-ui/core';
 import SimpleList from '../../Modules/SimpleList'
+import { asUSD } from '../../../functions/methods';
 
 const useStyles = makeStyles((theme) => ({
   root: {},
@@ -74,16 +75,16 @@ function EarningsSegmentation(props, { className, ...rest }) {
           >
             <CardHeader title='Costs' style={{textAlign: 'center'}}/>
             <SimpleList variant='subtitle1' noShift={false} text={
-              ['Lead Investment (ASA)', props.account['ASA Leads Cost']]}
+              ['Lead Investment (ASA)', asUSD(props.account['ASA Leads Cost'])]}
             />
             <SimpleList variant='subtitle1' noShift={false} text={
-              ['Lease Investment (ASA)', props.account['ASA Lease Cost']]}
+              ['Lease Investment (ASA)', asUSD(props.account['ASA Lease Cost'])]}
             />
             <SimpleList variant='subtitle1' noShift={false} text={
-              ['Lead Investment (Lites)', props.account['Lites Leads Cost']]}
+              ['Lead Investment (Lites)', asUSD(props.account['Lites Leads Cost'])]}
             />
             <SimpleList variant='subtitle1' noShift={false} text={
-              ['Lease Investment (Lites)', props.account['Lites Lease Cost']]}
+              ['Lease Investment (Lites)', asUSD(props.account['Lites Lease Cost'])]}
             />
           </Card>
 
