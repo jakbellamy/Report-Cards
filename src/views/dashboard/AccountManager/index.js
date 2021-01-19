@@ -14,6 +14,7 @@ import Contacts from './src/InfoComponents/Contacts/Contacts'
 import LoanOfficers from './src/InfoComponents/LoanOfficers/LoanOfficers';
 
 import {accounts, data, filterForAccount} from './parsing';
+import {fetchSupremeVault} from './functions/scrapers';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -51,6 +52,7 @@ function DashboardAlternativeView() {
 
   const companyTotals = filterForAccount(data, 'Company Totals')
 
+  console.log(fetchSupremeVault())
   return (
     <Page className={classes.root} title="Sales Manager Dashboard">
       <Container maxWidth={false} className={classes.container}>
