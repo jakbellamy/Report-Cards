@@ -37,7 +37,7 @@ const getYear = date => date.split('-')[0]
 const filterYear = (data, year) => _.filter(data, x => getYear(x['Date']) === year)
 
 function DashboardAlternativeView() {
-  const user = useSelector((state) => state.account);
+  // const user = useSelector((state) => state.account);
   const [selectedAccount, setSelectedAccount] = useState(null)
   const [accountData, setAccountData] = useState([])
   const [ppb, setPpb] = useState([{'Title': '', 'Date': ''}])
@@ -62,13 +62,13 @@ function DashboardAlternativeView() {
     <Page className={classes.root} title="Sales Manager Dashboard">
       <Container maxWidth={false} className={classes.container}>
         <Grid container spacing={3}>
-          <Header accounts={accounts}
-                  selectedAccount={selectedAccount}
-                  setSelectedAccount={setSelectedAccount}
-                  setAccountData={setAccountData}
-                  data={data}
-                  admin={user.user.role === 'admin'}
-          />
+          {/*<Header accounts={accounts}*/}
+          {/*        selectedAccount={selectedAccount}*/}
+          {/*        setSelectedAccount={setSelectedAccount}*/}
+          {/*        setAccountData={setAccountData}*/}
+          {/*        data={data}*/}
+          {/*        admin={user.user.role === 'admin'}*/}
+          {/*/>*/}
           <Grid item xs={7} spacing={3}>
             <DataOverview
               accountData={accountData}

@@ -60,7 +60,7 @@ function Account() {
             variant="h6"
             color="inherit"
           >
-            {`${account.user.firstName} ${account.user.lastName}`}
+            {/*{`${account.user.firstName} ${account.user.lastName}`}*/}
           </Typography>
         </Hidden>
       </Box>

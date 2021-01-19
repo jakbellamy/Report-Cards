@@ -59,12 +59,12 @@ function App() {
         <MuiPickersUtilsProvider utils={MomentUtils}>
           <SnackbarProvider maxSnack={1}>
             <Router history={history}>
-              <Auth>
+              {/*<Auth>*/}
                 <ScrollReset />
                 {/*<GoogleAnalytics />*/}
                 {/*<SettingsNotification />*/}
                 <Routes />
-              </Auth>
+              {/*</Auth>*/}
             </Router>
           </SnackbarProvider>
         </MuiPickersUtilsProvider>

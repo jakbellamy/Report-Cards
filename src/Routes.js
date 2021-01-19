@@ -40,8 +40,8 @@ const routesConfig = [
   },
   {
     path: '/app',
-    guard: AuthGuard,
-    layout: DashboardLayout,
+    // guard: AuthGuard,
+    // layout: DashboardLayout,
     routes: [
       {
         exact: true,

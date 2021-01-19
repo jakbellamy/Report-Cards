@@ -39,11 +39,11 @@ function DashboardLayout({ children }) {
 
   return (
     <div className={classes.root}>
-      <TopBar onMobileNavOpen={() => setMobileNavOpen(false)} />
-      <NavBar
-        onMobileClose={() => setMobileNavOpen(false)}
-        openMobile={isMobileNavOpen}
-      />
+      {/*<TopBar onMobileNavOpen={() => setMobileNavOpen(false)} />*/}
+      {/*<NavBar*/}
+      {/*  onMobileClose={() => setMobileNavOpen(false)}*/}
+      {/*  openMobile={isMobileNavOpen}*/}
+      {/*/>*/}
       <div className={classes.wrapper}>
         <div className={classes.contentContainer}>
           <div className={classes.content}>
