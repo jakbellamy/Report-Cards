@@ -14,6 +14,8 @@ import Contacts from './src/InfoComponents/Contacts/Contacts'
 import LoanOfficers from './src/InfoComponents/LoanOfficers/LoanOfficers';
 import {accounts, data, filterForAccount, searchData} from './parsing';
 import {fetchSupremeVault} from './functions/scrapers';
+import Card from '@material-ui/core/Card';
+import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -33,6 +35,8 @@ const useStyles = makeStyles((theme) => ({
 
 const getYear = date => date.split('-')[0]
 const filterYear = (data, year) => _.filter(data, x => getYear(x['Date']) === year)
+
+let today = new Date()
 
 function DashboardAlternativeView(props) {
   // const user = useSelector((state) => state.account);
@@ -62,15 +66,27 @@ function DashboardAlternativeView(props) {
   return (
     <Page className={classes.root} title="Sales Manager Dashboard">
       <Container maxWidth={false} className={classes.container}>
+
         <Grid container spacing={3}>
-          {/*<Header accounts={accounts}*/}
-          {/*        selectedAccount={selectedAccount}*/}
-          {/*        setSelectedAccount={setSelectedAccount}*/}
-          {/*        setAccountData={setAccountData}*/}
-          {/*        data={data}*/}
-          {/*        admin={user.user.role === 'admin'}*/}
-          {/*/>*/}
-          <Grid item xs={7} spacing={3}>
+            <Grid item xs={2}  />
+
+            <Grid item xs={5}>
+              <img src={'https://supremebest.com/wp-content/uploads/2020/02/supreme_logo.svg'} width={'45%'}/>
+            </Grid>
+
+            <Grid item xs={4}>
+              <div style={{paddingTop: 20}}>
+                <Typography variant="h1">{accountData[0] ? accountData[0]['Account'] : ''}</Typography>
+                <Typography variant="subtitle1">{accountData[0] ? `Date: ${today.toLocaleDateString()}` : ''}</Typography>
+              </div>
+            </Grid>
+            <Grid item xs={2}  />
+
+        </Grid>
+
+        <Grid container spacing={3}>
+          <Grid item xs={2}  />
+          <Grid item xs={5}>
             <DataOverview
               accountData={accountData}
               thisMonth={accountData.length > 0 ? accountData[accountData.length - 1] : null}
@@ -79,11 +95,13 @@ function DashboardAlternativeView(props) {
             <DataChart accountData={accountData} comanyTotals={companyTotals}/>
             <PersonalBest ppb={ppb}/>
           </Grid>
-          <Grid item xs={5}>
+          <Grid item xs={3}>
             <AccountBio account={accountData.length > 0 ? accountData[accountData.length - 1] : null}/>
             {/*<Leads account={selectedAccount} leads={filteredLeadReports}/>*/}
             {/*<Education account={selectedAccount} events={filteredEducation}/>*/}
           </Grid>
+          <Grid item xs={2}  />
+
         </Grid>
         <Grid container spacing={3}>
           <Grid item xs={10}>

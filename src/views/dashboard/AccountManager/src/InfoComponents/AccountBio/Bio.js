@@ -39,18 +39,8 @@ function EarningsSegmentation(props, { className, ...rest }) {
         <Box
           p={2}
           position="relative"
-          minHeight={380}
+          minHeight={240}
         >
-          <Box
-            p={1}
-            position="relative"
-            height={30}
-            marginBottom={3.5}
-          >
-            <Typography variant="h2" color="textPrimary">
-              <center>{props.account['Account']}</center>
-            </Typography>
-          </Box>
 
           <SimpleList variant='subtitle1' noShift={false} text={
             ['', '']}
