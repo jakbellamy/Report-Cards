@@ -77,7 +77,7 @@ function Header(props, {  ...rest }) {
   //   }
   // }
 
-  let thruDate = `Production Data Updated Through October 2020`
+  let thruDate = `Production Data Updated Through November 2020`
 
   return (
     <>

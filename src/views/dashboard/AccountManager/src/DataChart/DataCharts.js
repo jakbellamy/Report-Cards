@@ -8,6 +8,10 @@ import MarketShareChart from './charts/MarketShareChart';
 import Comments from './comments'
 import VolumeOverTime from './charts/VolumeOverTime';
 import UnitsOverTime from './charts/UnitsOverTime';
+import {filterForYear} from '../../parsing'
+import _ from 'lodash'
+
+
 
 const useStyles = makeStyles(() => ({
   chart: {
@@ -19,19 +23,19 @@ function DataChart(props, { className, ...rest }) {
   let [tab, setTab] = useState(0)
   const classes = useStyles();
   const labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-  const labels2 = props.stats2Labels;
+  // const labels2 = props.stats2Labels;
 
   const theRef = React.createRef()
 
-  const statsOverTime = (type, source) => {
-    if(!source){
-      return [];
-    } else {
-      return source.map(record => {
-        return record[type];
-      });
-    }
-  };
+  // const statsOverTime = (type, source) => {
+  //   if(!source){
+  //     return [];
+  //   } else {
+  //     return source.map(record => {
+  //       return record[type];
+  //     });
+  //   }
+  // };
   const handleTab = (event, value) => setTab(value);
 
   const tabToID = () => {
@@ -47,14 +51,16 @@ function DataChart(props, { className, ...rest }) {
     }
   }
 
+
   function renderGraph(tab) {
     switch(tab) {
       case 0:
         return(
           <MarketShareChart
             className={classes.chart}
-            data={props.stats}
-            labels={labels}
+            ly={filterForYear(props.accountData, 2019).map(x => x['Market Share Volume'])}
+            ytd={filterForYear(props.accountData, 2020).map(x => x['Market Share Volume'])}
+            labels={_.uniq(_.map(props.accountData, x => x['Date'].slice(0,3)))}
             company={props.company}
             key={Math.floor(Math.random() * 101)}
             ref={theRef}
@@ -64,8 +70,9 @@ function DataChart(props, { className, ...rest }) {
         return(
           <MarketShareChart
             className={classes.chart}
-            data={props.stats1}
-            labels={labels}
+            ly={filterForYear(props.accountData, 2019).map(x => x['Market Share Units'])}
+            ytd={filterForYear(props.accountData, 2020).map(x => x['Market Share Units'])}
+            labels={_.uniq(_.map(props.accountData, x => x['Date'].slice(0,3)))}
             company={props.company}
             key={Math.floor(Math.random() * 101)}
           />
@@ -74,19 +81,23 @@ function DataChart(props, { className, ...rest }) {
         return(
           <VolumeOverTime
             className={classes.chart}
-            labels={labels2}
-            data={statsOverTime('supreme_volume', props.stats2)}
-            office={statsOverTime('office_volume', props.stats2)}
+            labels={_.uniq(_.map(props.accountData, x => {
+              return x['Date'].slice(0,3) + '-' + x['Year'].toString()
+            }))}
+            data={props.accountData.map(x => x['Supreme Volume'])}
+            office={props.accountData.map(x => x['Office Volume'])}
             key={Math.floor(Math.random() * 101)}
           />
         )
       case 3:
         return(
-          <UnitsOverTime
+          <VolumeOverTime
             className={classes.chart}
-            labels={labels2}
-            data={statsOverTime('supreme_units', props.stats2)}
-            office={statsOverTime('office_units', props.stats2)}
+            labels={_.uniq(_.map(props.accountData, x => {
+              return x['Date'].slice(0,3) + '-' + x['Year'].toString()
+            }))}
+            data={props.accountData.map(x => x['Supreme Units'])}
+            office={props.accountData.map(x => x['Office Units'])}
             key={Math.floor(Math.random() * 101)}
           />
         )

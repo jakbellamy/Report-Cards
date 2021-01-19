@@ -22,8 +22,10 @@ function formatNumber(x) {
 defaults.global.defaultFontFamily = 'Arial'
 
 function MarketShareChart({
-  data: dataProp,
-  labels,
+  // data: dataProp,
+  ly,
+  ytd,
+  labels: labels,
   className,
   ...rest
 }) {
@@ -36,7 +38,7 @@ function MarketShareChart({
         label: '2020',
         type: 'bar',
         backgroundColor: theme.palette.secondary.main,
-        data: dataProp.ly,
+        data: ytd,
         barThickness: 12,
         maxBarThickness: 10,
         barPercentage: 0.5,
@@ -46,20 +48,20 @@ function MarketShareChart({
         label: '2019',
         type: 'bar',
         backgroundColor: fade(theme.palette.secondary.main, 0.35),
-        data: dataProp.y,
+        data: ly,
         barThickness: 12,
         maxBarThickness: 10,
         barPercentage: 0.5,
         categoryPercentage: 0.5
       },
-      {
-        type: 'line',
-        label: '2019 Supreme Average',
-        data: dataProp.avg,
-        backgroundColor: '#FCF7E1',
-        borderColor: '#FCEEE1',
-        borderWidth: 1
-      }
+      // {
+      //   type: 'line',
+      //   label: '2019 Supreme Average',
+      //   data: dataProp.avg,
+      //   backgroundColor: '#FCF7E1',
+      //   borderColor: '#FCEEE1',
+      //   borderWidth: 1
+      // }
     ],
     labels
   };

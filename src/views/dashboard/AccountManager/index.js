@@ -13,7 +13,7 @@ import Education from './src/InfoComponents/ContinuingEducation/Education'
 import Contacts from './src/InfoComponents/Contacts/Contacts'
 import LoanOfficers from './src/InfoComponents/LoanOfficers/LoanOfficers';
 
-import {accounts, data} from './parsing';
+import {accounts, data, filterForAccount} from './parsing';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -49,8 +49,7 @@ function DashboardAlternativeView() {
     setSelectedAccount(sel)
   }
 
-  const ly = filterYear(accountData, '2019')
-  const ytd = filterYear(accountData, '2020')
+  const companyTotals = filterForAccount(data, 'Company Totals')
 
   return (
     <Page className={classes.root} title="Sales Manager Dashboard">
@@ -58,8 +57,12 @@ function DashboardAlternativeView() {
         <Grid container spacing={3}>
           <Header accounts={accounts} selectedAccount={selectedAccount} setSelectedAccount={setSelectedAccount} setAccountData={setAccountData} data={data} admin={user.user.role === 'admin'}/>
           <Grid item xs={7} spacing={3}>
-            {/*<DataOverview thisYear={ytd} lastYear={ly} thisMonth={current} key={Math.floor(Math.random() * 101)}/>*/}
-            {/*<DataChart stats={stats} stats1={stats1} current={current} setCurrent={setCurrent} stats2={stats2} stats2Labels={stats2Labels} stats2Company={stats2Company}/>*/}
+            <DataOverview
+              accountData={accountData}
+              thisMonth={accountData.length > 0 ? accountData[accountData.length - 1] : null}
+              key={Math.floor(Math.random() * 101)}
+            />
+            <DataChart accountData={accountData} comanyTotals={companyTotals}/>
             <PersonalBest account={accountData.length > 0 ? accountData[accountData.length - 1] : null} />
           </Grid>
           <Grid item xs={5}>

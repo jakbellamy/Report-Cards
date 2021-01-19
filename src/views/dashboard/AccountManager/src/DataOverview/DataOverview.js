@@ -3,6 +3,7 @@ import Volume from './volume'
 import Units from './units'
 import { Box, Grid, makeStyles, Typography} from '@material-ui/core';
 import PropTypes from 'prop-types';
+import {filterForYear, find_ly} from '../../parsing'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -12,23 +13,45 @@ const useStyles = makeStyles((theme) => ({
 
 function DataOverview(props, { className, ...rest }) {
   const classes = useStyles();
-  const y = {
-    officeVol: props.thisMonth.office_volume ? props.thisMonth.office_volume : 0,
-    supremeVol: props.thisMonth.supreme_volume ? props.thisMonth.supreme_volume : 0,
-    officeUnits: props.thisMonth.office_units ? props.thisMonth.office_units : 0,
-    supremeUnits: props.thisMonth.supreme_units ? props.thisMonth.supreme_units : 0,
-    mktVol: props.thisMonth.market_share_volume ? props.thisMonth.market_share_volume : 0,
-    mktUnits: props.thisMonth.market_share_units ? props.thisMonth.market_share_units : 0
-  };
-  let retro = props.lastYear[props.thisMonth?.month]
-  const ly = {
-    officeVol: retro ? retro.office_volume : 0,
-    supremeVol: retro ? retro.supreme_volume : 0,
-    officeUnits: retro ?retro.office_units : 0,
-    supremeUnits: retro ?retro.supreme_units : 0,
-    mktVol: retro ? retro.market_share_volume : 0,
-    mktUnits: retro ? retro.market_share_units : 0
+  let y = {
+    officeVol: 0,
+    supremeVol: 0,
+    officeUnits: 0,
+    supremeUnits: 0,
+    mktVol: 0,
+    mktUnits: 0
   }
+  let ly = {
+    officeVol: 0,
+    supremeVol: 0,
+    officeUnits: 0,
+    supremeUnits: 0,
+    mktVol: 0,
+    mktUnits: 0
+  }
+
+  if(props.thisMonth){
+    y = {
+      officeVol: props.thisMonth['YTD Office Volume'] ? props.thisMonth['YTD Office Volume'] : 0,
+      supremeVol: props.thisMonth['YTD Supreme Volume'] ? props.thisMonth['YTD Supreme Volume'] : 0,
+      officeUnits: props.thisMonth['YTD Office Units'] ? props.thisMonth['YTD Office Units'] : 0,
+      supremeUnits: props.thisMonth['YTD Supreme Units'] ? props.thisMonth['YTD Supreme Units'] : 0,
+      mktVol: props.thisMonth['YTD Market Share Volume'] ? props.thisMonth['YTD Market Share Volume'].toFixed(2) : 0,
+      mktUnits: props.thisMonth['YTD Market Share Units'] ? props.thisMonth['YTD Market Share Units'].toFixed(2) : 0
+    };
+    let retro = find_ly(props.accountData)
+    if(retro){
+      ly = {
+        officeVol: retro['YTD Office Volume'] ? retro['YTD Office Volume'] : 0,
+        supremeVol: retro['YTD Supreme Volume'] ? retro['YTD Supreme Volume'] : 0,
+        officeUnits: retro['YTD Office Units'] ? retro['YTD Office Units'] : 0,
+        supremeUnits: retro['YTD Supreme Units'] ? retro['YTD Supreme Units'] : 0,
+        mktVol: retro['YTD Market Share Volume'] ? retro['YTD Market Share Volume'].toFixed(2) : 0,
+        mktUnits: retro['YTD Market Share Units'] ? retro['YTD Market Share Units'].toFixed(2) : 0
+      };
+    }
+  }
+
   const calcChange = (name) => {
     let sv1 = y[name] - ly[name]
     let sv2 = sv1 / ly[name]

@@ -45,69 +45,61 @@ function EarningsSegmentation(props, { className, ...rest }) {
             p={1}
             position="relative"
             height={30}
-            marginBottom={2.5}
+            marginBottom={3.5}
           >
             <Typography variant="h2" color="textPrimary">
               <center>{props.account['Account']}</center>
             </Typography>
           </Box>
-          <Card
-            position={'relative'}
-            height={250}
-          >
-            <CardHeader title='Tenure & Status' style={{textAlign: 'center'}}/>
-            <SimpleList variant='subtitle1' noShift={false} text={
-              ['Start Date', props.account['Start Date']]}
-            />
 
-            <SimpleList variant='subtitle1' noShift={false} text={
-              props.account['Termination Date']
-                ?
-              ['Termination Date', props.account['Termination Date']]
-                :
-              ['Renewal Date', props.account['Renewal']]
-            }
-            />
-            <SimpleList variant='subtitle1' noShift={false} text={
-              ['Tenure', props.account['Tenure (Months)']]}
-            />
-          </Card>
-          <Card
-            position={'relative'}
-            height={250}
-          >
-            <CardHeader title='Staffing' style={{textAlign: 'center'}}/>
-            <SimpleList variant='subtitle1' noShift={false} text={
-              ['Agents', props.account['Agent Count']]}
-            />
-            <SimpleList variant='subtitle1' noShift={false} text={
-              ['Loan Officers', props.account['Loan Officer Count']]}
-            />
-            <SimpleList variant='subtitle1' noShift={false} text={
-              ['Other Lenders', props.account['Count of Other Lenders']]}
-            />
-            <SimpleList variant='subtitle1' noShift={false} text={
-              ['Associated Lite Accounts', props.account['Lite Count']]}
-            />
-          </Card>
-          <Card
-            position={'relative'}
-            height={250}
-          >
-            <CardHeader title='Costs' style={{textAlign: 'center'}}/>
-            <SimpleList variant='subtitle1' noShift={false} text={
-              ['Lead Investment (ASA)', asUSD(props.account['ASA Leads Cost'])]}
-            />
-            <SimpleList variant='subtitle1' noShift={false} text={
-              ['Lease Investment (ASA)', asUSD(props.account['ASA Lease Cost'])]}
-            />
-            <SimpleList variant='subtitle1' noShift={false} text={
-              ['Lead Investment (Lites)', asUSD(props.account['Lites Leads Cost'])]}
-            />
-            <SimpleList variant='subtitle1' noShift={false} text={
-              ['Lease Investment (Lites)', asUSD(props.account['Lites Lease Cost'])]}
-            />
-          </Card>
+          <SimpleList variant='subtitle1' noShift={false} text={
+            ['', '']}
+          />
+
+          <SimpleList variant='subtitle1' noShift={false} text={
+            ['Start Date', props.account['Start Date']]}
+          />
+
+          <SimpleList variant='subtitle1' noShift={false} text={
+            props.account['Termination Date']
+              ?
+            ['Termination Date', props.account['Termination Date']]
+              :
+            ['Renewal Date', props.account['Renewal']]
+          }
+          />
+          <SimpleList variant='subtitle1' noShift={false} text={
+            ['Agents', props.account['Agent Count']]}
+          />
+          <SimpleList variant='subtitle1' noShift={false} text={
+            ['Loan Officers', props.account['Loan Officer Count']]}
+          />
+          <SimpleList variant='subtitle1' noShift={false} text={
+            ['Agent per Loan Officer', Math.round(props.account['Agent Count'] / props.account['Loan Officer Count'])]}
+          />
+          <SimpleList variant='subtitle1' noShift={false} text={
+            ['Other Lenders', props.account['Count of Other Lenders']]}
+          />
+
+
+          {/*<Card*/}
+          {/*  position={'relative'}*/}
+          {/*  height={250}*/}
+          {/*>*/}
+          {/*  <CardHeader title='Costs' style={{textAlign: 'center'}}/>*/}
+          {/*  <SimpleList variant='subtitle1' noShift={false} text={*/}
+          {/*    ['Lead Investment (ASA)', asUSD(props.account['ASA Leads Cost'])]}*/}
+          {/*  />*/}
+          {/*  <SimpleList variant='subtitle1' noShift={false} text={*/}
+          {/*    ['Lease Investment (ASA)', asUSD(props.account['ASA Lease Cost'])]}*/}
+          {/*  />*/}
+          {/*  <SimpleList variant='subtitle1' noShift={false} text={*/}
+          {/*    ['Lead Investment (Lites)', asUSD(props.account['Lites Leads Cost'])]}*/}
+          {/*  />*/}
+          {/*  <SimpleList variant='subtitle1' noShift={false} text={*/}
+          {/*    ['Lease Investment (Lites)', asUSD(props.account['Lites Lease Cost'])]}*/}
+          {/*  />*/}
+          {/*</Card>*/}
 
 
           {/*<SimpleList variant='subtitle1' noShift={true} text={*/}

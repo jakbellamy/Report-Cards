@@ -19,7 +19,18 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0bc8d6a-fedc-4de2-bb38-f2b918ef4cd3" name="Default Changelist" comment="" />
+    <list default="true" id="d0bc8d6a-fedc-4de2-bb38-f2b918ef4cd3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/parsing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/parsing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataChart/DataCharts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataChart/DataCharts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataChart/charts/MarketShareChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataChart/charts/MarketShareChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataOverview/DataOverview.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataOverview/DataOverview.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/Header/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/InfoComponents/AccountBio/Bio.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/InfoComponents/AccountBio/Bio.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,7 +57,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JavaScript&#10;JSON" />
     <property name="full.screen.before.presentation.mode" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/views/dashboard" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -59,17 +70,17 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/views/dashboard" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/loanOfficers" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/views/dashboard/AccountManager" />
       <recent name="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/InfoComponents" />
       <recent name="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/MarketChart/charts" />
       <recent name="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/_Components" />
       <recent name="$PROJECT_DIR$/src/views/components" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/loanOfficers" />
-      <recent name="$PROJECT_DIR$/src/views/dashboard" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -142,6 +153,9 @@
       <workItem from="1607128140554" duration="1000" />
       <workItem from="1607552800206" duration="20000" />
       <workItem from="1609361858442" duration="1772000" />
+      <workItem from="1610119122832" duration="233000" />
+      <workItem from="1610726068170" duration="363000" />
+      <workItem from="1610990075499" duration="5262000" />
     </task>
     <servers />
   </component>
@@ -161,15 +175,14 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="887" y="327" width="888" height="537" key="find.popup" timestamp="1609438164867">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="776" y="318" width="777" height="523" key="find.popup" timestamp="1611018650609">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="-1033" y="327" width="888" height="537" key="find.popup/-1920.0.1920.1080/0.0.1920.1080@-1920.0.1920.1080" timestamp="1600808645529" />
+    <state x="776" y="318" width="777" height="523" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1611018650609" />
     <state x="887" y="327" width="888" height="537" key="find.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1609438164867" />
     <state x="577" y="240" width="766" height="696" key="search.everywhere.popup" timestamp="1609434509382">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1601384947181" />
     <state x="577" y="240" width="766" height="696" key="search.everywhere.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1609434509382" />
   </component>
   <component name="XDebuggerManager">
