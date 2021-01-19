@@ -58,8 +58,8 @@ function DataChart(props, { className, ...rest }) {
         return(
           <MarketShareChart
             className={classes.chart}
-            ly={filterForYear(props.accountData, 2019).map(x => x['Market Share Volume'])}
-            ytd={filterForYear(props.accountData, 2020).map(x => x['Market Share Volume'])}
+            ly={filterForYear(props.accountData, 2019).map(x => x['Market Share Volume'] * 100)}
+            ytd={filterForYear(props.accountData, 2020).map(x => x['Market Share Volume'] * 100)}
             labels={_.uniq(_.map(props.accountData, x => x['Date'].slice(0,3)))}
             company={props.company}
             key={Math.floor(Math.random() * 101)}
@@ -70,8 +70,8 @@ function DataChart(props, { className, ...rest }) {
         return(
           <MarketShareChart
             className={classes.chart}
-            ly={filterForYear(props.accountData, 2019).map(x => x['Market Share Units'])}
-            ytd={filterForYear(props.accountData, 2020).map(x => x['Market Share Units'])}
+            ly={filterForYear(props.accountData, 2019).map(x => x['Market Share Units'] * 100)}
+            ytd={filterForYear(props.accountData, 2020).map(x => x['Market Share Units'] * 100)}
             labels={_.uniq(_.map(props.accountData, x => x['Date'].slice(0,3)))}
             company={props.company}
             key={Math.floor(Math.random() * 101)}
@@ -91,7 +91,7 @@ function DataChart(props, { className, ...rest }) {
         )
       case 3:
         return(
-          <VolumeOverTime
+          <UnitsOverTime
             className={classes.chart}
             labels={_.uniq(_.map(props.accountData, x => {
               return x['Date'].slice(0,3) + '-' + x['Year'].toString()
@@ -129,7 +129,7 @@ function DataChart(props, { className, ...rest }) {
           {renderGraph(tab)}
         </Box>
       </PerfectScrollbar>
-      <Comments current={props.current} setCurrent={props.setCurrent} htmlID={tabToID()}/>
+      {/*<Comments current={props.current} setCurrent={props.setCurrent} htmlID={tabToID()}/>*/}
     </Card>
   );
 }
