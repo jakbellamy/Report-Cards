@@ -127,7 +127,7 @@ function MarketShareChart({
       callbacks: {
         title: () => {},
         label: (tooltipItem) => {
-          let label = `${tooltipItem.yLabel}`;
+          let label = `${tooltipItem.yLabel.toFixed(2)}`;
 
           if (tooltipItem.yLabel > 0) {
             label = `${formatNumber(label)}%`;
