@@ -41,6 +41,7 @@ const useStyles = makeStyles((theme) => ({
 function Header(props, {  ...rest }) {
   const [isOpen, setIsOpen] = React.useState(false)
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const [updatedThru, setUpdatedThru] = React.useState(null)
   const classes = useStyles();
 
   const handleClick = (e) => {
@@ -59,10 +60,10 @@ function Header(props, {  ...rest }) {
 
   const chooseAccount = (name) => {
     if(name != 'Choose Account'){
-      console.log(name)
       props.setSelectedAccount(name)
-      console.log(filterForAccount(props.data, name))
-      props.setAccountData(filterForAccount(props.data, name))
+      let accountData = filterForAccount(props.data, name)
+      props.setAccountData(accountData)
+      setUpdatedThru(accountData[accountData.length - 1]['Date'])
     }
   }
 
@@ -77,7 +78,7 @@ function Header(props, {  ...rest }) {
   //   }
   // }
 
-  let thruDate = `Production Data Updated Through November 2020`
+  let thruDate = updatedThru ? `Production Data Updated Through ${updatedThru}` : ''
 
   return (
     <>

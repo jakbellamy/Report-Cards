@@ -62,7 +62,13 @@ function DashboardAlternativeView() {
     <Page className={classes.root} title="Sales Manager Dashboard">
       <Container maxWidth={false} className={classes.container}>
         <Grid container spacing={3}>
-          <Header accounts={accounts} selectedAccount={selectedAccount} setSelectedAccount={setSelectedAccount} setAccountData={setAccountData} data={data} admin={user.user.role === 'admin'}/>
+          <Header accounts={accounts}
+                  selectedAccount={selectedAccount}
+                  setSelectedAccount={setSelectedAccount}
+                  setAccountData={setAccountData}
+                  data={data}
+                  admin={user.user.role === 'admin'}
+          />
           <Grid item xs={7} spacing={3}>
             <DataOverview
               accountData={accountData}
