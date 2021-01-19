@@ -20,9 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0bc8d6a-fedc-4de2-bb38-f2b918ef4cd3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/functions/scrapers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/functions/scrapers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/functions/scrapers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataChart/DataCharts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataChart/DataCharts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/InfoComponents/PersonalBest/PersonalBest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/InfoComponents/PersonalBest/PersonalBest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/Modules/SimpleList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/Modules/SimpleList.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +151,7 @@
       <workItem from="1609361858442" duration="1772000" />
       <workItem from="1610119122832" duration="233000" />
       <workItem from="1610726068170" duration="363000" />
-      <workItem from="1610990075499" duration="6564000" />
+      <workItem from="1610990075499" duration="8668000" />
     </task>
     <servers />
   </component>
@@ -168,10 +171,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="776" y="318" width="777" height="523" key="find.popup" timestamp="1611018650609">
+    <state x="776" y="318" width="777" height="523" key="find.popup" timestamp="1611028192834">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="776" y="318" width="777" height="523" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1611018650609" />
+    <state x="776" y="318" width="777" height="523" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1611028192834" />
     <state x="887" y="327" width="888" height="537" key="find.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1609438164867" />
     <state x="577" y="240" width="766" height="696" key="search.everywhere.popup" timestamp="1609434509382">
       <screen x="0" y="0" width="1920" height="1080" />

@@ -13,7 +13,7 @@ function Title(props, { className, ...rest }) {
           </Typography>
         </Grid>
         <Grid item xs={props.noShift ? 4 : props.x3 ? props.x3 : 4}>
-          <Typography variant={props.variant} align={'right'}>
+          <Typography variant={props.variant} align={props.align ? props.align : 'right'}>
             {props.text[1]}
           </Typography>
         </Grid>
