@@ -40,8 +40,6 @@ const routesConfig = [
   },
   {
     path: '/app',
-    // guard: AuthGuard,
-    // layout: DashboardLayout,
     routes: [
       {
         exact: true,
@@ -108,8 +106,19 @@ const renderRoutes = (routes) => (routes ? (
   </Suspense>
 ) : null);
 
+const reportCardRoute = () => {
+  return (
+    <Switch>
+      <Route path="*" component={DashboardAlternativeView} />
+      <Route path="*/:account" component={DashboardAlternativeView} />
+    </Switch>
+  )
+}
+
+
+
 function Routes() {
-  return renderRoutes(routesConfig);
+  return reportCardRoute();
 }
 
 export default Routes;

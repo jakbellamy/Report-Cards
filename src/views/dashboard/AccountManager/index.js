@@ -12,9 +12,7 @@ import PersonalBest from './src/InfoComponents/PersonalBest/PersonalBest'
 import Education from './src/InfoComponents/ContinuingEducation/Education'
 import Contacts from './src/InfoComponents/Contacts/Contacts'
 import LoanOfficers from './src/InfoComponents/LoanOfficers/LoanOfficers';
-
-
-import {accounts, data, filterForAccount} from './parsing';
+import {accounts, data, filterForAccount, searchData} from './parsing';
 import {fetchSupremeVault} from './functions/scrapers';
 
 const useStyles = makeStyles((theme) => ({
@@ -36,11 +34,11 @@ const useStyles = makeStyles((theme) => ({
 const getYear = date => date.split('-')[0]
 const filterYear = (data, year) => _.filter(data, x => getYear(x['Date']) === year)
 
-function DashboardAlternativeView() {
+function DashboardAlternativeView(props) {
   // const user = useSelector((state) => state.account);
-  const [selectedAccount, setSelectedAccount] = useState(null)
+  // const [selectedAccount, setSelectedAccount] = useState(null)
   const [accountData, setAccountData] = useState([])
-  const [ppb, setPpb] = useState([{'Title': '', 'Date': ''}])
+  const [ppb, setPpb] = useState([{ 'Title': '', 'Date': '' }])
   const classes = useStyles();
 
   useEffect(() => {
@@ -48,16 +46,19 @@ function DashboardAlternativeView() {
     fetch(proxyUrl + 'https://eyxiglvod6.execute-api.us-east-2.amazonaws.com/scrape_vault')
       .then(res => res.json())
       .then(res => setPpb(res))
+  }, [])
+
+  let companyTotals = []
+  useEffect(() => {
+    // Get Account Data from Params Account Search
+    let params = props.match.params[0] ? props.match.params[0].split('/')[1] : ''
+    setAccountData(searchData(data, params))
+
+    // Set Company Totals
+    companyTotals = filterForAccount(data, 'Company Totals')
   }, []);
 
-
-  const handleAccountSelection = (name) => {
-    let sel = data.filter(rec => rec['Account'] === name)
-    setSelectedAccount(sel)
-  }
-
-  const companyTotals = filterForAccount(data, 'Company Totals')
-
+  console.log(ppb)
   return (
     <Page className={classes.root} title="Sales Manager Dashboard">
       <Container maxWidth={false} className={classes.container}>
@@ -79,7 +80,7 @@ function DashboardAlternativeView() {
             <PersonalBest ppb={ppb}/>
           </Grid>
           <Grid item xs={5}>
-            <AccountBio account={accountData.length > 0 ? accountData[accountData.length - 1] : null}  />
+            <AccountBio account={accountData.length > 0 ? accountData[accountData.length - 1] : null}/>
             {/*<Leads account={selectedAccount} leads={filteredLeadReports}/>*/}
             {/*<Education account={selectedAccount} events={filteredEducation}/>*/}
           </Grid>
@@ -95,6 +96,7 @@ function DashboardAlternativeView() {
       </Container>
     </Page>
   );
+
 }
 
 export default DashboardAlternativeView;

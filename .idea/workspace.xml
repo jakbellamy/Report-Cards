@@ -20,12 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0bc8d6a-fedc-4de2-bb38-f2b918ef4cd3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/dataFunctions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/DashboardLayout/TopBar/Account.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/DashboardLayout/TopBar/Account.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/DashboardLayout/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/DashboardLayout/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/parsing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/parsing.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,17 +67,17 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/views/dashboard" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/loanOfficers" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/views/dashboard/AccountManager" />
       <recent name="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/InfoComponents" />
       <recent name="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/MarketChart/charts" />
       <recent name="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/_Components" />
       <recent name="$PROJECT_DIR$/src/views/components" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/views/dashboard" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/loanOfficers" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -172,15 +173,15 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="776" y="318" width="777" height="523" key="find.popup" timestamp="1611028192834">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state x="776" y="318" width="777" height="523" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1611028192834" />
-    <state x="887" y="327" width="888" height="537" key="find.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1609438164867" />
-    <state x="577" y="240" width="766" height="696" key="search.everywhere.popup" timestamp="1609434509382">
+    <state x="887" y="327" width="888" height="537" key="find.popup" timestamp="1611087435001">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="577" y="240" width="766" height="696" key="search.everywhere.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1609434509382" />
+    <state x="776" y="318" width="777" height="523" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1611028192834" />
+    <state x="887" y="327" width="888" height="537" key="find.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1611087435001" />
+    <state x="577" y="240" width="766" height="696" key="search.everywhere.popup" timestamp="1611091177902">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="577" y="240" width="766" height="696" key="search.everywhere.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1611091177902" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

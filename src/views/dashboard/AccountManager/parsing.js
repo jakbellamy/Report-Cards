@@ -23,5 +23,12 @@ const filterForAccount = (data, account) => {
   return _.filter(data, { 'Account': account });
 }
 
-export { accounts, data, filterForYear, find_ly, filterForAccount };
+const searchData = (data, search, key='Account') => {
+  // console.log('search', search)
+  return _.filter(data, x => _.lowerCase(x['Account'])
+    .includes(_.lowerCase(search)))
+}
+
+
+export { accounts, data, filterForYear, find_ly, filterForAccount, searchData };
 
