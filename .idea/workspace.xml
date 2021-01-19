@@ -21,11 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d0bc8d6a-fedc-4de2-bb38-f2b918ef4cd3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/functions/scrapers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/functions/scrapers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/data.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataChart/DataCharts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataChart/DataCharts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/InfoComponents/PersonalBest/PersonalBest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/InfoComponents/PersonalBest/PersonalBest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/Modules/SimpleList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/Modules/SimpleList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataOverview/DataOverview.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataOverview/DataOverview.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +149,7 @@
       <workItem from="1609361858442" duration="1772000" />
       <workItem from="1610119122832" duration="233000" />
       <workItem from="1610726068170" duration="363000" />
-      <workItem from="1610990075499" duration="8668000" />
+      <workItem from="1610990075499" duration="9361000" />
     </task>
     <servers />
   </component>

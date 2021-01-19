@@ -36,8 +36,8 @@ function DataOverview(props, { className, ...rest }) {
       supremeVol: props.thisMonth['YTD Supreme Volume'] ? props.thisMonth['YTD Supreme Volume'] : 0,
       officeUnits: props.thisMonth['YTD Office Units'] ? props.thisMonth['YTD Office Units'] : 0,
       supremeUnits: props.thisMonth['YTD Supreme Units'] ? props.thisMonth['YTD Supreme Units'] : 0,
-      mktVol: props.thisMonth['YTD Market Share Volume'] ? props.thisMonth['YTD Market Share Volume'].toFixed(2) : 0,
-      mktUnits: props.thisMonth['YTD Market Share Units'] ? props.thisMonth['YTD Market Share Units'].toFixed(2) : 0
+      mktVol: props.thisMonth['YTD Market Share Volume'] ? (props.thisMonth['YTD Market Share Volume'] * 100).toFixed(2): 0,
+      mktUnits: props.thisMonth['YTD Market Share Units'] ? (props.thisMonth['YTD Market Share Units'] * 100).toFixed(2) : 0
     };
     let retro = find_ly(props.accountData)
     if(retro){
@@ -46,8 +46,8 @@ function DataOverview(props, { className, ...rest }) {
         supremeVol: retro['YTD Supreme Volume'] ? retro['YTD Supreme Volume'] : 0,
         officeUnits: retro['YTD Office Units'] ? retro['YTD Office Units'] : 0,
         supremeUnits: retro['YTD Supreme Units'] ? retro['YTD Supreme Units'] : 0,
-        mktVol: retro['YTD Market Share Volume'] ? retro['YTD Market Share Volume'].toFixed(2) : 0,
-        mktUnits: retro['YTD Market Share Units'] ? retro['YTD Market Share Units'].toFixed(2) : 0
+        mktVol: retro['YTD Market Share Volume'] ? (retro['YTD Market Share Volume'] * 100).toFixed(2) : 0,
+        mktUnits: retro['YTD Market Share Units'] ? (retro['YTD Market Share Units'] * 100).toFixed(2) : 0
       };
     }
   }
