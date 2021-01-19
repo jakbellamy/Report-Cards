@@ -106,8 +106,8 @@ function DataChart(props, { className, ...rest }) {
           textColor="secondary"
           variant="fullWidth"
         >
-          <Tab label="Market Share Volume"/>
-          <Tab label="Market Share Units" />
+          <Tab label="YTD Mkt Share Volume"/>
+          <Tab label="YTD Mkt Share Units" />
           <Tab label="Volume Over Time" />
           <Tab label="Units Over Time" />
         </Tabs>
