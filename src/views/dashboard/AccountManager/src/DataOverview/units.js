@@ -40,7 +40,7 @@ function Volume(props, { className, ...rest }) {
       <Divider />
       <DataBlock
         mainValue={props.y.mktUnits}
-        mainText={'Market Share 2020'}
+        mainText={'Share 2020'}
         lyValue={props.ly.mktUnits}
         valueName={'mktUnits'}
         calcChange={props.calcChange}

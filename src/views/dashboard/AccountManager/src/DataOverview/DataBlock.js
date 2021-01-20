@@ -10,12 +10,12 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
   },
   valueSuccess: {
-    textAlign: 'center',
+    textAlign: 'left',
     verticalAlign: 'center',
     backgroundColor: '#E1FFEB'
   },
   valueFail: {
-    textAlign: 'center',
+    textAlign: 'left',
     verticalAlign: 'center',
     backgroundColor: '#FFE1E6'
   },
@@ -35,15 +35,15 @@ export default function DataBlock(props) {
     <Box>
       <Box
         paddingLeft={1}
-        paddingRight={1}
+        paddingRight={3}
         position="relative"
         height={40}
       >
         <GridList className={classes.gridList} cols={2}>
           <GridListTile className={classes.value}>
-            <Box paddingTop={0} position={'relative'}>
+            <Box paddingTop={0} position={'relative'} paddingLeft={3}>
               <Typography
-                align="center"
+                align="left"
                 variant="subtitle1"
                 color="textPrimary"
               >
@@ -56,6 +56,7 @@ export default function DataBlock(props) {
               <Typography
                 variant="subtitle1"
                 color="textPrimary"
+                align="right"
               >
                 {props.mainText}
               </Typography>
@@ -66,16 +67,17 @@ export default function DataBlock(props) {
       <Divider />
       <Box
         paddingLeft={1}
-        paddingRight={1}
+        paddingRight={3}
         position="relative"
         height={40}
       >
         <GridList className={classes.gridList} cols={2}>
           <GridListTile className={classes.value}>
-            <Box paddingBottom={10} position="relative">
+            <Box paddingBottom={10} position="relative" paddingLeft={3}>
               <Typography
                 variant="body1"
                 color="textPrimary"
+                align={"left"}
               >
                 {props.lyValue ? s + props.insertCommas(props.lyValue) + p: ''}
               </Typography>
@@ -86,6 +88,7 @@ export default function DataBlock(props) {
               <Typography
                 variant="body1"
                 color="textPrimary"
+                align="right"
               >
                 {props.mainText ? props.mainText.split(' ')[0] + ' 2019' : ''}
               </Typography>
@@ -96,17 +99,18 @@ export default function DataBlock(props) {
       <Divider />
       <Box
         paddingLeft={1}
-        paddingRight={1}
+        paddingRight={3}
         position="relative"
         height={33}
         className={props.calcChange(props.valueName) >= 0 ? classes.success : classes.fail}
       >
         <GridList className={classes.gridList} cols={2}>
           <GridListTile className={classes.value}>
-            <Box paddingBottom={10} position="relative">
+            <Box paddingBottom={10} position="relative" paddingLeft={3}>
               <Typography
                 variant="body1"
                 color="textPrimary"
+                align='left'
               >
                 {props.lyValue ? (props.calcChange(props.valueName)) + '%' : ''}
               </Typography>
@@ -117,8 +121,9 @@ export default function DataBlock(props) {
               <Typography
                 variant="body1"
                 color="textPrimary"
+                align={"right"}
               >
-                Percent Change
+                YOY Change
               </Typography>
             </GridListTile>
           </Box>
