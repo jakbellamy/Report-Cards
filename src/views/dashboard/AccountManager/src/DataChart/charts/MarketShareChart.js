@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { Bar } from 'react-chartjs-2';
 import { defaults } from 'react-chartjs-2'
+import ChartRegressions from 'chartjs-plugin-regression'
+import regression from 'regression';
+
 import {
   fade,
   makeStyles,
@@ -25,48 +28,75 @@ function MarketShareChart({
   // data: dataProp,
   ly,
   ytd,
+  prod: prod,
   labels: labels,
   className,
   ...rest
 }) {
   const classes = useStyles();
   const theme = useTheme();
+  console.log(regression.power(prod.map(rec => rec['Market Share Volume'] * 100), {order: 3}))
 
+  let count = prod.length - 1
+  let linearRegression = regression.polynomial(
+    prod.map(rec => [count-=1, rec['Market Share Volume']]), {'order': '3'}
+  ).points
+  console.log(linearRegression)
   const data = {
+    plugins: [ChartRegressions],
+
     datasets: [
+      // {
+      //   label: '2020',
+      //   type: 'scatter',
+      //   backgroundColor: theme.palette.secondary.main,
+      //   data: ytd,
+      //   barThickness: 12,
+      //   maxBarThickness: 10,
+      //   barPercentage: 0.5,
+      //   categoryPercentage: 0.5,
+      //   regressions: {
+      //     type: 'linear',
+      //     line: { color: 'red', width: 3 },
+      //     calculation: { precision: 5 },
+      //
+      //   }
+      // },
       {
-        label: '2020',
-        type: 'bar',
+        // label: 'Monthly Supreme Market Share',
+        type: 'scatter',
         backgroundColor: theme.palette.secondary.main,
-        data: ytd,
+        data: prod.map(rec => rec['Market Share Volume'] * 100) ,
         barThickness: 12,
         maxBarThickness: 10,
         barPercentage: 0.5,
         categoryPercentage: 0.5,
+        // regressions: {
+        //   type: 'linear',
+        //   line: { color: 'red', width: 3}
+        // },
       },
+
       {
-        label: '2019',
-        type: 'bar',
-        backgroundColor: fade(theme.palette.secondary.main, 0.35),
-        data: ly,
-        barThickness: 12,
-        maxBarThickness: 10,
-        barPercentage: 0.5,
-        categoryPercentage: 0.5
-      },
-      // {
-      //   type: 'line',
-      //   label: '2019 Supreme Average',
-      //   data: dataProp.avg,
-      //   backgroundColor: '#FCF7E1',
-      //   borderColor: '#FCEEE1',
-      //   borderWidth: 1
-      // }
+        type: 'line',
+        // label: '2019 Supreme Average',
+        data: linearRegression.map(rec => rec[1]),
+        backgroundColor: '#FCF7E1',
+        borderColor: '#FCEEE1',
+        borderWidth: 1
+      }
     ],
     labels
   };
-
   const options = {
+    plugins: {
+      regressions: {
+        type: ['linear', 'polynomial'],
+        line: { color: 'blue', width: 3 },
+        // onCompleteCalculation: function callback(chart){ ... }
+      }
+    },
+
     responsive: true,
     maintainAspectRatio: false,
     cornerRadius: 20,

@@ -30,6 +30,8 @@ function EarningsSegmentation(props, { className, ...rest }) {
   console.log(props.account)
   if (props.account) {
     return (
+      <Box paddingTop={3.5}>
+
       <Card
         className={clsx(classes.root, className)}
         {...rest}
@@ -39,18 +41,16 @@ function EarningsSegmentation(props, { className, ...rest }) {
         <Box
           p={2}
           position="relative"
-          minHeight={240}
+          minHeight={200}
+          marginBottom={-2.5}
         >
 
-          <SimpleList variant='subtitle1' noShift={false} text={
-            ['', '']}
-          />
 
-          <SimpleList variant='subtitle1' noShift={false} text={
+          <SimpleList align={'right'} variant='subtitle1' noShift={false} text={
             ['Start Date', props.account['Start Date']]}
           />
 
-          <SimpleList variant='subtitle1' noShift={false} text={
+          <SimpleList align={'right'} variant='subtitle1' noShift={false} text={
             props.account['Termination Date']
               ?
             ['Termination Date', props.account['Termination Date']]
@@ -58,16 +58,16 @@ function EarningsSegmentation(props, { className, ...rest }) {
             ['Renewal Date', props.account['Renewal']]
           }
           />
-          <SimpleList variant='subtitle1' noShift={false} text={
+          <SimpleList align={'right'} variant='subtitle1' noShift={false} text={
             ['Agents', props.account['Agent Count']]}
           />
-          <SimpleList variant='subtitle1' noShift={false} text={
+          <SimpleList align={'right'} variant='subtitle1' noShift={false} text={
             ['Loan Officers', props.account['Loan Officer Count']]}
           />
-          <SimpleList variant='subtitle1' noShift={false} text={
+          <SimpleList align={'right'} variant='subtitle1' noShift={false} text={
             ['Agent per Loan Officer', Math.round(props.account['Agent Count'] / props.account['Loan Officer Count'])]}
           />
-          <SimpleList variant='subtitle1' noShift={false} text={
+          <SimpleList align={'right'} variant='subtitle1' noShift={false} text={
             ['Other Lenders', props.account['Count of Other Lenders']]}
           />
 
@@ -77,43 +77,45 @@ function EarningsSegmentation(props, { className, ...rest }) {
           {/*  height={250}*/}
           {/*>*/}
           {/*  <CardHeader title='Costs' style={{textAlign: 'center'}}/>*/}
-          {/*  <SimpleList variant='subtitle1' noShift={false} text={*/}
+          {/*  <SimpleList align={'right'} variant='subtitle1' noShift={false} text={*/}
           {/*    ['Lead Investment (ASA)', asUSD(props.account['ASA Leads Cost'])]}*/}
           {/*  />*/}
-          {/*  <SimpleList variant='subtitle1' noShift={false} text={*/}
+          {/*  <SimpleList align={'right'} variant='subtitle1' noShift={false} text={*/}
           {/*    ['Lease Investment (ASA)', asUSD(props.account['ASA Lease Cost'])]}*/}
           {/*  />*/}
-          {/*  <SimpleList variant='subtitle1' noShift={false} text={*/}
+          {/*  <SimpleList align={'right'} variant='subtitle1' noShift={false} text={*/}
           {/*    ['Lead Investment (Lites)', asUSD(props.account['Lites Leads Cost'])]}*/}
           {/*  />*/}
-          {/*  <SimpleList variant='subtitle1' noShift={false} text={*/}
+          {/*  <SimpleList align={'right'} variant='subtitle1' noShift={false} text={*/}
           {/*    ['Lease Investment (Lites)', asUSD(props.account['Lites Lease Cost'])]}*/}
           {/*  />*/}
           {/*</Card>*/}
 
 
-          {/*<SimpleList variant='subtitle1' noShift={true} text={*/}
+          {/*<SimpleList align={'right'} variant='subtitle1' noShift={true} text={*/}
             {/*  ['ASA Lead Investment', props.account['Lite Count']]}*/}
             {/*/>*/}
 
 
-            {/*{props.account.agent_count ? <SimpleList variant='subtitle1' noShift={true}*/}
+            {/*{props.account.agent_count ? <SimpleList align={'right'} variant='subtitle1' noShift={true}*/}
             {/*                                         text={['Monthly Lead Investment', investment]}/>*/}
             {/*  : null}*/}
 
-            {/*{props.account.agent_count ? <SimpleList variant='subtitle1' noShift={true}*/}
+            {/*{props.account.agent_count ? <SimpleList align={'right'} variant='subtitle1' noShift={true}*/}
             {/*                                         text={['Monthly Lease', lease]}/>*/}
             {/*  : null}*/}
 
-            {/*{props.account.agent_count ? <SimpleList variant='subtitle1' noShift={true}*/}
+            {/*{props.account.agent_count ? <SimpleList align={'right'} variant='subtitle1' noShift={true}*/}
             {/*                                         text={['Agreement Start', agreement]}/>*/}
             {/*  : null}*/}
 
-            {/*{props.account.agent_count ? <SimpleList variant='subtitle1' noShift={true}*/}
+            {/*{props.account.agent_count ? <SimpleList align={'right'} variant='subtitle1' noShift={true}*/}
             {/*                                         text={['Renewal Date', renewal]}/>*/}
             {/*  : null}*/}
         </Box>
       </Card>
+      </Box>
+
     );
   } else {
     return (

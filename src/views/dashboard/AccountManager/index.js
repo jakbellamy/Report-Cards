@@ -16,6 +16,7 @@ import {accounts, data, filterForAccount, searchData} from './parsing';
 import {fetchSupremeVault} from './functions/scrapers';
 import Card from '@material-ui/core/Card';
 import Typography from '@material-ui/core/Typography';
+import ReportCardGraph from './src/DataChart/ReportCardGraph';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -43,7 +44,9 @@ function DashboardAlternativeView(props) {
   // const [selectedAccount, setSelectedAccount] = useState(null)
   const [accountData, setAccountData] = useState([])
   const [ppb, setPpb] = useState([{ 'Title': '', 'Date': '' }])
+  const [imageSrc, setImageSrc] = useState('')
   const classes = useStyles();
+
 
   useEffect(() => {
     let proxyUrl = 'https://cors-anywhere.herokuapp.com/'
@@ -58,20 +61,33 @@ function DashboardAlternativeView(props) {
     let params = props.match.params[0] ? props.match.params[0].split('/')[1] : ''
     setAccountData(searchData(data, params))
 
+    setImageSrc(`./Plots/${searchData(data, params)[0]['Account']}-report_card_plot.png`)
+
+
     // Set Company Totals
     companyTotals = filterForAccount(data, 'Company Totals')
+
+    if (accountData[0]){
+
+    }
+
+    console.log(imageSrc)
+
   }, []);
 
-  console.log(ppb)
   return (
     <Page className={classes.root} title="Sales Manager Dashboard">
       <Container maxWidth={false} className={classes.container}>
-
         <Grid container spacing={3}>
+          <Grid item xs={12}  />
+
+        </Grid>
+        <Grid container spacing={3}>
+
             <Grid item xs={2}  />
 
             <Grid item xs={5}>
-              <img src={'https://supremebest.com/wp-content/uploads/2020/02/supreme_logo.svg'} width={'45%'}/>
+              <img src={'https://supremebest.com/wp-content/uploads/2020/02/supreme_logo.svg'} width={'45%'} />
             </Grid>
 
             <Grid item xs={4}>
@@ -92,7 +108,12 @@ function DashboardAlternativeView(props) {
               thisMonth={accountData.length > 0 ? accountData[accountData.length - 1] : null}
               key={Math.floor(Math.random() * 101)}
             />
-            <DataChart accountData={accountData} comanyTotals={companyTotals}/>
+            {/*<DataChart accountData={accountData} comanyTotals={companyTotals}/>*/}
+            <Card>
+              <center>
+                <img src={imageSrc} width={'auto'} height={430}/>
+              </center>
+            </Card>
             <PersonalBest ppb={ppb}/>
           </Grid>
           <Grid item xs={3}>

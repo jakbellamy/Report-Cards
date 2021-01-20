@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import PerfectScrollbar from 'react-perfect-scrollbar';
-import { Box, Card, Tabs, Tab, Divider, makeStyles } from '@material-ui/core';
+import { Box, Card, Tabs, Tab, Divider, makeStyles, CardHeader } from '@material-ui/core';
 import MarketShareChart from './charts/MarketShareChart';
 import VolumeOverTime from './charts/VolumeOverTime';
 import UnitsOverTime from './charts/UnitsOverTime';
@@ -46,9 +46,13 @@ function DataChart(props, { className, ...rest }) {
         return(
           <MarketShareChart
             className={classes.chart}
+            prod={props.accountData}
             ly={filterForYear(props.accountData, 2019).map(x => x['YTD Market Share Volume'] * 100)}
-            ytd={filterForYear(props.accountData, 2020).map(x => x['YTD Market Share Volume'] * 100)}
-            labels={_.uniq(_.map(props.accountData, x => x['Date'].slice(0,3)))}
+            ytd={props.accountData.map(x => x['YTD Market Share Volume'] * 100)}
+            labels={props.accountData.map(rec => {
+              let month = rec['Date'].split(' ')[0].slice(0, 3)
+              return month + '-' + rec['Date'].split(' ')[1]
+            })}
             company={props.company}
             key={Math.floor(Math.random() * 101)}
             ref={theRef}
@@ -58,8 +62,8 @@ function DataChart(props, { className, ...rest }) {
         return(
           <MarketShareChart
             className={classes.chart}
-            ly={filterForYear(props.accountData, 2019).map(x => x['YTD Market Share Units'] * 100)}
-            ytd={filterForYear(props.accountData, 2020).map(x => x['YTD Market Share Units'] * 100)}
+            ly={filterForYear(props.accountData, 2019).map(x => x['Market Share Units'] * 100)}
+            ytd={filterForYear(props.accountData, 2020).map(x => x['Market Share Units'] * 100)}
             labels={_.uniq(_.map(props.accountData, x => x['Date'].slice(0,3)))}
             company={props.company}
             key={Math.floor(Math.random() * 101)}
@@ -99,22 +103,11 @@ function DataChart(props, { className, ...rest }) {
       className={clsx(classes.root, className)}
       {...rest}
     >
-        <Tabs
-          value={tab}
-          onChange={handleTab}
-          indicatorColor="secondary"
-          textColor="secondary"
-          variant="fullWidth"
-        >
-          <Tab label="YTD Mkt Share Volume"/>
-          <Tab label="YTD Mkt Share Units" />
-          <Tab label="Volume Over Time" />
-          <Tab label="Units Over Time" />
-        </Tabs>
+      <CardHeader title="Market Share Over Time"/>
       <Divider />
       <PerfectScrollbar>
         <Box minWidth={500} pt={4} pr={2} pl={2}>
-          {renderGraph(tab)}
+          {renderGraph(0)}
         </Box>
       </PerfectScrollbar>
     </Card>

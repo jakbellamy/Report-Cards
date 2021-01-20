@@ -43,7 +43,7 @@ function Volume(props, { className, ...rest }) {
     >
       <DataBlock
         mainValue={props.y.supremeVol}
-        mainText={'Supreme Volume'}
+        mainText={'Supreme 2020'}
         lyValue={props.ly.supremeVol}
         valueName={'supremeVol'}
         calcChange={props.calcChange}
@@ -53,7 +53,7 @@ function Volume(props, { className, ...rest }) {
       <Divider />
       <DataBlock
         mainValue={props.y.officeVol}
-        mainText={'Office Volume'}
+        mainText={'Office 2020'}
         lyValue={props.ly.officeVol}
         valueName={'officeVol'}
         calcChange={props.calcChange}
@@ -63,7 +63,7 @@ function Volume(props, { className, ...rest }) {
       <Divider />
       <DataBlock
         mainValue={props.y.mktVol}
-        mainText={'Supreme Share'}
+        mainText={'Market Share'}
         lyValue={props.ly.mktVol}
         valueName={'mktVol'}
         calcChange={props.calcChange}

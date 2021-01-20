@@ -26,15 +26,15 @@ function PersonalBest(props, { className, ...rest }) {
     >
       <CardHeader title="Personal & Professional Best"/>
       <Divider />
-      <Box paddingTop={2} position="relative" height={295}>
+      <Box paddingTop={2} position="relative" height={295} padding={4}>
         {/*<Title text={"Recent Events"} variant={'h3'} align={'center'}/>*/}
-        <SimpleList variant='subtitle2' noshift={false} text={
+        <SimpleList variant='subtitle2' noshift={false} xs1={4} text={
           ['Date', 'Event']}
         />
 
-        <Box position={"relative"} height={100}>
+        <Box position={"relative"} height={100} >
           {_.map(props.ppb.slice(0,5), event => {
-            return <SimpleList variant='subtitle1' noShift={false} text={
+            return <SimpleList variant='subtitle1' noShift={false} xs1={4} text={
               [event['Date'], event['Title']]}
             />
           })}

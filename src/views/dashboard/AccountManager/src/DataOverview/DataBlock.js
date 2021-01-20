@@ -37,14 +37,14 @@ export default function DataBlock(props) {
         paddingLeft={1}
         paddingRight={1}
         position="relative"
-        height={43}
+        height={40}
       >
         <GridList className={classes.gridList} cols={2}>
           <GridListTile className={classes.value}>
             <Box paddingTop={0} position={'relative'}>
               <Typography
                 align="center"
-                variant="h4"
+                variant="subtitle1"
                 color="textPrimary"
               >
                 {props.mainValue ? s + props.insertCommas(props.mainValue) + p : ''}
@@ -68,7 +68,7 @@ export default function DataBlock(props) {
         paddingLeft={1}
         paddingRight={1}
         position="relative"
-        height={35}
+        height={40}
       >
         <GridList className={classes.gridList} cols={2}>
           <GridListTile className={classes.value}>
@@ -87,7 +87,7 @@ export default function DataBlock(props) {
                 variant="body1"
                 color="textPrimary"
               >
-                Last Year
+                {props.mainText ? props.mainText.split(' ')[0] + ' 2019' : ''}
               </Typography>
             </GridListTile>
           </Box>
