@@ -17,6 +17,7 @@ import {fetchSupremeVault} from './functions/scrapers';
 import Card from '@material-ui/core/Card';
 import Typography from '@material-ui/core/Typography';
 import ReportCardGraph from './src/DataChart/ReportCardGraph';
+const ppbData = require('./ppb.json')
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -49,10 +50,11 @@ function DashboardAlternativeView(props) {
 
 
   useEffect(() => {
-    let proxyUrl = 'https://cors-anywhere.herokuapp.com/'
-    fetch(proxyUrl + 'https://eyxiglvod6.execute-api.us-east-2.amazonaws.com/scrape_vault')
-      .then(res => res.json())
-      .then(res => setPpb(res))
+    // let proxyUrl = 'https://cors-anywhere.herokuapp.com/'
+    // fetch(proxyUrl + 'https://eyxiglvod6.execute-api.us-east-2.amazonaws.com/scrape_vault')
+    //   .then(res => res.json())
+    //   .then(res => setPpb(res))
+    setPpb(ppbData)
   }, [])
 
   let companyTotals = []
