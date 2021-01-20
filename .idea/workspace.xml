@@ -20,121 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0bc8d6a-fedc-4de2-bb38-f2b918ef4cd3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Plots/BHG - 1st Florida-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plots/C21 Tenace Realty-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plots/Champagne &amp; Parisi-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plots/Company Totals-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plots/Exit Realty-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plots/KW - Athens-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plots/KW - Barrow Jackson-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plots/KW - Brandon-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plots/KW - Buckhead-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plots/KW - Cityside-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plots/KW - Coral Springs-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plots/KW - East Cobb-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plots/KW - Ft. Lauderdale-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plots/KW - Intown-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plots/KW - Kannapolis-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plots/KW - Midtown-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plots/KW - Paddocks-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plots/KW - Peachtree City-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plots/KW - Peachtree Road-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plots/KW - Plantation-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plots/KW - Snellville-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plots/KW - South Tampa-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plots/KW - Stockbridge-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plots/KW - Sugarloaf-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plots/KW - Tucker-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plots/KW - West Cobb-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plots/KW - Woodstock-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plots/Lake Realty-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plots/ReMax Advisors-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plots/ReMax Park Creek-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plots/ReMax Preferred-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plots/Realty One-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plots/Sanders Group-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Plots/BHG - 1st Florida-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Plots/C21 Tenace Realty-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Plots/Champagne &amp; Parisi-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Plots/Company Totals-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Plots/Exit Realty-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Plots/KW - Athens-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Plots/KW - Barrow Jackson-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Plots/KW - Brandon-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Plots/KW - Buckhead-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Plots/KW - Cityside-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Plots/KW - Coral Springs-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Plots/KW - East Cobb-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Plots/KW - Ft. Lauderdale-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Plots/KW - Intown-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Plots/KW - Kannapolis-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Plots/KW - Midtown-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Plots/KW - Paddocks-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Plots/KW - Peachtree City-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Plots/KW - Peachtree Road-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Plots/KW - Plantation-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Plots/KW - Snellville-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Plots/KW - South Tampa-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Plots/KW - Stockbridge-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Plots/KW - Sugarloaf-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Plots/KW - Tucker-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Plots/KW - West Cobb-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Plots/KW - Woodstock-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Plots/Lake Realty-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Plots/ReMax Advisors-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Plots/ReMax Park Creek-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Plots/ReMax Preferred-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Plots/Realty One-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Plots/Sanders Group-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/polys.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/Plots/BHG - 1st Florida-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/Plots/C21 Tenace Realty-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/Plots/Champagne &amp; Parisi-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/Plots/Company Totals-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/Plots/Exit Realty-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/Plots/KW - Athens-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/Plots/KW - Barrow Jackson-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/Plots/KW - Brandon-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/Plots/KW - Buckhead-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/Plots/KW - Cityside-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/Plots/KW - Coral Springs-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/Plots/KW - East Cobb-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/Plots/KW - Ft. Lauderdale-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/Plots/KW - Intown-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/Plots/KW - Kannapolis-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/Plots/KW - Midtown-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/Plots/KW - Paddocks-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/Plots/KW - Peachtree City-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/Plots/KW - Peachtree Road-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/Plots/KW - Plantation-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/Plots/KW - Snellville-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/Plots/KW - South Tampa-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/Plots/KW - Stockbridge-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/Plots/KW - Sugarloaf-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/Plots/KW - Tucker-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/Plots/KW - West Cobb-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/Plots/KW - Woodstock-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/Plots/Lake Realty-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/Plots/ReMax Advisors-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/Plots/ReMax Park Creek-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/Plots/ReMax Preferred-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/Plots/Realty One-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/Plots/Sanders Group-report_card_plot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataChart/ReportCardGraph.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataChart/DataCharts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataChart/DataCharts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataChart/charts/MarketShareChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataChart/charts/MarketShareChart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataOverview/DataBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataOverview/DataBlock.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataOverview/units.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataOverview/units.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataOverview/volume.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/DataOverview/volume.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/InfoComponents/AccountBio/Bio.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/InfoComponents/AccountBio/Bio.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/InfoComponents/PersonalBest/PersonalBest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/InfoComponents/PersonalBest/PersonalBest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/Modules/SimpleList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/Modules/SimpleList.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -264,6 +150,7 @@
       <workItem from="1610726068170" duration="363000" />
       <workItem from="1610990075499" duration="10344000" />
       <workItem from="1611063800368" duration="1151000" />
+      <workItem from="1611150031749" duration="114000" />
     </task>
     <servers />
   </component>
@@ -330,7 +217,6 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/index.js</url>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
