@@ -336,6 +336,9 @@ def report_card_plot(df):
     ax2.yaxis.set_major_formatter(large_currency)
 
     ax.set_xlabel('Month')
+    ax.legend()
+    ax2.legend()
+
 
 
 
