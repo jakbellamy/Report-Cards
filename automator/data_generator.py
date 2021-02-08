@@ -7,7 +7,7 @@ from matplotlib import pyplot, dates
 import statsmodels.api as sm
 import seaborn as sns
 from supreme_data.pandas_methods import apply_to_multiple_columns
-from supreme_data.pandas_methods import safe_series_divide
+from supreme_data.pandas_methods import safe_divide
 
 load_dotenv()
 
@@ -252,14 +252,14 @@ for col in cum_ytd_cols:
 
 print('Ensuring Market Shares are Correctly Calculated.')
 
-df['Market Share Volume'] = safe_series_divide(df, ['Supreme Volume', 'Office Volume'])
-df['YTD Market Share Volume'] = safe_series_divide(df, ['YTD Supreme Volume', 'YTD Office Volume'])
-df['Market Share Units'] = safe_series_divide(df, ['Supreme Units', 'Office Units'])
-df['YTD Market Share Units'] = safe_series_divide(df, ['YTD Supreme Units', 'YTD Office Units'])
-df['Lite Share Volume'] = safe_series_divide(df, ['Lite Volume', 'Supreme Volume'])
-df['YTD Lite Share Volume'] = safe_series_divide(df, ['YTD Lite Volume', 'YTD Supreme Volume'])
-df['Lite Share Units'] = safe_series_divide(df, ['Lite Units', 'Supreme Units'])
-df['YTD Lite Share Units'] = safe_series_divide(df, ['YTD Lite Units', 'YTD Supreme Units'])
+df['Market Share Volume'] = safe_divide(df, ['Supreme Volume', 'Office Volume'])
+df['YTD Market Share Volume'] = safe_divide(df, ['YTD Supreme Volume', 'YTD Office Volume'])
+df['Market Share Units'] = safe_divide(df, ['Supreme Units', 'Office Units'])
+df['YTD Market Share Units'] = safe_divide(df, ['YTD Supreme Units', 'YTD Office Units'])
+df['Lite Share Volume'] = safe_divide(df, ['Lite Volume', 'Supreme Volume'])
+df['YTD Lite Share Volume'] = safe_divide(df, ['YTD Lite Volume', 'YTD Supreme Volume'])
+df['Lite Share Units'] = safe_divide(df, ['Lite Units', 'Supreme Units'])
+df['YTD Lite Share Units'] = safe_divide(df, ['YTD Lite Units', 'YTD Supreme Units'])
 df = df.fillna(0)
 
 
@@ -336,8 +336,10 @@ def report_card_plot(df):
     ax2.yaxis.set_major_formatter(large_currency)
 
     ax.set_xlabel('Month')
-    ax.legend()
-    ax2.legend()
+
+    ax.legend(['Market Share'], loc="upper left")
+
+    ax2.legend(['Office Volume'])
 
 
 
