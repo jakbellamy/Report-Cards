@@ -86,25 +86,26 @@ function DashboardAlternativeView(props) {
         </Grid>
         <Grid container spacing={3}>
 
-            <Grid item xs={1}  />
+            {/*<Grid item xs={1}  />*/}
 
-            <Grid item xs={6}>
+            <Grid item xs={7}>
               <img src={'https://supremebest.com/wp-content/uploads/2020/02/supreme_logo.svg'} width={'45%'} />
             </Grid>
 
-            <Grid item xs={4}>
+            <Grid item xs={5}>
               <div style={{paddingTop: 20}}>
                 <Typography variant="h1">{accountData[0] ? accountData[0]['Account'] : ''}</Typography>
                 <Typography variant="subtitle1">{accountData[0] ? `Date: ${today.toLocaleDateString()}` : ''}</Typography>
               </div>
             </Grid>
-            <Grid item xs={1}  />
+
+            {/*<Grid item xs={1}  />*/}
 
         </Grid>
 
         <Grid container spacing={3}>
-          <Grid item xs={1}  />
-          <Grid item xs={6}>
+          {/*<Grid item xs={1}  />*/}
+          <Grid item xs={7}>
             <DataOverview
               accountData={accountData}
               thisMonth={accountData.length > 0 ? accountData[accountData.length - 1] : null}
@@ -118,12 +119,12 @@ function DashboardAlternativeView(props) {
             </Card>
             <PersonalBest ppb={ppb}/>
           </Grid>
-          <Grid item xs={4}>
+          <Grid item xs={5}>
             <AccountBio account={accountData.length > 0 ? accountData[accountData.length - 1] : null}/>
-            {/*<Leads account={selectedAccount} leads={filteredLeadReports}/>*/}
-            {/*<Education account={selectedAccount} events={filteredEducation}/>*/}
+            <Leads />
+            <Education />
           </Grid>
-          <Grid item xs={1}  />
+          {/*<Grid item xs={1}  />*/}
 
         </Grid>
         <Grid container spacing={3}>

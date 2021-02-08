@@ -11,7 +11,7 @@ import TopicsList from './TopicsList';
 const useStyles = makeStyles((theme) => ({
   root: {
     marginTop: theme.spacing(2),
-    height: 685
+    height: 350
   },
 }));
 
@@ -56,38 +56,38 @@ function Education(props, { className, ...rest }) {
       className={clsx(classes.root, className)}
       {...rest}
     >
-      <CardHeader title="Continuing Education"/>
+      <CardHeader title="Continuing Education Events"/>
       <Divider />
       <Box paddingTop={2} paddingLeft={3} position="relative">
-        <Title text={props.account.agent_count ? "2020": ''} variant={'h4'} align={'left'} height={1}/>
+        {/*<Title text={props.account.agent_count ? "2020": ''} variant={'h4'} align={'left'} height={1}/>*/}
         <Grid container>
           <Grid item xs={1} />
           <Grid item xs={9}>
               <Box position={'relative'} >
-                {props.account.agent_count ? <SimpleList variant='subtitle1' height={1} x1={0} x2={7} x3={4} x4={1}
-                 text={['Number of Events', props.events?.y.length]}/>
-                  : null}
-                {props.account.agent_count ? <SimpleList variant='subtitle1' height={1} x1={0} x2={7} x3={4} x4={1}
-                 text={['Number of Agents Trained', totalTrained(props.events?.y)]}/>
-                  : null}
-                {props.account.agent_count ?  <TopicsList topics={getTopics(props.events?.y)} /> : null }
+                {/*{props.account.agent_count ? <SimpleList variant='subtitle1' height={1} x1={0} x2={7} x3={4} x4={1}*/}
+                {/* text={['Number of Events', props.events?.y.length]}/>*/}
+                {/*  : null}*/}
+                {/*{props.account.agent_count ? <SimpleList variant='subtitle1' height={1} x1={0} x2={7} x3={4} x4={1}*/}
+                {/* text={['Number of Agents Trained', totalTrained(props.events?.y)]}/>*/}
+                {/*  : null}*/}
+                {/*{props.account.agent_count ?  <TopicsList topics={getTopics(props.events?.y)} /> : null }*/}
               </Box>
           </Grid>
         </Grid>
       </Box>
       <Box paddingTop={2} paddingLeft={3} position="relative" paddingBottom={3}>
-        <Title text={props.account.agent_count ? "2019": ''} variant={'h4'} align={'left'} height={1}/>
+        {/*<Title text={props.account.agent_count ? "2019": ''} variant={'h4'} align={'left'} height={1}/>*/}
         <Grid container>
           <Grid item xs={1} />
           <Grid item xs={9}>
             <Box position={'relative'} >
-              {props.account.agent_count ? <SimpleList variant='subtitle1' height={1} x1={0} x2={7} x3={4} x4={1}
-                 text={['Number of Events', props.events?.ly.length]}/>
-                : null}
-              {props.account.agent_count ? <SimpleList variant='subtitle1' height={1} x1={0} x2={7} x3={4} x4={1}
-                 text={['Number of Agents Trained', totalTrained(props.events?.ly)]}/>
-                : null}
-              {props.account.agent_count ?  <TopicsList topics={getTopics(props.events?.ly)} /> : null }
+              {/*{props.account.agent_count ? <SimpleList variant='subtitle1' height={1} x1={0} x2={7} x3={4} x4={1}*/}
+              {/*   text={['Number of Events', props.events?.ly.length]}/>*/}
+              {/*  : null}*/}
+              {/*{props.account.agent_count ? <SimpleList variant='subtitle1' height={1} x1={0} x2={7} x3={4} x4={1}*/}
+              {/*   text={['Number of Agents Trained', totalTrained(props.events?.ly)]}/>*/}
+              {/*  : null}*/}
+              {/*{props.account.agent_count ?  <TopicsList topics={getTopics(props.events?.ly)} /> : null }*/}
             </Box>
           </Grid>
         </Grid>
