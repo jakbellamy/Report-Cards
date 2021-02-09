@@ -64,7 +64,7 @@ const navConfig = [
       //   href: '/app/dashboard/summaries'
       // },
       {
-        title: 'Sales Manager Dashboard',
+        title: 'Report Card Auto',
         href: '/app/dashboard/summaries-live'
       }
     ]

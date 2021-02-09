@@ -78,7 +78,7 @@ function DashboardAlternativeView(props) {
   }, []);
 
   return (
-    <Page className={classes.root} title="Sales Manager Dashboard">
+    <Page className={classes.root} title="Auto Report Card">
       <Container maxWidth={false} className={classes.container}>
         <Grid container spacing={3}>
           <Grid item xs={12}  />
