@@ -325,13 +325,13 @@ def report_card_plot(df):
         return str(int(y / 1000000)) + 'M'
 
     fig, ax = pyplot.subplots()
-    sns.regplot(x="Date Number", y="Market Share Volume", data=df, ax=ax, order=2, ci=None, scatter_kws={"s": 20})
+    sns.regplot(x="Date Number", y="Market Share Volume", data=df, ax=ax, order=2, ci=None, scatter_kws={"s": 10, 'alpha': 0.25})
 
     ax.xaxis.set_major_formatter(fake_dates)
     ax.yaxis.set_major_formatter(precentages)
 
     ax2 = pyplot.twinx()
-    sns.regplot(x="Date Number",y="Office Volume", color='r', data=df, ax=ax2, order=2, ci=None, scatter_kws={"s": 20})
+    sns.regplot(x="Date Number",y="Office Volume", color='r', data=df, ax=ax2, order=2, ci=None, scatter_kws={"s": 10, 'alpha': 0.25})
 
     ax2.yaxis.set_major_formatter(large_currency)
 
