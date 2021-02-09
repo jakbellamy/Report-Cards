@@ -59,22 +59,9 @@ function DashboardAlternativeView(props) {
 
   let companyTotals = []
   useEffect(() => {
-    // Get Account Data from Params Account Search
     let params = props.match.params[0] ? props.match.params[0].split('/')[1] : ''
     setAccountData(searchData(data, params))
-
     setImageSrc(`./Plots/${searchData(data, params)[0]['Account']}-report_card_plot.png`)
-
-
-    // Set Company Totals
-    companyTotals = filterForAccount(data, 'Company Totals')
-
-    if (accountData[0]){
-
-    }
-
-    console.log(imageSrc)
-
   }, []);
 
   return (
@@ -111,7 +98,6 @@ function DashboardAlternativeView(props) {
               thisMonth={accountData.length > 0 ? accountData[accountData.length - 1] : null}
               key={Math.floor(Math.random() * 101)}
             />
-            {/*<DataChart accountData={accountData} comanyTotals={companyTotals}/>*/}
             <Card>
               <center>
                 <img src={imageSrc} width={'auto'} height={430}/>
