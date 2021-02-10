@@ -22,6 +22,9 @@ import { reportCardIndexStyles } from './styles';
 import {searchData} from './parsing';
 import MShareVolume from './src/Components/DataPoints/MShareVolume';
 import { doIfExists, ifExists } from '../../../utilities/functions/conditionals';
+import diff from 'redux-logger/src/diff';
+import { asUSD } from './functions/methods';
+import OfficeVolume from './src/Components/DataPoints/OfficeVolume';
 
 //----------------------------------------------------------
 //Constants
@@ -33,6 +36,11 @@ const useStyles = reportCardIndexStyles()
 //Lambda Functions
 const firstStr = x => x.split(' ')[0]
 const lastStr = x => x.split(' ')[x.split(' ').length - 1]
+const compData = (key, compareSet, originalSet) => ((compareSet[key] - originalSet[key]) /originalSet[key]) * 100
+
+
+//----------------------------------------------------------
+//Functions
 
 
 //----------------------------------------------------------!
@@ -90,6 +98,16 @@ export default function DashboardAlternativeView(props) {
 
   }, []);
 
+  let periodCaption
+  if (period==='YOY' && comparableMonth) {
+    periodCaption = "Since Last Year"
+  } else if (period==='MOM' && comparableMonth) {
+    periodCaption = 'Since Last Month'
+  } else {
+    periodCaption = ''
+  }
+
+
   return (
     <Page className={classes.root} title="Auto Report Card">
       <Container maxWidth={false} className={classes.container} id={'content-container'}>
@@ -106,15 +124,12 @@ export default function DashboardAlternativeView(props) {
           <Grid item xs={6} id={'Data-Column'}>
             <Grid container spacing={2}>
               <MShareVolume thisMonth={thisMonth} />
+              <OfficeVolume
+                thisMonth={thisMonth}
+                comparableMonth={comparableMonth}
+                periodCaption={periodCaption}
+              />
 
-              <Grid item xs={6}>
-                <DataBox
-                  title="Office Volume"
-                  value="$14,523,100"
-                  differenceValue="-32%"
-                  caption="Since last year"
-                />
-              </Grid>
 
             </Grid>
 
@@ -130,3 +145,5 @@ export default function DashboardAlternativeView(props) {
     </Page>
   );
 }
+
+export {compData}
