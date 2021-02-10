@@ -37,19 +37,27 @@ export default function DashboardAlternativeView(props) {
   return (
     <Page className={classes.root} title="Auto Report Card">
       <Container maxWidth={false} className={classes.container} id={'content-container'}>
+
         <NullBlock />
         <ReportCardHeader accountData={accountData} />
-        <BoxDivider paddingTop={2} paddingBottom={3} />
+
+        <BoxDivider
+          paddingTop={3}
+          paddingBottom={3}
+        />
+
         <Grid container spacing={3} id={'Report-Card-Content'}>
-          <Grid item xs={7} id={'Data-Column'}>
-            <DataOverview
-              accountData={accountData}
-              thisMonth={accountData.length > 0 ? accountData[accountData.length - 1] : null}
-              key={Math.floor(Math.random() * 101)}
-            />
+          <Grid item xs={6} id={'Data-Column'}>
+            {/*<DataOverview*/}
+            {/*  accountData={accountData}*/}
+            {/*  thisMonth={accountData.length > 0 ? accountData[accountData.length - 1] : null}*/}
+            {/*  key={Math.floor(Math.random() * 101)}*/}
+            {/*/>*/}
             <GraphCard imageSrc={imageSrc} height={430} />
           </Grid>
-          <Grid item xs={5} id={'Marketing-Column'}>
+
+          <Grid item xs={6} id={'Marketing-Column'}>
+
           </Grid>
         </Grid>
       </Container>
