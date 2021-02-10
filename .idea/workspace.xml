@@ -6,6 +6,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0bc8d6a-fedc-4de2-bb38-f2b918ef4cd3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/Modules/DataBox/DataBox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/Modules/DataBox/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,19 +51,19 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/views/dashboard/AccountManager" />
-      <recent name="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/InfoComponents" />
-      <recent name="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/MarketChart/charts" />
-      <recent name="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/_Components" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/automator" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/views/dashboard/AccountManager" />
       <recent name="$PROJECT_DIR$/src/views/dashboard" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/Modules/DataBox" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/views/dashboard/AccountManager" />
+      <recent name="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/InfoComponents" />
+      <recent name="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/MarketChart/charts" />
     </key>
   </component>
   <component name="SvnConfiguration">
