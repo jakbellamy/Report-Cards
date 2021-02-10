@@ -12,6 +12,13 @@ const strToDate = (date) => {
   return Number(date.split('-').join(''))
 };
 
+const pctString = (percent) => {
+  percent = (percent * 100)
+    .toFixed(2)
+    .toString()
+  return percent + ' %'
+}
+
 // exports.strToDate = strToDate
 //
 // exports.getCurrentReport = (reports) => {
@@ -79,4 +86,4 @@ const strToDate = (date) => {
 //   }
 // }
 
-export { asUSD }
+export { asUSD, pctString, strToDate }

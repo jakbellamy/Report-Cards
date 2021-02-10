@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/core';
 
 export default makeStyles(theme => ({
   root: {
-    height: '100%'
+    marginBottom: '3%'
   },
   difference: {
     marginTop: theme.spacing(1),

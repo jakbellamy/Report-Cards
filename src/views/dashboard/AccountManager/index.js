@@ -19,6 +19,8 @@ import GraphCard from './src/Modules/GraphCard';
 //Functions
 import { reportCardIndexStyles } from './styles';
 import {searchData} from './parsing';
+import MShareVolume from './src/Components/DataPoints/MShareVolume';
+import { ifExists } from '../../../utilities/functions/conditionals';
 
 //----------------------------------------------------------
 //Constants
@@ -51,6 +53,7 @@ export default function DashboardAlternativeView(props) {
     setImageSrc(_imageSrc)
   }, []);
 
+  console.log(ifExists(thisMonth['Date'][-1]))
   return (
     <Page className={classes.root} title="Auto Report Card">
       <Container maxWidth={false} className={classes.container} id={'content-container'}>
@@ -65,12 +68,20 @@ export default function DashboardAlternativeView(props) {
 
         <Grid container spacing={3} id={'Report-Card-Content'}>
           <Grid item xs={6} id={'Data-Column'}>
-            <DataBox
-              title="Sales Today"
-              value="1.500"
-              differenceValue="+20%"
-              caption=" Since last week"
-            />
+            <Grid container spacing={2}>
+              <MShareVolume thisMonth={thisMonth} />
+
+              <Grid item xs={6}>
+                <DataBox
+                  title="Office Volume"
+                  value="$14,523,100"
+                  differenceValue="-32%"
+                  caption="Since last year"
+                />
+              </Grid>
+
+            </Grid>
+
 
             <GraphCard imageSrc={imageSrc} height={430} />
           </Grid>

@@ -12,14 +12,7 @@ export const DataBox = props => {
 
   return (
     <Card {...rest} className={clsx(classes.root, className)} elevation={0}>
-      <CardHeader
-        action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
-          </IconButton>
-        }
-        title={title}
-      />
+      <CardHeader title={title} />
       <CardContent>
         <Grid container justify="space-between">
           <Grid item>
