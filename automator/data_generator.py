@@ -310,45 +310,48 @@ print('JSON File Successfully Saved.')
 
 def report_card_plot(df):
     null_prod_mask = df['Office Volume'] > 0
-    df = (df.loc[null_prod_mask]
-            .set_index(pd.to_datetime(df.loc[null_prod_mask]['Date']))
-            .resample('Q', convention='end')
-            .agg('mean')
-            .reset_index())
+    try:
+        df = (df.loc[null_prod_mask]
+                .set_index(pd.to_datetime(df.loc[null_prod_mask]['Date Time']))
+                .resample('Q', convention='end')
+                .agg('mean')
+                .reset_index())
 
-    df['Date Number'] = dates.datestr2num(df['Date'].apply(lambda x: str(x)))
-    df['Market Share Volume'] = df['Market Share Volume'].apply(lambda x: pd.to_numeric(x)).fillna(0)
+        df['Date Number'] = dates.datestr2num(df['Date Time'].apply(lambda x: str(x)))
+        df['Market Share Volume'] = df['Market Share Volume'].apply(lambda x: pd.to_numeric(x)).fillna(0)
 
-    @pyplot.FuncFormatter
-    def fake_dates(x, pos):
-        return dates.num2date(x).strftime('%b-%Y')
+        @pyplot.FuncFormatter
+        def fake_dates(x, pos):
+            return dates.num2date(x).strftime('%b-%Y')
 
-    @pyplot.FuncFormatter
-    def precentages(y, pos):
-        return str(round(y * 100, 2)) + '%'
+        @pyplot.FuncFormatter
+        def precentages(y, pos):
+            return str(round(y * 100, 2)) + '%'
 
-    @pyplot.FuncFormatter
-    def large_currency(y, pos):
-        return str(int(y / 1000000)) + 'M'
+        @pyplot.FuncFormatter
+        def large_currency(y, pos):
+            return str(int(y / 1000000)) + 'M'
 
-    fig, ax = pyplot.subplots()
-    sns.regplot(x="Date Number", y="Market Share Volume", data=df, ax=ax, order=2, ci=None, scatter_kws={"s": 20})
+        fig, ax = pyplot.subplots()
+        sns.regplot(x="Date Number", y="Market Share Volume", data=df, ax=ax, order=2, ci=None, scatter_kws={"s": 20})
 
-    ax.xaxis.set_major_formatter(fake_dates)
-    ax.yaxis.set_major_formatter(precentages)
+        ax.xaxis.set_major_formatter(fake_dates)
+        ax.yaxis.set_major_formatter(precentages)
 
-    ax2 = pyplot.twinx()
-    sns.regplot(x="Date Number",y="Office Volume", color='r', data=df, ax=ax2, order=2, ci=None, scatter_kws={"s": 20})
+        ax2 = pyplot.twinx()
+        sns.regplot(x="Date Number",y="Office Volume", color='r', data=df, ax=ax2, order=2, ci=None, scatter_kws={"s": 20})
 
-    ax2.yaxis.set_major_formatter(large_currency)
+        ax2.yaxis.set_major_formatter(large_currency)
 
-    ax.set_xlabel('Month')
+        ax.set_xlabel('Month')
 
-    ax.legend(['Market Share'], loc='upper center', bbox_to_anchor=(.15, -0.05),
-          fancybox=True, shadow=True, ncol=5)
-    ax2.legend(['Office Volume'], loc='upper center', bbox_to_anchor=(.85, -0.05),
-          fancybox=True, shadow=True, ncol=5)
-
+        ax.legend(['Market Share'], loc='upper center', bbox_to_anchor=(.15, -0.05),
+              fancybox=True, shadow=True, ncol=5)
+        ax2.legend(['Office Volume'], loc='upper center', bbox_to_anchor=(.85, -0.05),
+              fancybox=True, shadow=True, ncol=5)
+    except:
+        print('Failed.')
+        print(df)
 
 
 
