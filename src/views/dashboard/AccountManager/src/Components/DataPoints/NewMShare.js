@@ -1,15 +1,15 @@
 import React from 'react';
 import { DataBox } from '../../Modules/DataBox/DataBox';
-import { asUSD } from '../../../functions/methods';
+import { pctString } from '../../../functions/methods';
 import { compData } from '../../../index';
 import Grid from '@material-ui/core/Grid';
 
-export default function OfficeVolume(props) {
+export default function MShareVolume(props) {
   const { thisMonth, comparableMonth, period } = props
 
   let differenceValue
   let captions = ['', '']
-  let valueKey = period === 'YOY' ? 'YTD Office Volume' : 'Office Volume'
+  let valueKey = period === 'YOY' ? 'YTD Market Share Volume' : 'Market Share Volume'
 
   if (comparableMonth) {
     captions = [thisMonth['Date'], comparableMonth['Date']]
@@ -28,10 +28,10 @@ export default function OfficeVolume(props) {
       <DataBox
         title={valueKey}
         valueYTD={thisMonth[valueKey] ?
-          asUSD(thisMonth[valueKey]) : ''
+          pctString(thisMonth[valueKey]) : ''
         }
         valueComp={comparableMonth[valueKey] ?
-          asUSD(comparableMonth[valueKey]) : ''
+          pctString(comparableMonth[valueKey]) : ''
         }
         differenceValue={differenceValue}
         captions={captions}
