@@ -4,9 +4,9 @@
     "dashboard": {
         "files": [
             {
-                "relativePath": "src/views/dashboard/DashboardView/Header.js",
+                "relativePath": "src/views/dashboard/DashboardView/ReportCardHeader.js",
                 "test": false,
-                "name": "Header.js"
+                "name": "ReportCardHeader.js"
             },
             {
                 "relativePath": "src/views/dashboard/DashboardView/LatestProjects.js",
@@ -84,9 +84,9 @@
                 "name": "CustomerActivity.js"
             },
             {
-                "relativePath": "src/views/dashboard/Summaries/Header.js",
+                "relativePath": "src/views/dashboard/Summaries/ReportCardHeader.js",
                 "test": false,
-                "name": "Header.js"
+                "name": "ReportCardHeader.js"
             },
             {
                 "relativePath": "src/views/dashboard/Summaries/LatestOrders.js",
@@ -144,9 +144,9 @@
                 "name": "CustomerActivity.js"
             },
             {
-                "relativePath": "src/views/dashboard/Summes-Live/Header.js",
+                "relativePath": "src/views/dashboard/Summes-Live/ReportCardHeader.js",
                 "test": false,
-                "name": "Header.js"
+                "name": "ReportCardHeader.js"
             },
             {
                 "relativePath": "src/views/dashboard/Summes-Live/LatestOrders.js",
