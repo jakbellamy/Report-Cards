@@ -6,7 +6,6 @@ import _ from 'lodash';
 
 //----------------------------------------------------------
 //Modules
-import Page from 'src/components/Page';
 import { DataBox } from './src/Modules/DataBox/DataBox';
 import BoxDivider from './src/Modules/BoxDivider';
 import NullBlock from './src/Modules/NullBlock';
@@ -25,6 +24,10 @@ import { doIfExists, ifExists } from '../../../utilities/functions/conditionals'
 import diff from 'redux-logger/src/diff';
 import { asUSD } from './functions/methods';
 import OfficeVolume from './src/Components/DataPoints/OfficeVolume';
+import Card from '@material-ui/core/Card';
+import Box from '@material-ui/core/Box';
+import CardHeader from '@material-ui/core/CardHeader';
+import Page from '../../../components/Page';
 
 //----------------------------------------------------------
 //Constants
@@ -133,16 +136,28 @@ export default function DashboardAlternativeView(props) {
                 comparableMonth={comparableMonth}
                 period={period}
               />
-
-
             </Grid>
 
 
-            <GraphCard imageSrc={imageSrc} height={430} />
+            <GraphCard
+              imageSrc={imageSrc}
+              height={420}
+              header={'Market Share & Office Volume by Month'}/>
           </Grid>
 
           <Grid item xs={6} id={'Marketing-Column'}>
-
+            <Card elevation={0}>
+              <center>
+                <CardHeader title={'Building a Championship Season in with Dr. Kevin Elko'} />
+              </center>
+              <Box padding={5} paddingTop={1}>
+                <center><img
+                  src={'https://supremebest.com/wp-content/uploads/2021/01/D44DEBE4-84F2-44EF-98DC-A946D243C709.jpg'}
+                  height={'270'}
+                  width={'auto'}
+                /></center>
+              </Box>
+            </Card>
           </Grid>
         </Grid>
       </Container>
