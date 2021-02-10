@@ -5,10 +5,12 @@ import { compData } from '../../../index';
 import Grid from '@material-ui/core/Grid';
 
 export default function OfficeVolume(props) {
-  const { thisMonth, comparableMonth, periodCaption } = props
+  const { thisMonth, comparableMonth } = props
 
   let differenceValue
-  if (periodCaption && comparableMonth) {
+  let captions = ['', '']
+  if (comparableMonth) {
+    captions = [thisMonth['Date'], comparableMonth['Date']]
     differenceValue = compData('YTD Office Volume', thisMonth, comparableMonth)
       .toFixed(2)
       .toString() + '%'
@@ -18,16 +20,19 @@ export default function OfficeVolume(props) {
   } else {
     differenceValue = ''
   }
-
+  console.log(captions)
   return (
     <Grid item xs={6}>
       <DataBox
-        title="Office Volume"
-        value={thisMonth['YTD Office Volume'] ?
+        title="YTD Office Volume"
+        valueYTD={thisMonth['YTD Office Volume'] ?
           asUSD(thisMonth['YTD Office Volume']) : ''
         }
+        valueComp={comparableMonth['YTD Office Volume'] ?
+          asUSD(comparableMonth['YTD Office Volume']) : ''
+        }
         differenceValue={differenceValue}
-        caption={periodCaption}
+        captions={captions}
       />
     </Grid>
   );

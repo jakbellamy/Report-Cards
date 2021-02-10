@@ -100,9 +100,9 @@ export default function DashboardAlternativeView(props) {
 
   let periodCaption
   if (period==='YOY' && comparableMonth) {
-    periodCaption = "Since Last Year"
+    periodCaption = comparableMonth['Date']
   } else if (period==='MOM' && comparableMonth) {
-    periodCaption = 'Since Last Month'
+    periodCaption = comparableMonth['Date']
   } else {
     periodCaption = ''
   }
@@ -123,11 +123,10 @@ export default function DashboardAlternativeView(props) {
         <Grid container spacing={3} id={'Report-Card-Content'}>
           <Grid item xs={6} id={'Data-Column'}>
             <Grid container spacing={2}>
-              <MShareVolume thisMonth={thisMonth} />
+              {/*<MShareVolume thisMonth={thisMonth} />*/}
               <OfficeVolume
                 thisMonth={thisMonth}
                 comparableMonth={comparableMonth}
-                periodCaption={periodCaption}
               />
 
 

@@ -12,6 +12,15 @@ export default makeStyles(theme => ({
   differenceValue: {
     color: props =>
       props.positiveDifference ? theme.palette.success.main : theme.palette.error.main,
-    marginRight: theme.spacing(1)
+    marginRight: theme.spacing(1),
+    marginLeft: '5%'
+  },
+  title: {
+    marginTop: theme.spacing(2),
+    marginRight: theme.spacing(1),
+    marginLeft: '5%'
+  },
+  currentValue: {
+    marginRight: '3%'
   }
 }));
