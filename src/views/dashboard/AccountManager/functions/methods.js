@@ -16,7 +16,7 @@ const pctString = (percent) => {
   percent = (percent * 100)
     .toFixed(2)
     .toString()
-  return percent + ' %'
+  return percent + '%'
 }
 
 // exports.strToDate = strToDate

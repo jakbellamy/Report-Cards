@@ -1,23 +1,38 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import { Grid } from '@material-ui/core';
 import { DataBox } from '../../Modules/DataBox/DataBox';
-import { pctString } from '../../../functions/methods';
-
-const useStyles = makeStyles((theme) => ({
-  root: {}
-}));
+import { asUSD, pctString } from '../../../functions/methods';
+import { compData } from '../../../index';
+import Grid from '@material-ui/core/Grid';
 
 export default function MShareVolume(props) {
-  const classes = useStyles();
+  const { thisMonth, comparableMonth } = props
 
+  let differenceValue
+  let captions = ['', '']
+  if (comparableMonth) {
+    captions = [thisMonth['Date'], comparableMonth['Date']]
+    differenceValue = compData('YTD Market Share Volume', thisMonth, comparableMonth)
+      .toFixed(2)
+      .toString() + '%'
+    if (!differenceValue.includes('-')){
+      differenceValue = '+' + differenceValue
+    }
+  } else {
+    differenceValue = ''
+  }
+  console.log(captions)
   return (
     <Grid item xs={6}>
       <DataBox
-        title="Market Share Volume"
-        value={pctString(props.thisMonth['Market Share Volume'])}
-        differenceValue="+13%"
-        caption="Since last year"
+        title="YTD Market Share"
+        valueYTD={thisMonth['YTD Market Share Volume'] ?
+          pctString(thisMonth['YTD Market Share Volume']) : ''
+        }
+        valueComp={comparableMonth['YTD Market Share Volume'] ?
+          pctString(comparableMonth['YTD Market Share Volume']) : ''
+        }
+        differenceValue={differenceValue}
+        captions={captions}
       />
     </Grid>
   );

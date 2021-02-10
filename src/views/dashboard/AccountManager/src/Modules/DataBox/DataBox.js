@@ -12,6 +12,7 @@ export const DataBox = props => {
 
   captions = captions.map(caption => {
     if(!caption){ return '' }
+    // return caption.split(' ')[1]
     return (
       caption.split(' ')[0].slice(0,3)
       + ' '
@@ -21,7 +22,7 @@ export const DataBox = props => {
 
   return (
     <Card {...rest} className={clsx(classes.root, className)} elevation={0}>
-      {/*<CardHeader title={title} />*/}
+
       <Typography className={classes.title} variant="h5">
         <span>
           {title}
@@ -31,33 +32,25 @@ export const DataBox = props => {
         </span>
       </Typography>
 
-
-
       <CardContent>
-        <Grid container justify="space-between">
-          <Grid item>
-            <Grid container spacing={3}>
-              <Grid item xs={7}>
-                <Typography variant="subtitle2">{valueYTD}</Typography>
-              </Grid>
-              <Grid item xs={5}>
-                <Typography variant="caption">{captions[0]}</Typography>
-              </Grid>
-            </Grid>
+        <Grid container spacing={1}>
+          <Grid item xs={'auto'}>
+            <Typography variant="subtitle2">{valueYTD}</Typography>
           </Grid>
-
-          <Grid item>
-            <Grid container spacing={3}>
-              <Grid item xs={7}>
-                <Typography variant="subtitle2">{valueComp}</Typography>
-              </Grid>
-              <Grid item xs={5}>
-                <Typography variant="caption">{captions[1]}</Typography>
-              </Grid>
-            </Grid>
+          <Grid item xs={'auto'}>
+            <i><Typography variant="caption">({captions[0]})</Typography></i>
           </Grid>
-
         </Grid>
+
+        <Grid container spacing={1}>
+          <Grid item xs={'auto'}>
+            <Typography variant="subtitle2">{valueComp}</Typography>
+          </Grid>
+          <Grid item xs={'auto'}>
+            <i><Typography variant="caption">({captions[1]})</Typography></i>
+          </Grid>
+        </Grid>
+
       </CardContent>
     </Card>
   );

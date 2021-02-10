@@ -123,7 +123,10 @@ export default function DashboardAlternativeView(props) {
         <Grid container spacing={3} id={'Report-Card-Content'}>
           <Grid item xs={6} id={'Data-Column'}>
             <Grid container spacing={2}>
-              {/*<MShareVolume thisMonth={thisMonth} />*/}
+              <MShareVolume
+                thisMonth={thisMonth}
+                comparableMonth={comparableMonth}
+              />
               <OfficeVolume
                 thisMonth={thisMonth}
                 comparableMonth={comparableMonth}
