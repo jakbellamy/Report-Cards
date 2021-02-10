@@ -6,7 +6,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0bc8d6a-fedc-4de2-bb38-f2b918ef4cd3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/automator/data_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/automator/data_generator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/automator/headless_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/automator/headless_process.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +145,7 @@
       <workItem from="1611675500558" duration="11000" />
       <workItem from="1612382624917" duration="3069000" />
       <workItem from="1612796519135" duration="502000" />
-      <workItem from="1612802325453" duration="6874000" />
+      <workItem from="1612802325453" duration="8105000" />
     </task>
     <servers />
   </component>

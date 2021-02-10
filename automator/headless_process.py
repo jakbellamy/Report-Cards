@@ -47,7 +47,7 @@ print('Beginning Report Generation')
 
 only_alpha = lambda x: ''.join([s for s in x if str.isalpha(s)])
 
-for account in accounts_list[0:5]:
+for account in accounts_list[0:1]:
     name = account
     account = [x if not any(s for s in x if str.isnumeric(s))
                else False for x in account.split(' ')]
