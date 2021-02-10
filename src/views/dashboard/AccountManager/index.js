@@ -126,10 +126,12 @@ export default function DashboardAlternativeView(props) {
               <MShareVolume
                 thisMonth={thisMonth}
                 comparableMonth={comparableMonth}
+                period={period}
               />
               <OfficeVolume
                 thisMonth={thisMonth}
                 comparableMonth={comparableMonth}
+                period={period}
               />
 
 
