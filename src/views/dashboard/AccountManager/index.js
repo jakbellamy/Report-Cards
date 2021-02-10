@@ -2,6 +2,7 @@
 //Libraries
 import React, { useEffect, useState } from 'react';
 import { Container, Grid } from '@material-ui/core';
+import _ from 'lodash';
 
 //----------------------------------------------------------
 //Modules
@@ -20,13 +21,18 @@ import GraphCard from './src/Modules/GraphCard';
 import { reportCardIndexStyles } from './styles';
 import {searchData} from './parsing';
 import MShareVolume from './src/Components/DataPoints/MShareVolume';
-import { ifExists } from '../../../utilities/functions/conditionals';
+import { doIfExists, ifExists } from '../../../utilities/functions/conditionals';
 
 //----------------------------------------------------------
 //Constants
 const data = require('./data.json')
 const ppbData = require('./ppb.json')
 const useStyles = reportCardIndexStyles()
+
+//----------------------------------------------------------
+//Lambda Functions
+const firstStr = x => x.split(' ')[0]
+const lastStr = x => x.split(' ')[x.split(' ').length - 1]
 
 
 //----------------------------------------------------------!
@@ -37,11 +43,15 @@ const useStyles = reportCardIndexStyles()
 export default function DashboardAlternativeView(props) {
   const [accountData, setAccountData] = useState([])
   const [thisMonth, setThisMonth] = useState({})
+  const [comparableMonth, setComparableMonth] = useState({})
   const [ppb, setPpb] = useState([{ 'Title': '', 'Date': '' }])
+  const [period, setPeriod] = useState('YOY')
   const [imageSrc, setImageSrc] = useState('')
   const classes = useStyles();
 
   useEffect(() => {
+
+    //Set Data
     let params = props.match.params[0] ? props.match.params[0].split('/')[1] : ''
     let _accountData = searchData(data, params)
     let _thisMonth = _accountData.length > 0 ? _accountData[_accountData.length - 1] : null
@@ -51,9 +61,35 @@ export default function DashboardAlternativeView(props) {
     setThisMonth(_thisMonth)
     setPpb(ppbData)
     setImageSrc(_imageSrc)
+
+
+    // Get Last Year Month or Last Month
+    let thisMonthText = ifExists(_thisMonth['Date'], null)
+    if (thisMonthText) {
+      let thisMonthMonth = firstStr(thisMonthText)
+      let thisMonthYear = Number(lastStr(thisMonthText))
+
+      let monthSet = _.filter(_accountData, x => {
+        let monthTxt = firstStr(x['Date'])
+        return monthTxt === thisMonthMonth
+      })
+
+      let lastYearDate = thisMonthMonth + ' ' + (thisMonthYear - 1).toString()
+      let lastYear = _.find(monthSet, {'Date': lastYearDate})
+
+      if (lastYear) {
+        setPeriod('YOY')
+        setComparableMonth(lastYear)
+      } else if (_accountData[_accountData.length - 2]) {
+        setPeriod('MOM')
+        setComparableMonth(_accountData[_accountData.length - 2])
+      } else {
+        setPeriod(null)
+      }
+    }
+
   }, []);
 
-  console.log(ifExists(thisMonth['Date'][-1]))
   return (
     <Page className={classes.root} title="Auto Report Card">
       <Container maxWidth={false} className={classes.container} id={'content-container'}>

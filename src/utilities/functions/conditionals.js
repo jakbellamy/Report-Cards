@@ -12,6 +12,7 @@ export const ifExists = (conditionalVar, defaultVar) => {
 }
 
 export const doIfExists = (func, conditionalVar, defaultVar) => {
+  console.log('hit')
   try{
     if (conditionalVar) {
       return func(conditionalVar)
