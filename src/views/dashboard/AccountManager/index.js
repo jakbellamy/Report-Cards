@@ -9,11 +9,12 @@ import GraphCard from './src/Modules/GraphCard';
 import NullBlock from './src/Modules/NullBlock';
 import ReportCardHeader from './src/ReportCardHeader';
 import { reportCardIndexStyles } from './styles';
+import BoxDivider from './src/Modules/BoxDivider';
 const ppbData = require('./ppb.json')
 
 const useStyles = reportCardIndexStyles()
 
-function DashboardAlternativeView(props) {
+export default function DashboardAlternativeView(props) {
   const [accountData, setAccountData] = useState([])
   const [ppb, setPpb] = useState([{ 'Title': '', 'Date': '' }])
   const [imageSrc, setImageSrc] = useState('')
@@ -31,12 +32,7 @@ function DashboardAlternativeView(props) {
       <Container maxWidth={false} className={classes.container}>
         <NullBlock />
         <ReportCardHeader accountData={accountData} />
-        <Box
-          paddingTop={1}
-          paddingBottom={3}
-        >
-          <Divider/>
-        </Box>
+        <BoxDivider paddingTop={2} paddingBottom={3} />
 
 
         <Grid container spacing={3}>
@@ -54,7 +50,4 @@ function DashboardAlternativeView(props) {
       </Container>
     </Page>
   );
-
 }
-
-export default DashboardAlternativeView;

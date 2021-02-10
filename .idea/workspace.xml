@@ -6,9 +6,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0bc8d6a-fedc-4de2-bb38-f2b918ef4cd3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/ReportCardHeader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.bitmap" beforeDir="false" afterPath="$PROJECT_DIR$/.bitmap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utilities/functions/conditionals.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/Modules/BoxDivider.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/dashboard/AccountManager/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/dashboard/AccountManager/index.js" afterDir="false" />
     </list>
@@ -167,6 +166,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="554" y="325" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1612928294904">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="554" y="325" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1612928294904" />
     <state x="297" y="824" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1611154622159">
       <screen x="0" y="0" width="1080" height="1920" />
     </state>
