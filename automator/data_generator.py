@@ -309,15 +309,18 @@ print('JSON File Successfully Saved.')
             #    Plot DataFrame Method  #
 
 def report_card_plot(df):
-    null_prod_mask = df['Office Volume'] > 0
     try:
+        null_prod_mask = df['Office Volume'] > 0
+        rf = df
         df = (df.loc[null_prod_mask]
-                .set_index(pd.to_datetime(df.loc[null_prod_mask]['Date Time']))
+                .set_index(pd.to_datetime(df.loc[null_prod_mask]['Date']))
                 .resample('Q', convention='end')
                 .agg('mean')
                 .reset_index())
 
-        df['Date Number'] = dates.datestr2num(df['Date Time'].apply(lambda x: str(x)))
+        rf['Date Number'] = dates.datestr2num(rf['Date'].apply(lambda x: str(x)))
+
+        df['Date Number'] = dates.datestr2num(df['Date'].apply(lambda x: str(x)))
         df['Market Share Volume'] = df['Market Share Volume'].apply(lambda x: pd.to_numeric(x)).fillna(0)
 
         @pyplot.FuncFormatter
@@ -333,20 +336,27 @@ def report_card_plot(df):
             return str(int(y / 1000000)) + 'M'
 
         fig, ax = pyplot.subplots()
-        sns.regplot(x="Date Number", y="Market Share Volume", data=df, ax=ax, order=3, ci=None, scatter_kws={"s": 20})
+        sns.regplot(x="Date Number", y="Office Volume", color='#544D75', data=rf, ax=ax, order=3, ci=1, scatter_kws={"s": 0}, truncate=False)
+        sns.scatterplot(x="Date Number", y="Office Volume", color='#544D75', ax=ax, data=df, s=20)
+
 
         ax.xaxis.set_major_formatter(fake_dates)
-        ax.yaxis.set_major_formatter(precentages)
+        ax.yaxis.set_major_formatter(large_currency)
 
         ax2 = pyplot.twinx()
-        sns.regplot(x="Date Number",y="Office Volume", color='r', data=df, ax=ax2, order=3, ci=None, scatter_kws={"s": 20})
 
-        ax2.yaxis.set_major_formatter(large_currency)
+        sns.regplot(x="Date Number", y="Market Share Volume", color='#659ADC', data=rf, ax=ax2, order=3, ci=1, scatter_kws={"s": 0}, truncate=False)
+        sns.scatterplot(x="Date Number", y="Market Share Volume", color='#659ADC', ax=ax2, data=df, s=25)
+
+        ax2.yaxis.set_major_formatter(precentages)
 
         ax.set_xlabel('Month')
 
-        ax.legend(['Market Share'], loc='upper center', bbox_to_anchor=(.15, -0.05), ncol=5)
-        ax2.legend(['Office Volume'], loc='upper center', bbox_to_anchor=(.85, -0.05), ncol=5)
+        ax.legend(['Market Share'], loc='upper center',
+                  bbox_to_anchor=(.85, -0.05), ncol=5)
+        ax2.legend(['Office Volume'], loc='upper center',
+                   bbox_to_anchor=(.15, -0.05),fancybox=True,
+                   shadow=True, ncol=5)
     except:
         print('Failed.')
         print(df)
