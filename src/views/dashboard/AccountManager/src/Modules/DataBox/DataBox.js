@@ -25,7 +25,7 @@ export const DataBox = props => {
 
       <Typography className={classes.title} variant="h5">
         <span>
-          {title}
+          {title.replace('Volume', '')}
         </span>
         <span className={classes.differenceValue}>
           {differenceValue}
