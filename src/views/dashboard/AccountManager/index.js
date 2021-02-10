@@ -2,14 +2,13 @@ import React, { useEffect, useState } from 'react';
 import _ from 'lodash'
 import { Container, Grid, makeStyles } from '@material-ui/core';
 import Page from 'src/components/Page';
-import AccountBio from './src/InfoComponents/AccountBio/Bio';
 import DataOverview from './src/DataOverview/DataOverview';
-import Leads from './src/InfoComponents/Leads/Leads'
-import PersonalBest from './src/InfoComponents/PersonalBest/PersonalBest'
-import Education from './src/InfoComponents/ContinuingEducation/Education'
 import {accounts, data, filterForAccount, searchData} from './parsing';
-import Card from '@material-ui/core/Card';
 import Typography from '@material-ui/core/Typography';
+import Divider from '@material-ui/core/Divider';
+import Box from '@material-ui/core/Box';
+import GraphCard from './src/Modules/GraphCard';
+import NullBlock from './src/Modules/NullBlock';
 const ppbData = require('./ppb.json')
 
 const useStyles = makeStyles((theme) => ({
@@ -44,7 +43,6 @@ function DashboardAlternativeView(props) {
     setPpb(ppbData)
   }, [])
 
-  let companyTotals = []
   useEffect(() => {
     let params = props.match.params[0] ? props.match.params[0].split('/')[1] : ''
     setAccountData(searchData(data, params))
@@ -54,12 +52,8 @@ function DashboardAlternativeView(props) {
   return (
     <Page className={classes.root} title="Auto Report Card">
       <Container maxWidth={false} className={classes.container}>
+        <NullBlock />
         <Grid container spacing={3}>
-          <Grid item xs={12}  />
-
-        </Grid>
-        <Grid container spacing={3}>
-
             <Grid item xs={7}>
               <div style={{paddingTop: 20}}>
                 <Typography variant="h1">{accountData[0] ? accountData[0]['Account'] : ''}</Typography>
@@ -72,6 +66,14 @@ function DashboardAlternativeView(props) {
             </Grid>
         </Grid>
 
+        <Box
+          paddingTop={1}
+          paddingBottom={3}
+        >
+          <Divider/>
+        </Box>
+
+
         <Grid container spacing={3}>
           <Grid item xs={7}>
             <DataOverview
@@ -79,11 +81,7 @@ function DashboardAlternativeView(props) {
               thisMonth={accountData.length > 0 ? accountData[accountData.length - 1] : null}
               key={Math.floor(Math.random() * 101)}
             />
-            <Card>
-              <center>
-                <img src={imageSrc} width={'auto'} height={430}/>
-              </center>
-            </Card>
+            <GraphCard imageSrc={imageSrc} height={430} />
           </Grid>
           <Grid item xs={5}>
           </Grid>
