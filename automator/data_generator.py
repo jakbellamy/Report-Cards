@@ -339,7 +339,7 @@ def report_card_plot(df):
 
     ax.legend(['Market Share'], loc="upper left")
 
-    ax2.legend(['Office Volume'])
+    ax2.legend(['Office Volume'], loc='upper right')
 
 
 
