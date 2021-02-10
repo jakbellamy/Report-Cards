@@ -18,11 +18,9 @@ import {searchData} from './parsing';
 const data = require('./data.json')
 const ppbData = require('./ppb.json')
 const useStyles = reportCardIndexStyles()
-
-//----------------------------------------------------------
+//----------------------------------------------------------!
 //                          HOOK
-//----------------------------------------------------------
-
+//----------------------------------------------------------!
 export default function DashboardAlternativeView(props) {
   const [accountData, setAccountData] = useState([])
   const [ppb, setPpb] = useState([{ 'Title': '', 'Date': '' }])
@@ -42,8 +40,6 @@ export default function DashboardAlternativeView(props) {
         <NullBlock />
         <ReportCardHeader accountData={accountData} />
         <BoxDivider paddingTop={2} paddingBottom={3} />
-
-
         <Grid container spacing={3} id={'Report-Card-Content'}>
           <Grid item xs={7} id={'Data-Column'}>
             <DataOverview
