@@ -146,7 +146,7 @@ export default function DashboardAlternativeView(props) {
           </Grid>
 
           <Grid item xs={6} id={'Marketing-Column'}>
-            <Card elevation={0}>
+            <Card >
               <center>
                 <CardHeader title={'Building a Championship Season in with Dr. Kevin Elko'} />
               </center>
@@ -160,6 +160,9 @@ export default function DashboardAlternativeView(props) {
             </Card>
           </Grid>
         </Grid>
+        <Box height={650}>
+
+        </Box>
       </Container>
     </Page>
   );

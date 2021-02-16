@@ -12,7 +12,6 @@ export const DataBox = props => {
 
   captions = captions.map(caption => {
     if(!caption){ return '' }
-    // return caption.split(' ')[1]
     return (
       caption.split(' ')[0].slice(0,3)
       + ' '
