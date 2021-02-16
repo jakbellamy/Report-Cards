@@ -342,9 +342,7 @@ def report_card_plot(df):
 
         ax.xaxis.set_major_formatter(fake_dates)
         ax.yaxis.set_major_formatter(large_currency)
-
         ax2 = pyplot.twinx()
-
         sns.regplot(x="Date Number", y="Market Share Volume", color='#659ADC', data=df, ax=ax2, order=6, ci=0, scatter_kws={"s": 20})
 
         ax2.yaxis.set_major_formatter(precentages)
