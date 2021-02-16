@@ -66,7 +66,8 @@ export default function DashboardAlternativeView(props) {
     let params = props.match.params[0] ? props.match.params[0].split('/')[1] : ''
     let _accountData = searchData(data, params)
     let _thisMonth = _accountData.length > 0 ? _accountData[_accountData.length - 1] : null
-    let _imageSrc = `./Plots/${searchData(data, params)[0]['Account']}-report_card_plot.png`
+    // let _imageSrc = `./Plots/${searchData(data, params)[0]['Account']}-report_card_plot.png`
+    let _imageSrc = `./Plots/2021-02-12 ${searchData(data, params)[0]['Account']}.png`
 
     setAccountData(_accountData)
     setThisMonth(_thisMonth)
@@ -75,6 +76,7 @@ export default function DashboardAlternativeView(props) {
 
 
     // Get Last Year Month or Last Month
+    console.log(_imageSrc)
     let thisMonthText = ifExists(_thisMonth['Date'], null)
     if (thisMonthText) {
       let thisMonthMonth = firstStr(thisMonthText)
