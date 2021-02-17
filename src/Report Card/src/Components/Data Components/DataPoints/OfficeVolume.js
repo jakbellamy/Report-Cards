@@ -1,7 +1,7 @@
 import React from 'react';
 import { DataBox } from '../DataBox/DataBox';
-import { asUSD } from '../../../functions/methods';
-import { compData } from '../../../index';
+import { asUSD } from '../../../../functions/dataDisplayers';
+import { calculatePercentChange } from '../../../../functions/dataMethods';
 import Grid from '@material-ui/core/Grid';
 
 export default function OfficeVolume(props) {
@@ -13,7 +13,7 @@ export default function OfficeVolume(props) {
 
   if (comparableMonth) {
     captions = [thisMonth['Date'], comparableMonth['Date']]
-    differenceValue = compData(valueKey, thisMonth, comparableMonth)
+    differenceValue = calculatePercentChange(valueKey, thisMonth, comparableMonth)
       .toFixed(2)
       .toString() + '%'
     if (!differenceValue.includes('-')){

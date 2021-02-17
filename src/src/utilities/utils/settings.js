@@ -8,7 +8,7 @@ export function restoreSettings() {
       settings = JSON.parse(storedData);
     }
   } catch (err) {
-    // If stored data is not a strigified JSON this might fail,
+    // If stored data is not a strigified data this might fail,
     // that's why we catch the error
   }
 

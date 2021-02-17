@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { Box, Card, CardHeader, Divider, Typography, Grid, makeStyles, GridList, GridListTile } from '@material-ui/core';
 import SimpleList from '../../Modules/SimpleList'
-import { asUSD } from '../../../functions/methods';
+import { asUSD } from '../../../functions/dataDisplayers';
 
 const useStyles = makeStyles((theme) => ({
   root: {},

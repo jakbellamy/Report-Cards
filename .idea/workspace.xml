@@ -6,9 +6,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0bc8d6a-fedc-4de2-bb38-f2b918ef4cd3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Report Card/functions/dataDisplayers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Report Card/functions/stringParsers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Report Card/indexFunctions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/DataFunctions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Report Card/src/Components/Header/styles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/data/data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/functions/dataFunctions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/functions/dataParsers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/functions/methods.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/functions/parsing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/functions/jsonParsers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/functions/scrapers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/ppb.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/data/ppb.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Components/DataBox/DataBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/DataBox/DataBox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Components/DataBox/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/DataBox/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Components/DataPoints/MShareVolume.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/DataPoints/MShareVolume.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Components/DataPoints/NewMShare.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/DataPoints/NewMShare.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Components/DataPoints/OfficeVolume.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/DataPoints/OfficeVolume.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Header/Header.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Header/ReportCardHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/Header/ReportCardHeader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Header/functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/functions/dataMethods.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/src/InfoComponents/AccountBio/Bio.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/InfoComponents/AccountBio/Bio.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Modules/BoxDivider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Modules/BoxDivider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/utilities/functions/conditionals.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/functions/conditionals.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/utilities/utils/settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/utilities/utils/settings.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,11 +80,11 @@
       <recent name="$PROJECT_DIR$/src/views/dashboard/AccountManager" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/Report Card" />
-      <recent name="$PROJECT_DIR$/src/src" />
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/views/dashboard/AccountManager/src/Modules/DataBox" />
-      <recent name="$PROJECT_DIR$/src/views/dashboard/AccountManager" />
+      <recent name="$PROJECT_DIR$/src/Report Card/src/Components/Data Components" />
+      <recent name="$PROJECT_DIR$/src/Report Card/JSON" />
+      <recent name="$PROJECT_DIR$/src/Report Card/index" />
+      <recent name="$PROJECT_DIR$/src/Report Card/functions" />
+      <recent name="$PROJECT_DIR$/src/Report Card/src/Components" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -171,14 +193,18 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="554" y="325" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1612928294904" />
+    <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1613522880714">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1613522880714" />
     <state x="297" y="824" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1611154622159">
       <screen x="0" y="0" width="1080" height="1920" />
     </state>
     <state x="297" y="824" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/1080.719.1920.1080/0.0.1080.1920@0.0.1080.1920" timestamp="1611154622159" />
-    <state x="776" y="318" width="777" height="523" key="find.popup" timestamp="1612905796896">
+    <state x="776" y="318" width="777" height="523" key="find.popup" timestamp="1613524111490">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="776" y="318" width="777" height="523" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1612905796896" />
+    <state x="776" y="318" width="777" height="523" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1613524111490" />
     <state x="887" y="327" width="888" height="537" key="find.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1612893958859" />
     <state x="325" y="427" width="670" height="1238" key="search.everywhere.popup" timestamp="1611155359298">
       <screen x="0" y="0" width="1080" height="1920" />
@@ -224,6 +250,12 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/index.js</url>
           <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/Report Card/index.js</url>
+          <line>13</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

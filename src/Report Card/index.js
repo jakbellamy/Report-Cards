@@ -1,55 +1,28 @@
-//----------------------------------------------------------
-//Libraries
 import React, { useEffect, useState } from 'react';
-import { Container, Grid } from '@material-ui/core';
 import _ from 'lodash';
-
-//----------------------------------------------------------
-//Modules
-import { DataBox } from './src/Components/DataBox/DataBox';
+import {
+  Container,
+  Grid,
+  Box,
+  CardHeader
+} from '@material-ui/core';
+import Page from '../src/components/Page';
 import BoxDivider from './src/Modules/BoxDivider';
 import NullBlock from './src/Modules/NullBlock';
-
-//----------------------------------------------------------
-//Components
-import ReportCardHeader from './src/Header/ReportCardHeader';
+import ReportCardHeader from './src/Components/Header/ReportCardHeader';
 import GraphCard from './src/Modules/GraphCard';
-
-//----------------------------------------------------------
-//Functions
 import { reportCardIndexStyles } from './styles';
-import {searchData} from './functions/parsing';
-import MShareVolume from './src/Components/DataPoints/MShareVolume';
-import { doIfExists, ifExists } from '../src/utilities/functions/conditionals';
-import diff from 'redux-logger/src/diff';
-import { asUSD } from './functions/methods';
-import OfficeVolume from './src/Components/DataPoints/OfficeVolume';
+import {searchData} from './functions/jsonParsers';
+import MShareVolume from './src/Components/Data Components/DataPoints/MShareVolume';
+import { ifExists } from './functions/conditionals';
+import OfficeVolume from './src/Components/Data Components/DataPoints/OfficeVolume';
 import Card from '@material-ui/core/Card';
-import Box from '@material-ui/core/Box';
-import CardHeader from '@material-ui/core/CardHeader';
-import Page from '../src/components/Page';
+import {firstStr, lastStr} from './functions/stringParsers';
+import { calculatePercentChange} from './functions/dataMethods';
+const data = require('./data/data.json')
+const ppbData = require('./data/ppb.json')
 
-//----------------------------------------------------------
-//Constants
-const data = require('./data.json')
-const ppbData = require('./ppb.json')
 const useStyles = reportCardIndexStyles()
-
-//----------------------------------------------------------
-//Lambda Functions
-const firstStr = x => x.split(' ')[0]
-const lastStr = x => x.split(' ')[x.split(' ').length - 1]
-const compData = (key, compareSet, originalSet) => ((compareSet[key] - originalSet[key]) /originalSet[key]) * 100
-
-
-//----------------------------------------------------------
-//Functions
-
-
-//----------------------------------------------------------!
-//                          HOOK
-//----------------------------------------------------------!
-
 
 export default function DashboardAlternativeView(props) {
   const [accountData, setAccountData] = useState([])
@@ -170,4 +143,3 @@ export default function DashboardAlternativeView(props) {
   );
 }
 
-export {compData}

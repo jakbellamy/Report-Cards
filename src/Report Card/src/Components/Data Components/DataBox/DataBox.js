@@ -1,8 +1,12 @@
 import React from 'react';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import { Card, CardContent, Grid, Typography, CardHeader, IconButton } from '@material-ui/core';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
+import {
+  Card,
+  CardContent,
+  Grid,
+  Typography,
+} from '@material-ui/core';
 import useStyles from './styles';
 
 export const DataBox = props => {

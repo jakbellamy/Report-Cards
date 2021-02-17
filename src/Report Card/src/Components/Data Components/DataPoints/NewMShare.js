@@ -1,7 +1,7 @@
 import React from 'react';
 import { DataBox } from '../DataBox/DataBox';
-import { pctString } from '../../../functions/methods';
-import { compData } from '../../../index';
+import { printPercent } from '../../../../functions/dataDisplayers';
+import { calculatePercentChange } from '../../../../functions/dataMethods';
 import Grid from '@material-ui/core/Grid';
 
 export default function MShareVolume(props) {
@@ -13,7 +13,7 @@ export default function MShareVolume(props) {
 
   if (comparableMonth) {
     captions = [thisMonth['Date'], comparableMonth['Date']]
-    differenceValue = compData(valueKey, thisMonth, comparableMonth)
+    differenceValue = calculatePercentChange(valueKey, thisMonth, comparableMonth)
       .toFixed(2)
       .toString() + '%'
     if (!differenceValue.includes('-')){
@@ -28,10 +28,10 @@ export default function MShareVolume(props) {
       <DataBox
         title={valueKey}
         valueYTD={thisMonth[valueKey] ?
-          pctString(thisMonth[valueKey]) : ''
+          printPercent(thisMonth[valueKey]) : ''
         }
         valueComp={comparableMonth[valueKey] ?
-          pctString(comparableMonth[valueKey]) : ''
+          printPercent(comparableMonth[valueKey]) : ''
         }
         differenceValue={differenceValue}
         captions={captions}
