@@ -7,7 +7,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d0bc8d6a-fedc-4de2-bb38-f2b918ef4cd3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Report Card/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,12 +181,12 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="981" y="23" width="663" height="792" key="dock-window-1/0.23.1680.1027@0.23.1680.1027" timestamp="1613544079020" />
-    <state x="887" y="343" width="888" height="586" key="find.popup" timestamp="1613577241179">
+    <state x="887" y="343" width="888" height="586" key="find.popup" timestamp="1613589608278">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="776" y="318" width="777" height="582" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1613538793054" />
     <state x="887" y="327" width="888" height="537" key="find.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1612893958859" />
-    <state x="887" y="343" width="888" height="586" key="find.popup/1920.23.1920.1057/0.23.1920.1057@0.23.1920.1057" timestamp="1613577241179" />
+    <state x="887" y="343" width="888" height="586" key="find.popup/1920.23.1920.1057/0.23.1920.1057@0.23.1920.1057" timestamp="1613589608278" />
     <state x="325" y="427" width="670" height="1238" key="search.everywhere.popup" timestamp="1611155359298">
       <screen x="0" y="0" width="1080" height="1920" />
     </state>
