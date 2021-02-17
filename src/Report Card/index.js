@@ -19,6 +19,7 @@ import OfficeVolume from './src/Components/Data Components/DataPoints/OfficeVolu
 import Card from '@material-ui/core/Card';
 import {firstStr, lastStr} from './functions/stringParsers';
 import { calculatePercentChange} from './functions/dataMethods';
+import UpcomingBest from './src/Components/BEST Components/upcomingBest';
 const data = require('./data/data.json')
 const ppbData = require('./data/ppb.json')
 
@@ -121,18 +122,7 @@ export default function DashboardAlternativeView(props) {
           </Grid>
 
           <Grid item xs={6} id={'Marketing-Column'}>
-            <Card >
-              <center>
-                <CardHeader title={'Building a Championship Season in with Dr. Kevin Elko'} />
-              </center>
-              <Box padding={5} paddingTop={1}>
-                <center><img
-                  src={'https://supremebest.com/wp-content/uploads/2021/01/D44DEBE4-84F2-44EF-98DC-A946D243C709.jpg'}
-                  height={'270'}
-                  width={'auto'}
-                /></center>
-              </Box>
-            </Card>
+            <UpcomingBest />
           </Grid>
         </Grid>
         <Box height={650}>
