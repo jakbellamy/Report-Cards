@@ -2,9 +2,11 @@ import { printPercent } from '../../../functions/dataDisplayers';
 import { colors } from 'tabler-react';
 
 const determineProgressColor = (progressWidth) => {
-  if(progressWidth >= 85) {
+  console.log(progressWidth)
+  if(progressWidth >= 90) {
     return 'green'
-  }else if(85 > progressWidth <= 70) {
+  }else if(progressWidth >= 70) {
+    console.log('hit')
     return 'yellow'
   }else {
     return 'red'

@@ -13,11 +13,11 @@ import { asUSD, printPercent } from '../../../../functions/dataDisplayers';
 
 
 export default function PercentToGoal(props) {
-  let { mshare, percentageToGoal, header, display } = props
+  let { mshare, percentageToGoal, header, display, color } = props
 
   let displayProgress = printPercent(percentageToGoal, -2)
   percentageToGoal = percentageToGoal <= 1 ? percentageToGoal * 100 : 100
-  let progressColor = setDonutColor(percentageToGoal)
+
   let percentLeft = percentageToGoal <= 100 ? 100 - percentageToGoal : 0
   display = printPercent(display)
 
@@ -42,7 +42,7 @@ export default function PercentToGoal(props) {
               ],
               type: "donut",
               colors: {
-                data1: progressColor,
+                data1: color,
                 data2: colors["gray-lighter"],
               },
               names: {
