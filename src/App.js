@@ -19,7 +19,7 @@ import GoogleAnalytics from 'src/components/GoogleAnalytics';
 import ScrollReset from 'src/components/ScrollReset';
 import useSettings from 'src/utilities/hooks/useSettings';
 import { createTheme } from 'src/utilities/theme';
-import Routes from 'src/Routes';
+import Routes from 'src/src/Routes';
 
 const history = createBrowserHistory();
 const jss = create({ plugins: [...jssPreset().plugins, rtl()] });

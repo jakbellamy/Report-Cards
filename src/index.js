@@ -1,6 +1,6 @@
 import 'react-app-polyfill/ie11';
 import 'react-app-polyfill/stable';
-import './polys'
+import './src/polys'
 import 'react-perfect-scrollbar/dist/css/styles.css';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 import 'react-quill/dist/quill.snow.css';
@@ -13,7 +13,7 @@ import { enableES5 } from 'immer';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import * as serviceWorker from 'src/serviceWorker';
+import * as serviceWorker from 'src/src/serviceWorker';
 import { SettingsProvider } from 'src/utilities/context/SettingsContext';
 import { configureStore } from 'src/utilities/store';
 import { restoreSettings } from 'src/utilities/utils/settings';
