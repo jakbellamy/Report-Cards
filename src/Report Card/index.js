@@ -84,7 +84,6 @@ export default function DashboardAlternativeView(props) {
 
   }, []);
 
-  console.log(ce2020)
   return (
     <div style={{backgroundColor: mainBackgroundColor}}>
       <Page className={classes.root} title="Auto Report Card">
@@ -131,7 +130,7 @@ export default function DashboardAlternativeView(props) {
 
             <Grid item spacing={3} sxs={6} id={'Marketing-Column'}>
               <UpcomingBest />
-              <ContinuingEducation />
+              <ContinuingEducation ce2020={ce2020} ce2021={ce2021} />
             </Grid>
           </Grid>
           <Box height={300}>

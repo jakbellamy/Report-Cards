@@ -165,7 +165,7 @@ for account_name in valid_accounts:
 #     ax.set_title(f'Supreme Market Share in {account_name}', fontweight='bold', pad=10)
 #     ax.set_xlabel('Quarter')
 #     ax.set_ylabel('Supreme Market Share')
-    ax.legend(loc=2, prop={'size': 14})
+    ax.legend(loc=2, prop={'size': 11})
 
     filename = f"/Users/jakobbellamy/Dev/_supreme/Report Card/public/plots/share_{account_name}.png"
 #     fig.set_size_inches(10, 6)

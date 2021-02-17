@@ -14,6 +14,9 @@ import { variableBestTagline } from '../../../data/constants';
 
 export default function ContinuingEducation(props) {
   const classes = useStyles();
+  const {ce2020, ce2021} = props
+
+  console.log(ce2020, ce2021)
   return (
     <Box className={classes.root}>
       <Card className={classes.card} elevation={cardElevation}>
