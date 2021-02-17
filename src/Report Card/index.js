@@ -19,6 +19,7 @@ import {
   Box
 } from '@material-ui/core';
 import ContinuingEducation from './src/Components/Continuing Education Components/ContinuingEducation';
+import Test from './src/Components/Test';
 
 const data = require('./data/data.json')
 const ppbData = require('./data/ppb.json')
@@ -117,7 +118,10 @@ export default function DashboardAlternativeView(props) {
               <GraphCard
                 imageSrc={imageSrc}
                 height={420}
-                header={'Market Share & Office Volume by Month'}/>
+                header={'Market Share & Office Volume by Month'}
+              />
+
+              <Test />
             </Grid>
 
             <Grid item spacing={3} sxs={6} id={'Marketing-Column'}>
