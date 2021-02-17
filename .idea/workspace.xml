@@ -6,48 +6,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0bc8d6a-fedc-4de2-bb38-f2b918ef4cd3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/src/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/Routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/views/dashboard/AccountManager/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/views/dashboard/AccountManager/dataFunctions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/dataFunctions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/views/dashboard/AccountManager/functions/accountSelection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/functions/accountSelection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/views/dashboard/AccountManager/functions/methods.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/functions/methods.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/views/dashboard/AccountManager/functions/scrapers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/functions/scrapers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/views/dashboard/AccountManager/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/views/dashboard/AccountManager/parsing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/parsing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/views/dashboard/AccountManager/ppb.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/ppb.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/views/dashboard/AccountManager/src/Components/DataPoints/MShareVolume.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/DataPoints/MShareVolume.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/views/dashboard/AccountManager/src/Components/DataPoints/NewMShare.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/DataPoints/NewMShare.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/views/dashboard/AccountManager/src/Components/DataPoints/OfficeVolume.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/DataPoints/OfficeVolume.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/views/dashboard/AccountManager/src/DataChart/DataCharts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/DataChart/DataCharts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/views/dashboard/AccountManager/src/DataChart/ReportCardGraph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/DataChart/ReportCardGraph.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/views/dashboard/AccountManager/src/DataChart/charts/MarketShareChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/DataChart/charts/MarketShareChart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/views/dashboard/AccountManager/src/DataChart/charts/UnitsOverTime.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/DataChart/charts/UnitsOverTime.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/views/dashboard/AccountManager/src/DataChart/charts/VolumeOverTime.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/DataChart/charts/VolumeOverTime.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/views/dashboard/AccountManager/src/DataChart/comments.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/DataChart/comments.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/views/dashboard/AccountManager/src/DataOverview/DataBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/DataOverview/DataBlock.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/views/dashboard/AccountManager/src/DataOverview/DataOverview.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/DataOverview/DataOverview.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/views/dashboard/AccountManager/src/DataOverview/units.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/DataOverview/units.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/views/dashboard/AccountManager/src/DataOverview/volume.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/DataOverview/volume.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/views/dashboard/AccountManager/src/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/views/dashboard/AccountManager/src/Header/functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Header/functions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/views/dashboard/AccountManager/src/InfoComponents/AccountBio/Bio.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/InfoComponents/AccountBio/Bio.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/views/dashboard/AccountManager/src/InfoComponents/Contacts/ContactRow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/InfoComponents/Contacts/ContactRow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/views/dashboard/AccountManager/src/InfoComponents/Contacts/Contacts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/InfoComponents/Contacts/Contacts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/views/dashboard/AccountManager/src/InfoComponents/ContinuingEducation/Education.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/InfoComponents/ContinuingEducation/Education.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/views/dashboard/AccountManager/src/InfoComponents/ContinuingEducation/TopicsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/InfoComponents/ContinuingEducation/TopicsList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/views/dashboard/AccountManager/src/InfoComponents/Leads/Leads.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/InfoComponents/Leads/Leads.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/views/dashboard/AccountManager/src/InfoComponents/LoanOfficers/LoanOfficers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/InfoComponents/LoanOfficers/LoanOfficers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/views/dashboard/AccountManager/src/InfoComponents/PersonalBest/PersonalBest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/InfoComponents/PersonalBest/PersonalBest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/views/dashboard/AccountManager/src/Modules/BoxDivider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Modules/BoxDivider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/views/dashboard/AccountManager/src/Modules/DataBox/DataBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Modules/DataBox/DataBox.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/views/dashboard/AccountManager/src/Modules/DataBox/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Modules/DataBox/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/views/dashboard/AccountManager/src/Modules/GraphCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Modules/GraphCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/views/dashboard/AccountManager/src/Modules/Module.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Modules/Module.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/views/dashboard/AccountManager/src/Modules/NullBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Modules/NullBlock.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/views/dashboard/AccountManager/src/Modules/SimpleList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Modules/SimpleList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/views/dashboard/AccountManager/src/Modules/Title.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Modules/Title.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/views/dashboard/AccountManager/src/ReportCardHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/ReportCardHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/views/dashboard/AccountManager/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
