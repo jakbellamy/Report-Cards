@@ -26,7 +26,7 @@ const filterForAccount = (data, account) => {
 const searchData = (data, search, key='Account') => {
   // console.log('search', search)
   return _.filter(data, x => {
-    let nrmlized = _.lowerCase(x['Account'])
+    let nrmlized = _.lowerCase(x[key])
     nrmlized = nrmlized.replace(/\s+/g, '')
     return nrmlized.includes(_.lowerCase(search))
   })

@@ -20,9 +20,9 @@ import {
 
 import C3Chart from "react-c3js";
 import Box from '@material-ui/core/Box';
-import ProgressMeterCard from '../../Data Components/Tabler Components/ProgressCard';
-import DonutProgressCard from '../../Data Components/Tabler Components/DonutProgressCard';
-import PercentToGoalCard from '../../Data Components/Tabler Components/PercentToGoalCard';
+import ProgressMeterCard from './ProgressCard';
+import DonutProgressCard from './DonutProgressCard';
+import PercentToGoalCard from './PercentToGoalCard';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -31,16 +31,20 @@ const useStyles = makeStyles((theme) => ({
 
 export default function GoalDonuts(props) {
   const classes = useStyles();
+  let {mshare, goals, incentives} = props
+
   return (
     <Box marginTop={'2%'}>
       <Grid.Row>
         <PercentToGoalCard
           header={'Percent to Goal'}
-          percentageToGoal={.86}
+          percentageToGoal={mshare/goals[0]}
+          incentive={incentives[0]}
         />
         <PercentToGoalCard
           header={'Percent to Stretch Goal'}
-          percentageToGoal={.57}
+          percentageToGoal={mshare/goals[1]}
+          incentive={incentives[1]}
         />
         {/*<DonutProgressCard*/}
         {/*  header={'Percent to Goal'}*/}

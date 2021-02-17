@@ -19,7 +19,7 @@ import {
   Box
 } from '@material-ui/core';
 import ContinuingEducation from './src/Components/Continuing Education Components/ContinuingEducation';
-import Test from './src/Components/Tabler Components/Data Components/GoalDonuts';
+import GoalDonuts from './src/Components/Data Components/Tabler Components/GoalDonuts';
 
 const data = require('./data/data.json')
 const ppbData = require('./data/ppb.json')
@@ -36,24 +36,28 @@ export default function DashboardAlternativeView(props) {
   const [ppb, setPpb] = useState([{ 'Title': '', 'Date': '' }])
   const [period, setPeriod] = useState('YOY')
   const [imageSrc, setImageSrc] = useState('')
+  const [goals, setGoals] = useState([])
+  const [ce2020, setCE2020] = useState([])
+  const [ce2021, setCE2021] = useState([])
 
   useEffect(() => {
-
-    //Set Data
     let params = props.match.params[0] ? props.match.params[0].split('/')[1] : ''
     let _accountData = searchData(data, params)
+    let _goalsData = searchData(goalData, params, 'Name')[0]
     let _thisMonth = _accountData.length > 0 ? _accountData[_accountData.length - 1] : null
-    // let _imageSrc = `./Plots/${searchData(data, params)[0]['Account']}-report_card_plot.png`
     let _imageSrc = `./Plots/2021-02-12 ${searchData(data, params)[0]['Account']}.png`
+    let _ce2020 = searchData(ce_2020, params)
+    let _ce2021 = searchData(ce_2021, params)
 
     setAccountData(_accountData)
+    setGoals(_goalsData)
     setThisMonth(_thisMonth)
     setPpb(ppbData)
     setImageSrc(_imageSrc)
-
+    setCE2020(_ce2020)
+    setCE2021(_ce2021)
 
     // Get Last Year Month or Last Month
-    console.log(_imageSrc)
     let thisMonthText = ifExists(_thisMonth['Date'], null)
     if (thisMonthText) {
       let thisMonthMonth = firstStr(thisMonthText)
@@ -80,16 +84,16 @@ export default function DashboardAlternativeView(props) {
 
   }, []);
 
-  let periodCaption
-  if (period==='YOY' && comparableMonth) {
-    periodCaption = comparableMonth['Date']
-  } else if (period==='MOM' && comparableMonth) {
-    periodCaption = comparableMonth['Date']
-  } else {
-    periodCaption = ''
-  }
+  // let periodCaption
+  // if (period==='YOY' && comparableMonth) {
+  //   periodCaption = comparableMonth['Date']
+  // } else if (period==='MOM' && comparableMonth) {
+  //   periodCaption = comparableMonth['Date']
+  // } else {
+  //   periodCaption = ''
+  // }
 
-
+  console.log(ce2020)
   return (
     <div style={{backgroundColor: mainBackgroundColor}}>
       <Page className={classes.root} title="Auto Report Card">
@@ -122,10 +126,15 @@ export default function DashboardAlternativeView(props) {
               <GraphCard
                 imageSrc={imageSrc}
                 height={500}
+                width={'full'}
                 header={'Market Share & Office Volume by Month'}
               />
 
-              <Test />
+              <GoalDonuts
+                mshare={thisMonth['YTD Market Share Volume']}
+                goals={[goals['Goal'], goals['Stretch Goal']]}
+                incentives={[goals['Increase'], goals['Stretch Increase']]}
+              />
 
             </Grid>
 

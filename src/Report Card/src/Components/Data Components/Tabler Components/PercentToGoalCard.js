@@ -9,16 +9,22 @@ import {
 } from 'tabler-react';
 import C3Chart from "react-c3js";
 import { setDonutColor } from '../_functions';
-import { printPercent } from '../../../../functions/dataDisplayers';
+import { asUSD, printPercent } from '../../../../functions/dataDisplayers';
 
 
 export default function PercentToGoal(props) {
-  let { percentageToGoal, header } = props
+  let { incentive, percentageToGoal, header } = props
 
   let displayProgress = printPercent(percentageToGoal, -2)
   percentageToGoal = percentageToGoal <= 1 ? percentageToGoal * 100 : 100
   let progressColor = setDonutColor(percentageToGoal)
   let percentLeft = percentageToGoal <= 100 ? 100 - percentageToGoal : 0
+
+  if(incentive === 0){
+    incentive = 'Re-Evaluate'
+  } else {
+    incentive = '+$' + incentive + '/Mo'
+  }
 
   console.log(percentageToGoal)
   return (
@@ -26,7 +32,8 @@ export default function PercentToGoal(props) {
       <Card>
         <Card.Body>
           <Card.Body className="text-center">
-            <Header size={5}>{header}</Header>
+            <Header size={10}>{header}</Header>
+            <Header size={5}>{incentive}</Header>
             <div className="display-4 font-weight-bold mb-4">{displayProgress}</div>
           </Card.Body>
           <C3Chart
