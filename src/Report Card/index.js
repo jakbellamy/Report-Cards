@@ -45,7 +45,7 @@ export default function DashboardAlternativeView(props) {
     let _accountData = searchData(data, params)
     let _goalsData = searchData(goalData, params, 'Name')[0]
     let _thisMonth = _accountData.length > 0 ? _accountData[_accountData.length - 1] : null
-    let _imageSrc = `./Plots/2021-02-12 ${searchData(data, params)[0]['Account']}.png`
+    let _imageSrc = `./Plots/share_${searchData(data, params)[0]['Account']}.png`
     let _ce2020 = searchData(ce_2020, params)
     let _ce2021 = searchData(ce_2021, params)
 
@@ -84,15 +84,6 @@ export default function DashboardAlternativeView(props) {
 
   }, []);
 
-  // let periodCaption
-  // if (period==='YOY' && comparableMonth) {
-  //   periodCaption = comparableMonth['Date']
-  // } else if (period==='MOM' && comparableMonth) {
-  //   periodCaption = comparableMonth['Date']
-  // } else {
-  //   periodCaption = ''
-  // }
-
   console.log(ce2020)
   return (
     <div style={{backgroundColor: mainBackgroundColor}}>
@@ -126,8 +117,8 @@ export default function DashboardAlternativeView(props) {
               <GraphCard
                 imageSrc={imageSrc}
                 height={500}
-                width={'full'}
                 header={'Market Share & Office Volume by Month'}
+                account={thisMonth['Account']}
               />
 
               <GoalDonuts
@@ -143,7 +134,7 @@ export default function DashboardAlternativeView(props) {
               <ContinuingEducation />
             </Grid>
           </Grid>
-          <Box height={650}>
+          <Box height={300}>
 
           </Box>
         </Container>

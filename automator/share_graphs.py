@@ -41,7 +41,9 @@ date_floor = '2018-12-31'
 date_ceiling = False
 
 name_key = {
-    'KW - Brandon': 'KW - Suburban Tampa'
+    'KW - Brandon': 'KW - Suburban Tampa',
+    'KW - Kannapolis': 'KW - Premier',
+    'KW - Athens': 'KW - Greater Athens'
 }
 
 valid_accounts = [account for account in set(asa_accounts['Account'])
@@ -136,8 +138,8 @@ for account_name in valid_accounts:
         best_dataset['Supreme Volume'] / best_dataset['Office Volume'])
 
     #       Save Dataset
-    target_dataset.to_excel(f"./datasets/{datetime.now().strftime('%Y-%m-%d')} {account_name}.xlsx")
-    best_dataset.to_excel(f"./best_datasets/Best Comparison for {account_name}.xlsx")
+#     target_dataset.to_excel(f"./datasets/{datetime.now().strftime('%Y-%m-%d')} {account_name}.xlsx")
+#     best_dataset.to_excel(f"./best_datasets/Best Comparison for {account_name}.xlsx")
 
     #       Plot Chart
     fig = plt.figure()
@@ -160,14 +162,13 @@ for account_name in valid_accounts:
     ax = plt.gca()
     ax.yaxis.set_major_formatter(as_percent)
 
-    ax.set_title(f'Supreme Market Share in {account_name}', fontweight='bold', pad=10)
-    ax.set_xlabel('Quarter')
-    ax.set_ylabel('Supreme Market Share')
-    ax.legend(loc=2, prop={'size': 12})
+#     ax.set_title(f'Supreme Market Share in {account_name}', fontweight='bold', pad=10)
+#     ax.set_xlabel('Quarter')
+#     ax.set_ylabel('Supreme Market Share')
+    ax.legend(loc=2, prop={'size': 14})
 
-    filename = f"./plots/{datetime.now().strftime('%Y-%m-%d')} {account_name}.png"
-    fig.set_size_inches(11.5, 8.5)
-    plt.savefig(filename, dpi=300,
-                facecolor='w', edgecolor='w')
+    filename = f"/Users/jakobbellamy/Dev/_supreme/Report Card/public/plots/share_{account_name}.png"
+#     fig.set_size_inches(10, 6)
+    plt.savefig(filename, dpi=300, facecolor='w', bbox_inches='tight')
 
 print('Complete')

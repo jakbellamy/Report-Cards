@@ -7,10 +7,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d0bc8d6a-fedc-4de2-bb38-f2b918ef4cd3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Report Card/functions/jsonParsers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/functions/jsonParsers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/automator/share_graphs.py" beforeDir="false" afterPath="$PROJECT_DIR$/automator/share_graphs.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Report Card/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/Tabler Components/PercentToGoalCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/Tabler Components/PercentToGoalCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Components/Tabler Components/Data Components/GoalDonuts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/Tabler Components/GoalDonuts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Components/_Modules/GraphCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/_Modules/GraphCard.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
