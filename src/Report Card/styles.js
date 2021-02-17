@@ -19,5 +19,6 @@ export const useStyles = () => {
 }
 
 export const cardElevation = 1
-export const mainBackgroundColor = '#F4F5F5'
+// export const mainBackgroundColor = '#F4F5F5'
+export const mainBackgroundColor = '#F5F7FB'
 

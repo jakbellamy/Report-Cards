@@ -6,31 +6,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0bc8d6a-fedc-4de2-bb38-f2b918ef4cd3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Report Card/src/Components/Continuing Education Components/ContinuingEducation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Report Card/src/Components/Continuing Education Components/styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Report Card/src/Components/_Modules/centeredImage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Report Card/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Report Card/indexFunctions.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Report Card/src/Components/BEST Components/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/BEST Components/styles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Report Card/src/Components/BEST Components/upcomingBest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/BEST Components/upcomingBest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/DataBox/DataBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/DataBox/DataBox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Components/Continuing Education Components/ContinuingEducation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/Continuing Education Components/ContinuingEducation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Components/Continuing Education Components/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/Continuing Education Components/styles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Report Card/src/Components/Header/ReportCardHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/Header/ReportCardHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Components/Header/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/Header/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Report Card/src/InfoComponents/AccountBio/Bio.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Deprecated Components/AccountBio/Bio.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Report Card/src/InfoComponents/Contacts/ContactRow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Deprecated Components/Contacts/ContactRow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Report Card/src/InfoComponents/Contacts/Contacts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Deprecated Components/Contacts/Contacts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Report Card/src/InfoComponents/ContinuingEducation/Education.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Deprecated Components/ContinuingEducation/Education.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Report Card/src/InfoComponents/ContinuingEducation/TopicsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Deprecated Components/ContinuingEducation/TopicsList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Report Card/src/InfoComponents/Leads/Leads.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Deprecated Components/Leads/Leads.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Report Card/src/InfoComponents/LoanOfficers/LoanOfficers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Deprecated Components/LoanOfficers/LoanOfficers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Report Card/src/InfoComponents/PersonalBest/PersonalBest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Deprecated Components/PersonalBest/PersonalBest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Modules/BoxDivider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/_Modules/BoxDivider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Modules/GraphCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/_Modules/GraphCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Modules/Module.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/data/constants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Modules/NullBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/_Modules/NullBlock.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Modules/SimpleList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/_Modules/deprecated/SimpleList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Modules/Title.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/_Modules/deprecated/Title.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Report Card/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/styles.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

@@ -18,6 +18,7 @@ import {
   Grid,
   Box
 } from '@material-ui/core';
+import ContinuingEducation from './src/Components/Continuing Education Components/ContinuingEducation';
 
 const data = require('./data/data.json')
 const ppbData = require('./data/ppb.json')
@@ -119,8 +120,9 @@ export default function DashboardAlternativeView(props) {
                 header={'Market Share & Office Volume by Month'}/>
             </Grid>
 
-            <Grid item xs={6} id={'Marketing-Column'}>
+            <Grid item spacing={3} sxs={6} id={'Marketing-Column'}>
               <UpcomingBest />
+              <ContinuingEducation />
             </Grid>
           </Grid>
           <Box height={650}>
