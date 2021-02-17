@@ -1,3 +1,0 @@
-##Django Server Documentation
-
-* ###[Routes]()
