@@ -27,7 +27,7 @@ export const DataBox = props => {
   return (
     <Card {...rest} className={clsx(classes.root, className)} elevation={cardElevation}>
 
-      <Typography className={classes.title} variant="h5">
+      <Typography className={classes.title} variant="h3">
         <span>
           {title.replace('Volume', '')}
         </span>
@@ -39,19 +39,19 @@ export const DataBox = props => {
       <CardContent>
         <Grid container spacing={1}>
           <Grid item xs={'auto'}>
-            <Typography variant="subtitle2">{valueYTD}</Typography>
+            <Typography variant="h4" className="display-4 font-weight-bold ">{valueYTD}</Typography>
           </Grid>
           <Grid item xs={'auto'}>
-            <i><Typography variant="caption">({captions[0]})</Typography></i>
+            <Typography variant="caption">({captions[0]})</Typography>
           </Grid>
         </Grid>
 
         <Grid container spacing={1}>
           <Grid item xs={'auto'}>
-            <Typography variant="subtitle2">{valueComp}</Typography>
+            <Typography variant="h4" className="display-4 font-weight-bold ">{valueComp}</Typography>
           </Grid>
           <Grid item xs={'auto'}>
-            <i><Typography variant="caption">({captions[1]})</Typography></i>
+            <Typography variant="caption">({captions[1]})</Typography>
           </Grid>
         </Grid>
 

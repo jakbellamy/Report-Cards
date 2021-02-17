@@ -7,7 +7,8 @@ export default makeStyles(theme => ({
   difference: {
     marginTop: theme.spacing(1),
     display: 'flex',
-    alignItems: 'center'
+    textAlign: 'right',
+    fontWeight: 'bolder'
   },
   differenceValue: {
     color: props =>
