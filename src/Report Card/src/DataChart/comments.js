@@ -6,7 +6,7 @@ import MarketShareChart from './charts/MarketShareChart';
 import PropTypes from 'prop-types';
 import DataChart from './DataCharts';
 import Grid from '@material-ui/core/Grid';
-import GenericMoreButton from '../../../../../components/GenericMoreButton';
+import GenericMoreButton from '../../../src/components/GenericMoreButton';
 
 const useStyles = makeStyles(() => ({
   root: {},

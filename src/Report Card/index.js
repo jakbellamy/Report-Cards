@@ -20,14 +20,14 @@ import GraphCard from './src/Modules/GraphCard';
 import { reportCardIndexStyles } from './styles';
 import {searchData} from './parsing';
 import MShareVolume from './src/Components/DataPoints/MShareVolume';
-import { doIfExists, ifExists } from '../../../utilities/functions/conditionals';
+import { doIfExists, ifExists } from '../src/utilities/functions/conditionals';
 import diff from 'redux-logger/src/diff';
 import { asUSD } from './functions/methods';
 import OfficeVolume from './src/Components/DataPoints/OfficeVolume';
 import Card from '@material-ui/core/Card';
 import Box from '@material-ui/core/Box';
 import CardHeader from '@material-ui/core/CardHeader';
-import Page from '../../../components/Page';
+import Page from '../src/components/Page';
 
 //----------------------------------------------------------
 //Constants

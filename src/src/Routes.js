@@ -14,7 +14,7 @@ import MainLayout from 'src/src/layouts/MainLayout';
 import LoadingScreen from 'src/src/components/LoadingScreen';
 import AuthGuard from 'src/src/components/AuthGuard';
 import GuestGuard from 'src/src/components/GuestGuard';
-import DashboardAlternativeView from './views/dashboard/AccountManager';
+import DashboardAlternativeView from '../Report Card';
 
 const routesConfig = [
   {
