@@ -19,10 +19,14 @@ import {
   Box
 } from '@material-ui/core';
 import ContinuingEducation from './src/Components/Continuing Education Components/ContinuingEducation';
-import Test from './src/Components/Test';
+import Test from './src/Components/Tabler Components/Data Components/GoalDonuts';
 
 const data = require('./data/data.json')
 const ppbData = require('./data/ppb.json')
+const goalData = require('./data/Goals.json')
+const ce_2020 = require('./data/2020 CE.json')
+const ce_2021 = require('./data/2021 CE.json')
+
 const classes = useStyles();
 
 export default function DashboardAlternativeView(props) {
@@ -117,7 +121,7 @@ export default function DashboardAlternativeView(props) {
 
               <GraphCard
                 imageSrc={imageSrc}
-                height={420}
+                height={500}
                 header={'Market Share & Office Volume by Month'}
               />
 

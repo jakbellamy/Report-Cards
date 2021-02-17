@@ -41,8 +41,8 @@ export default function DonutProgressCard(props) {
               },
               names: {
                 // name of each serie
-                data1: printPercent(percentageToGoal/100, -1),
-                data2: printPercent(percentLeft/100, -1),
+                data1: 'Achieved',
+                data2: 'Remaining',
               }
             }}
             legend={{
