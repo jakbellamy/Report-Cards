@@ -1,5 +1,5 @@
 import React from 'react';
-import { DataBox } from '../../Modules/DataBox/DataBox';
+import { DataBox } from '../DataBox/DataBox';
 import { asUSD } from '../../../functions/methods';
 import { compData } from '../../../index';
 import Grid from '@material-ui/core/Grid';

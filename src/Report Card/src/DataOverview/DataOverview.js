@@ -3,7 +3,7 @@ import Volume from './volume'
 import Units from './units'
 import { Box, Grid, makeStyles, Typography} from '@material-ui/core';
 import PropTypes from 'prop-types';
-import {filterForYear, find_ly} from '../../parsing'
+import {filterForYear, find_ly} from '../../functions/parsing'
 
 const useStyles = makeStyles((theme) => ({
   root: {

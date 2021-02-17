@@ -6,19 +6,19 @@ import _ from 'lodash';
 
 //----------------------------------------------------------
 //Modules
-import { DataBox } from './src/Modules/DataBox/DataBox';
+import { DataBox } from './src/Components/DataBox/DataBox';
 import BoxDivider from './src/Modules/BoxDivider';
 import NullBlock from './src/Modules/NullBlock';
 
 //----------------------------------------------------------
 //Components
-import ReportCardHeader from './src/ReportCardHeader';
+import ReportCardHeader from './src/Header/ReportCardHeader';
 import GraphCard from './src/Modules/GraphCard';
 
 //----------------------------------------------------------
 //Functions
 import { reportCardIndexStyles } from './styles';
-import {searchData} from './parsing';
+import {searchData} from './functions/parsing';
 import MShareVolume from './src/Components/DataPoints/MShareVolume';
 import { doIfExists, ifExists } from '../src/utilities/functions/conditionals';
 import diff from 'redux-logger/src/diff';

@@ -6,7 +6,7 @@ import { Box, Card, Tabs, Tab, Divider, makeStyles, CardHeader } from '@material
 import MarketShareChart from './charts/MarketShareChart';
 import VolumeOverTime from './charts/VolumeOverTime';
 import UnitsOverTime from './charts/UnitsOverTime';
-import {filterForYear} from '../../parsing'
+import {filterForYear} from '../../functions/parsing'
 import _ from 'lodash'
 
 

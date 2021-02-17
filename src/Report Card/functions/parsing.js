@@ -1,5 +1,5 @@
 import _ from 'lodash';
-const data = require('./data.json')
+const data = require('../data.json')
 
 const print = (x) => console.log(x)
 
