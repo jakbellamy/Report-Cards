@@ -1,7 +1,8 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 export const useStyles = makeStyles((theme) => ({
-  upcomingBestRoot: {},
+  root: {paddingTop: '2%'},
+  upcomingBestRoot: {paddingTop: '2%'},
   upcomingBestCard: {},
   title: {
     textAlign: 'center',

@@ -20,6 +20,8 @@ import {
 } from '@material-ui/core';
 import ContinuingEducation from './src/Components/Continuing Education Components/ContinuingEducation';
 import GoalDonuts from './src/Components/Data Components/Tabler Components/GoalDonuts';
+import CSAT from './src/Components/BEST Components/csat';
+import CenteredImage from './src/Components/_Modules/centeredImage';
 
 const data = require('./data/data.json')
 const ppbData = require('./data/ppb.json')
@@ -126,16 +128,33 @@ export default function DashboardAlternativeView(props) {
                 incentives={[goals['Increase'], goals['Stretch Increase']]}
               />
 
+              <ContinuingEducation ce2020={ce2020} ce2021={ce2021} />
+
             </Grid>
 
             <Grid item spacing={3} sxs={6} id={'Marketing-Column'}>
+              <CenteredImage src={'./images/Credit Essentials.jpg'} height={300} />
+              <Box paddingTop={'2%'}>
+                <Grid container spacing={3}>
+                  <Grid item xs={6}>
+                    <CenteredImage src={'./images/CSAT.png'} height={280} />
+                  </Grid>
+                  <Grid item xs={6}>
+                    <CenteredImage src={'./images/CSAT.png'} height={280} />
+                  </Grid>
+                </Grid>
+              </Box>
+              <Box paddingTop={'2%'}>
+                <CenteredImage src={'./images/Courses Offered.png'} height={610} />
+              </Box>
+
               <UpcomingBest />
-              <ContinuingEducation ce2020={ce2020} ce2021={ce2021} />
+              <CSAT />
             </Grid>
           </Grid>
-          <Box height={300}>
+          {/*<Box height={300}>*/}
 
-          </Box>
+          {/*</Box>*/}
         </Container>
       </Page>
     </div>

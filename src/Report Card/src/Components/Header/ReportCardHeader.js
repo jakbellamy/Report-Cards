@@ -26,12 +26,12 @@ export default function ReportCardHeader(props) {
         </div>
       </Grid>
 
-      <Grid item xs={4}>
-        <Box className={classes.logoBox} paddingRight={'15%'}>
-          <CenteredImage src={supremeTitleLogoURL} height={'70'} />
-        </Box>
-      </Grid>
-      <Grid item xs={1} />
+      {/*<Grid item xs={4}>*/}
+      {/*  <Box className={classes.logoBox} paddingRight={'15%'}>*/}
+      {/*    <CenteredImage src={supremeTitleLogoURL} height={'70'} />*/}
+      {/*  </Box>*/}
+      {/*</Grid>*/}
+      {/*<Grid item xs={1} />*/}
     </Grid>
   );
 }

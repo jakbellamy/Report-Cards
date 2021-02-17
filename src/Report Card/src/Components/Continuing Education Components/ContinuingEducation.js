@@ -1,8 +1,13 @@
 import React from 'react';
 import { useStyles } from './styles'
 import { cardElevation } from '../../../styles';
-import "tabler-react/dist/Tabler.css";
-import { Header} from "tabler-react"
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableContainer from '@material-ui/core/TableContainer';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import Paper from '@material-ui/core/Paper';
 import {
   Card,
   Box,
@@ -14,27 +19,48 @@ import { variableBestTagline } from '../../../data/constants';
 
 export default function ContinuingEducation(props) {
   const classes = useStyles();
-  const {ce2020, ce2021} = props
+  let {ce2020, ce2021} = props
 
-  console.log(ce2020, ce2021)
+  const sortByMonth = (arr) => {
+    return arr.sort((a,b) => {
+      return b['month'] - a['month']
+    })
+  }
+
+  ce2020 = sortByMonth(ce2020)
+  ce2021 = sortByMonth(ce2021)
   return (
-    <Box className={classes.root}>
-      <Card className={classes.card} elevation={cardElevation}>
-        {/*<CardHeader*/}
-        {/*  title ={*/}
-        {/*    <Box>*/}
-        {/*      <Typography gutterBottom variant="h3" component="h1" className={classes.title}>*/}
-        {/*        Continuing Education*/}
-        {/*      </Typography>*/}
-        {/*      /!*{OPTIONAL SUBTITLE}*!/*/}
-        {/*      /!*<Typography gutterBottom variant="subtitle1" component="h1" className={classes.subtitle}>*!/*/}
-        {/*      /!*  {variableBestTagline}*!/*/}
-        {/*      /!*</Typography>*!/*/}
-        {/*    </Box>*/}
-        {/*  } />*/}
-        <Header.H1 align={'center'} size={1}>Continuing Education</Header.H1>
-      </Card>
-    </Box>
+    <Card className={classes.card} elevation={cardElevation}>
 
+  <TableContainer className={classes.root}>
+        <Table>
+          <TableHead>
+            <TableRow>
+              <TableCell>Date</TableCell>
+              <TableCell>Class</TableCell>
+              <TableCell>Status</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {ce2021.map(row => (
+              <TableRow key={row['Date']}>
+                <TableCell component='th' scope='row'>{row['Date']}</TableCell>
+                <TableCell>{row['Class']}</TableCell>
+                <TableCell>{row['Status']}</TableCell>
+              </TableRow>
+
+            ))}
+            {ce2020.map(row => (
+              <TableRow key={row['Date']}>
+                <TableCell component='th' scope='row'>{row['Date']}</TableCell>
+                <TableCell>{row['Class']}</TableCell>
+                <TableCell>{row['Status']}</TableCell>
+              </TableRow>
+
+            ))}
+          </TableBody>
+        </Table>
+    </TableContainer>
+    </Card>
   );
 }

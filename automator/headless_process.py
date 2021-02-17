@@ -48,26 +48,36 @@ print('Beginning Report Generation')
 only_alpha = lambda x: ''.join([s for s in x if str.isalpha(s)])
 
 for account in accounts_list:
-    name = account
-    account = [x if not any(s for s in x if str.isnumeric(s))
-               else False for x in account.split(' ')]
+    name_key = {
+        'KW - Brandon': 'KW - Suburban Tampa',
+        'KW - Kannapolis': 'KW - Premier',
+        'KW - Athens': 'KW - Greater Athens'
+    }
+    account = name_key[account] if account in list(name_key.keys()) else account
 
-    chunks = []
-    for chunk in account:
-        if chunk:
-            chunks += chunk
-        else:
-            chunks = []
+    try:
+        name = account
+        account = [x if not any(s for s in x if str.isnumeric(s))
+                   else False for x in account.split(' ')]
 
-    account = ''.join(chunks)
-    url = f'http://localhost:3000/{only_alpha(account).lower()}'
-    browser.get(url)
-    sleep(2.5)
+        chunks = []
+        for chunk in account:
+            if chunk:
+                chunks += chunk
+            else:
+                chunks = []
 
-    ele=browser.find_element("xpath", '//div[@class="MuiContainer-root makeStyles-container-2"]')
-    total_height = ele.size["height"]
+        account = ''.join(chunks)
+        url = f'http://localhost:3000/{only_alpha(account).lower()}'
+        browser.get(url)
+        sleep(2.5)
 
-    browser.set_window_size(1200, total_height)      #the trick
-    sleep(2)
-    browser.save_screenshot(f"./Reports/{name}.png")
+        ele=browser.find_element_by_class_name('MuiContainer-root')
+        total_height = ele.size["height"]
+
+        browser.set_window_size(1600, total_height)      #the trick
+        sleep(2)
+        browser.save_screenshot(f"./Reports/{name}.png")
+    except:
+        print('failed on ', account)
 browser.close()
