@@ -13,7 +13,8 @@ export default function OfficeVolume(props) {
 
   if (comparableMonth) {
     captions = [thisMonth['Date'], comparableMonth['Date']]
-    differenceValue = calculatePercentChange(valueKey, thisMonth, comparableMonth)
+    differenceValue = (
+      calculatePercentChange(valueKey, thisMonth, comparableMonth) * 100)
       .toFixed(2)
       .toString() + '%'
     if (!differenceValue.includes('-')){

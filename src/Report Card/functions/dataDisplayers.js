@@ -6,8 +6,8 @@ const asUSD = (cost) => {
 
 const printPercent = (percent, toDecimalPlace=0) => {
   percent = (percent * 100)
-    .toFixed(2 + toDecimalPlace)
-    .toString()
+              .toFixed(2 + toDecimalPlace)
+              .toString()
   return percent + '%'
 }
 

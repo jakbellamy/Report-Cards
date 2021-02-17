@@ -11,7 +11,7 @@ const valueKeyText = (period) => {
 
 const formatPercentAsString = (percentInt) => {
   let percentStr = (
-    percentInt
+    (percentInt * 100)
       .toFixed(2)
       .toString() + '%'
   )

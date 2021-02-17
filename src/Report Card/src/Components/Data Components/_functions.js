@@ -1,6 +1,7 @@
 import { printPercent } from '../../../functions/dataDisplayers';
+import { colors } from 'tabler-react';
 
-const determineProgressMeterColor = (progressWidth) => {
+const determineProgressColor = (progressWidth) => {
   if(progressWidth >= 90) {
     return 'green'
   }else if(90 > progressWidth <= 70) {
@@ -10,7 +11,14 @@ const determineProgressMeterColor = (progressWidth) => {
   }
 }
 
+const setDonutColor = (percentProgress) => {
+  let progressColor = determineProgressColor(percentProgress) + '-light'
+  return colors[progressColor]
+}
+
 export {
   printPercent,
-  determineProgressMeterColor
+  determineProgressColor,
+  setDonutColor
 }
+

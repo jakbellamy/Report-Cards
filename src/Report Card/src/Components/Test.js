@@ -22,6 +22,7 @@ import {
 import C3Chart from "react-c3js";
 import Box from '@material-ui/core/Box';
 import ProgressMeterCard from './Data Components/Tabler Components/ProgressCard';
+import DonutProgressCard from './Data Components/Tabler Components/DonutProgressCard';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -34,6 +35,10 @@ export default function Test(props) {
     <Box marginTop={'2%'}>
       <Grid.Row>
         <ProgressMeterCard
+          header={'Percent to Goal'}
+          percentageToGoal={.86}
+        />
+        <DonutProgressCard
           header={'Percent to Goal'}
           percentageToGoal={.86}
         />
