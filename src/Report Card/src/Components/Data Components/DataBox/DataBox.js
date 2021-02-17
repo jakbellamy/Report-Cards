@@ -8,6 +8,7 @@ import {
   Typography,
 } from '@material-ui/core';
 import useStyles from './styles';
+import { cardElevation } from '../../../../styles';
 
 export const DataBox = props => {
   let { className, title, valueYTD, valueComp, differenceValue, captions, ...rest } = props;
@@ -24,7 +25,7 @@ export const DataBox = props => {
   })
 
   return (
-    <Card {...rest} className={clsx(classes.root, className)} elevation={0}>
+    <Card {...rest} className={clsx(classes.root, className)} elevation={cardElevation}>
 
       <Typography className={classes.title} variant="h5">
         <span>

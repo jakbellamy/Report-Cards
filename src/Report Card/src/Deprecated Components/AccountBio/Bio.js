@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { Box, Card, CardHeader, Divider, Typography, Grid, makeStyles, GridList, GridListTile } from '@material-ui/core';
-import SimpleList from '../../Modules/SimpleList'
+import SimpleList from '../../Components/_Modules/deprecated/SimpleList'
 import { asUSD } from '../../../functions/dataDisplayers';
 
 const useStyles = makeStyles((theme) => ({

@@ -2,8 +2,8 @@ import React from 'react';
 import { Box, Card, CardHeader, Divider, makeStyles, Button } from '@material-ui/core';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import Title from '../../Modules/Title'
-import SimpleList from '../../Modules/SimpleList'
+import Title from '../../Components/_Modules/deprecated/Title'
+import SimpleList from '../../Components/_Modules/deprecated/SimpleList'
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import TopicsList from './TopicsList';

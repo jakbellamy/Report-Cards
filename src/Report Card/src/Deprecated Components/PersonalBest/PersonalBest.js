@@ -3,8 +3,8 @@ import _ from 'lodash';
 import { Box, Card, CardHeader, Divider, Grid, makeStyles, Typography } from '@material-ui/core';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import Title from '../../Modules/Title'
-import SimpleList from '../../Modules/SimpleList';
+import Title from '../../Components/_Modules/deprecated/Title'
+import SimpleList from '../../Components/_Modules/deprecated/SimpleList';
 
 const useStyles = makeStyles((theme) => ({
   root: {

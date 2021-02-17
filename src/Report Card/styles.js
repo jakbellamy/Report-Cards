@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core';
 
-export const reportCardIndexStyles = () => {
+export const useStyles = () => {
   return makeStyles((theme) => ({
     root: {
       backgroundColor: theme.palette.background.dark,
@@ -17,4 +17,7 @@ export const reportCardIndexStyles = () => {
     }
   }))
 }
+
+export const cardElevation = 1
+export const mainBackgroundColor = '#F4F5F5'
 

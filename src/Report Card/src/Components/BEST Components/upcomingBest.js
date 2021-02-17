@@ -1,25 +1,40 @@
 import React from 'react';
-import { useUpcomingBestStyles } from './styles';
+import { useStyles } from './styles';
+import CenteredImage from '../_Modules/centeredImage';
+import { upcomingBestImageURL, variableBestTagline } from '../../../data/constants';
 import {
   Box,
   CardHeader,
   Card
 } from '@material-ui/core';
+import Typography from '@material-ui/core/Typography';
+import { cardElevation } from '../../../styles';
+
 
 export default function UpcomingBest(props) {
-  const classes = useUpcomingBestStyles();
+  const classes = useStyles();
   return (
-    <Card >
-      <center>
-        <CardHeader title={'Building a Championship Season in with Dr. Kevin Elko'} />
-      </center>
-      <Box padding={5} paddingTop={1}>
-        <center><img
-          src={'https://supremebest.com/wp-content/uploads/2021/01/D44DEBE4-84F2-44EF-98DC-A946D243C709.jpg'}
-          height={'270'}
-          width={'auto'}
-        /></center>
-      </Box>
-    </Card>
+    <Box className={classes.upcomingBestRoot}>
+      <Card className={classes.upcomingBestCard} elevation={cardElevation}>
+          <CardHeader
+            className={classes.upcomingBestTitle}
+            titleTypographyProps={{variant:'h4' }}
+            title = {
+              <Box>
+                <Typography gutterBottom variant="h3" component="h1">
+                  Personal & Professional BEST
+                </Typography>
+                {/*{OPTIONAL SUBTITLE}*/}
+                <Typography gutterBottom variant="subtitle1" component="h1">
+                  {variableBestTagline}
+                </Typography>
+              </Box>
+            }
+          />
+        <Box padding={3} paddingTop={0}>
+          <CenteredImage src={upcomingBestImageURL} height={'290'}/>
+        </Box>
+      </Card>
+    </Box>
   );
 }

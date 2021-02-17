@@ -1,10 +1,13 @@
 import React from 'react';
+import { useStyles } from './styles'
+import CenteredImage from '../_Modules/centeredImage';
+import { supremeTitleLogoURL } from '../../../data/constants';
+
 import {
   Grid,
-  Typography
+  Typography,
+  Box
 } from '@material-ui/core';
-
-import { useStyles } from './styles'
 
 let today = new Date()
 
@@ -15,13 +18,16 @@ export default function ReportCardHeader(props) {
       <Grid item xs={7}>
         <div style={{paddingTop: 20}}>
           <Typography variant="h1">{props.accountData[0] ? props.accountData[0]['Account'] : ''}</Typography>
-          <Typography variant="subtitle1">{props.accountData[0] ? `Date: ${today.toLocaleDateString()}` : ''}</Typography>
+          <Typography variant="caption">{props.accountData[0] ? `Date: ${today.toLocaleDateString()}` : ''}</Typography>
         </div>
       </Grid>
 
-      <Grid item xs={5}>
-        <center><img src={'https://supremebest.com/wp-content/uploads/2020/02/supreme_logo.svg'} width={'80%'} /></center>
+      <Grid item xs={4}>
+        <Box className={classes.logoBox}>
+          <CenteredImage src={supremeTitleLogoURL} height={'70'} />
+        </Box>
       </Grid>
+      <Grid item xs={1} />
     </Grid>
   );
 }

@@ -1,29 +1,27 @@
 import React, { useEffect, useState } from 'react';
 import _ from 'lodash';
+import { mainBackgroundColor, useStyles } from './styles';
+import Page from '../src/components/Page';
+import BoxDivider from './src/Components/_Modules/BoxDivider';
+import NullBlock from './src/Components/_Modules/NullBlock';
+import ReportCardHeader from './src/Components/Header/ReportCardHeader';
+import GraphCard from './src/Components/_Modules/GraphCard';
+import {searchData} from './functions/jsonParsers';
+import MShareVolume from './src/Components/Data Components/DataPoints/MShareVolume';
+import OfficeVolume from './src/Components/Data Components/DataPoints/OfficeVolume';
+import UpcomingBest from './src/Components/BEST Components/upcomingBest';
+import { ifExists } from './functions/conditionals';
+import {firstStr, lastStr} from './functions/stringParsers';
+
 import {
   Container,
   Grid,
-  Box,
-  CardHeader
+  Box
 } from '@material-ui/core';
-import Page from '../src/components/Page';
-import BoxDivider from './src/Modules/BoxDivider';
-import NullBlock from './src/Modules/NullBlock';
-import ReportCardHeader from './src/Components/Header/ReportCardHeader';
-import GraphCard from './src/Modules/GraphCard';
-import { reportCardIndexStyles } from './styles';
-import {searchData} from './functions/jsonParsers';
-import MShareVolume from './src/Components/Data Components/DataPoints/MShareVolume';
-import { ifExists } from './functions/conditionals';
-import OfficeVolume from './src/Components/Data Components/DataPoints/OfficeVolume';
-import Card from '@material-ui/core/Card';
-import {firstStr, lastStr} from './functions/stringParsers';
-import { calculatePercentChange} from './functions/dataMethods';
-import UpcomingBest from './src/Components/BEST Components/upcomingBest';
+
 const data = require('./data/data.json')
 const ppbData = require('./data/ppb.json')
-
-const useStyles = reportCardIndexStyles()
+const classes = useStyles();
 
 export default function DashboardAlternativeView(props) {
   const [accountData, setAccountData] = useState([])
@@ -32,7 +30,6 @@ export default function DashboardAlternativeView(props) {
   const [ppb, setPpb] = useState([{ 'Title': '', 'Date': '' }])
   const [period, setPeriod] = useState('YOY')
   const [imageSrc, setImageSrc] = useState('')
-  const classes = useStyles();
 
   useEffect(() => {
 
@@ -88,48 +85,51 @@ export default function DashboardAlternativeView(props) {
 
 
   return (
-    <Page className={classes.root} title="Auto Report Card">
-      <Container maxWidth={false} className={classes.container} id={'content-container'}>
+    <div style={{backgroundColor: mainBackgroundColor}}>
+      <Page className={classes.root} title="Auto Report Card">
+        <Container maxWidth={false} className={classes.container} id={'content-container'}>
 
-        <NullBlock />
-        <ReportCardHeader accountData={accountData} />
+          <NullBlock />
+          <ReportCardHeader accountData={accountData} />
 
-        <BoxDivider
-          paddingTop={3}
-          paddingBottom={3}
-        />
+          <BoxDivider
+            paddingTop={3}
+            paddingBottom={3}
+          />
 
-        <Grid container spacing={3} id={'Report-Card-Content'}>
-          <Grid item xs={6} id={'Data-Column'}>
-            <Grid container spacing={2}>
-              <MShareVolume
-                thisMonth={thisMonth}
-                comparableMonth={comparableMonth}
-                period={period}
-              />
-              <OfficeVolume
-                thisMonth={thisMonth}
-                comparableMonth={comparableMonth}
-                period={period}
-              />
+          <Grid container spacing={3} id={'Report-Card-Content'}>
+            <Grid item xs={6} id={'Data-Column'}>
+              <Grid container spacing={2}>
+                <MShareVolume
+                  thisMonth={thisMonth}
+                  comparableMonth={comparableMonth}
+                  period={period}
+                />
+                <OfficeVolume
+                  thisMonth={thisMonth}
+                  comparableMonth={comparableMonth}
+                  period={period}
+                />
+              </Grid>
+
+
+              <GraphCard
+                imageSrc={imageSrc}
+                height={420}
+                header={'Market Share & Office Volume by Month'}/>
             </Grid>
 
-
-            <GraphCard
-              imageSrc={imageSrc}
-              height={420}
-              header={'Market Share & Office Volume by Month'}/>
+            <Grid item xs={6} id={'Marketing-Column'}>
+              <UpcomingBest />
+            </Grid>
           </Grid>
+          <Box height={650}>
 
-          <Grid item xs={6} id={'Marketing-Column'}>
-            <UpcomingBest />
-          </Grid>
-        </Grid>
-        <Box height={650}>
+          </Box>
+        </Container>
+      </Page>
+    </div>
 
-        </Box>
-      </Container>
-    </Page>
   );
 }
 

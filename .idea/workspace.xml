@@ -6,10 +6,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0bc8d6a-fedc-4de2-bb38-f2b918ef4cd3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Report Card/src/Components/BEST Components/styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Report Card/src/Components/BEST Components/upcomingBest.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Report Card/src/Components/Continuing Education Components/ContinuingEducation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Report Card/src/Components/Continuing Education Components/styles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Report Card/src/Components/_Modules/centeredImage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Report Card/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/indexFunctions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Components/BEST Components/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/BEST Components/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Components/BEST Components/upcomingBest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/BEST Components/upcomingBest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/DataBox/DataBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/DataBox/DataBox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Components/Header/ReportCardHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/Header/ReportCardHeader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Components/Header/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/Header/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/src/InfoComponents/AccountBio/Bio.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Deprecated Components/AccountBio/Bio.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/src/InfoComponents/Contacts/ContactRow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Deprecated Components/Contacts/ContactRow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/src/InfoComponents/Contacts/Contacts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Deprecated Components/Contacts/Contacts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/src/InfoComponents/ContinuingEducation/Education.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Deprecated Components/ContinuingEducation/Education.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/src/InfoComponents/ContinuingEducation/TopicsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Deprecated Components/ContinuingEducation/TopicsList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/src/InfoComponents/Leads/Leads.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Deprecated Components/Leads/Leads.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/src/InfoComponents/LoanOfficers/LoanOfficers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Deprecated Components/LoanOfficers/LoanOfficers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/src/InfoComponents/PersonalBest/PersonalBest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Deprecated Components/PersonalBest/PersonalBest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Modules/BoxDivider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/_Modules/BoxDivider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Modules/GraphCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/_Modules/GraphCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Modules/Module.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/data/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Modules/NullBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/_Modules/NullBlock.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Modules/SimpleList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/_Modules/deprecated/SimpleList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Modules/Title.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/_Modules/deprecated/Title.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/styles.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,11 +81,11 @@
       <recent name="$PROJECT_DIR$/src/views/dashboard/AccountManager" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Report Card/src/Deprecated Components" />
+      <recent name="$PROJECT_DIR$/src/Report Card/src/Components/deprecated" />
+      <recent name="$PROJECT_DIR$/src/Report Card/src/Components/Module Components/deprecated" />
+      <recent name="$PROJECT_DIR$/src/Report Card/src/Components/Module Components" />
       <recent name="$PROJECT_DIR$/src/Report Card/src/Components/Data Components" />
-      <recent name="$PROJECT_DIR$/src/Report Card/JSON" />
-      <recent name="$PROJECT_DIR$/src/Report Card/index" />
-      <recent name="$PROJECT_DIR$/src/Report Card/functions" />
-      <recent name="$PROJECT_DIR$/src/Report Card/src/Components" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -180,10 +202,10 @@
       <screen x="0" y="0" width="1080" height="1920" />
     </state>
     <state x="297" y="824" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/1080.719.1920.1080/0.0.1080.1920@0.0.1080.1920" timestamp="1611154622159" />
-    <state x="776" y="318" width="777" height="523" key="find.popup" timestamp="1613524111490">
+    <state x="776" y="318" width="777" height="582" key="find.popup" timestamp="1613530978349">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="776" y="318" width="777" height="523" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1613524111490" />
+    <state x="776" y="318" width="777" height="582" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1613530978349" />
     <state x="887" y="327" width="888" height="537" key="find.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1612893958859" />
     <state x="325" y="427" width="670" height="1238" key="search.everywhere.popup" timestamp="1611155359298">
       <screen x="0" y="0" width="1080" height="1920" />
@@ -214,7 +236,7 @@
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/Report Card/src/Modules/SimpleList.js</url>
+          <url>file://$PROJECT_DIR$/src/Report Card/src/Components/_Modules/deprecated/SimpleList.js</url>
           <line>29</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
@@ -229,12 +251,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/index.js</url>
           <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/Report Card/index.js</url>
-          <line>13</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

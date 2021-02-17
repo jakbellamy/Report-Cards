@@ -1,5 +1,8 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 export const useStyles = makeStyles((theme) => ({
-  root: {}
+  root: {},
+  logoBox: {
+    marginTop: '4%'
+  }
 }));
