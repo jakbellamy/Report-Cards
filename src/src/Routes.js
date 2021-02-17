@@ -14,7 +14,7 @@ import MainLayout from 'src/src/layouts/MainLayout';
 import LoadingScreen from 'src/src/components/LoadingScreen';
 import AuthGuard from 'src/src/components/AuthGuard';
 import GuestGuard from 'src/src/components/GuestGuard';
-import DashboardAlternativeView from '../Report Card';
+import ReportCard from '../Report Card';
 
 const routesConfig = [
   {
@@ -49,7 +49,7 @@ const routesConfig = [
       {
         exact: true,
         path: '/app/dashboard/account-manager',
-        component: DashboardAlternativeView
+        component: ReportCard
       },
       {
         exact: true,
@@ -109,8 +109,8 @@ const renderRoutes = (routes) => (routes ? (
 const reportCardRoute = () => {
   return (
     <Switch>
-      <Route path="*" component={DashboardAlternativeView} />
-      <Route path="*/:account" component={DashboardAlternativeView} />
+      <Route path="*" component={ReportCard} />
+      <Route path="*/:account" component={ReportCard} />
     </Switch>
   )
 }

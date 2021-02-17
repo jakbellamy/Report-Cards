@@ -16,12 +16,14 @@ import {firstStr, lastStr} from './functions/stringParsers';
 import {
   Container,
   Grid,
-  Box
+  Box,
+  CardHeader
 } from '@material-ui/core';
 import ContinuingEducation from './src/Components/Continuing Education Components/ContinuingEducation';
 import GoalDonuts from './src/Components/Data Components/Tabler Components/GoalDonuts';
 import CSAT from './src/Components/BEST Components/csat';
 import CenteredImage from './src/Components/_Modules/centeredImage';
+import Card from '@material-ui/core/Card';
 
 const data = require('./data/data.json')
 const ppbData = require('./data/ppb.json')
@@ -31,7 +33,7 @@ const ce_2021 = require('./data/2021 CE.json')
 
 const classes = useStyles();
 
-export default function DashboardAlternativeView(props) {
+export default function ReportCard(props) {
   const [accountData, setAccountData] = useState([])
   const [thisMonth, setThisMonth] = useState({})
   const [comparableMonth, setComparableMonth] = useState({})
@@ -137,7 +139,12 @@ export default function DashboardAlternativeView(props) {
               <Box paddingTop={'2%'}>
                 <Grid container spacing={3}>
                   <Grid item xs={6}>
-                    <CenteredImage src={'./images/CSAT.png'} height={280} />
+                    <Card>
+                      <CardHeader title={"Supreme vs Industry"} />
+                      <Box height={230}>
+
+                      </Box>
+                    </Card>
                   </Grid>
                   <Grid item xs={6}>
                     <CenteredImage src={'./images/CSAT.png'} height={280} />
@@ -149,7 +156,7 @@ export default function DashboardAlternativeView(props) {
               </Box>
 
               <UpcomingBest />
-              <CSAT />
+              {/*<CSAT />*/}
             </Grid>
           </Grid>
           {/*<Box height={300}>*/}
