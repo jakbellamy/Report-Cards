@@ -13,27 +13,24 @@ import { asUSD, printPercent } from '../../../../functions/dataDisplayers';
 
 
 export default function PercentToGoal(props) {
-  let { incentive, percentageToGoal, header, display } = props
+  let { mshare, percentageToGoal, header, display } = props
 
   let displayProgress = printPercent(percentageToGoal, -2)
   percentageToGoal = percentageToGoal <= 1 ? percentageToGoal * 100 : 100
   let progressColor = setDonutColor(percentageToGoal)
   let percentLeft = percentageToGoal <= 100 ? 100 - percentageToGoal : 0
   display = printPercent(display)
-  if(incentive === 0){
-    incentive = 'Re-Evaluate'
-  } else {
-    incentive = '+$' + incentive + '/Mo'
-  }
+
+
 
   console.log(percentageToGoal)
   return (
-    <Grid.Col sm={6}>
-      <Card>
+    <Grid.Col sm={6} marginTop={-2}>
+      <Card >
         <Card.Body>
           <Card.Body className="text-center">
-            <Header size={10}>{header}</Header>
-            <Header size={5}>{incentive}</Header>
+            <Header className="display-12 font-weight-medium ">{header}</Header>
+            <Header size={15}>Current: {printPercent(mshare)}</Header>
             <div className="display-4 font-weight-bold mb-4">{display}</div>
           </Card.Body>
           <C3Chart

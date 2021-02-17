@@ -39,19 +39,15 @@ export default function GoalDonuts(props) {
         <PercentToGoalCard
           header={'Market Share Goal'}
           percentageToGoal={mshare/goals[0]}
-          incentive={incentives[0]}
+          mshare={mshare}
           display={goals[0]}
         />
         <PercentToGoalCard
           header={'Stretch Goal'}
           percentageToGoal={mshare/goals[1]}
-          incentive={incentives[1]}
+          mshare={mshare}
           display={goals[1]}
         />
-        {/*<DonutProgressCard*/}
-        {/*  header={'Percent to Goal'}*/}
-        {/*  percentageToGoal={.86}*/}
-        {/*/>*/}
       </Grid.Row>
     </Box>
   );
