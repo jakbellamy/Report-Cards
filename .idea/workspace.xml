@@ -7,11 +7,17 @@
   <component name="ChangeListManager">
     <list default="true" id="d0bc8d6a-fedc-4de2-bb38-f2b918ef4cd3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Components/BEST Components/upcomingBest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/BEST Components/upcomingBest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Components/Continuing Education Components/ContinuingEducation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/Continuing Education Components/ContinuingEducation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/DataBox/DataBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/DataBox/DataBox.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/DataFunctions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/DataFunctions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/DataPoints/MShareVolume.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/DataPoints/MShareVolume.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/DataPoints/NewMShare.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/DataPoints/NewMShare.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/DataPoints/OfficeVolume.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/DataPoints/OfficeVolume.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/Tabler Components/GoalDonuts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/Tabler Components/GoalDonuts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/Tabler Components/PercentToGoalCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/Tabler Components/PercentToGoalCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/_functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/_functions.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,10 +184,11 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1613522880714" />
-    <state x="297" y="824" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1611154622159">
-      <screen x="0" y="0" width="1080" height="1920" />
+    <state x="528" y="464" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1613663475510">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="297" y="824" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/1080.719.1920.1080/0.0.1080.1920@0.0.1080.1920" timestamp="1611154622159" />
+    <state x="528" y="464" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1613663475510" />
     <state x="981" y="23" width="663" height="792" key="dock-window-1" timestamp="1613544079020">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>

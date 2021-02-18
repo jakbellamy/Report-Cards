@@ -1,5 +1,5 @@
 import React from 'react';
-import { useStyles } from './styles'
+import { useStyles } from './styles';
 import { cardElevation } from '../../../styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -7,32 +7,25 @@ import TableCell from '@material-ui/core/TableCell';
 import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
-import Paper from '@material-ui/core/Paper';
-import {
-  Card,
-  Box,
-  CardHeader
-} from '@material-ui/core';
-// import { DataGrid } from '@material-ui/data-grid';
-import Typography from '@material-ui/core/Typography';
-import { variableBestTagline } from '../../../data/constants';
+import { Card } from '@material-ui/core';
 
 export default function ContinuingEducation(props) {
   const classes = useStyles();
-  let {ce2020, ce2021} = props
+  let { ce2020, ce2021 } = props;
 
   const sortByMonth = (arr) => {
-    return arr.sort((a,b) => {
-      return b['month'] - a['month']
-    })
-  }
+    return arr.sort((a, b) => {
+      return b['month'] - a['month'];
+    });
+  };
 
-  ce2020 = sortByMonth(ce2020)
-  ce2021 = sortByMonth(ce2021)
+  ce2020 = sortByMonth(ce2020);
+  ce2021 = sortByMonth(ce2021);
+
   return (
     <Card className={classes.card} elevation={cardElevation}>
 
-  <TableContainer className={classes.root}>
+      <TableContainer className={classes.root}>
         <Table>
           <TableHead>
             <TableRow>
@@ -60,7 +53,7 @@ export default function ContinuingEducation(props) {
             ))}
           </TableBody>
         </Table>
-    </TableContainer>
+      </TableContainer>
     </Card>
   );
 }

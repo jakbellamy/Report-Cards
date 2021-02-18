@@ -5,24 +5,24 @@ import { calculatePercentChange } from '../../../../functions/dataMethods';
 import Grid from '@material-ui/core/Grid';
 
 export default function MShareVolume(props) {
-  const { thisMonth, comparableMonth, period } = props
+  const { thisMonth, comparableMonth, period } = props;
 
-  let differenceValue
-  let captions = ['', '']
-  let valueKey = period === 'YOY' ? 'YTD Market Share Volume' : 'Market Share Volume'
+  let differenceValue;
+  let captions = ['', ''];
+  let valueKey = period === 'YOY' ? 'YTD Market Share Volume' : 'Market Share Volume';
 
   if (comparableMonth) {
-    captions = [thisMonth['Date'], comparableMonth['Date']]
+    captions = [thisMonth['Date'], comparableMonth['Date']];
     differenceValue = calculatePercentChange(valueKey, thisMonth, comparableMonth)
       .toFixed(0)
-      .toString() + '%'
-    if (!differenceValue.includes('-')){
-      differenceValue = '+' + differenceValue
+      .toString() + '%';
+    if (!differenceValue.includes('-')) {
+      differenceValue = '+' + differenceValue;
     }
   } else {
-    differenceValue = ''
+    differenceValue = '';
   }
-  console.log(captions)
+  console.log(captions);
   return (
     <Grid item xs={6}>
       <DataBox

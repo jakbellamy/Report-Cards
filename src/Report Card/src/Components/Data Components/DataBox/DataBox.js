@@ -5,7 +5,7 @@ import {
   Card,
   CardContent,
   Grid,
-  Typography,
+  Typography
 } from '@material-ui/core';
 import useStyles from './styles';
 import { cardElevation } from '../../../../styles';
@@ -16,13 +16,15 @@ export const DataBox = props => {
   const classes = useStyles({ positiveDifference, ...props });
 
   captions = captions.map(caption => {
-    if(!caption){ return '' }
+    if (!caption) {
+      return '';
+    }
     return (
-      caption.split(' ')[0].slice(0,3)
+      caption.split(' ')[0].slice(0, 3)
       + ' '
       + caption.split(' ')[1]
-    )
-  })
+    );
+  });
 
   return (
     <Card {...rest} className={clsx(classes.root, className)} elevation={cardElevation}>
