@@ -17,7 +17,7 @@ export default function MShareVolume(props) {
   if (comparableMonth) {
     captions = [thisMonth['Date'], comparableMonth['Date']]
     let percentChangeInt = calculatePercentChange(valueKey, thisMonth, comparableMonth)
-    percentChangeStr = formatPercentAsString(percentChangeInt)
+    percentChangeStr = formatPercentAsString(percentChangeInt, 0)
   }
 
   let valueYTD = thisMonth[valueKey] ? printPercent(thisMonth[valueKey]) : ''

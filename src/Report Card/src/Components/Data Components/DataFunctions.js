@@ -9,10 +9,10 @@ const valueKeyText = (period) => {
   }
 }
 
-const formatPercentAsString = (percentInt) => {
+const formatPercentAsString = (percentInt, toFixed=2) => {
   let percentStr = (
     (percentInt * 100)
-      .toFixed(2)
+      .toFixed(toFixed)
       .toString() + '%'
   )
   let intSign = percentStr.includes('-') ? '' : '+'

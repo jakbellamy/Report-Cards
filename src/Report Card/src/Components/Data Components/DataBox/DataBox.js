@@ -39,7 +39,7 @@ export const DataBox = props => {
       <CardContent>
         <Grid container spacing={1}>
           <Grid item xs={'auto'}>
-            <Typography variant="h4" className="display-4 font-weight-bold ">{valueYTD}</Typography>
+            <Typography variant="h4" className="display-4 font-weight-medium ">{valueYTD}</Typography>
           </Grid>
           <Grid item xs={'auto'}>
             <Typography variant="caption">({captions[0]})</Typography>
@@ -48,7 +48,7 @@ export const DataBox = props => {
 
         <Grid container spacing={1}>
           <Grid item xs={'auto'}>
-            <Typography variant="h4" className="display-4 font-weight-bold ">{valueComp}</Typography>
+            <Typography variant="h4" className="display-4 font-weight-medium">{valueComp}</Typography>
           </Grid>
           <Grid item xs={'auto'}>
             <Typography variant="caption">({captions[1]})</Typography>
