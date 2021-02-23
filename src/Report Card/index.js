@@ -75,7 +75,7 @@ export default function ReportCard(props) {
       let lastYearDate = thisMonthMonth + ' ' + (thisMonthYear - 1).toString();
       let lastYear = _.find(monthSet, { 'Date': lastYearDate });
 
-      if (lastYear) {
+      if (lastYear && lastYear['Office Volume'] > 0) {
         setPeriod('YOY');
         setComparableMonth(lastYear);
       } else if (_accountData[_accountData.length - 2]) {
