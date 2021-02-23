@@ -18,18 +18,18 @@ export default function GoalDonuts(props) {
     <Box marginTop={'2%'}>
       <Grid.Row>
         <PercentToGoalCard
-          header={'Market Share Goal'}
-          percentageToGoal={mshare / goals[0]}
+          header={'Goal'}
           mshare={mshare}
-          display={goals[0]}
           color={progressColors[0]}
+          goal={goals[0]}
         />
         <PercentToGoalCard
-          header={'Stretch Goal'}
+          header={'Stretch'}
           percentageToGoal={mshare / goals[1]}
           mshare={mshare}
-          display={goals[1]}
           color={progressColors[1]}
+          goal={goals[1]}
+
         />
       </Grid.Row>
     </Box>

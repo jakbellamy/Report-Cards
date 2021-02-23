@@ -8,32 +8,29 @@ import {
   Header
 } from 'tabler-react';
 import C3Chart from 'react-c3js';
-import { setDonutColor } from '../_functions';
-import { asUSD, printPercent } from '../../../../functions/dataDisplayers';
+import { printPercent } from '../../../../functions/dataDisplayers';
+import Typography from '@material-ui/core/Typography';
 
 
 export default function PercentToGoal(props) {
-  let { mshare, percentageToGoal, header, display, color } = props;
+  let { mshare, goal, header, color } = props;
 
-  let displayProgress = printPercent(percentageToGoal, -2);
-  percentageToGoal = percentageToGoal <= 1 ? percentageToGoal * 100 : 100;
-
+  let percentageToGoal = mshare / goal <= 1 ? mshare / goal * 100 : 100;
   let percentLeft = percentageToGoal <= 100 ? 100 - percentageToGoal : 0;
-  display = printPercent(display);
 
 
   console.log(percentageToGoal);
   return (
     <Grid.Col sm={6} marginTop={-2}>
-      <Card>
-        <Card.Body>
-          <Card.Body className="text-center">
-            <Header className="display-12 font-weight-medium ">{header}</Header>
-            <Header size={15}>Current: {printPercent(mshare)}</Header>
-            <div className="display-4 font-weight-bold mb-4">{display}</div>
+      <Card >
+          <Card.Body className="text-center" paddingTop={-2}>
+            <Typography variant={'subtitle2'}>Market Share Goals</Typography>
+
+            <Header className="display-4 font-weight-medium mb-auto">{header}</Header>
+            <Header className="display-4 font-weight-bold mb-0">{printPercent(goal)}</Header>
           </Card.Body>
           <C3Chart
-            style={{ height: '15rem' }}
+            style={{ height: '15rem'}}
             data={{
               columns: [
                 ['data1', percentageToGoal],
@@ -45,20 +42,27 @@ export default function PercentToGoal(props) {
                 data2: colors['gray-lighter']
               },
               names: {
-                // name of each serie
-                data1: 'Percent to Goal',
-                data2: 'Percent Increase to Reach Goal'
-              }
+                data1: 'Current: ' + printPercent(mshare, -1),
+                data2: percentageToGoal <= 100 ? 'Difference: ' + printPercent(goal - mshare, -1) : 'Difference: 0%'
+              },
+              labels: false
             }}
             legend={{
-              // show: true, //hide legend
+              show: true, //hide legend
             }}
             padding={{
               bottom: 0,
               top: -4
             }}
+            tooltip={{
+              show: false
+            }}
+            donut={{
+              label: {
+                show: false
+              }
+            }}
           />
-        </Card.Body>
       </Card>
     </Grid.Col>
   );

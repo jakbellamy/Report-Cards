@@ -3,7 +3,7 @@ import { colors } from 'tabler-react';
 
 const determineProgressColor = (progressWidth) => {
   console.log(progressWidth);
-  if (progressWidth >= 90) {
+  if (progressWidth >= 85) {
     return 'green';
   } else if (progressWidth >= 70) {
     console.log('hit');

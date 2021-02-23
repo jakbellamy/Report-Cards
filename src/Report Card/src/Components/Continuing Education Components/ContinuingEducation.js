@@ -24,36 +24,6 @@ export default function ContinuingEducation(props) {
 
   return (
     <Card className={classes.card} elevation={cardElevation}>
-
-      <TableContainer className={classes.root}>
-        <Table>
-          <TableHead>
-            <TableRow>
-              <TableCell>Date</TableCell>
-              <TableCell>Class</TableCell>
-              <TableCell>Status</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {ce2021.map(row => (
-              <TableRow key={row['Date']}>
-                <TableCell component='th' scope='row'>{row['Date']}</TableCell>
-                <TableCell>{row['Class']}</TableCell>
-                <TableCell>{row['Status']}</TableCell>
-              </TableRow>
-
-            ))}
-            {ce2020.map(row => (
-              <TableRow key={row['Date']}>
-                <TableCell component='th' scope='row'>{row['Date']}</TableCell>
-                <TableCell>{row['Class']}</TableCell>
-                <TableCell>{row['Status']}</TableCell>
-              </TableRow>
-
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
     </Card>
   );
 }

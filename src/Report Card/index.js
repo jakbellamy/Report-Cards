@@ -19,7 +19,7 @@ import {
   Box,
   CardHeader
 } from '@material-ui/core';
-import ContinuingEducation from './src/Components/Continuing Education Components/ContinuingEducation';
+import ContinuingEducation from './src/Components/Continuing Education Components/ContinuingEducation_Deprecated';
 import GoalDonuts from './src/Components/Data Components/Tabler Components/GoalDonuts';
 import CSAT from './src/Components/BEST Components/csat';
 import CenteredImage from './src/Components/_Modules/centeredImage';
@@ -91,7 +91,8 @@ export default function ReportCard(props) {
   return (
     <div style={{ backgroundColor: mainBackgroundColor }}>
       <Page className={classes.root} title="Auto Report Card">
-        <Container maxWidth={false} className={classes.container} id={'content-container'}>
+        <Box marginLeft={3}>
+        <Container maxWidth={false} className={classes.container} id={'content-container'} >
 
           <NullBlock/>
           <ReportCardHeader accountData={accountData}/>
@@ -101,7 +102,7 @@ export default function ReportCard(props) {
             paddingBottom={3}
           />
 
-          <Grid container spacing={3} id={'Report-Card-Content'}>
+          <Grid container spacing={3} id={'Report-Card-Content'} alignItems={'flex-start'} justify={'space-evenly'}>
             <Grid item xs={6} id={'Data-Column'}>
               <Grid container spacing={2}>
                 <MShareVolume
@@ -134,7 +135,7 @@ export default function ReportCard(props) {
 
             </Grid>
 
-            <Grid item spacing={3} sxs={6} id={'Marketing-Column'}>
+            <Grid item spacing={3} sxs={6} id={'Marketing-Column'} >
               <CenteredImage src={'./images/Credit Essentials.jpg'} height={300}/>
               <Box paddingTop={'2%'}>
                 <Grid container spacing={3}>
@@ -163,6 +164,7 @@ export default function ReportCard(props) {
 
           {/*</Box>*/}
         </Container>
+        </Box>
       </Page>
     </div>
 
