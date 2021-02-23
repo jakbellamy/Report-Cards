@@ -78,6 +78,7 @@ for account in accounts_list:
         browser.set_window_size(1600, total_height)      #the trick
         sleep(2)
         browser.save_screenshot(f"./Reports/{name}.png")
-    except:
+    except Exception as e:
+        print(e)
         print('failed on ', account)
 browser.close()

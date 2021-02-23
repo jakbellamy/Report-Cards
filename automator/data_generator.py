@@ -296,7 +296,14 @@ asa_accounts['Start Date'] = asa_accounts['Start Date'].apply(lambda x: x if isi
             #    Save DataFrame as JSON to Report Card Directory   #
 
 monthly_data = pd.merge(df, asa_accounts, left_on=['Account'], right_on=['Name'], how='left').fillna(0).drop(columns=['Name'])
-monthly_data.to_json('~/Dev/_supreme/Report Card/src/views/dashboard/AccountManager/data.json', orient='records')
+name_key = {
+    'KW - Brandon': 'KW - Suburban Tampa',
+    'KW - Kannapolis': 'KW - Premier',
+    'KW - Athens': 'KW - Greater Athens'
+}
+apply_name_key = lambda account: name_key[account] if account in list(name_key.keys()) else account
+monthly_data['Account'] = monthly_data['Account'].apply(apply_name_key)
+monthly_data.to_json('~/Dev/_supreme/Report Card/src/Report Card/data/data.json', orient='records')
 
 print('JSON File Successfully Saved.')
 
