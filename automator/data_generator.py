@@ -375,13 +375,15 @@ for account in list(set(df['Account'])):
     report_card_plot(search(df, 'Account', account))
     pyplot.tight_layout()
 
-    filename = f"{account}-report_card_plot.png"
+    filename = f"share_{account}.svg"
     file_path = f"/Users/jakobbellamy/Dev/_supreme/Report Card/public/Plots/{filename}"
 
     if os.path.isfile(file_path):
        os.remove(file_path)
 
-    pyplot.savefig(file_path, dpi=300, transparent=True)
+    pyplot.figure(figsize=(20, 15))
+    pyplot.tight_layout()
+    pyplot.savefig(file_path, dpi=300)
 
 
 ########################################################################################################################
