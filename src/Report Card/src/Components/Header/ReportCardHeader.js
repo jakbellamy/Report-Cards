@@ -2,6 +2,7 @@ import React from 'react';
 import { useStyles } from './styles'
 import CenteredImage from '../_Modules/centeredImage';
 import { supremeTitleLogoURL } from '../../../data/constants';
+import { Header } from 'tabler-react';
 
 import {
   Grid,
@@ -20,9 +21,10 @@ export default function ReportCardHeader(props) {
   return (
     <Grid container spacing={3}>
       <Grid item xs={7}>
-        <div style={{paddingTop: 20}}>
-          <Typography variant="h1">{accountHeader}</Typography>
-          <Typography variant="h5">{reportDate}</Typography>
+        <div style={{paddingTop: 20, marginLeft: 25, marginBottom: -15}}>
+          <Header className="display-3 font-weight-bold">{accountHeader}</Header>
+          {/*<Typography variant="h1">{accountHeader}</Typography>*/}
+          <Header className="font-weight-normal">{reportDate}</Header>
         </div>
       </Grid>
 

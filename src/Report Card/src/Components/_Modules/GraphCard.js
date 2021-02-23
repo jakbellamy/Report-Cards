@@ -6,6 +6,7 @@ import {
   Header
 } from 'tabler-react';
 import Box from '@material-ui/core/Box';
+import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles((theme) => ({
   root: {}
 }));
@@ -17,7 +18,7 @@ export default function GraphCard(props) {
       <Card elevation={cardElevation}>
         <center>
           <Box marginTop={3} paddingBottom={-3} marginBottom={-1}>
-            <Header.H2>Quarterly Market Share</Header.H2>
+            <Typography variant={'h2'} >SUPREME SHARE</Typography>
           </Box>
 
           <img src={props.imageSrc} width={'100%'} height={props.height} />
