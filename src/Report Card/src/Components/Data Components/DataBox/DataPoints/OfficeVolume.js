@@ -1,7 +1,7 @@
 import React from 'react';
-import { DataBox } from '../DataBox/DataBox';
-import { asUSD } from '../../../../functions/dataDisplayers';
-import { calculatePercentChange } from '../../../../functions/dataMethods';
+import { DataBox } from '../DataBox';
+import { asUSD } from '../../../../../functions/dataDisplayers';
+import { calculatePercentChange } from '../../../../../functions/dataMethods';
 import Grid from '@material-ui/core/Grid';
 
 export default function OfficeVolume(props) {

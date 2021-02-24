@@ -7,11 +7,11 @@ import {
   Grid,
   Typography
 } from '@material-ui/core';
-import useStyles from './styles';
-import { cardElevation } from '../../../../styles';
+import useStyles from '../../Components/Data Components/DataBox/styles';
+import { cardElevation } from '../../../styles';
 
-export const DataBox = props => {
-  let { className, title, valueYTD, valueComp, differenceValue, captions, ...rest } = props;
+export default DataBox = props => {
+  const {className, title, valueYTD, valueComp, differenceValue, captions, ...rest } = props;
   const positiveDifference = differenceValue && differenceValue.charAt(0) === '+';
   const classes = useStyles({ positiveDifference, ...props });
 

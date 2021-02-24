@@ -7,9 +7,9 @@ import NullBlock from './src/Components/_Modules/NullBlock';
 import ReportCardHeader from './src/Components/Header/ReportCardHeader';
 import GraphCard from './src/Components/_Modules/GraphCard';
 import { searchData } from './functions/jsonParsers';
-import MShareVolume from './src/Components/Data Components/DataPoints/MShareVolume';
-import OfficeVolume from './src/Components/Data Components/DataPoints/OfficeVolume';
-import UpcomingBest from './src/Components/BEST Components/upcomingBest';
+import MShareVolume from './src/Components/Data Components/DataBox/DataPoints/MShareVolume';
+import OfficeVolume from './src/Components/Data Components/DataBox/DataPoints/OfficeVolume';
+import UpcomingBest from './src/Components/Inustry Standards/upcomingBest';
 import { ifExists } from './functions/conditionals';
 import { firstStr, lastStr } from './functions/stringParsers';
 
@@ -19,9 +19,9 @@ import {
   Box,
   CardHeader
 } from '@material-ui/core';
-import ContinuingEducation from './src/Components/Continuing Education Components/ContinuingEducation_Deprecated';
+import ContinuingEducation from './src/Components/Continuing Education/ContinuingEducation_Deprecated';
 import GoalDonuts from './src/Components/Data Components/Tabler Components/GoalDonuts';
-import CSAT from './src/Components/BEST Components/csat';
+import CSAT from './src/Components/Inustry Standards/csat';
 import CenteredImage from './src/Components/_Modules/centeredImage';
 import Card from '@material-ui/core/Card';
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid } from '@material-ui/core';
-import { DataBox } from '../DataBox/DataBox';
-import { valueKeyText, calculatePercentChange, printPercent, formatPercentAsString } from '../DataFunctions';
+import { DataBox } from '../DataBox';
+import { valueKeyText, calculatePercentChange, printPercent, formatPercentAsString } from '../../DataFunctions';
 
 export default function MShareVolume(props) {
   const { thisMonth, comparableMonth, period } = props;
