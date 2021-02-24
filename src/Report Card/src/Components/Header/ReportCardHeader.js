@@ -14,15 +14,16 @@ let today = new Date()
 
 
 export default function ReportCardHeader(props) {
+  const { data } = props
   const classes = useStyles();
 
-  let accountHeader = props.accountData[0] ? props.accountData[0]['Account'] : ''
-  let reportDate = props.accountData[0] ? `Date: ${today.toLocaleDateString()}` : ''
+  let accountHeader = data ? data['Account'] : ''
+  let renewal = data ? data['Renewal'] : ''
   return (
 
         <div className={classes.div}>
           <Typography className={classes.accountHeader} >{accountHeader}</Typography>
-          <Header className={classes.date}>{reportDate}</Header>
+          <Typography className={classes.date}>Contract Expiration / Goal Renewal: {renewal}</Typography>
         </div>
 
   );

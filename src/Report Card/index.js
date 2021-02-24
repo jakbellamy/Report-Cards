@@ -93,7 +93,7 @@ export default function ReportCard(props) {
 
   return (
     <div style={{ backgroundColor: mainBackgroundColor }}>
-      <ReportCardHeader accountData={accountData}/>
+      <ReportCardHeader data={thisMonth}/>
 
       <Page>
         <Box marginLeft={3}>

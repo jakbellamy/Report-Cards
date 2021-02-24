@@ -11,12 +11,12 @@ export const useStyles = makeStyles((theme) => ({
     marginTop: '4%'
   },
   accountHeader: {
-    fontSize: '110px',
+    fontSize: '80px',
     fontWeight: 'bold',
     fontFamily: 'Open Sans'
   },
   date: {
-    fontsize: '38px',
+    fontSize: '36px',
     fontWeight: 'medium',
     fontFamily: 'Open Sans'
   }
