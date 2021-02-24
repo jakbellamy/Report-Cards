@@ -25,6 +25,7 @@ import CSAT from './src/Components/Inustry Standards/csat';
 import CenteredImage from './src/Components/_Modules/centeredImage';
 import Card from '@material-ui/core/Card';
 import CloseComparison from './src/Components/Inustry Standards/CloseComparison';
+import ExperienceGrid from './src/Components/Experience';
 
 const data = require('./data/data.json');
 const ppbData = require('./data/ppb.json');
@@ -147,6 +148,9 @@ export default function ReportCard(props) {
                     <CenteredImage src={'./images/CSAT.png'} height={325}/>
                   </Grid>
                 </Grid>
+              </Box>
+              <Box paddingTop={'1%'}>
+                <ExperienceGrid />
               </Box>
               <Box paddingTop={'2%'}>
                 <CenteredImage src={'./images/Courses Offered.png'} height={715}/>
