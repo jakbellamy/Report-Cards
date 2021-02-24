@@ -1,13 +1,12 @@
 {
-  "name": "@devias-io/material-kit-pro-react",
-  "author": "DeviasIO",
-  "email": "contact@devias.io",
+  "name": "Kob's Report Card Generator",
+  "author": "Kob Sailad",
+  "email": "jakbellamy@gmail.com",
   "licence": "UNLICENSED",
-  "version": "2.0.0",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "lint": "eslint ./src",
     "dev": "react-scripts start",
     "start": "set HTTPS=true&&serve -s build",
     "build": "GENERATE_SOURCEMAP=false react-scripts build",
