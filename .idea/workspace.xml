@@ -6,12 +6,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0bc8d6a-fedc-4de2-bb38-f2b918ef4cd3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/DataBox/_Depecrecated_DataBox.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/DataBox/DataBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/DataBox/DataBox.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/DataPoints/MShareVolume.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/DataPoints/MShareVolume.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/DataPoints/NewMShare.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/DataPoints/NewMShare.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/DataPoints/OfficeVolume.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/DataPoints/OfficeVolume.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Report Card/src/Components/_Modules/GraphCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/_Modules/GraphCard.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -153,7 +149,7 @@
       <workItem from="1613078025107" duration="604000" />
       <workItem from="1613490299968" duration="4741000" />
       <workItem from="1613766853595" duration="916000" />
-      <workItem from="1614110245269" duration="13620000" />
+      <workItem from="1614110245269" duration="14427000" />
     </task>
     <servers />
   </component>

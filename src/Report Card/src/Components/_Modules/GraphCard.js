@@ -18,8 +18,11 @@ export default function GraphCard(props) {
       <Card elevation={cardElevation}>
         <center>
           <Box marginTop={3} paddingBottom={-3} marginBottom={-1}>
-            <Header className={'font-normal mb-2'}>
-              Share in {props.account} vs Best in Class
+            <Header className={'font-bold mb-auto'}>
+              {props.account} vs Best in Class
+            </Header>
+            <Header size='3' className={'font-normal mb-auto'}>
+              Market Share
             </Header>
           </Box>
 

@@ -35,32 +35,29 @@ export const DataBox = props => {
   return (
       <Card>
         <Card.Body>
+          <Typography variant={'subtitle2'}>Year-to-Date</Typography>
           <Grid.Row>
             <Grid.Col sm={7}>
-              <Typography variant={'subtitle2'}>Year-to-Date</Typography>
               <Header className={'font-bold mb-2'}>{title}</Header>
             </Grid.Col>
             <Grid.Col sm={5} align={'left'}>
               <Header className={classes.differenceValue}>{differenceValue}</Header>
             </Grid.Col>
           </Grid.Row>
-
-
           <Grid.Row>
-            <Grid.Col sm={5}>
-              <Header className='font-normal mb-0'>{captions[0]}</Header>
+            <Grid.Col sm={'auto'} >
+              <Header size='2' className='font-normal mb-0'>{captions[0]}</Header>
             </Grid.Col>
-            <Grid.Col sm={7} align={'right'}>
-              <Header className='font-medium mb-0'>{valueYTD}</Header>
+            <Grid.Col sm={6} align={'center'}>
+              <Header size='2' className='font-medium mb-0'>{valueYTD}</Header>
             </Grid.Col>
           </Grid.Row>
-
           <Grid.Row>
-            <Grid.Col sm={5}>
-              <Header className='font-normal mb-0'>{captions[1]}</Header>
+            <Grid.Col sm={'auto'}>
+              <Header size='2' className='font-normal mb-0'>{captions[1]}</Header>
             </Grid.Col>
-            <Grid.Col sm={7} align={'right'}>
-              <Header className='font-medium mb-0'>{valueComp}</Header>
+            <Grid.Col sm={6} align={'right'}>
+              <Header size='2' className='font-medium mb-0'>{valueComp}</Header>
             </Grid.Col>
           </Grid.Row>
 
