@@ -28,7 +28,7 @@ export default function ContinuingEducation(props) {
     return event['Status'] != 'Completed' && !event['Status'].includes('Can')
   })
 
-  upcomingEvents = upcomingEvents.slice(0, 3)
+  upcomingEvents = upcomingEvents.slice(0, 1)
 
   let pastEvents = ce2020.concat(ce2021)
   pastEvents = pastEvents.filter(event => {
@@ -79,7 +79,7 @@ export default function ContinuingEducation(props) {
               </Grid>
             </Box>
             <Typography className={classes.subtitle}>
-              Upcoming Events
+              Next Event
             </Typography>
             <TableContainer >
               <Table >
@@ -106,7 +106,7 @@ export default function ContinuingEducation(props) {
             <Typography className={classes.subtitle}>
               Recent Events
             </Typography>
-            <TableContainer className={classes.root} >
+            <TableContainer  >
               <Table>
                 <TableHead>
                   <TableRow>

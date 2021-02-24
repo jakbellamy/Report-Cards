@@ -29,7 +29,7 @@ export const useStyles = makeStyles((theme) => ({
     fontWeight: 'bold',
     fontSize: '50px',
     marginTop: '5px',
-    color: '#50D55A',
+    color: '#4D94C8',
     // margin: '25px 0 -4rem 0'
   },
   overviewText: {

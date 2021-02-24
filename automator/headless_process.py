@@ -85,7 +85,7 @@ for i, account in enumerate(accounts_list):
         ele=browser.find_element_by_class_name('MuiBox-root.MuiBox-root-2')
         total_height = ele.size["height"]
 
-        browser.set_window_size(1650, total_height)
+        browser.set_window_size(1850, total_height)
         sleep(2)
         browser.save_screenshot(f"../__GeneratedReportCards__/{name}.png")
     except Exception as e:

@@ -121,21 +121,18 @@ export default function ReportCard(props) {
               </Grid>
 
 
-              <GraphCard
-                imageSrc={imageSrc}
-                height={500}
-                header={'Market Share & Office Volume by Month'}
-                account={thisMonth['Account']}
-              />
-
               <GoalDonuts
                 mshare={thisMonth['YTD Market Share Volume']}
                 goals={[goals['Goal'], goals['Stretch Goal']]}
                 incentives={[goals['Increase'], goals['Stretch Increase']]}
               />
-              <Box marginTop={3} marginBottom={3}>
-                <ContinuingEducation ce2020={ce2020} ce2021={ce2021}/>
-              </Box>
+
+              <GraphCard
+                imageSrc={imageSrc}
+                height={550}
+                header={'Market Share & Office Volume by Month'}
+                account={thisMonth['Account']}
+              />
 
             </Grid>
 
@@ -144,7 +141,9 @@ export default function ReportCard(props) {
               <Box paddingTop={'2%'}>
                 <ExperienceGrid />
               </Box>
-
+              <Box marginTop={3} marginBottom={3}>
+                <ContinuingEducation ce2020={ce2020} ce2021={ce2021}/>
+              </Box>
               <PnPB />
             </Grid>
           </Grid>
