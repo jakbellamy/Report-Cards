@@ -32,7 +32,7 @@ yarn-error.log*
 ./package.json
 ./jsonconfig.json
 
-.bitmap
+./.bitmap
 .editorconfig
 .env
 .editorconfig
