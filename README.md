@@ -1,4 +1,6 @@
-#<center>Kob's Report Card Generator</center>
+<center><h1>Kob's Report Card Generator</h1></center>
+
+A report card generator for supreme-lending southeast.
 ### Instructions
 
 ##### 1. Run `npm i` inside this application's root directory to install all dependencies.
@@ -16,5 +18,5 @@
 ##### 5. Add Industry Module.
 ##### 6. Add PDF Converter.
 ##### 7. Add Auto-Emailer.
-##### 8. Write a cron script in my server to run this regularly.
-##### 9. Make a web version?
+##### 8. Write a cron script in server to run this regularly and send as mail attachments.
+
