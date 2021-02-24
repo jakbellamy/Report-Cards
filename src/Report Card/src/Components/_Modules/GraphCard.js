@@ -17,7 +17,7 @@ export default function GraphCard(props) {
     <Box>
       <Card elevation={cardElevation}>
         <center>
-          <Box marginTop={3} paddingBottom={-3} marginBottom={-1}>
+          <Box marginTop={3} >
             <Header className={'font-bold mb-auto'}>
               {props.account} vs Best in Class
             </Header>
