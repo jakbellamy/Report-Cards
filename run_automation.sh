@@ -6,4 +6,5 @@ python3 share_graphs.py &&
 echo "Generating Report Cards (Headless)" &&
 python3 headless_process.py
 cd ..
-echo "Complete"
+echo "Fin."
+open '__Generated Report Cards__'

@@ -9,7 +9,7 @@ import seaborn as sns
 from supreme_data.pandas_methods import apply_to_multiple_columns
 from supreme_data.pandas_methods import safe_divide
 
-load_dotenv()
+load_dotenv('../.env')
 
 pg_url = os.getenv('PG_URL')
 gs_id = os.getenv('GS_ID')

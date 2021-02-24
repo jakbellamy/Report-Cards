@@ -6,7 +6,7 @@ import dataset
 from dotenv import load_dotenv
 import os
 
-load_dotenv()
+load_dotenv('../.env')
 pg_url = os.getenv('PG_URL')
 
 opts = Options()
@@ -43,11 +43,24 @@ accounts_list = sorted(list(set(asa_accounts['Name'])))
 #                    STEP 2.                       #
 ####################################################
 
+def printProgressBar (iteration, total, prefix = '', suffix = '', decimals = 1, length = 100, fill = '█', printEnd = "\r"):
+    percent = ("{0:." + str(decimals) + "f}").format(100 * (iteration / float(total)))
+    filledLength = int(length * iteration // total)
+    bar = fill * filledLength + '-' * (length - filledLength)
+    print(f'\r{prefix} |{bar}| {percent}% {suffix}', end = printEnd)
+    # Print New Line on Complete
+    if iteration == total:
+        print()
+
+
 print('Beginning Report Generation')
 
 only_alpha = lambda x: ''.join([s for s in x if str.isalpha(s)])
 
-for account in accounts_list:
+accounts_list += [accounts_list[0]
+
+printProgressBar(0, len(accounts_list), prefix='Report Cards', suffix='Generated', length=50)
+for i, account in enumerate(accounts_list):
     name_key = {
         'KW - Brandon': 'KW - Suburban Tampa',
         'KW - Kannapolis': 'KW - Premier',
@@ -78,7 +91,7 @@ for account in accounts_list:
         browser.set_window_size(1650, total_height)      #the trick
         sleep(2)
         browser.save_screenshot(f"../__Generated Report Cards__/{name}.png")
+        printProgressBar(i + 1, len(accounts_list), prefix='Report Cards', suffix='Generated', length=50)
     except Exception as e:
-        print(e)
-        print('failed on ', account)
+        pass
 browser.close()

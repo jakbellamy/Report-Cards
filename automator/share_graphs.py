@@ -11,7 +11,7 @@ from datetime import datetime
 from IPython.display import display, FileLink
 
 
-load_dotenv('.env')
+load_dotenv('../.env')
 plt.style.use('seaborn')
 plt.rcParams.update({'figure.max_open_warning': 0})
 
@@ -170,5 +170,3 @@ for account_name in valid_accounts:
     filename = f"../public/plots/share_{account_name}.svg"
 #     fig.set_size_inches(10, 6)
     plt.savefig(filename, dpi=1200, facecolor='w', bbox_inches='tight')
-
-print('Complete')
