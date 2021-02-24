@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
 export default function GraphCard(props) {
   const classes = useStyles();
   return (
-    <Box>
+    <Box marginTop={'2%'}>
       <Card elevation={cardElevation}>
         <center>
           <Box marginTop={3} >

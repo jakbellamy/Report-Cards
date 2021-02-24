@@ -24,6 +24,7 @@ import GoalDonuts from './src/Components/Data Components/Tabler Components/GoalD
 import CSAT from './src/Components/Inustry Standards/csat';
 import CenteredImage from './src/Components/_Modules/centeredImage';
 import Card from '@material-ui/core/Card';
+import CloseComparison from './src/Components/Inustry Standards/CloseComparison';
 
 const data = require('./data/data.json');
 const ppbData = require('./data/ppb.json');
@@ -90,82 +91,71 @@ export default function ReportCard(props) {
 
   return (
     <div style={{ backgroundColor: mainBackgroundColor }}>
-      {/*<Page className={classes.root} title="Auto Report Card">*/}
-        <Box marginLeft={3}>
-        <Container maxWidth={false} className={classes.container} id={'content-container'} >
+      <Box marginLeft={3}>
+      <Container maxWidth={false} className={classes.container} id={'content-container'} >
 
-          <NullBlock/>
-          <ReportCardHeader accountData={accountData}/>
+        <NullBlock/>
+        <ReportCardHeader accountData={accountData}/>
 
-          <BoxDivider
-            paddingTop={3}
-            paddingBottom={3}
-          />
+        <BoxDivider
+          paddingTop={3}
+          paddingBottom={3}
+        />
 
-          <Grid container spacing={0} id={'Report-Card-Content'} alignItems={'flex-start'} justify={'space-evenly'}>
-            <Grid item xs={6} id={'Data-Column'}>
-              <Grid container spacing={2}>
-                <MShareVolume
-                  thisMonth={thisMonth}
-                  comparableMonth={comparableMonth}
-                  period={period}
-                />
-                <OfficeVolume
-                  thisMonth={thisMonth}
-                  comparableMonth={comparableMonth}
-                  period={period}
-                />
-              </Grid>
-
-
-              <GraphCard
-                imageSrc={imageSrc}
-                height={500}
-                header={'Market Share & Office Volume by Month'}
-                account={thisMonth['Account']}
+        <Grid container spacing={0} id={'Report-Card-Content'} alignItems={'flex-start'} justify={'space-evenly'}>
+          <Grid item xs={6} id={'Data-Column'}>
+            <Grid container spacing={2}>
+              <MShareVolume
+                thisMonth={thisMonth}
+                comparableMonth={comparableMonth}
+                period={period}
               />
-
-              <GoalDonuts
-                mshare={thisMonth['YTD Market Share Volume']}
-                goals={[goals['Goal'], goals['Stretch Goal']]}
-                incentives={[goals['Increase'], goals['Stretch Increase']]}
+              <OfficeVolume
+                thisMonth={thisMonth}
+                comparableMonth={comparableMonth}
+                period={period}
               />
-
-              <ContinuingEducation ce2020={ce2020} ce2021={ce2021}/>
-
             </Grid>
 
-            <Grid item id={'Marketing-Column'} alignItems={'flex-start'}>
-              <CenteredImage src={'./images/Credit Essentials.jpg'} height={350}/>
-              <Box paddingTop={'2%'}>
-                <Grid container spacing={3}>
-                  <Grid item xs={6}>
-                    <Card>
-                      <CardHeader title={'Supreme vs Industry'}/>
-                      <Box height={260}>
 
-                      </Box>
-                    </Card>
-                  </Grid>
-                  <Grid item xs={6}>
-                    <CenteredImage src={'./images/CSAT.png'} height={325}/>
-                  </Grid>
-                </Grid>
-              </Box>
-              <Box paddingTop={'2%'}>
-                <CenteredImage src={'./images/Courses Offered.png'} height={715}/>
-              </Box>
+            <GraphCard
+              imageSrc={imageSrc}
+              height={500}
+              header={'Market Share & Office Volume by Month'}
+              account={thisMonth['Account']}
+            />
 
-              <UpcomingBest/>
-              {/*<CSAT />*/}
-            </Grid>
+            <GoalDonuts
+              mshare={thisMonth['YTD Market Share Volume']}
+              goals={[goals['Goal'], goals['Stretch Goal']]}
+              incentives={[goals['Increase'], goals['Stretch Increase']]}
+            />
+
+            <ContinuingEducation ce2020={ce2020} ce2021={ce2021}/>
+
           </Grid>
-          {/*<Box height={300}>*/}
 
-          {/*</Box>*/}
-        </Container>
-        </Box>
-      {/*</Page>*/}
+          <Grid item id={'Marketing-Column'} alignItems={'flex-start'}>
+            <CenteredImage src={'./images/Credit Essentials.jpg'} height={350}/>
+            <Box paddingTop={'2%'}>
+              <Grid container spacing={3}>
+                <Grid item xs={6}>
+                  <CloseComparison />
+                </Grid>
+                <Grid item xs={6}>
+                  <CenteredImage src={'./images/CSAT.png'} height={325}/>
+                </Grid>
+              </Grid>
+            </Box>
+            <Box paddingTop={'2%'}>
+              <CenteredImage src={'./images/Courses Offered.png'} height={715}/>
+            </Box>
+            <UpcomingBest/>
+          </Grid>
+        </Grid>
+        <NullBlock/>
+      </Container>
+      </Box>
     </div>
 
   );

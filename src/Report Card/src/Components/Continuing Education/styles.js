@@ -4,7 +4,9 @@ export const useStyles = makeStyles((theme) => ({
   root: {
     // paddingTop: '',
   },
-  card: {},
+  card: {
+    marginTop: '2.5%'
+  },
   title: {
     textAlign: 'center',
   },

@@ -3,7 +3,8 @@ import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import {
   CardContent,
-  Typography
+  Typography,
+  Card as MCard
 } from '@material-ui/core';
 import {
   Grid,
@@ -33,7 +34,7 @@ export const DataBox = props => {
   });
 
   return (
-      <Card>
+      <MCard elevation={cardElevation}>
         <Card.Body>
           <Typography variant={'subtitle2'}>Year-to-Date</Typography>
           <Grid.Row>
@@ -62,7 +63,7 @@ export const DataBox = props => {
           </Grid.Row>
 
         </Card.Body>
-      </Card>
+      </MCard>
   );
 };
 

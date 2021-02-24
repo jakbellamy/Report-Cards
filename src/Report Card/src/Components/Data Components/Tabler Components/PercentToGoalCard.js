@@ -3,13 +3,15 @@ import {
   Grid,
   ProgressCard,
   StatsCard,
-  Card,
   colors,
-  Header
+  Header,
+  Card as TCard
 } from 'tabler-react';
 import C3Chart from 'react-c3js';
 import { printPercent } from '../../../../functions/dataDisplayers';
 import Typography from '@material-ui/core/Typography';
+import Card from '@material-ui/core/Card';
+import { cardElevation } from '../../../../styles';
 
 
 export default function PercentToGoal(props) {
@@ -21,14 +23,14 @@ export default function PercentToGoal(props) {
 
   console.log(percentageToGoal);
   return (
-    <Grid.Col sm={6} marginTop={-2}>
-      <Card >
-          <Card.Body className="text-center" paddingTop={-2}>
+    <Grid.Col sm={6} marginTop={-2} >
+      <Card elevation={cardElevation} >
+          <TCard.Body className="text-center" paddingTop={-2}>
             <Typography variant={'subtitle2'}>Market Share Goals</Typography>
 
             <Header className="display-4 font-weight-medium mb-auto">{header}</Header>
             <Header className="display-4 font-weight-bold mb-0">{printPercent(goal)}</Header>
-          </Card.Body>
+          </TCard.Body>
           <C3Chart
             style={{ height: '15rem'}}
             data={{
