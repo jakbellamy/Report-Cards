@@ -1,13 +1,14 @@
 [
-  { "Title": "#BESTIN20: A Year in Review", "Date": "Nov 18, 2020" },
-  { "Title": "Better Decisions, Fewer Regrets", "Date": "Oct 22, 2020" },
-  { "Title": "Love Everybody Better", "Date": "Sep 24, 2020" },
-  { "Title": "The Energy Bus", "Date": "Aug 6, 2020" },
   {
-    "Title": "Profiles in BEST: A Conversation with Herschel Walker",
-    "Date": "Jul 2, 2020"
+    "Title": "Mind, Body, and Spirit",
+    "Date": "Feb 18, 2021",
+    "Text": "The road to becoming the BEST of ourselves requires us to dig deeper and consider a more comprehensive view of our health defined by 3 core components — Our Mind, Our Bodies, and our Spirits.",
+    "Image": "https://supremebest.com/wp-content/uploads/2021/02/image001.jpg"
   },
-  { "Title": "Be The Source", "Date": "Jun 4, 2020" },
-  { "Title": "Choose Better Not Bitter", "Date": "Apr 2, 2020" },
-  { "Title": "Love Thy Neighbor", "Date": "Mar 19, 2020" }
+  {
+    "Title": "Building a Championship Season",
+    "Date": "Jan 21, 2021",
+    "Text": "As we reflect on 2020 and begin to think about setting goals for 2021, we know that becoming our #BESTIN21 will require each of us to create a specific plan for success.",
+    "Image": "https://supremebest.com/wp-content/uploads/2021/01/D44DEBE4-84F2-44EF-98DC-A946D243C709.jpg'"
+  }
 ]

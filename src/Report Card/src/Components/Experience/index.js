@@ -3,7 +3,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import {Card, Grid} from '@material-ui/core'
 import { Header, colors } from 'tabler-react';
 import Box from '@material-ui/core/Box';
-import {Card as TCard} from 'tabler-react';
 import Typography from '@material-ui/core/Typography';
 
 const data = require('../../../data/experience.json')

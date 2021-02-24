@@ -26,6 +26,7 @@ import CenteredImage from './src/Components/_Modules/centeredImage';
 import Card from '@material-ui/core/Card';
 import CloseComparison from './src/Components/Inustry Standards/CloseComparison';
 import ExperienceGrid from './src/Components/Experience';
+import PnPB from './src/Components/PPB';
 
 const data = require('./data/data.json');
 const ppbData = require('./data/ppb.json');
@@ -139,24 +140,14 @@ export default function ReportCard(props) {
 
             <Grid item id={'Marketing-Column'} alignItems={'flex-start'}>
               <CenteredImage src={'./images/Credit Essentials.jpg'} height={400}/>
-
-              {/*<Box paddingTop={'2%'}>*/}
-              {/*  <Grid container spacing={3}>*/}
-              {/*    <Grid item xs={6}>*/}
-              {/*      <CloseComparison />*/}
-              {/*    </Grid>*/}
-              {/*    <Grid item xs={6}>*/}
-              {/*      <CenteredImage src={'./images/CSAT.png'} height={325}/>*/}
-              {/*    </Grid>*/}
-              {/*  </Grid>*/}
-              {/*</Box>*/}
               <Box paddingTop={'2%'}>
                 <ExperienceGrid />
               </Box>
-              <Box paddingTop={'2%'}>
-                <CenteredImage src={'./images/Courses Offered.png'} height={715}/>
-              </Box>
-              <UpcomingBest/>
+              {/*<Box paddingTop={'2%'}>*/}
+              {/*  <CenteredImage src={'./images/Courses Offered.png'} height={715}/>*/}
+              {/*</Box>*/}
+              {/*<UpcomingBest/>*/}
+              <PnPB />
             </Grid>
           </Grid>
           <NullBlock/>
