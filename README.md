@@ -14,3 +14,7 @@
 ##### 3. Add COT/FOT Module.
 ##### 4. Fix CE Module.
 ##### 5. Add Industry Module.
+##### 6. Add PDF Converter.
+##### 7. Add Auto-Emailer.
+##### 8. Write a cron script in my server to run this regularly.
+##### 9. Make a web version?
