@@ -137,11 +137,6 @@ for account_name in valid_accounts:
     best_dataset['Market Share'] = pd.to_numeric(
         best_dataset['Supreme Volume'] / best_dataset['Office Volume'])
 
-    #       Save Dataset
-#     target_dataset.to_excel(f"./datasets/{datetime.now().strftime('%Y-%m-%d')} {account_name}.xlsx")
-#     best_dataset.to_excel(f"./best_datasets/Best Comparison for {account_name}.xlsx")
-
-    #       Plot Chart
     fig = plt.figure()
 
     font = {'size': 22}
@@ -162,11 +157,7 @@ for account_name in valid_accounts:
     ax = plt.gca()
     ax.yaxis.set_major_formatter(as_percent)
 
-#     ax.set_title(f'Supreme Market Share in {account_name}', fontweight='bold', pad=10)
-#     ax.set_xlabel('Quarter')
-#     ax.set_ylabel('Supreme Market Share')
     ax.legend(loc=2, prop={'size': 11})
 
     filename = f"../public/plots/share_{account_name}.svg"
-#     fig.set_size_inches(10, 6)
     plt.savefig(filename, dpi=1200, facecolor='w', bbox_inches='tight')
