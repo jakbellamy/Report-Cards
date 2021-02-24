@@ -26,7 +26,7 @@ export default function UpcomingBest(props) {
             }
           />
         <Box padding={3} paddingTop={0}>
-          <CenteredImage src={upcomingBestImageURL} height={'290'}/>
+          <center><CenteredImage src={upcomingBestImageURL} height={'290'}/></center>
         </Box>
       </Card>
     </Box>
