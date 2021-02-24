@@ -1,5 +1,5 @@
 echo "Generating Data"
-cd automator &&
+cd automator
 python3 data_generator.py
 echo "Generating Plots" &
 python3 share_graphs.py &&
