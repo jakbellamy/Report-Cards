@@ -37,45 +37,38 @@
       <change beforePath="$PROJECT_DIR$/automator/Reports/ReMax Park Creek.png" beforeDir="false" afterPath="$PROJECT_DIR$/automator/Reports/ReMax Park Creek.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/automator/Reports/ReMax Preferred.png" beforeDir="false" afterPath="$PROJECT_DIR$/automator/Reports/ReMax Preferred.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/automator/Reports/Realty One.png" beforeDir="false" afterPath="$PROJECT_DIR$/automator/Reports/Realty One.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/automator/run_automation.sh" beforeDir="false" afterPath="$PROJECT_DIR$/automator/run_automation.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/plots/BHG - 1st Florida-report_card_plot.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/BHG - 1st Florida-report_card_plot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/plots/C21 Tenace Realty-report_card_plot.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/C21 Tenace Realty-report_card_plot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/plots/Champagne &amp; Parisi-report_card_plot.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/Champagne &amp; Parisi-report_card_plot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/plots/Company Totals-report_card_plot.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/Company Totals-report_card_plot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/plots/Exit Realty-report_card_plot.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/Exit Realty-report_card_plot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/plots/KW - Athens-report_card_plot.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/KW - Athens-report_card_plot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/plots/KW - Barrow Jackson-report_card_plot.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/KW - Barrow Jackson-report_card_plot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/plots/KW - Brandon-report_card_plot.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/KW - Brandon-report_card_plot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/plots/KW - Buckhead-report_card_plot.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/KW - Buckhead-report_card_plot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/plots/KW - Cityside-report_card_plot.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/KW - Cityside-report_card_plot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/plots/KW - Coral Springs-report_card_plot.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/KW - Coral Springs-report_card_plot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/plots/KW - East Cobb-report_card_plot.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/KW - East Cobb-report_card_plot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/plots/KW - Ft. Lauderdale-report_card_plot.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/KW - Ft. Lauderdale-report_card_plot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/plots/KW - Intown-report_card_plot.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/KW - Intown-report_card_plot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/plots/KW - Kannapolis-report_card_plot.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/KW - Kannapolis-report_card_plot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/plots/KW - Midtown-report_card_plot.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/KW - Midtown-report_card_plot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/plots/KW - Paddocks-report_card_plot.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/KW - Paddocks-report_card_plot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/plots/KW - Peachtree City-report_card_plot.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/KW - Peachtree City-report_card_plot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/plots/KW - Peachtree Road-report_card_plot.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/KW - Peachtree Road-report_card_plot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/plots/KW - Plantation-report_card_plot.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/KW - Plantation-report_card_plot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/plots/KW - Snellville-report_card_plot.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/KW - Snellville-report_card_plot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/plots/KW - South Tampa-report_card_plot.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/KW - South Tampa-report_card_plot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/plots/KW - Stockbridge-report_card_plot.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/KW - Stockbridge-report_card_plot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/plots/KW - Sugarloaf-report_card_plot.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/KW - Sugarloaf-report_card_plot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/plots/KW - Tucker-report_card_plot.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/KW - Tucker-report_card_plot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/plots/KW - West Cobb-report_card_plot.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/KW - West Cobb-report_card_plot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/plots/KW - Woodstock-report_card_plot.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/KW - Woodstock-report_card_plot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/plots/Lake Realty-report_card_plot.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/Lake Realty-report_card_plot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/plots/ReMax Advisors-report_card_plot.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/ReMax Advisors-report_card_plot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/plots/ReMax Park Creek-report_card_plot.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/ReMax Park Creek-report_card_plot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/plots/ReMax Preferred-report_card_plot.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/ReMax Preferred-report_card_plot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/plots/Realty One-report_card_plot.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/Realty One-report_card_plot.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/plots/Sanders Group-report_card_plot.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/Sanders Group-report_card_plot.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/automator/headless_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/automator/headless_process.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/plots/share_BHG - 1st Florida.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/share_BHG - 1st Florida.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/plots/share_C21 Tenace Realty.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/share_C21 Tenace Realty.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/plots/share_Champagne &amp; Parisi.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/share_Champagne &amp; Parisi.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/plots/share_Exit Realty.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/share_Exit Realty.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/plots/share_KW - Barrow Jackson.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/share_KW - Barrow Jackson.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/plots/share_KW - Buckhead.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/share_KW - Buckhead.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/plots/share_KW - Cityside.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/share_KW - Cityside.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/plots/share_KW - Coral Springs.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/share_KW - Coral Springs.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/plots/share_KW - East Cobb.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/share_KW - East Cobb.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/plots/share_KW - Ft. Lauderdale.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/share_KW - Ft. Lauderdale.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/plots/share_KW - Greater Athens.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/share_KW - Greater Athens.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/plots/share_KW - Intown.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/share_KW - Intown.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/plots/share_KW - Midtown.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/share_KW - Midtown.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/plots/share_KW - Paddocks.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/share_KW - Paddocks.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/plots/share_KW - Peachtree City.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/share_KW - Peachtree City.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/plots/share_KW - Peachtree Road.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/share_KW - Peachtree Road.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/plots/share_KW - Plantation.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/share_KW - Plantation.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/plots/share_KW - Premier.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/share_KW - Premier.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/plots/share_KW - Snellville.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/share_KW - Snellville.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/plots/share_KW - South Tampa.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/share_KW - South Tampa.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/plots/share_KW - Suburban Tampa.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/share_KW - Suburban Tampa.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/plots/share_KW - Sugarloaf.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/share_KW - Sugarloaf.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/plots/share_KW - Tucker.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/share_KW - Tucker.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/plots/share_KW - West Cobb.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/share_KW - West Cobb.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/plots/share_KW - Woodstock.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/share_KW - Woodstock.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/plots/share_Lake Realty.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/share_Lake Realty.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/plots/share_ReMax Advisors.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/share_ReMax Advisors.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/plots/share_ReMax Park Creek.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/share_ReMax Park Creek.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/plots/share_ReMax Preferred.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/share_ReMax Preferred.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/plots/share_Realty One.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/plots/share_Realty One.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Report Card/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/ShareChart/ShareChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/ShareChart/ShareChart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Components/Header/ReportCardHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/Header/ReportCardHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Components/_Modules/GraphCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/_Modules/GraphCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Components/_Modules/centeredImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/_Modules/centeredImage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,7 +209,7 @@
       <workItem from="1613078025107" duration="604000" />
       <workItem from="1613490299968" duration="4741000" />
       <workItem from="1613766853595" duration="916000" />
-      <workItem from="1614110245269" duration="10966000" />
+      <workItem from="1614110245269" duration="11575000" />
     </task>
     <servers />
   </component>

@@ -102,7 +102,7 @@ export default function ReportCard(props) {
             paddingBottom={3}
           />
 
-          <Grid container spacing={3} id={'Report-Card-Content'} alignItems={'flex-start'} justify={'space-evenly'}>
+          <Grid container spacing={0} id={'Report-Card-Content'} alignItems={'flex-start'} justify={'space-evenly'}>
             <Grid item xs={6} id={'Data-Column'}>
               <Grid container spacing={2}>
                 <MShareVolume
