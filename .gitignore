@@ -33,5 +33,5 @@ yarn-error.log*
 /package-lock.json
 /jsonconfig.json
 
-/.bitmap
+.bitmap
 /.editorconfig
