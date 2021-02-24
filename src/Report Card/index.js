@@ -138,18 +138,19 @@ export default function ReportCard(props) {
             </Grid>
 
             <Grid item id={'Marketing-Column'} alignItems={'flex-start'}>
-              <CenteredImage src={'./images/Credit Essentials.jpg'} height={350}/>
+              <CenteredImage src={'./images/Credit Essentials.jpg'} height={400}/>
+
+              {/*<Box paddingTop={'2%'}>*/}
+              {/*  <Grid container spacing={3}>*/}
+              {/*    <Grid item xs={6}>*/}
+              {/*      <CloseComparison />*/}
+              {/*    </Grid>*/}
+              {/*    <Grid item xs={6}>*/}
+              {/*      <CenteredImage src={'./images/CSAT.png'} height={325}/>*/}
+              {/*    </Grid>*/}
+              {/*  </Grid>*/}
+              {/*</Box>*/}
               <Box paddingTop={'2%'}>
-                <Grid container spacing={3}>
-                  <Grid item xs={6}>
-                    <CloseComparison />
-                  </Grid>
-                  <Grid item xs={6}>
-                    <CenteredImage src={'./images/CSAT.png'} height={325}/>
-                  </Grid>
-                </Grid>
-              </Box>
-              <Box paddingTop={'1%'}>
                 <ExperienceGrid />
               </Box>
               <Box paddingTop={'2%'}>
