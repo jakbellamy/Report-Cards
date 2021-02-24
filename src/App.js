@@ -10,11 +10,8 @@ import {
   jssPreset,
   makeStyles,
   StylesProvider,
-  ThemeProvider
 } from '@material-ui/core';
 import { MuiPickersUtilsProvider } from '@material-ui/pickers';
-import useSettings from 'src/src/utilities/hooks/useSettings';
-import { createTheme } from 'src/src/utilities/theme';
 import Routes from 'src/src/Routes';
 
 const history = createBrowserHistory();
@@ -47,10 +44,7 @@ const useStyles = makeStyles(() => createStyles({
 function App() {
   useStyles();
 
-  const { settings } = useSettings();
-
   return (
-    <ThemeProvider theme={createTheme(settings)}>
       <StylesProvider jss={jss}>
         <MuiPickersUtilsProvider utils={MomentUtils}>
           <SnackbarProvider maxSnack={1}>
@@ -60,7 +54,6 @@ function App() {
           </SnackbarProvider>
         </MuiPickersUtilsProvider>
       </StylesProvider>
-    </ThemeProvider>
   );
 }
 

@@ -90,7 +90,7 @@ export default function ReportCard(props) {
 
   return (
     <div style={{ backgroundColor: mainBackgroundColor }}>
-      <Page className={classes.root} title="Auto Report Card">
+      {/*<Page className={classes.root} title="Auto Report Card">*/}
         <Box marginLeft={3}>
         <Container maxWidth={false} className={classes.container} id={'content-container'} >
 
@@ -135,25 +135,25 @@ export default function ReportCard(props) {
 
             </Grid>
 
-            <Grid item spacing={3} sxs={6} id={'Marketing-Column'} >
-              <CenteredImage src={'./images/Credit Essentials.jpg'} height={300}/>
+            <Grid item id={'Marketing-Column'} alignItems={'flex-start'}>
+              <CenteredImage src={'./images/Credit Essentials.jpg'} height={350}/>
               <Box paddingTop={'2%'}>
                 <Grid container spacing={3}>
                   <Grid item xs={6}>
                     <Card>
                       <CardHeader title={'Supreme vs Industry'}/>
-                      <Box height={230}>
+                      <Box height={260}>
 
                       </Box>
                     </Card>
                   </Grid>
                   <Grid item xs={6}>
-                    <CenteredImage src={'./images/CSAT.png'} height={280}/>
+                    <CenteredImage src={'./images/CSAT.png'} height={325}/>
                   </Grid>
                 </Grid>
               </Box>
               <Box paddingTop={'2%'}>
-                <CenteredImage src={'./images/Courses Offered.png'} height={610}/>
+                <CenteredImage src={'./images/Courses Offered.png'} height={715}/>
               </Box>
 
               <UpcomingBest/>
@@ -165,7 +165,7 @@ export default function ReportCard(props) {
           {/*</Box>*/}
         </Container>
         </Box>
-      </Page>
+      {/*</Page>*/}
     </div>
 
   );
