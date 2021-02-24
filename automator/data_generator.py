@@ -272,6 +272,12 @@ df = df.fillna(0)
 
 print('Saving Compiled Data to JSON File.')
 
+            ###################################
+            # Drop Null Data Hiding as Zeroes #
+
+null_data_mask = df['Office Volume'] <= 0
+df = df.loc[null_data_mask]
+
             #################################
             #    Convert Dates to Strings   #
 
