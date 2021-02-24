@@ -135,6 +135,36 @@ export default function ReportCard(props) {
                 account={thisMonth['Account']}
               />
 
+              <Box marginTop={2}>
+                <Grid container spacing={2}>
+                  <MShareVolume
+                    thisMonth={thisMonth}
+                    comparableMonth={comparableMonth}
+                    period={period}
+                  />
+                  <OfficeVolume
+                    thisMonth={thisMonth}
+                    comparableMonth={comparableMonth}
+                    period={period}
+                  />
+                </Grid>
+              </Box>
+
+
+              <Box marginTop={2}>
+                <Grid container spacing={2}>
+                  <MShareVolume
+                    thisMonth={thisMonth}
+                    comparableMonth={comparableMonth}
+                    period={period}
+                  />
+                  <OfficeVolume
+                    thisMonth={thisMonth}
+                    comparableMonth={comparableMonth}
+                    period={period}
+                  />
+                </Grid>
+              </Box>
             </Grid>
 
             <Grid item id={'Marketing-Column'} alignItems={'flex-start'}>

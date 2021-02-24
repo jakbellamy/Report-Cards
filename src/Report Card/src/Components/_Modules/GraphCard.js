@@ -12,7 +12,8 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '22px',
     fontWeight: 'bold',
     fontFamily: 'Open Sans',
-    margin: '-1rem 0 0 0'
+    margin: '-1rem 0 0 0',
+    textAlign: 'center'
   }
 }));
 
@@ -21,7 +22,6 @@ export default function GraphCard(props) {
   return (
     <Box marginTop={'2%'}>
       <Card elevation={cardElevation}>
-        <center>
           <Box marginTop={3} >
             <Typography className={classes.title}>
               Supreme Market Share
@@ -29,7 +29,6 @@ export default function GraphCard(props) {
           </Box>
 
           <img src={props.imageSrc} width={'100%'} height={props.height} />
-        </center>
       </Card>
     </Box>
 
