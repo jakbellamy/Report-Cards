@@ -75,7 +75,7 @@ for account in accounts_list:
         ele=browser.find_element_by_class_name('MuiContainer-root')
         total_height = ele.size["height"]
 
-        browser.set_window_size(1400, total_height)      #the trick
+        browser.set_window_size(1650, total_height)      #the trick
         sleep(2)
         browser.save_screenshot(f"./Reports/{name}.png")
     except Exception as e:
