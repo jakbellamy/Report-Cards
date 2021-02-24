@@ -43,7 +43,7 @@ export default function PercentToGoal(props) {
               },
               names: {
                 data1: 'Current: ' + printPercent(mshare, -1),
-                data2: percentageToGoal <= 100 ? 'Difference: ' + printPercent(goal - mshare, -1) : 'Difference: 0%'
+                data2: percentageToGoal < 100 ? 'Difference: ' + printPercent(goal - mshare, -1) : 'Difference: 0%'
               },
               labels: false
             }}
