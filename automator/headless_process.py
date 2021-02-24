@@ -24,24 +24,12 @@ browser = webdriver.Chrome('./chromedriver', options=opts)
     2.      For Each Account Open Headless Chrome.
 """
 ########################################################################################################################
+                          ## Methods ##
 ########################################################################################################################
 
-
-####################################################
-#                    STEP 1.                       #
-####################################################
-
-print('Fetching Database.')
-
-database = dataset.connect(pg_url)
 table_to_frame = lambda table: pd.DataFrame(list(database[table].find()))
 
-asa_accounts = table_to_frame('account')
-accounts_list = sorted(list(set(asa_accounts['Name'])))
-
-####################################################
-#                    STEP 2.                       #
-####################################################
+only_alpha = lambda x: ''.join([s for s in x if str.isalpha(s)])
 
 def printProgressBar (iteration, total, prefix = '', suffix = '', decimals = 1, length = 100, fill = '█', printEnd = "\r"):
     percent = ("{0:." + str(decimals) + "f}").format(100 * (iteration / float(total)))
@@ -53,26 +41,35 @@ def printProgressBar (iteration, total, prefix = '', suffix = '', decimals = 1, 
         print()
 
 
+####################################################
+#                    STEP 1.                       #
+####################################################
+
+print('Fetching Database.')
+
+database = dataset.connect(pg_url)
+
+asa_accounts = table_to_frame('account')
+accounts_list = sorted(list(set(asa_accounts['Name'])))
+accounts_list += [accounts_list[0]]
+
+####################################################
+#                    STEP 2.                       #
+####################################################
+
+
 print('Beginning Report Generation')
-
-only_alpha = lambda x: ''.join([s for s in x if str.isalpha(s)])
-
-accounts_list += [accounts_list[0]
 
 printProgressBar(0, len(accounts_list), prefix='Report Cards', suffix='Generated', length=50)
 for i, account in enumerate(accounts_list):
-    name_key = {
-        'KW - Brandon': 'KW - Suburban Tampa',
-        'KW - Kannapolis': 'KW - Premier',
-        'KW - Athens': 'KW - Greater Athens'
-    }
+    name_key = {'KW - Brandon': 'KW - Suburban Tampa',
+                'KW - Kannapolis': 'KW - Premier',
+                'KW - Athens': 'KW - Greater Athens'}
     account = name_key[account] if account in list(name_key.keys()) else account
-
     try:
         name = account
         account = [x if not any(s for s in x if str.isnumeric(s))
                    else False for x in account.split(' ')]
-
         chunks = []
         for chunk in account:
             if chunk:
@@ -88,10 +85,10 @@ for i, account in enumerate(accounts_list):
         ele=browser.find_element_by_class_name('MuiContainer-root')
         total_height = ele.size["height"]
 
-        browser.set_window_size(1650, total_height)      #the trick
+        browser.set_window_size(1650, total_height)
         sleep(2)
         browser.save_screenshot(f"../__GeneratedReportCards__/{name}.png")
-        printProgressBar(i + 1, len(accounts_list), prefix='Report Cards', suffix='Generated', length=50)
     except Exception as e:
-        pass
+        print('Failed on ', account)
+    printProgressBar(i + 1, len(accounts_list), prefix='Report Cards', suffix='Generated', length=50)
 browser.close()
