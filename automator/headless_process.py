@@ -90,7 +90,7 @@ for i, account in enumerate(accounts_list):
 
         browser.set_window_size(1650, total_height)      #the trick
         sleep(2)
-        browser.save_screenshot(f"../__Generated Report Cards__/{name}.png")
+        browser.save_screenshot(f"../__GeneratedReportCards__/{name}.png")
         printProgressBar(i + 1, len(accounts_list), prefix='Report Cards', suffix='Generated', length=50)
     except Exception as e:
         pass

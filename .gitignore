@@ -28,4 +28,4 @@ yarn-debug.log*
 yarn-error.log*
 
 /.idea
-/'__Generated Report Cards'/*
+/__GeneratedReportCards__/*

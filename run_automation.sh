@@ -7,4 +7,4 @@ echo "Generating Report Cards (Headless)" &&
 python3 headless_process.py
 cd ..
 echo "Fin."
-open '__Generated Report Cards__'
+open '__GeneratedReportCards__'
