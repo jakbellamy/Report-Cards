@@ -27,7 +27,7 @@ export default function OfficeVolume(props) {
   return (
     <Grid item xs={6}>
       <DataBox
-        title={valueKey}
+        title={'Office Volume'}
         valueYTD={thisMonth[valueKey] ?
           asUSD(thisMonth[valueKey]) : ''
         }

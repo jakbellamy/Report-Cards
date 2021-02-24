@@ -18,7 +18,9 @@ export default function GraphCard(props) {
       <Card elevation={cardElevation}>
         <center>
           <Box marginTop={3} paddingBottom={-3} marginBottom={-1}>
-            <Typography variant={'h2'} >SUPREME SHARE</Typography>
+            <Header className={'font-normal mb-2'}>
+              Share in {props.account} vs Best in Class
+            </Header>
           </Box>
 
           <img src={props.imageSrc} width={'100%'} height={props.height} />

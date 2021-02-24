@@ -2,11 +2,17 @@ import React from 'react';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import {
-  Card,
   CardContent,
-  Grid,
   Typography
 } from '@material-ui/core';
+import {
+  Grid,
+  ProgressCard,
+  StatsCard,
+  Card,
+  colors,
+  Header
+} from 'tabler-react';
 import useStyles from './styles';
 import { cardElevation } from '../../../../styles';
 
@@ -27,38 +33,39 @@ export const DataBox = props => {
   });
 
   return (
-    <Card {...rest} className={clsx(classes.root, className)} elevation={cardElevation}>
+      <Card>
+        <Card.Body>
+          <Grid.Row>
+            <Grid.Col sm={7}>
+              <Typography variant={'subtitle2'}>Year-to-Date</Typography>
+              <Header className={'font-bold mb-2'}>{title}</Header>
+            </Grid.Col>
+            <Grid.Col sm={5} align={'left'}>
+              <Header className={classes.differenceValue}>{differenceValue}</Header>
+            </Grid.Col>
+          </Grid.Row>
 
-      <Typography className={classes.title} variant="h3">
-        <span>
-          {title.replace('Volume', '')}
-        </span>
-        <span className={classes.differenceValue}>
-          {differenceValue}
-        </span>
-      </Typography>
 
-      <CardContent>
-        <Grid container spacing={1}>
-          <Grid item xs={'auto'}>
-            <Typography variant="h4" className="display-4 font-weight-medium ">{valueYTD}</Typography>
-          </Grid>
-          <Grid item xs={'auto'}>
-            <Typography variant="caption">({captions[0]})</Typography>
-          </Grid>
-        </Grid>
+          <Grid.Row>
+            <Grid.Col sm={5}>
+              <Header className='font-normal mb-0'>{captions[0]}</Header>
+            </Grid.Col>
+            <Grid.Col sm={7} align={'right'}>
+              <Header className='font-medium mb-0'>{valueYTD}</Header>
+            </Grid.Col>
+          </Grid.Row>
 
-        <Grid container spacing={1}>
-          <Grid item xs={'auto'}>
-            <Typography variant="h4" className="display-4 font-weight-medium">{valueComp}</Typography>
-          </Grid>
-          <Grid item xs={'auto'}>
-            <Typography variant="caption">({captions[1]})</Typography>
-          </Grid>
-        </Grid>
+          <Grid.Row>
+            <Grid.Col sm={5}>
+              <Header className='font-normal mb-0'>{captions[1]}</Header>
+            </Grid.Col>
+            <Grid.Col sm={7} align={'right'}>
+              <Header className='font-medium mb-0'>{valueComp}</Header>
+            </Grid.Col>
+          </Grid.Row>
 
-      </CardContent>
-    </Card>
+        </Card.Body>
+      </Card>
   );
 };
 
