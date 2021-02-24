@@ -275,7 +275,7 @@ print('Saving Compiled Data to JSON File.')
             ###################################
             # Drop Null Data Hiding as Zeroes #
 
-null_data_mask = df['Office Volume'] <= 0
+null_data_mask = df['Office Volume'] >= 0
 df = df.loc[null_data_mask]
 
             #################################

@@ -82,7 +82,7 @@ for i, account in enumerate(accounts_list):
         browser.get(url)
         sleep(2.5)
 
-        ele=browser.find_element_by_class_name('MuiContainer-root')
+        ele=browser.find_element_by_class_name('MuiBox-root.MuiBox-root-2')
         total_height = ele.size["height"]
 
         browser.set_window_size(1650, total_height)
@@ -90,5 +90,6 @@ for i, account in enumerate(accounts_list):
         browser.save_screenshot(f"../__GeneratedReportCards__/{name}.png")
     except Exception as e:
         print('Failed on ', account)
+        print(e)
     printProgressBar(i + 1, len(accounts_list), prefix='Report Cards', suffix='Generated', length=50)
 browser.close()

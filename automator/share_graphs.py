@@ -105,8 +105,16 @@ def query_best(account_name):
 print('Graphing Data.')
 
 for account_name in valid_accounts:
-    #      Target Dataset
+
     target_dataset = query_account(account_name)
+    if len(target_dataset) > 6:
+        period='Q'
+        dt_form = '%F-Q%q'
+    else:
+        period='M'
+        dt_form = '%F-%m'
+
+    #      Target Dataset
     target_dataset = (target_dataset
                       .sort_values(by=['date'])
                       .set_index('date'))

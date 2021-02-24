@@ -91,71 +91,73 @@ export default function ReportCard(props) {
 
   return (
     <div style={{ backgroundColor: mainBackgroundColor }}>
-      <Box marginLeft={3}>
-      <Container maxWidth={false} className={classes.container} id={'content-container'} >
+      <Page>
+        <Box marginLeft={3}>
+        <Container maxWidth={false} className={classes.container} id={'content-container'} >
 
-        <NullBlock/>
-        <ReportCardHeader accountData={accountData}/>
+          <NullBlock/>
+          <ReportCardHeader accountData={accountData}/>
 
-        <BoxDivider
-          paddingTop={3}
-          paddingBottom={3}
-        />
+          <BoxDivider
+            paddingTop={3}
+            paddingBottom={3}
+          />
 
-        <Grid container spacing={0} id={'Report-Card-Content'} alignItems={'flex-start'} justify={'space-evenly'}>
-          <Grid item xs={6} id={'Data-Column'}>
-            <Grid container spacing={2}>
-              <MShareVolume
-                thisMonth={thisMonth}
-                comparableMonth={comparableMonth}
-                period={period}
+          <Grid container spacing={3} id={'Report-Card-Content'} alignItems={'flex-start'} justify={'space-evenly'}>
+            <Grid item xs={6} id={'Data-Column'}>
+              <Grid container spacing={2}>
+                <MShareVolume
+                  thisMonth={thisMonth}
+                  comparableMonth={comparableMonth}
+                  period={period}
+                />
+                <OfficeVolume
+                  thisMonth={thisMonth}
+                  comparableMonth={comparableMonth}
+                  period={period}
+                />
+              </Grid>
+
+
+              <GraphCard
+                imageSrc={imageSrc}
+                height={500}
+                header={'Market Share & Office Volume by Month'}
+                account={thisMonth['Account']}
               />
-              <OfficeVolume
-                thisMonth={thisMonth}
-                comparableMonth={comparableMonth}
-                period={period}
+
+              <GoalDonuts
+                mshare={thisMonth['YTD Market Share Volume']}
+                goals={[goals['Goal'], goals['Stretch Goal']]}
+                incentives={[goals['Increase'], goals['Stretch Increase']]}
               />
+
+              <ContinuingEducation ce2020={ce2020} ce2021={ce2021}/>
+
             </Grid>
 
-
-            <GraphCard
-              imageSrc={imageSrc}
-              height={500}
-              header={'Market Share & Office Volume by Month'}
-              account={thisMonth['Account']}
-            />
-
-            <GoalDonuts
-              mshare={thisMonth['YTD Market Share Volume']}
-              goals={[goals['Goal'], goals['Stretch Goal']]}
-              incentives={[goals['Increase'], goals['Stretch Increase']]}
-            />
-
-            <ContinuingEducation ce2020={ce2020} ce2021={ce2021}/>
-
-          </Grid>
-
-          <Grid item id={'Marketing-Column'} alignItems={'flex-start'}>
-            <CenteredImage src={'./images/Credit Essentials.jpg'} height={350}/>
-            <Box paddingTop={'2%'}>
-              <Grid container spacing={3}>
-                <Grid item xs={6}>
-                  <CloseComparison />
+            <Grid item id={'Marketing-Column'} alignItems={'flex-start'}>
+              <CenteredImage src={'./images/Credit Essentials.jpg'} height={350}/>
+              <Box paddingTop={'2%'}>
+                <Grid container spacing={3}>
+                  <Grid item xs={6}>
+                    <CloseComparison />
+                  </Grid>
+                  <Grid item xs={6}>
+                    <CenteredImage src={'./images/CSAT.png'} height={325}/>
+                  </Grid>
                 </Grid>
-                <Grid item xs={6}>
-                  <CenteredImage src={'./images/CSAT.png'} height={325}/>
-                </Grid>
-              </Grid>
-            </Box>
-            <Box paddingTop={'2%'}>
-              <CenteredImage src={'./images/Courses Offered.png'} height={715}/>
-            </Box>
-            <UpcomingBest/>
+              </Box>
+              <Box paddingTop={'2%'}>
+                <CenteredImage src={'./images/Courses Offered.png'} height={715}/>
+              </Box>
+              <UpcomingBest/>
+            </Grid>
           </Grid>
-        </Grid>
-        <NullBlock/>
-      </Container>
-      </Box>
+          <NullBlock/>
+        </Container>
+        </Box>
+      </Page>
     </div>
 
   );
