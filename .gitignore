@@ -29,10 +29,10 @@ yarn-error.log*
 /__GeneratedReportCards__/*.png
 !/__GeneratedReportCards__/Example.png
 
-./package.json
-./jsonconfig.json
+package-lock.json
+jsonconfig.json
 
-*.bitmap
+.bitmap
 .editorconfig
 .env
 .editorconfig
