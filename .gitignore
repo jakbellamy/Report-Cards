@@ -20,6 +20,8 @@
 /.env.production.local
 
 /automator.env
+/automator/Reports/*
+/public/plots
 
 npm-debug.log*
 yarn-debug.log*
