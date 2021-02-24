@@ -1,6 +1,6 @@
 <center><h1>Kob's Report Card Generator</h1></center>
 
-A report card generator for supreme-lending southeast.
+A report card generator for Supreme Lending Ssoutheast.
 ### Instructions
 
 ##### 1. Run `npm i` inside this application's root directory to install all dependencies.
