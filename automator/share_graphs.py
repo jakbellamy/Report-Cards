@@ -167,7 +167,7 @@ for account_name in valid_accounts:
 #     ax.set_ylabel('Supreme Market Share')
     ax.legend(loc=2, prop={'size': 11})
 
-    filename = f"/Users/jakobbellamy/Dev/_supreme/Report Card/public/plots/share_{account_name}.svg"
+    filename = f"../public/plots/share_{account_name}.svg"
 #     fig.set_size_inches(10, 6)
     plt.savefig(filename, dpi=1200, facecolor='w', bbox_inches='tight')
 

@@ -303,6 +303,6 @@ name_key = {
 }
 apply_name_key = lambda account: name_key[account] if account in list(name_key.keys()) else account
 monthly_data['Account'] = monthly_data['Account'].apply(apply_name_key)
-monthly_data.to_json('~/Dev/_supreme/Report Card/src/Report Card/data/data.json', orient='records')
+monthly_data.to_json('../data/data.json', orient='records')
 
 print('JSON File Successfully Saved.')
