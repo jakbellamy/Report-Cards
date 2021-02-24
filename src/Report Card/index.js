@@ -12,19 +12,12 @@ import OfficeVolume from './src/Components/Data Components/DataBox/DataPoints/Of
 import UpcomingBest from './src/Components/Inustry Standards/upcomingBest';
 import { ifExists } from './functions/conditionals';
 import { firstStr, lastStr } from './functions/stringParsers';
-
-import {
-  Container,
-  Grid,
-  Box,
-  CardHeader
-} from '@material-ui/core';
+import { Container, Grid, Box } from '@material-ui/core';
 import ContinuingEducation from './src/Components/Continuing Education/ContinuingEducation_Deprecated';
 import GoalDonuts from './src/Components/Data Components/Tabler Components/GoalDonuts';
-import CSAT from './src/Components/Inustry Standards/csat';
 import CenteredImage from './src/Components/_Modules/centeredImage';
-import Card from '@material-ui/core/Card';
 import CloseComparison from './src/Components/Inustry Standards/CloseComparison';
+import ExperienceGrid from './src/Components/Experience';
 
 const data = require('./data/data.json');
 const ppbData = require('./data/ppb.json');
@@ -152,6 +145,9 @@ export default function ReportCard(props) {
                 <CenteredImage src={'./images/Courses Offered.png'} height={715}/>
               </Box>
               <UpcomingBest/>
+              <Box paddingTop={'2%'}>
+                <ExperienceGrid />
+              </Box>
             </Grid>
           </Grid>
           <NullBlock/>

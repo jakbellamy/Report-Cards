@@ -42,7 +42,7 @@ export const DataBox = props => {
               <Header className={'font-bold mb-2'}>{title}</Header>
             </Grid.Col>
             <Grid.Col sm={5} align={'left'}>
-              <Header className={classes.differenceValue}>{differenceValue}</Header>
+              <Header className={classes.differenceValue}>{differenceValue.includes('NaN') ? '0%' : differenceValue}</Header>
             </Grid.Col>
           </Grid.Row>
           <Grid.Row>

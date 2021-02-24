@@ -119,10 +119,12 @@ for account_name in valid_accounts:
                       .sort_values(by=['date'])
                       .set_index('date'))
     target_dataset.index = (pd.to_datetime(target_dataset.index)
-                            .to_period('Q')
-                            .strftime('%F-Q%q'))
-    target_dataset.drop([quarter for quarter in target_dataset.index
-                         if not len(target_dataset.loc[quarter]) == 3], inplace=True)
+                            .to_period(period)
+                            .strftime(dt_form))
+    if period == 'Q':
+        target_dataset.drop([quarter for quarter in target_dataset.index
+                             if not len(target_dataset.loc[quarter]) == 3], inplace=True)
+
     target_dataset = (target_dataset[['Office Volume', 'Supreme Volume']]
                       .groupby(target_dataset.index)
                       .agg('sum'))
@@ -135,10 +137,12 @@ for account_name in valid_accounts:
                     .sort_values(by=['date'])
                     .set_index('date'))
     best_dataset.index = (pd.to_datetime(best_dataset.index)
-                          .to_period('Q')
-                          .strftime('%F-Q%q'))
+                          .to_period(period)
+                          .strftime(dt_form))
+
     best_dataset.drop([quarter for quarter in best_dataset.index
                        if not quarter in target_dataset.index], inplace=True)
+
     best_dataset = (best_dataset[['Office Volume', 'Supreme Volume']]
                     .groupby(best_dataset.index)
                     .agg('sum'))
