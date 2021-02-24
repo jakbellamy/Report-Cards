@@ -20,3 +20,10 @@ A report card generator for Supreme Lending Ssoutheast.
 ##### 7. Add Auto-Emailer.
 ##### 8. Write a cron script in server to run this regularly and send as mail attachments.
 
+---
+### Fonts
+##### font-family: 'Fira Sans', sans-serif;
+##### font-family: 'Open Sans', sans-serif;
+##### font-family: 'Oxygen', sans-serif;
+##### font-family: 'Roboto', sans-serif;
+##### font-family: 'Ubuntu', sans-serif;

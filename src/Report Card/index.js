@@ -93,12 +93,13 @@ export default function ReportCard(props) {
 
   return (
     <div style={{ backgroundColor: mainBackgroundColor }}>
+      <ReportCardHeader accountData={accountData}/>
+
       <Page>
         <Box marginLeft={3}>
         <Container maxWidth={false} className={classes.container} id={'content-container'} >
 
           <NullBlock/>
-          <ReportCardHeader accountData={accountData}/>
 
           <BoxDivider
             paddingTop={3}
