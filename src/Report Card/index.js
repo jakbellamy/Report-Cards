@@ -133,8 +133,9 @@ export default function ReportCard(props) {
                 goals={[goals['Goal'], goals['Stretch Goal']]}
                 incentives={[goals['Increase'], goals['Stretch Increase']]}
               />
-
-              <ContinuingEducation ce2020={ce2020} ce2021={ce2021}/>
+              <Box marginTop={3} marginBottom={3}>
+                <ContinuingEducation ce2020={ce2020} ce2021={ce2021}/>
+              </Box>
 
             </Grid>
 
@@ -143,10 +144,7 @@ export default function ReportCard(props) {
               <Box paddingTop={'2%'}>
                 <ExperienceGrid />
               </Box>
-              {/*<Box paddingTop={'2%'}>*/}
-              {/*  <CenteredImage src={'./images/Courses Offered.png'} height={715}/>*/}
-              {/*</Box>*/}
-              {/*<UpcomingBest/>*/}
+
               <PnPB />
             </Grid>
           </Grid>
