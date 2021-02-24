@@ -48,7 +48,7 @@ export const DataBox = props => {
             <Grid.Col sm={'auto'} >
               <Header size='2' className='font-normal mb-0'>{captions[0]}</Header>
             </Grid.Col>
-            <Grid.Col sm={6} align={'center'}>
+            <Grid.Col sm={6} align={'right'}>
               <Header size='2' className='font-medium mb-0'>{valueYTD}</Header>
             </Grid.Col>
           </Grid.Row>
