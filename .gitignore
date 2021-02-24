@@ -34,4 +34,4 @@ yarn-error.log*
 /jsonconfig.json
 
 .bitmap
-/.editorconfig
+.editorconfig
