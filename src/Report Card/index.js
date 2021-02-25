@@ -28,6 +28,7 @@ import CloseComparison from './src/Components/Inustry Standards/CloseComparison'
 import ExperienceGrid from './src/Components/Experience';
 import PnPB from './src/Components/PPB';
 import DataTable from './src/Components/Data Components/Data Table';
+import RetroData from './src/Components/Data Components/DataBox/DataPoints/RetroData';
 
 const data = require('./data/data.json');
 const ppbData = require('./data/ppb.json');
@@ -137,7 +138,10 @@ export default function ReportCard(props) {
               />
 
               <Box marginTop={2}>
-                <DataTable data={accountData} />
+                <RetroData data={accountData}/>
+              </Box>
+              <Box marginTop={3} marginBottom={3}>
+                <ContinuingEducation ce2020={ce2020} ce2021={ce2021}/>
               </Box>
 
             </Grid>
@@ -146,9 +150,6 @@ export default function ReportCard(props) {
               <CenteredImage src={'./images/Credit Essentials.jpg'} height={400}/>
               <Box paddingTop={'2%'}>
                 <ExperienceGrid />
-              </Box>
-              <Box marginTop={3} marginBottom={3}>
-                <ContinuingEducation ce2020={ce2020} ce2021={ce2021}/>
               </Box>
               <PnPB />
             </Grid>

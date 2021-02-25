@@ -14,20 +14,22 @@ export default makeStyles(theme => ({
       props.positiveDifference ? theme.palette.success.main : theme.palette.error.main,
     // marginLeft: '5%',
     fontWeight: 'bolder',
-    fontSize: '40px',
-    marginRight: '1rem',
-    fontFamily: 'Ubuntu'
+    fontSize: '25px',
+    marginTop: '-.1rem',
+    marginLeft: '-1.5rem',
+    fontFamily: 'Ubuntu',
+    textAlign: 'left'
   },
   top: {
     fontFamily: 'Roboto',
-    fontWeight: 'bold',
-    fontSize: '20px',
+    fontWeight: 'medium',
+    fontSize: '14px',
   },
   title: {
     fontFamily: 'Roboto',
-    fontWeight: 'bolder',
-    fontSize: '33px',
-    margin: '-.7rem 0 0 '
+    fontWeight: 'bold',
+    fontSize: '14px',
+    margin: '0 0 0 0'
   },
   currentValue: {
     marginRight: '3%'

@@ -28,8 +28,6 @@ export default function ContinuingEducation(props) {
     return event['Status'] != 'Completed' && !event['Status'].includes('Can')
   })
 
-  upcomingEvents = upcomingEvents.slice(0, 1)
-
   let pastEvents = ce2020.concat(ce2021)
   pastEvents = pastEvents.filter(event => {
     return event['Status'].includes('Comp')
@@ -45,43 +43,55 @@ export default function ContinuingEducation(props) {
   return (
     <Box marginTop={3}>
       <Card elevation={0}>
-        <Box height={750}>
+        <Box height={390}>
           <Typography className={classes.title}>
             Continuing Education
           </Typography>
-          <Box margin={10} marginTop={'3.5rem'}>
+          <Box margin={1}>
             <Box className={classes.overview}>
               <Grid container spacing={4} >
                 <Grid item xs={4}>
-                  <Card className={classes.overviewCard} elevation={0} >
-                  <Box height={145} padding={2}>
+                  {/*<Card elevation={0} >*/}
+                  <Box height={145} padding={2} align={'center'}>
                     <Typography className={classes.overviewText}>Courses in 2020</Typography>
-                    <Typography className={classes.display}>{completed20}</Typography>
+                    <div className={classes.circle}>
+                      <div className={classes.center}>
+                        <Typography className={classes.display}>{completed20}</Typography>
+                      </div>
+                    </div>
                   </Box>
-                  </Card>
+                  {/*</Card>*/}
                 </Grid>
                 <Grid item xs={4}>
-                  <Card className={classes.overviewCard} elevation={0} >
-                    <Box height={145} padding={2}>
+                  {/*<Card className={classes.overviewCard} elevation={0} >*/}
+                    <Box height={145} padding={2} align={'center'}>
                       <Typography className={classes.overviewText}>Courses in 2021</Typography>
-                      <Typography className={classes.display}>{completed21}</Typography>
+                      <div className={classes.circle}>
+                        <div className={classes.center}>
+                          <Typography className={classes.display}>{completed21}</Typography>
+                        </div>
+                      </div>
                     </Box>
-                  </Card>
+                  {/*</Card>*/}
                 </Grid>
                 <Grid item xs={4}>
-                  <Card className={classes.overviewCard} elevation={0} >
-                    <Box height={145} padding={2}>
-                      <Typography className={classes.overviewText}>Scheduled in 2021</Typography>
-                      <Typography className={classes.display}>{upcomingEvents.length}</Typography>
+                  {/*<Card className={classes.overviewCard} elevation={0} >*/}
+                    <Box height={140} padding={1} align={'center'}>
+                      <Typography className={classes.overviewText}>Scheduled 2021</Typography>
+                      <div className={classes.circle}>
+                        <div className={classes.center}>
+                          <Typography className={classes.display}>{upcomingEvents.length}</Typography>
+                        </div>
+                      </div>
                     </Box>
-                  </Card>
+                  {/*</Card>*/}
                 </Grid>
               </Grid>
-            </Box>
+            </Box >
             <Typography className={classes.subtitle}>
               Next Event
             </Typography>
-            <TableContainer >
+            <TableContainer padding={20}>
               <Table >
                 <TableHead>
                   <TableRow>
@@ -91,7 +101,7 @@ export default function ContinuingEducation(props) {
                   </TableRow>
                 </TableHead>
                 <TableBody>
-                  {upcomingEvents.map(row => (
+                  {upcomingEvents.slice(0, 1).map(row => (
                     <TableRow key={row['Date']}>
                       <TableCell className={classes.tableItem}>{row['Date']}</TableCell>
                       <TableCell className={classes.tableItem}>{row['Class']}</TableCell>
@@ -102,31 +112,31 @@ export default function ContinuingEducation(props) {
               </Table>
             </TableContainer>
           </Box>
-          <Box margin={10} marginTop={'-2rem'}>
-            <Typography className={classes.subtitle}>
-              Recent Events
-            </Typography>
-            <TableContainer  >
-              <Table>
-                <TableHead>
-                  <TableRow>
-                    <TableCell className={classes.tableHead}>Date</TableCell>
-                    <TableCell className={classes.tableHead}>Class</TableCell>
-                    <TableCell className={classes.tableHead}>Status</TableCell>
-                  </TableRow>
-                </TableHead>
-                <TableBody>
-                  {pastEvents.map(row => (
-                    <TableRow key={row['Date']}>
-                      <TableCell className={classes.tableItem}>{row['Date']}</TableCell>
-                      <TableCell className={classes.tableItem}>{row['Class']}</TableCell>
-                      <TableCell className={classes.tableItem}>{row['Status']}</TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </TableContainer>
-          </Box>
+          {/*<Box margin={10} marginTop={'-2rem'}>*/}
+          {/*  <Typography className={classes.subtitle}>*/}
+          {/*    Recent Events*/}
+          {/*  </Typography>*/}
+          {/*  <TableContainer  >*/}
+          {/*    <Table>*/}
+          {/*      <TableHead>*/}
+          {/*        <TableRow>*/}
+          {/*          <TableCell className={classes.tableHead}>Date</TableCell>*/}
+          {/*          <TableCell className={classes.tableHead}>Class</TableCell>*/}
+          {/*          <TableCell className={classes.tableHead}>Status</TableCell>*/}
+          {/*        </TableRow>*/}
+          {/*      </TableHead>*/}
+          {/*      <TableBody>*/}
+          {/*        {pastEvents.map(row => (*/}
+          {/*          <TableRow key={row['Date']}>*/}
+          {/*            <TableCell className={classes.tableItem}>{row['Date']}</TableCell>*/}
+          {/*            <TableCell className={classes.tableItem}>{row['Class']}</TableCell>*/}
+          {/*            <TableCell className={classes.tableItem}>{row['Status']}</TableCell>*/}
+          {/*          </TableRow>*/}
+          {/*        ))}*/}
+          {/*      </TableBody>*/}
+          {/*    </Table>*/}
+          {/*  </TableContainer>*/}
+          {/*</Box>*/}
         </Box>
 
       </Card>

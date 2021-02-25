@@ -36,6 +36,7 @@ export default function OfficeVolume(props) {
         }
         differenceValue={differenceValue}
         captions={captions}
+        period={'Year-to-Date'}
       />
     </Grid>
   );

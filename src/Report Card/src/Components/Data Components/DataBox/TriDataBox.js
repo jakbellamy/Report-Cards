@@ -14,11 +14,11 @@ import {
   colors,
   Header
 } from 'tabler-react';
-import useStyles from './styles';
+import useStyles from './triStyles';
 import { cardElevation } from '../../../../styles';
 import Box from '@material-ui/core/Box';
 
-export const DataBox = props => {
+export const TriDataBox = props => {
   let { className, title, valueYTD, valueComp, differenceValue, captions, period, ...rest } = props;
   const positiveDifference = differenceValue && differenceValue.charAt(0) === '+';
   const classes = useStyles({ positiveDifference, ...props });
@@ -50,10 +50,10 @@ export const DataBox = props => {
 
             </Grid.Col>
           </Grid.Row>
-          <Box marginRight={'2rem'}>
+          <Box >
             <Grid.Row >
               <Grid.Col sm={'auto'} >
-                <Header size='2' className='font-normal mb-0'>{captions[0]}</Header>
+                <Header size='2' className='font-normal mb-0'>{captions[0] ? captions[0].split(' ')[1] : ''}</Header>
               </Grid.Col>
               <Grid.Col sm={6} align={'right'}>
                 <Header size='2' className='font-medium mb-0'>{valueYTD}</Header>
@@ -61,7 +61,7 @@ export const DataBox = props => {
             </Grid.Row>
             <Grid.Row>
               <Grid.Col sm={'auto'}>
-                <Header size='2' className='font-normal mb-0'>{captions[1]}</Header>
+                <Header size='2' className='font-normal mb-0'>{captions[1] ? captions[1].split(' ')[1] : ''}</Header>
               </Grid.Col>
               <Grid.Col sm={6} align={'right'}>
                 <Header size='2' className='font-medium mb-0'>{valueComp}</Header>
@@ -75,7 +75,7 @@ export const DataBox = props => {
   );
 };
 
-DataBox.propTypes = {
+TriDataBox.propTypes = {
   className: PropTypes.string,
   title: PropTypes.string,
   value: PropTypes.string,

@@ -26,6 +26,7 @@ export default function MShareVolume(props) {
         valueComp={valueComp}
         differenceValue={percentChangeStr}
         captions={captions}
+        period={'Year-to-Date'}
       />
     </Grid>
   );

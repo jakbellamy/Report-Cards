@@ -16,8 +16,9 @@ export const useStyles = makeStyles((theme) => ({
     fontFamily: 'Open Sans'
   },
   date: {
-    fontSize: '36px',
+    fontSize: '28px',
     fontWeight: 'medium',
-    fontFamily: 'Open Sans'
+    fontFamily: 'Open Sans',
+    margin: '-1rem 0 -.2rem .4rem'
   }
 }));

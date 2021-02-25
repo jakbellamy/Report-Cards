@@ -5,42 +5,61 @@ export const useStyles = makeStyles((theme) => ({
     fontSize: '20px'
   },
   tableItem: {
-    fontSize: '18px'
+    fontSize: '23px'
   },
   card: {
-    marginTop: '2.5%'
+    marginTop: '2.5%',
+
   },
   title: {
-    textAlign: 'center',
+    // textAlign: 'center',
     fontWeight: 'bold',
-    fontSize: '34px',
-    margin: '25px 0 -4rem 0'
+    fontSize: '35px',
+    margin: '0 -4rem 0',
+    color: 'White',
+    backgroundColor: '#7A9EDB',
+    textAlign: 'center',
+    borderRadius: '10em 10em 10em'
   },
   subtitle: {
     fontWeight: 'bold',
     fontSize: '28px',
-    textAlign: 'left',
-    marginLeft: '5px',
-    color: '#4C4C4C',
-    marginBottom: '10px'
+    marginLeft: '3rem',
+    marginRight: '3rem',
+    color: 'rgba(35,39,50,0.93)',
+    marginTop: '25px',
+    textAlign: 'center',
+    backgroundColor: '#d4deea',
+    borderRadius: '30em 30em 60em 60em'
   },
   display: {
     textAlign: 'center',
     fontWeight: 'bold',
-    fontSize: '50px',
+    fontSize: '35px',
     marginTop: '5px',
-    color: '#4D94C8',
-    // margin: '25px 0 -4rem 0'
+    // color: '#7A8BF8',
+    color: 'white',
+    margin: '-4rem -4rem -4rem -4rem'
   },
   overviewText: {
     fontWeight: 'bold',
-    fontSize: '20px',
-    textAlign: 'center'
+    fontSize: '21px',
+    textAlign: 'center',
+    paddingBottom: '10px'
   },
   overview: {
-    margin: '0 -2.5rem 0rem -2.5rem',
+    margin: '0 -2.5rem 1rem -2.5rem',
   },
-  overviewCard: {
-    borderRadius: 30,
+  circle: {
+    borderRadius: '100%',
+    backgroundColor: '#7A9EDB',
+    height: '85px',
+    width: '85px',
+
   },
+  center: {
+    width: '50%',
+    margin: 'auto',
+    padding: '10.5px',
+  }
 }));
