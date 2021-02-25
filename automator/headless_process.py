@@ -13,7 +13,6 @@ opts = Options()
 
 opts.add_argument("--headless")
 browser = webdriver.Chrome('./chromedriver', options=opts)
-# browser.set_window_size(1400, 1100)
 
 
 ########################################################################################################################
@@ -82,7 +81,7 @@ for i, account in enumerate(accounts_list):
         browser.get(url)
         sleep(2.5)
 
-        ele=browser.find_element_by_class_name('MuiBox-root.MuiBox-root-2')
+        ele=browser.find_element_by_class_name('report-card')
         total_height = ele.size["height"]
 
         browser.set_window_size(1850, total_height)

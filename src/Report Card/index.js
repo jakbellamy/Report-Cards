@@ -95,9 +95,8 @@ export default function ReportCard(props) {
 
   return (
     <div style={{ backgroundColor: mainBackgroundColor }}>
+      <Page className="report-card">
       <ReportCardHeader data={thisMonth}/>
-
-      <Page>
         <Box marginLeft={3}>
         <Container maxWidth={false} className={classes.container} id={'content-container'} >
 
