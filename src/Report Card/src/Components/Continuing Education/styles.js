@@ -14,23 +14,23 @@ export const useStyles = makeStyles((theme) => ({
   title: {
     // textAlign: 'center',
     fontWeight: 'bold',
-    fontSize: '35px',
-    margin: '0 -4rem 0',
-    color: 'White',
-    backgroundColor: '#7A9EDB',
+    fontSize: '22px',
+    margin: '1rem -4rem 0',
+    // color: 'White',
+    // backgroundColor: '#7A9EDB',
     textAlign: 'center',
     borderRadius: '10em 10em 10em'
   },
   subtitle: {
     fontWeight: 'bold',
     fontSize: '28px',
-    marginLeft: '3rem',
+    marginLeft: '1rem',
     marginRight: '3rem',
     color: 'rgba(35,39,50,0.93)',
     marginTop: '25px',
-    textAlign: 'center',
-    backgroundColor: '#d4deea',
-    borderRadius: '30em 30em 60em 60em'
+    textAlign: 'left',
+    // backgroundColor: '#d4deea',
+    // borderRadius: '30em 30em 60em 60em'
   },
   display: {
     textAlign: 'center',

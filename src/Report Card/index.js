@@ -129,6 +129,9 @@ export default function ReportCard(props) {
                 goals={[goals['Goal'], goals['Stretch Goal']]}
                 incentives={[goals['Increase'], goals['Stretch Increase']]}
               />
+              <Box marginTop={2}>
+                <RetroData data={accountData}/>
+              </Box>
 
               <GraphCard
                 imageSrc={imageSrc}
@@ -137,9 +140,7 @@ export default function ReportCard(props) {
                 account={thisMonth['Account']}
               />
 
-              <Box marginTop={2}>
-                <RetroData data={accountData}/>
-              </Box>
+
               <Box marginTop={3} marginBottom={3}>
                 <ContinuingEducation ce2020={ce2020} ce2021={ce2021}/>
               </Box>
@@ -150,6 +151,10 @@ export default function ReportCard(props) {
               <CenteredImage src={'./images/Credit Essentials.jpg'} height={400}/>
               <Box paddingTop={'2%'}>
                 <ExperienceGrid />
+              </Box>
+              <Box paddingTop={'2%'} align={'center'}>
+                <CenteredImage src={'https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/153168374_3681749721920486_5624809215965204231_o.jpg?_nc_cat=105&ccb=3&_nc_sid=340051&_nc_ohc=uuz-wa4KUzkAX_pZ1SV&_nc_ht=scontent-iad3-1.xx&oh=f0aea9bad0c5b72e2387812b068f8179&oe=605DEB57'}
+                               height={'420'}/>
               </Box>
               <PnPB />
             </Grid>

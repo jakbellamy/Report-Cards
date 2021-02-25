@@ -43,7 +43,7 @@ export default function ContinuingEducation(props) {
   return (
     <Box marginTop={3}>
       <Card elevation={0}>
-        <Box height={390}>
+        <Box height={370}>
           <Typography className={classes.title}>
             Continuing Education
           </Typography>

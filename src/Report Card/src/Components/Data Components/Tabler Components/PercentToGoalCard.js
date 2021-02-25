@@ -26,13 +26,13 @@ export default function PercentToGoal(props) {
     <Grid.Col sm={6} marginTop={-2} >
       <Card elevation={cardElevation} >
           <TCard.Body className="text-center" paddingTop={-2}>
-            <Typography variant={'subtitle2'}>Market Share Goals</Typography>
+            <Typography style={{fontWeight: 'bold', fontSize: '18px'}}>Market Share Goals</Typography>
 
             <Header className="display-4 font-weight-medium mb-auto">{header}</Header>
             <Header className="display-4 font-weight-bold mb-0">{printPercent(goal)}</Header>
           </TCard.Body>
           <C3Chart
-            style={{ height: '15rem'}}
+            style={{ height: '11.3rem'}}
             data={{
               columns: [
                 ['data1', percentageToGoal],
