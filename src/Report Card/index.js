@@ -27,6 +27,7 @@ import Card from '@material-ui/core/Card';
 import CloseComparison from './src/Components/Inustry Standards/CloseComparison';
 import ExperienceGrid from './src/Components/Experience';
 import PnPB from './src/Components/PPB';
+import DataTable from './src/Components/Data Components/Data Table';
 
 const data = require('./data/data.json');
 const ppbData = require('./data/ppb.json');
@@ -136,35 +137,9 @@ export default function ReportCard(props) {
               />
 
               <Box marginTop={2}>
-                <Grid container spacing={2}>
-                  <MShareVolume
-                    thisMonth={thisMonth}
-                    comparableMonth={comparableMonth}
-                    period={period}
-                  />
-                  <OfficeVolume
-                    thisMonth={thisMonth}
-                    comparableMonth={comparableMonth}
-                    period={period}
-                  />
-                </Grid>
+                <DataTable data={accountData} />
               </Box>
 
-
-              <Box marginTop={2}>
-                <Grid container spacing={2}>
-                  <MShareVolume
-                    thisMonth={thisMonth}
-                    comparableMonth={comparableMonth}
-                    period={period}
-                  />
-                  <OfficeVolume
-                    thisMonth={thisMonth}
-                    comparableMonth={comparableMonth}
-                    period={period}
-                  />
-                </Grid>
-              </Box>
             </Grid>
 
             <Grid item id={'Marketing-Column'} alignItems={'flex-start'}>

@@ -1,0 +1,23 @@
+.flag {
+    display: grid;
+    grid-column-gap: var(--flag-gap, 1em);
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+    'signifier .'
+    'signifier title'
+    'signifier content'
+    '. content';
+    grid-template-rows: repeat(3, minmax(min-content, max-content)) 1fr;
+    height: 400px;
+    text-align: center;
+}
+
+.flag__content {
+    grid-area: content;
+}
+
+.flag__signifier {
+    grid-area: signifier;
+    display: flex;
+    align-self: center;
+}
