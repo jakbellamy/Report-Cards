@@ -284,18 +284,10 @@ df = df.loc[null_data_mask]
 df['Date Time'] = df['Date']
 df['Date'] = df['Date'].apply(lambda x: x.strftime('%B %Y'))
 
-null_date_mask = lambda x: asa_accounts[x].apply(lambda x: not pd.isnull(x))
+date_to_text = lambda x: x if isinstance(x, str) else x.strftime('%B %d, %Y')
+date_cols = ['Termination Date', 'Renewal', 'Start Date']
 
-asa_date_formatter = lambda x: np.where(pd.isnull(x), '', x)
-
-asa_accounts['Renewal'] = asa_accounts['Renewal'].fillna('')
-asa_accounts['Renewal'] = asa_accounts['Renewal'].apply(lambda x: x if isinstance(x, str) else x.strftime('%B %d, %Y'))
-
-asa_accounts['Termination Date'] = asa_accounts['Termination Date'].fillna('')
-asa_accounts['Termination Date'] = asa_accounts['Termination Date'].apply(lambda x: x if isinstance(x, str) else x.strftime('%B %d, %Y'))
-
-asa_accounts['Start Date'] = asa_accounts['Start Date'].fillna('')
-asa_accounts['Start Date'] = asa_accounts['Start Date'].apply(lambda x: x if isinstance(x, str) else x.strftime('%B %d, %Y'))
+asa_accounts[date_cols] = asa_accounts[date_cols].fillna('').apply(date_to_text)
 
 
             ########################################################
