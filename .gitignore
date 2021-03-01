@@ -19,7 +19,6 @@
 /.env.production.local
 
 /automator/.env
-/public/plots/*.svg
 
 npm-debug.log*
 yarn-debug.log*
