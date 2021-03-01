@@ -35,10 +35,10 @@ export const useStyles = makeStyles((theme) => ({
   display: {
     textAlign: 'center',
     fontWeight: 'bold',
-    fontSize: '35px',
-    marginTop: '5px',
+    fontSize: '50px',
+    marginTop: '4px',
     // color: '#7A8BF8',
-    color: 'white',
+    color: '#72AEF7',
     margin: '-4rem -4rem -4rem -4rem'
   },
   overviewText: {
@@ -52,7 +52,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   circle: {
     borderRadius: '100%',
-    backgroundColor: '#7A9EDB',
+    // backgroundColor: '#7A9EDB',
     height: '85px',
     width: '85px',
 
