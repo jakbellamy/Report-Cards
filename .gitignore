@@ -29,7 +29,6 @@ yarn-error.log*
 /__GeneratedReportCards__/*.png
 !/__GeneratedReportCards__/Example.png
 
-package-lock.json
 jsonconfig.json
 
 .bitmap
