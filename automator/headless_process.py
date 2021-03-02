@@ -48,8 +48,8 @@ print('Fetching Database.')
 
 database = dataset.connect(pg_url)
 
-asa_accounts = table_to_frame('account')
-accounts_list = sorted(list(set(asa_accounts['Name'])))
+asa_accounts = table_to_frame('asa_accounts')
+accounts_list = sorted(list(set(asa_accounts['Account'])))
 accounts_list += [accounts_list[0]]
 
 ####################################################
@@ -61,10 +61,6 @@ print('Beginning Report Generation')
 
 printProgressBar(0, len(accounts_list), prefix='Report Cards', suffix='Generated', length=50)
 for i, account in enumerate(accounts_list):
-    name_key = {'KW - Brandon': 'KW - Suburban Tampa',
-                'KW - Kannapolis': 'KW - Premier',
-                'KW - Athens': 'KW - Greater Athens'}
-    account = name_key[account] if account in list(name_key.keys()) else account
     try:
         name = account
         account = [x if not any(s for s in x if str.isnumeric(s))

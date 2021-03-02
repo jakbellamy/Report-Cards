@@ -16,8 +16,9 @@ export default function MShareVolume(props) {
     percentChangeStr = formatPercentAsString(percentChangeInt, 0);
   }
 
-  let valueYTD = thisMonth[valueKey] ? printPercent(thisMonth[valueKey]) : '';
-  let valueComp = comparableMonth[valueKey] ? printPercent(comparableMonth[valueKey]) : '';
+  let valueYTD = thisMonth[valueKey] ? printPercent(thisMonth[valueKey]) : '0.00%';
+  let valueComp = comparableMonth[valueKey] ? printPercent(comparableMonth[valueKey]) : '0.00%';
+  percentChangeStr = percentChangeStr.includes('Inf') ? '+100%' : percentChangeStr
   return (
     <Grid item xs={6}>
       <DataBox

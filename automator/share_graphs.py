@@ -8,7 +8,8 @@ import matplotlib.pyplot as plt
 import matplotlib as mpl
 import seaborn as sns
 from datetime import datetime
-from IPython.display import display, FileLink
+from supreme_data.Database import Database
+
 
 
 load_dotenv('../.env')
@@ -20,11 +21,11 @@ pd.set_option('mode.chained_assignment', None)
 
 ########################################################################################################################
 #       Query Datasets
-database = dataset.connect(os.getenv('PG_URL'))
-table_to_frame = lambda table: pd.DataFrame(list(database[table].find()))
+db = Database(os.getenv('PG_URL'))
 
-asa_accounts = table_to_frame('asa_accounts')
-asa_production = table_to_frame('asa_production')
+
+asa_accounts = db.fetch_table('asa_accounts')
+asa_production = db.fetch_table('asa_production')
 
 if len(asa_accounts) > 0 and len(asa_production) > 0:
     print('Data Loaded.')
@@ -40,22 +41,14 @@ best_in_class_other_lenders = ['East Cobb', 'West Cobb']
 date_floor = '2018-12-31'
 date_ceiling = False
 
-name_key = {
-    'KW - Brandon': 'KW - Suburban Tampa',
-    'KW - Kannapolis': 'KW - Premier',
-    'KW - Athens': 'KW - Greater Athens'
-}
-
-valid_accounts = [account for account in set(asa_accounts['Account'])
-                  if account in list(set(asa_production['Account']))]
 ########################################################################################################################
 #       Define Query and Mask Methods
 remove_null_months = lambda df: df[df['Office Volume'] > 0]
 
 
 def date_mask(df):
-    df = df[df['date'] > pd.to_datetime(date_floor)] if date_floor else df
-    df = df[df['date'] < pd.to_datetime(date_ceiling)] if date_ceiling else df
+    df = df[df['Date'] > pd.to_datetime(date_floor)] if date_floor else df
+    df = df[df['Date'] < pd.to_datetime(date_ceiling)] if date_ceiling else df
     return df
 
 
@@ -68,7 +61,7 @@ def query_account(account_name):
     account_mask = asa_production['Account'] == account_name
     df = (asa_production
           .loc[account_mask]
-          .drop_duplicates(subset=['date'])
+          .drop_duplicates(subset=['Date'])
           .reset_index())
 
     if not len(set(df['Account'])) == 1:
@@ -102,12 +95,10 @@ def query_best(account_name):
     return remove_null_months(df)
 
 
-print('Graphing Data.')
-
-for account_name in valid_accounts:
+for account_name in list(set(asa_accounts['Account'])):
 
     target_dataset = query_account(account_name)
-    if len(target_dataset) > 6:
+    if len(target_dataset) >= 12:
         period='Q'
         dt_form = '%F-Q%q'
     else:
@@ -116,8 +107,8 @@ for account_name in valid_accounts:
 
     #      Target Dataset
     target_dataset = (target_dataset
-                      .sort_values(by=['date'])
-                      .set_index('date'))
+                      .sort_values(by=['Date'])
+                      .set_index('Date'))
     target_dataset.index = (pd.to_datetime(target_dataset.index)
                             .to_period('Q')
                             .strftime('%F-Q%q'))
@@ -132,8 +123,8 @@ for account_name in valid_accounts:
     #       Best in Class Dataset
     best_dataset = query_best(account_name)
     best_dataset = (best_dataset
-                    .sort_values(by=['date'])
-                    .set_index('date'))
+                    .sort_values(by=['Date'])
+                    .set_index('Date'))
     best_dataset.index = (pd.to_datetime(best_dataset.index)
                           .to_period('Q')
                           .strftime('%F-Q%q'))
@@ -155,8 +146,6 @@ for account_name in valid_accounts:
     @plt.FuncFormatter
     def as_percent(y, pos):
         return str(round(y * 100)) + '%'
-
-    account_name = name_key[account_name] if account_name in list(name_key.keys()) else account_name
 
     plt.fill_between(target_dataset.index, target_dataset['Market Share'],
                      alpha=0.55, label=account_name)

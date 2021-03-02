@@ -1,7 +1,11 @@
 
-const asUSD = (cost) => {
-  return cost.toLocaleString(
-    'en-US', { style: 'currency', currency: 'USD' }).split('.')[0]
+const asUSD = (cost, toPlace=0) => {
+  let moneyString = cost.toLocaleString('en-US', {
+                                          style: 'currency',
+                                          currency: 'USD'
+                                       }).split('.')
+  let tail = toPlace > 0 ? '.' + moneyString[1].slice(0, toPlace) : ''
+  return moneyString[0] + tail
 }
 
 const printPercent = (percent, toDecimalPlace=0) => {

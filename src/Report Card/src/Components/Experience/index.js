@@ -9,7 +9,7 @@ const data = require('../../../data/experience.json')
 
 const useStyles = makeStyles((theme) => ({
   header: {
-    color: '#EE231A',
+    color: theme.palette.success.main,
     fontWeight: 'bold',
     fontSize: '54px',
     paddingTop: '30px'

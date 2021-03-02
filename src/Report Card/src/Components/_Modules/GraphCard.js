@@ -9,9 +9,9 @@ import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles((theme) => ({
   title: {
-    fontSize: '22px',
+    fontSize: '34px',
     fontWeight: 'bold',
-    fontFamily: 'Open Sans',
+    fontFamily: 'Fira Sans',
     margin: '-1rem 0 0 0',
     textAlign: 'center'
   }

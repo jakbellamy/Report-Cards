@@ -20,7 +20,7 @@ import Box from '@material-ui/core/Box';
 
 export const DataBox = props => {
   let { className, title, valueYTD, valueComp, differenceValue, captions, period, ...rest } = props;
-  const positiveDifference = differenceValue && differenceValue.charAt(0) === '+';
+  const positiveDifference = differenceValue && differenceValue.charAt(0) === '+' ? !differenceValue.includes('NaN') : false;
   const classes = useStyles({ positiveDifference, ...props });
 
   captions = captions.map(caption => {
@@ -45,7 +45,9 @@ export const DataBox = props => {
             </Grid.Col>
             <Grid.Col sm={5} align={'left'}>
               <div className={classes.center}>
-                <Header className={classes.differenceValue}>{differenceValue}</Header>
+                <Header className={classes.differenceValue}>{
+                  differenceValue.includes('NaN') ? '0%' : differenceValue
+                }</Header>
               </div>
 
             </Grid.Col>

@@ -147,9 +147,6 @@ df['Date'] = df['Date'].apply(lambda x: pd.to_datetime(x).strftime('%B %Y'))
 df['Renewal'] = df['Renewal'].apply(lambda x: x if isinstance(x, str) else pd.to_datetime(x).strftime('%B %d, %Y'))
 df['Start Date'] = df['Start Date'].apply(lambda x: x if isinstance(x, str) else pd.to_datetime(x).strftime('%B %d, %Y'))
 
-# date_cols = ['Termination Date', 'Renewal', 'Start Date']
-# df[date_cols] = df[date_cols].apply(lambda x: x if isinstance(x, str) else pd.to_datetime(x).strftime('%B %d, %Y'))
-
 df.to_json('../src/Report Card/data/data.json', orient='records')
 
 print('JSON File Successfully Saved.')

@@ -5,25 +5,24 @@ export const useStyles = makeStyles((theme) => ({
     fontSize: '20px'
   },
   tableItem: {
-    fontSize: '23px'
+    fontSize: 'zpx'
   },
   card: {
     marginTop: '2.5%',
-
   },
   title: {
-    // textAlign: 'center',
+    fontSize: '34px',
     fontWeight: 'bold',
-    fontSize: '22px',
-    margin: '1rem -4rem 0',
-    // color: 'White',
-    // backgroundColor: '#7A9EDB',
-    textAlign: 'center',
-    borderRadius: '10em 10em 10em'
+    fontFamily: 'Fira Sans',
+    margin: '1.5rem 0 0 0',
+    textAlign: 'center'
   },
+
   subtitle: {
     fontWeight: 'bold',
-    fontSize: '28px',
+    fontSize: '35px',
+    position: 'relative',
+    fontFamily: 'Fira Sans',
     marginLeft: '1rem',
     marginRight: '3rem',
     color: 'rgba(35,39,50,0.93)',
@@ -35,19 +34,27 @@ export const useStyles = makeStyles((theme) => ({
   display: {
     textAlign: 'center',
     fontWeight: 'bold',
-    fontSize: '50px',
-    marginTop: '4px',
-    // color: '#7A8BF8',
-    color: '#72AEF7',
-    margin: '-4rem -4rem -4rem -4rem'
+    fontSize: '40px',
+    color: 'white',
+  },
+  overviewCard: {
+    textAlign: 'center',
+    borderRadius: '50%',
+    margin: 'auto',
+    height: '110px',
+    width: '110px',
+    backgroundColor: '#72AEF7',
+    marginTop: '15px',
+
   },
   overviewText: {
     fontWeight: 'bold',
-    fontSize: '21px',
+    fontSize: '26px',
+    fontFamily: 'roboto',
     textAlign: 'center',
-    paddingBottom: '10px'
   },
   overview: {
+    paddingTop: '10px',
     margin: '0 -2.5rem 1rem -2.5rem',
   },
   circle: {

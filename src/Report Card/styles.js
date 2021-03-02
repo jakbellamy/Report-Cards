@@ -14,6 +14,15 @@ export const useStyles = () => {
         paddingLeft: 64,
         paddingRight: 64
       }
+    },
+    ceTitle:{
+      fontWeight: 'bold',
+      fontSize: 90
+    },
+    text: {
+      flexWrap: 'wrap',
+      maxWidth: '260px',
+      margin: '0 -5rem 1rem -5rem'
     }
   }))
 }

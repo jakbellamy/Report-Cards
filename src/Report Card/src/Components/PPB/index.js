@@ -36,12 +36,12 @@ export default function PnPB(props) {
       <Grid container spacing={3}>
         {data.map(event => (
           <Grid xs={6} padding={3}>
-            <Box padding={1.5}>
+            <Box padding={1.5} marginTop={'15px'}>
               <Card elevation={0} align={'center'} width={400}>
-                <Box height={200} marginTop={'25px'}>
-                  <CenteredImage height={180} src={event['Image']} />
+                <Box height={200} marginTop={'15px'} >
+                  <CenteredImage height={195} src={event['Image']}/>
                 </Box>
-                <Box height={150}>
+                <Box height={130}>
                   <Typography className={classes.date}>
                     {event['Date']}
                   </Typography>

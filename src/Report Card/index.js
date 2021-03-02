@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import _ from 'lodash';
-import { mainBackgroundColor, useStyles } from './styles';
+import { mainBackgroundColor } from './styles';
 import Page from '../src/components/Page';
 import BoxDivider from './src/Components/_Modules/BoxDivider';
 import NullBlock from './src/Components/_Modules/NullBlock';
@@ -17,9 +17,9 @@ import {
   Container,
   Grid,
   Box,
-  CardHeader
+  CardHeader, makeStyles
 } from '@material-ui/core';
-import ContinuingEducation from './src/Components/Continuing Education/ContinuingEducation_Deprecated';
+import ContinuingEducation from './src/Components/Continuing Education/ContinuingEducation';
 import GoalDonuts from './src/Components/Data Components/Tabler Components/GoalDonuts';
 import CSAT from './src/Components/Inustry Standards/csat';
 import CenteredImage from './src/Components/_Modules/centeredImage';
@@ -29,6 +29,8 @@ import ExperienceGrid from './src/Components/Experience';
 import PnPB from './src/Components/PPB';
 import DataTable from './src/Components/Data Components/Data Table';
 import RetroData from './src/Components/Data Components/DataBox/DataPoints/RetroData';
+import Typography from '@material-ui/core/Typography';
+import Paper from '@material-ui/core/Paper';
 
 const data = require('./data/data.json');
 const ppbData = require('./data/ppb.json');
@@ -36,7 +38,29 @@ const goalData = require('./data/Goals.json');
 const ce_2020 = require('./data/2020 CE.json');
 const ce_2021 = require('./data/2021 CE.json');
 
-const classes = useStyles();
+const useStyles = () => {
+  return makeStyles((theme) => ({
+    text: {
+      flexWrap: 'wrap',
+      maxWidth: '240px',
+      margin: '5 -10 5 -5',
+
+    },
+    root: {
+      backgroundColor: theme.palette.background.dark,
+      minHeight: '100%',
+      paddingTop: theme.spacing(3),
+      paddingBottom: theme.spacing(3),
+      minWidth: '100%'
+    },
+    container: {
+      [theme.breakpoints.up('lg')]: {
+        paddingLeft: 64,
+        paddingRight: 64
+      }
+    },
+  }))
+}
 
 export default function ReportCard(props) {
   const [accountData, setAccountData] = useState([]);
@@ -48,6 +72,8 @@ export default function ReportCard(props) {
   const [goals, setGoals] = useState([]);
   const [ce2020, setCE2020] = useState([]);
   const [ce2021, setCE2021] = useState([]);
+
+  const classes = useStyles();
 
   useEffect(() => {
     let params = props.match.params[0] ? props.match.params[0].split('/')[1] : '';
@@ -93,6 +119,13 @@ export default function ReportCard(props) {
 
   }, []);
 
+  const ce_adverts = [
+      ['./CE/Social Media.svg', 'Understanding Appraisals', "We've partnered with D.S. Murphy & Associates to bring you 5 distinct courses on Appraisals."],
+      ['./CE/Introduction to Condominiums.svg', 'Intro to Condominiums', "Our Condo class was designed to help you better understand all of the intricacies of this transaction."],
+      ['./CE/Fundamentals of Credit.svg', 'Fundamentals of Credit', "Our credit class removes the mystery surrounding credit scores, leaving you better equipped to help your buyer qualify for the home of their dreams."],
+      ['./CE/Market Like a Rockstar.svg', 'Market Like a Rockstar', "Grammy-Award winner Tai Anderson will teach you how to Market Like A Rockstar and take advantage of Social Media to grow your audience."]
+  ]
+
   return (
     <div style={{ backgroundColor: mainBackgroundColor }}>
       <Page className="report-card">
@@ -134,7 +167,7 @@ export default function ReportCard(props) {
 
               <GraphCard
                 imageSrc={imageSrc}
-                height={550}
+                height={620}
                 header={'Market Share & Office Volume by Month'}
                 account={thisMonth['Account']}
               />
@@ -146,7 +179,7 @@ export default function ReportCard(props) {
 
             </Grid>
 
-            <Grid item id={'Marketing-Column'} alignItems={'flex-start'}>
+            <Grid item id={'Marketing-Column'} alignItems={'flex-start'} >
               <CenteredImage src={'./images/Credit Essentials.jpg'} height={400}/>
               <Box paddingTop={'2%'}>
                 <ExperienceGrid />
@@ -155,9 +188,40 @@ export default function ReportCard(props) {
                 <CenteredImage src={'https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/153168374_3681749721920486_5624809215965204231_o.jpg?_nc_cat=105&ccb=3&_nc_sid=340051&_nc_ohc=uuz-wa4KUzkAX_pZ1SV&_nc_ht=scontent-iad3-1.xx&oh=f0aea9bad0c5b72e2387812b068f8179&oe=605DEB57'}
                                height={'420'}/>
               </Box>
-              <PnPB />
             </Grid>
+
+
           </Grid>
+          <Box marginLeft={3} marginRight={3}>
+            <Grid container spacing={2} padding={3}>
+              {ce_adverts.map(item => {
+                return (
+                  <Grid item xs={3} sm={0}>
+                    <Card elevation={0}  align={'center'}>
+                      <Box  width={300} height={350}
+                            padding={0.5} paddingTop={2} paddingBottom={1.5}
+                      >
+                        <Box height={90} justify={'center'}>
+                          <Typography variant={'h4'}>{item[1]}</Typography>
+                        </Box>
+                        {/*<Box align={'center'}  marginTop={2}>*/}
+                        <embed src={item[0]} style={{borderRadius: '50%'}} height={120}/>
+                        {/*<Box marginTop={2}>*/}
+                        <Typography variant='subtitle1' paddingTop={'50%'}>{item[2]}</Typography>
+
+                        {/*</Box>*/}
+                        {/*</Box>*/}
+                      </Box>
+                    </Card>
+                  </Grid>
+                )
+              })}
+
+
+
+            </Grid>
+          </Box>s
+
           <NullBlock/>
         </Container>
         </Box>

@@ -36,12 +36,26 @@ export default function RetroDataGrid(props) {
 
     let valueYTD, valueComp
     if(metric.includes('Share')){
-      valueYTD = finalMonth && finalMonth[valueKey] ? printPercent(finalMonth[valueKey]) : '';
+      valueYTD = finalMonth && finalMonth[valueKey] ? printPercent(finalMonth[valueKey]) : '0%';
       valueComp = comparableMonth && comparableMonth[valueKey] ? printPercent(comparableMonth[valueKey]) : '';
     } else {
-      valueYTD = finalMonth && finalMonth[valueKey] ? asUSD(finalMonth[valueKey]/1000000) + 'M' : '';
-      valueComp = comparableMonth && comparableMonth[valueKey] ? asUSD(comparableMonth[valueKey]/1000000) + 'M' : '';
-
+      // valueYTD = finalMonth && finalMonth[valueKey] ? asUSD(finalMonth[valueKey]/1000000).replace('$', "$ ") + 'M' : '$0.00';
+      valueYTD = finalMonth && finalMonth[valueKey]
+        ?
+        finalMonth[valueKey] > 1000000000
+          ?
+          asUSD(finalMonth[valueKey]/1000000000, 2).replace('$', "$ ") + 'B'
+          :
+          asUSD(finalMonth[valueKey]/1000000).replace('$', "$ ") + 'M'
+        : '$ 0.00'
+      valueComp = comparableMonth && comparableMonth[valueKey]
+        ?
+        comparableMonth[valueKey] > 1000000000
+          ?
+          asUSD(comparableMonth[valueKey]/1000000000, 2).replace('$', "$ ") + 'B'
+          :
+        asUSD(comparableMonth[valueKey]/1000000).replace('$', "$ ") + 'M'
+        : ''
     }
 
     if(percentChangeInt && percentChangeInt >=0){
