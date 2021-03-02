@@ -12,7 +12,6 @@ import OfficeVolume from './src/Components/Data Components/DataBox/DataPoints/Of
 import UpcomingBest from './src/Components/Inustry Standards/upcomingBest';
 import { ifExists } from './functions/conditionals';
 import { firstStr, lastStr } from './functions/stringParsers';
-
 import {
   Container,
   Grid,
@@ -73,7 +72,7 @@ export default function ReportCard(props) {
   const [ce2020, setCE2020] = useState([]);
   const [ce2021, setCE2021] = useState([]);
 
-  const classes = useStyles();
+  let classes = useStyles();
 
   useEffect(() => {
     let params = props.match.params[0] ? props.match.params[0].split('/')[1] : '';
@@ -120,10 +119,15 @@ export default function ReportCard(props) {
   }, []);
 
   const ce_adverts = [
-      ['./CE/Social Media.svg', 'Understanding Appraisals', "We've partnered with D.S. Murphy & Associates to bring you 5 distinct courses on Appraisals."],
+      ['./CE/Social Media.svg', 'Social Media', "We've partnered with D.S. Murphy & Associates to bring you 5 distinct courses on Appraisals."],
       ['./CE/Introduction to Condominiums.svg', 'Intro to Condominiums', "Our Condo class was designed to help you better understand all of the intricacies of this transaction."],
       ['./CE/Fundamentals of Credit.svg', 'Fundamentals of Credit', "Our credit class removes the mystery surrounding credit scores, leaving you better equipped to help your buyer qualify for the home of their dreams."],
-      ['./CE/Market Like a Rockstar.svg', 'Market Like a Rockstar', "Grammy-Award winner Tai Anderson will teach you how to Market Like A Rockstar and take advantage of Social Media to grow your audience."]
+      ['./CE/Market Like a Rockstar.svg', 'Market Like a Rockstar', "Grammy-Award winner Tai Anderson will teach you how to Market Like A Rockstar and take advantage of Social Media to grow your audience."],
+      ['./CE/cmas.svg', 'CMAs'],
+      ['./CE/Appraisals Field Trip.svg', 'Appraisals Field Trip'],
+      ['./CE/Mastering Appraisals.svg', 'Mastering Appraisals'],
+      ['./CE/Understanding Home Inspections.svg', 'Home Inspections'],
+      ['./CE/Understanding Values.svg', 'Understanding Values']
   ]
 
   return (
@@ -157,8 +161,8 @@ export default function ReportCard(props) {
 
 
               <GoalDonuts
-                mshare={thisMonth['YTD Market Share Volume']}
-                goals={[goals['Goal'], goals['Stretch Goal']]}
+                mshare={thisMonth['Goal to Date']}
+                goals={[thisMonth['Goal'], thisMonth['Stretch']]}
                 incentives={[goals['Increase'], goals['Stretch Increase']]}
               />
               <Box marginTop={2}>
@@ -174,7 +178,7 @@ export default function ReportCard(props) {
 
 
               <Box marginTop={3} marginBottom={3}>
-                <ContinuingEducation ce2020={ce2020} ce2021={ce2021}/>
+                {/*<ContinuingEducation ce2020={ce2020} ce2021={ce2021}/>*/}
               </Box>
 
             </Grid>
@@ -192,35 +196,50 @@ export default function ReportCard(props) {
 
 
           </Grid>
-          <Box marginLeft={3} marginRight={3}>
-            <Grid container spacing={2} padding={3}>
-              {ce_adverts.map(item => {
-                return (
-                  <Grid item xs={3} sm={0}>
-                    <Card elevation={0}  align={'center'}>
-                      <Box  width={300} height={350}
-                            padding={0.5} paddingTop={2} paddingBottom={1.5}
-                      >
-                        <Box height={90} justify={'center'}>
-                          <Typography variant={'h4'}>{item[1]}</Typography>
-                        </Box>
-                        {/*<Box align={'center'}  marginTop={2}>*/}
-                        <embed src={item[0]} style={{borderRadius: '50%'}} height={120}/>
-                        {/*<Box marginTop={2}>*/}
-                        <Typography variant='subtitle1' paddingTop={'50%'}>{item[2]}</Typography>
+            {/*<Card>*/}
 
-                        {/*</Box>*/}
-                        {/*</Box>*/}
-                      </Box>
-                    </Card>
+
+          <Grid item xs={12}>
+                <Box >
+                  <Card>
+                    <Box padding={3}>
+                      <Typography variant={"h3"} align={'center'} >
+                        Continuing Education
+                      </Typography>
+                    </Box>
+                    <Box height={250} >
+                      <ContinuingEducation ce2020={ce2020} ce2021={ce2021}/>
+                    </Box>
+
+                    <Grid container spacing={3} padding={1} justify={'space-evenly'}>
+                    {ce_adverts.map(item => {
+                      return (
+                        <Grid item xs={12/9} sm={0}>
+                          <Card elevation={0}  >
+                            <Box  width={'auto'} height={150}
+                                  marginTop={2} paddingBottom={1}
+                            >
+                              <Card height={30}>
+                                <Typography align={'center'} >{item[1]}</Typography>
+                              </Card>
+                              <Box align={'center'}  marginTop={1}>
+                                <embed src={item[0]} style={{borderRadius: '100%'}} height={90}/>
+
+                              </Box>
+                            </Box>
+                            {/*</Box>*/}
+                          </Card>
+                        </Grid>
+                      )
+                    })}
+
                   </Grid>
-                )
-              })}
+                  </Card>
+
+                </Box>
+              </Grid>
 
 
-
-            </Grid>
-          </Box>s
 
           <NullBlock/>
         </Container>

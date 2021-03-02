@@ -41,80 +41,77 @@ export default function ContinuingEducation(props) {
 
   pastEvents = pastEvents.slice(0, 3)
   return (
-    <Box marginTop={3}>
+    <Box >
       <Card elevation={0}>
-        <Box height={'auto'}>
-          <Typography className={classes.title}>
-            Continuing Education
-          </Typography>
-          <Box margin={1} height={200}>
-            <Box className={classes.overview}>
-              <Grid container spacing={4} align='center'>
-                <Grid item xs={4}>
-                  <Typography className={classes.overviewText}>Courses in 2020</Typography>
-                  <Card elevation={0} className={classes.overviewCard}>
-                  <Box height={200} padding={2} align={'center'}>
-                    <div className={classes.circle}>
-                      <div className={classes.center}>
-                        <Typography className={classes.display}>{completed20}</Typography>
-                      </div>
-                    </div>
-                  </Box>
-                  </Card>
-                </Grid>
-                <Grid item xs={4}>
-                  <Typography className={classes.overviewText}>Courses in 2021</Typography>
-                  <Card className={classes.overviewCard} elevation={0} >
-                    <Box height={200} padding={2} align={'center'}>
-                      <div className={classes.circle}>
-                        <div className={classes.center}>
+        <Box height={270}>
+          <Grid container spacing={10}>
+            <Grid item xs={upcomingEvents.length ? 6 : 12}>
+              <Box margin={4} height={200}>
+                <Box className={classes.overview}>
+                  <Grid container spacing={4} align='center'>
+                    <Grid item xs={4}>
+                      <Typography className={classes.overviewText}>Courses in 2020</Typography>
+                      <Card elevation={1} className={classes.overviewCard}>
+                        <Box height={200} padding={2} align={'center'}>
+                          <Typography className={classes.display}>{completed20}</Typography>
+                        </Box>
+                      </Card>
+                    </Grid>
+                    <Grid item xs={4}>
+                      <Typography className={classes.overviewText}>Courses in 2021</Typography>
+                      <Card className={classes.overviewCard} elevation={1} >
+                        <Box height={200} padding={2} align={'center'}>
                           <Typography className={classes.display}>{completed21}</Typography>
-                        </div>
-                      </div>
-                    </Box>
-                  </Card>
-                </Grid>
-                <Grid item xs={4}>
-                  <Typography className={classes.overviewText}>Scheduled 2021</Typography>
-                  <Card className={classes.overviewCard} elevation={0} >
-                    <Box height={200} padding={1} align={'center'}>
-                      <div className={classes.circle}>
-                        <div className={classes.center}>
+                        </Box>
+                      </Card>
+                    </Grid>
+                    <Grid item xs={4}>
+                      <Typography className={classes.overviewText}>Scheduled 2021</Typography>
+                      <Card className={classes.overviewCard} elevation={1} >
+                        <Box height={200} padding={1} align={'center'}>
                           <Typography className={classes.display}>{upcomingEvents.length}</Typography>
-                        </div>
-                      </div>
-                    </Box>
-                  </Card>
-                </Grid>
-              </Grid>
-            </Box >
-          {/*  {upcomingEvents.length ? (*/}
-          {/*    <Box marginBottom={'-.8rem'}>*/}
-          {/*      <Typography className={classes.subtitle}>*/}
-          {/*        Next Event*/}
-          {/*      </Typography>*/}
-          {/*      <TableContainer padding={20} >*/}
-          {/*        <Table >*/}
-          {/*          <TableHead>*/}
-          {/*            <TableRow>*/}
-          {/*              <TableCell className={classes.tableHead}>Date</TableCell>*/}
-          {/*              <TableCell className={classes.tableHead}>Class</TableCell>*/}
-          {/*              <TableCell className={classes.tableHead}>Status</TableCell>*/}
-          {/*            </TableRow>*/}
-          {/*          </TableHead>*/}
-          {/*          <TableBody>*/}
-          {/*            {upcomingEvents.slice(0, 1).map(row => (*/}
-          {/*              <TableRow key={row['Date']}>*/}
-          {/*                <TableCell className={classes.tableItem}>{row['Date']}</TableCell>*/}
-          {/*                <TableCell className={classes.tableItem}>{row['Class']}</TableCell>*/}
-          {/*                <TableCell className={classes.tableItem}>{row['Status']}</TableCell>*/}
-          {/*              </TableRow>*/}
-          {/*            ))}*/}
-          {/*          </TableBody>*/}
-          {/*        </Table>*/}
-          {/*      </TableContainer>*/}
-          {/*    </Box>*/}
-          {/*  ) : null}*/}
+                        </Box>
+                      </Card>
+                    </Grid>
+                  </Grid>
+                </Box>
+              </Box >
+            </Grid>
+            <Grid item xs={upcomingEvents.length ? 6 : 0}>
+              {upcomingEvents.length ? (
+                <Box marginBottom={'-.8rem'}>
+                  <Typography className={classes.subtitle}>
+                    Next Event
+                  </Typography>
+                  <Box marginTop={4}>
+                    <TableContainer padding={20} >
+                      <Table >
+                        <TableHead>
+                          <TableRow>
+                            <TableCell className={classes.tableHead}>Date</TableCell>
+                            <TableCell className={classes.tableHead}>Class</TableCell>
+                            <TableCell className={classes.tableHead}>Status</TableCell>
+                          </TableRow>
+                        </TableHead>
+                        <TableBody>
+                          {upcomingEvents.slice(0, 1).map(row => (
+                            <TableRow key={row['Date']}>
+                              <TableCell className={classes.tableItem}>{row['Date']}</TableCell>
+                              <TableCell className={classes.tableItem}>{row['Class']}</TableCell>
+                              <TableCell className={classes.tableItem}>{row['Status']}</TableCell>
+                            </TableRow>
+                          ))}
+                        </TableBody>
+                      </Table>
+                    </TableContainer>
+                  </Box>
+
+                </Box>
+              ) : null}
+            </Grid>
+          </Grid>
+
+
           {/*</Box>*/}
           {/*<Box margin={10} marginTop={'-2rem'}>*/}
           {/*  <Typography className={classes.subtitle}>*/}
@@ -141,7 +138,6 @@ export default function ContinuingEducation(props) {
           {/*    </Table>*/}
           {/*  </TableContainer>*/}
           </Box>
-        </Box>
 
       </Card>
     </Box>

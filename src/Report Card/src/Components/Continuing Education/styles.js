@@ -26,8 +26,8 @@ export const useStyles = makeStyles((theme) => ({
     marginLeft: '1rem',
     marginRight: '3rem',
     color: 'rgba(35,39,50,0.93)',
-    marginTop: '25px',
-    textAlign: 'left',
+    marginTop: '10px',
+    textAlign: 'center',
     // backgroundColor: '#d4deea',
     // borderRadius: '30em 30em 60em 60em'
   },
@@ -35,16 +35,17 @@ export const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     fontWeight: 'bold',
     fontSize: '40px',
-    color: 'white',
+    marginTop: '20%',
+    // color: 'white',
   },
   overviewCard: {
     textAlign: 'center',
+    justifyContent: 'center',
     borderRadius: '50%',
     margin: 'auto',
     height: '110px',
     width: '110px',
-    backgroundColor: '#72AEF7',
-    marginTop: '15px',
+    marginTop: '5%',
 
   },
   overviewText: {
@@ -52,14 +53,17 @@ export const useStyles = makeStyles((theme) => ({
     fontSize: '26px',
     fontFamily: 'roboto',
     textAlign: 'center',
+
+
   },
   overview: {
     paddingTop: '10px',
     margin: '0 -2.5rem 1rem -2.5rem',
+
   },
   circle: {
     borderRadius: '100%',
-    // backgroundColor: '#7A9EDB',
+    backgroundColor: '#7A9EDB',
     height: '85px',
     width: '85px',
 
@@ -70,3 +74,4 @@ export const useStyles = makeStyles((theme) => ({
     padding: '10.5px',
   }
 }));
+
