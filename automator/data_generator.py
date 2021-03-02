@@ -20,7 +20,7 @@ asa_accounts = db.fetch_table('asa_accounts')
 asa_contracts = db.fetch_table('asa_contracts')
 asa_lites = db.fetch_table('lite_accounts')
 lite_contracts = db.fetch_table('lite_contracts')
-asa_production = db.fetch_table('asa_production')
+asa_production = db.fetch_table('asa_production').drop_duplicates()
 lite_production = db.fetch_table('lite_referrals')
 
 def contracts_to_costs(contracts):
@@ -55,7 +55,10 @@ associated_lite_costs = (contracts_to_costs(lite_contracts)
                               "Lead Cost": 'Lite Lead Cost',
                               "Lease Cost": "Lite Lease Cost"
                           })
-                          .set_index(["Account", 'Date'], drop=True))
+                          .set_index(["Account", 'Date'], drop=True)
+                          .reset_index()
+                          .groupby(['Account', 'Date'])
+                          .agg('sum'))
 
 total_asa_costs = (contracts_to_costs(asa_contracts)
                    .set_index(["Account", 'Date'])
@@ -141,6 +144,25 @@ df['YTD Market Share Units'] = pm.safe_divide(df, ['YTD Supreme Units', 'YTD Off
 null_data_mask = df['Office Volume'] > 0
 df = df.loc[null_data_mask]
 df = df.fillna('')
+
+share_goals = pd.read_json('./share_goals.json', orient='records')
+
+share_goals['Start Date'] = pd.to_datetime(share_goals['Start Date']).dt.date
+share_goals.rename(columns={'Start Date': 'Goal Start'}, inplace=True)
+share_goals['Goal Start'] = share_goals['Goal Start'].apply(lambda x: x if x < pd.to_datetime('2021-01-1') else pd.to_datetime('2021-01-1'))
+df = df.set_index('Account').join(share_goals.set_index('Account')[['Goal', 'Stretch', 'Goal Start']]).reset_index()
+
+def calc_gtd(x):
+    if pd.to_datetime(x['Date']) < pd.to_datetime(x['Goal Start']):
+        return 0
+    else:
+        a_mask = df['Account'] == x['Account']
+        d_mask = df['Date'].apply(lambda date: pd.to_datetime(date) >= pd.to_datetime(x['Goal Start']) <= pd.to_datetime(x['Date']))
+        mf = df.loc[a_mask & d_mask].sort_values('Date')
+        sv = mf['Supreme Volume'].agg('sum')
+        ov = mf['Office Volume'].agg('sum')
+        return sv / ov
+df['Goal to Date'] = df.apply(calc_gtd, axis=1)
 
 df['Date Time'] = df['Date']
 df['Date'] = df['Date'].apply(lambda x: pd.to_datetime(x).strftime('%B %Y'))
