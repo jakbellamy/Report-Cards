@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="be073d37-b0b0-4797-bfdc-1e9f5dba0135" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Report Card/data/education.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Report Card/src/Components/Continuing Education/CECourses.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Report Card/src/Components/Continuing Education/UpcomingEvent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/automator/share_graphs.py" beforeDir="false" afterPath="$PROJECT_DIR$/automator/share_graphs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Components/Continuing Education/ContinuingEducation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/Continuing Education/CECounts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/DataBox/DataPoints/MShareVolume.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/DataBox/DataPoints/MShareVolume.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/DataBox/DataPoints/OfficeVolume.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/DataBox/DataPoints/OfficeVolume.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/DataBox/TriDataBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/DataBox/TriDataBox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/Tabler Components/GoalDonuts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/Tabler Components/GoalDonuts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/Tabler Components/PercentToGoalCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/Tabler Components/PercentToGoalCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Components/Experience/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/Experience/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Report Card/src/Components/Header/ReportCardHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Report Card/src/Components/Header/ReportCardHeader.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1ouILwJKs5YWtLtOMO0AgpZN89E" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/" />
+      <recent name="$PROJECT_DIR$/src/Report Card/data" />
+      <recent name="$PROJECT_DIR$/src/Report Card/src/Components" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$USER_HOME$/Desktop" />
+      <recent name="$PROJECT_DIR$/automator" />
+      <recent name="$USER_HOME$/PycharmProjects/supremekob/_kobland/CE" />
+      <recent name="$PROJECT_DIR$/src/Report Card/src/Components/Data Components/DataBox" />
+      <recent name="$USER_HOME$/Desktop/Migrate React" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="be073d37-b0b0-4797-bfdc-1e9f5dba0135" name="Default Changelist" comment="" />
+      <created>1614129996354</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1614129996354</updated>
+      <workItem from="1614129998228" duration="37818000" />
+      <workItem from="1614216726249" duration="26000" />
+      <workItem from="1614217130975" duration="9466000" />
+      <workItem from="1614259813501" duration="1632000" />
+      <workItem from="1614261999640" duration="2753000" />
+      <workItem from="1614558568248" duration="1790000" />
+      <workItem from="1614616112704" duration="38708000" />
+      <workItem from="1614699558448" duration="12362000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1277" y="406" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1614699585980">
+      <screen x="-1920" y="72" width="1920" height="1080" />
+    </state>
+    <state x="-1277" y="406" key="#com.intellij.fileTypes.FileTypeChooser/-1920.72.1920.1080/0.0.1440.900/-3840.145.1920.1080@-1920.72.1920.1080" timestamp="1614699585980" />
+    <state x="563" y="325" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1614130504579" />
+    <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1614213283827">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1614213283827" />
+    <state x="594" y="389" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1614133903701">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="594" y="389" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1680.1050@0.0.1680.1050" timestamp="1614133903701" />
+    <state x="144" y="23" width="521" height="661" key="dock-window-1" timestamp="1614787420277">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="-3840" y="145" width="1920" height="1080" key="dock-window-1/0.0.1440.900/-1920.72.1920.1080/-3840.145.1920.1080@-3840.145.1920.1080" timestamp="1614621314783" />
+    <state x="-3840" y="145" width="1920" height="1080" key="dock-window-1/0.0.1680.1050/-1920.72.1920.1080/-3840.145.1920.1080@-1920.72.1920.1080" timestamp="1614559235923" />
+    <state x="0" y="0" width="1680" height="1050" key="dock-window-1/0.0.1680.1050@0.0.1680.1050" timestamp="1614562238716" />
+    <state x="0" y="23" width="1440" height="877" maximized="true" key="dock-window-1/0.23.1440.877/-1920.95.1920.1057/-3840.145.1920.1080@-3840.145.1920.1080" timestamp="1614616432637" />
+    <state x="176" y="111" width="1163" height="858" key="dock-window-1/0.23.1680.1027@0.23.1680.1027" timestamp="1614657811532" />
+    <state x="144" y="23" width="521" height="661" key="dock-window-1/0.23.1920.1057/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1614787420277" />
+    <state x="542" y="282" width="635" height="522" key="find.popup" timestamp="1614659600551">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="-1301" y="344" width="725" height="537" key="find.popup/0.0.1440.900/-1920.72.1920.1080/-3840.145.1920.1080@-1920.72.1920.1080" timestamp="1614651032385" />
+    <state x="-3221" y="417" width="682" height="537" key="find.popup/0.0.1440.900/-1920.72.1920.1080/-3840.145.1920.1080@-3840.145.1920.1080" timestamp="1614616823844" />
+    <state x="542" y="264" width="634" height="522" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1614645581736" />
+    <state x="542" y="282" width="635" height="522" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1614659600551" />
+    <state x="619" y="272" width="682" height="537" key="find.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1614176359232" />
+    <state x="547" y="234" width="670" height="658" key="search.everywhere.popup" timestamp="1614639669548">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="547" y="234" width="670" height="658" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1614639669548" />
+    <state x="625" y="241" width="670" height="676" key="search.everywhere.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1614175532403" />
+    <state x="2545" y="241" width="670" height="676" key="search.everywhere.popup/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1614188212735" />
+  </component>
+</project>
